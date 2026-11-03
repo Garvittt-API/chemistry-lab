@@ -7,3 +7,8 @@ No stock photography, third-party educational diagrams, laboratory renders or un
 assets were added. The visual identity is carried by typography, semantic color, layout rules and
 original CSS composition. Future assets require provenance, license, alternative text and an entry in
 `THIRD_PARTY_NOTICES.md`.
+
+Reference captures from the verified production build are stored at:
+
+- `docs/design/phase-02-home.png`
+- `docs/design/phase-02-explore.png`

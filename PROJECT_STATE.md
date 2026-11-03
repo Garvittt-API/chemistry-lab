@@ -17,7 +17,7 @@
 - Current phase: Phase 02 — Design System & Web Application Foundation
 - Current milestone: 02.1 — Scientific editorial web foundation
 - Overall status: Phase 02 implementation complete; project-owner review pending
-- Last verified commit: `8bb87bf` (`fix: normalize repository line endings`)
+- Last verified commit: `638e797` (`phase 2 complete`)
 - Last verification date: 2026-11-03
 
 ## Completed
@@ -31,14 +31,14 @@
 
 ## In progress
 - Complete owner review of Phase 01 and Phase 02 ADRs and acceptance evidence.
-- Connect a private remote repository and configure branch protection.
-- Run remote CI after the connected repository receives the Phase 02 changes.
+- Confirm branch protection on the configured private remote repository.
+- Run remote CI after the final Phase 02 changes are pushed.
 
 ## Blocked / undecided
 - Final product name.
 - Application and content license selection.
 - Exact LLM runtime/model/tool permissions.
-- This local Git repository has no commit or remote yet.
+- Remote `origin` is configured; branch protection and hosted CI remain unverified.
 - Backend and persistence decisions (deferred until justified).
 - Curriculum priorities and educator reviewers.
 
