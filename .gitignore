@@ -1,0 +1,40 @@
+# Dependencies and package-manager state
+node_modules/
+.pnpm-store/
+.turbo/
+
+# Build and test output
+dist/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+playwright-report/
+test-results/
+
+# Expo / React Native output
+.expo/
+web-build/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Editors and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*

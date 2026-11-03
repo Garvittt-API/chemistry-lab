@@ -1,0 +1,32 @@
+{
+  "name": "virtual-chemistry-lab",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.16.1",
+  "engines": {
+    "node": ">=24.3.0",
+    "pnpm": ">=12.16.1"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "build:web": "turbo run build --filter=@virtual-chemistry-lab/web",
+    "dev": "turbo run dev --parallel",
+    "e2e": "turbo run e2e --filter=@virtual-chemistry-lab/web",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "turbo run lint",
+    "security:audit": "pnpm audit --audit-level=high",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "validate:mobile": "turbo run validate --filter=@virtual-chemistry-lab/mobile",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "eslint": "9.39.1",
+    "prettier": "3.6.2",
+    "turbo": "2.11.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1"
+  }
+}

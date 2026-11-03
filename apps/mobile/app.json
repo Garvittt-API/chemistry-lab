@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Virtual Chemistry Lab",
+    "slug": "virtual-chemistry-lab",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "platforms": ["ios", "android", "web"]
+  }
+}

@@ -1,0 +1,62 @@
+# Virtual Chemistry Lab
+
+An open-source, cross-platform virtual chemistry laboratory for school and college learners. The
+long-term product vision includes interactive 2D and 3D experiments, molecular visualization,
+structured practical records, assessments, and offline-capable learning.
+
+> **Project status:** Foundation / Phase 01. This repository is not yet a validated chemistry
+> simulator. Do not present planned features as implemented.
+
+## Guiding principles
+
+1. Scientific correctness before visual effects.
+2. Safety and transparent limitations are mandatory.
+3. Shared experiment definitions and scientific logic across platforms.
+4. Accessible, responsive, beginner-friendly learning experiences.
+5. Small, reviewable phases with explicit acceptance gates.
+6. Open-source collaboration with clear licensing and provenance.
+
+## Current scope
+
+Phase 01 establishes product requirements, architecture, repository structure, engineering standards,
+security baseline, and CI. It does not implement experiment simulations or claim scientific
+validation.
+
+## Phase 01 foundation
+
+This repository contains the initial TypeScript monorepo, a minimal Next.js web application, a
+minimal Expo mobile application, and the versioned experiment metadata contract in
+`packages/experiment-schema`. No chemistry simulation, authentication, database, AI tutor, or
+production deployment is included in this phase.
+
+## Getting started
+
+Use Node.js `24.18.1` and pnpm `12.16.1` (Corepack can activate the pinned package manager):
+
+```powershell
+corepack enable
+corepack pnpm install
+corepack pnpm dev
+```
+
+See `docs/development/setup.md` for web and mobile commands, and `docs/development/testing.md`
+for verification commands.
+
+## Documentation map
+
+- `apps/`: web and mobile application entry points.
+- `packages/experiment-schema/`: versioned, Zod-validated experiment metadata.
+- `docs/product/`: vision, requirements, roadmap and scope.
+- `docs/design/`: design principles, design system and accessibility.
+- `docs/architecture/`: system design, data flow and decisions.
+- `docs/science/`: scientific integrity, validation, units and model policy.
+- `docs/security/`: threat model, secure development and privacy.
+- `docs/experiments/`: content specification and authoring workflow.
+- `docs/development/`: setup, workflow, testing and release process.
+- Root governance files: contribution, conduct, security reporting, changelog, license and project state.
+
+## Important disclaimer
+
+Virtual experiments are educational models. They do not replace supervised laboratory instruction,
+institutional safety procedures, or real-world practical competency. Each future simulation must
+disclose assumptions, limitations, and whether results are theoretical, simulated, or measured.
