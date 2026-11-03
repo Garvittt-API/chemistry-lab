@@ -13,7 +13,7 @@ in the repository.
 ## Decision
 
 Phase 01 pins Node.js `24.18.1`, pnpm `12.16.1`, Next.js `16.4.4`, React/React DOM `19.3.0`, Expo
-`58.0.22`, React Native `0.88.1`, React Native Web `0.21.4`, Turborepo `2.11.10`, Zod `4.6.7`,
+`58.0.23`, React Native `0.88.1`, React Native Web `0.21.4`, Turborepo `2.11.10`, Zod `4.6.7`,
 TypeScript `6.0.3`, typescript-eslint `8.72.1`, Vitest `5.1.0`, ESLint `9.39.1`, and Prettier `3.6.2`.
 Exact dependency versions
 are committed through package manifests and `pnpm-lock.yaml`.

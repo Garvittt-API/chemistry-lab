@@ -19,6 +19,16 @@ Statuses: `TODO`, `IN_PROGRESS`, `BLOCKED`, `REVIEW`, `DONE`. A task is `DONE` o
 | P01-012 | Phase 01 acceptance review and sign-off | Critical | P01-001..P01-011 | REVIEW |
 
 ## Phase 02 — Design system and web foundation
+| ID | Task | Priority | Depends on | Status |
+|---|---|---:|---|---|
+| P02-001 | Audit Phase 01 and confirm web foundation gates | Critical | P01-012 | DONE |
+| P02-002 | Document visual direction and implement semantic design tokens | High | P02-001 | DONE |
+| P02-003 | Implement responsive shell, navigation and themes | High | P02-002 | DONE |
+| P02-004 | Implement home, explore, subjects, detail, about and support pages | High | P02-003 | DONE |
+| P02-005 | Add accessibility, responsive and interaction coverage | Critical | P02-004 | DONE |
+| P02-006 | Update design, architecture and development documentation | High | P02-005 | DONE |
+| P02-007 | Phase 02 acceptance review and sign-off | Critical | P02-001..P02-006 | REVIEW |
+
 - Define visual language, typography, color tokens, spacing, elevation and motion.
 - Establish responsive application shell, navigation and component primitives.
 - Verify keyboard, screen-reader and contrast requirements.

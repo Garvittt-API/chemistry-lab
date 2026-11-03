@@ -54,6 +54,23 @@ No backend is required for the first local learning prototype unless a validated
 - `packages/experiment-schema` exports the Zod `1.0.0` metadata contract and its TypeScript types.
 - Turbo orchestrates package build, lint, typecheck, test and validation tasks.
 
+## Phase 02 web foundation
+
+The web presentation layer is organized as follows:
+
+```text
+apps/web/
+  app/                    # App Router routes, metadata, loading and error boundaries
+  components/             # Shared shell, UI primitives and real page interactions
+  lib/content.ts          # Explicitly labelled Phase 02 demonstration content
+  lib/utils.ts            # Small presentation helpers
+```
+
+`ThemeProvider` owns the local light/dark preference. CSS semantic tokens remain in one global
+stylesheet so themes and responsive behavior are inspectable without scattering raw values. The
+future laboratory is represented by an integration-boundary component; it does not own scientific
+state or produce readings.
+
 ## Rendering strategy
 - Prefer HTML/SVG for accessible diagrams and simple apparatus.
 - Use Canvas for dense 2D scenes where justified, with accessible textual alternatives.

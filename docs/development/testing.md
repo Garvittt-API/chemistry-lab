@@ -43,3 +43,11 @@ corepack pnpm security:audit
 
 The schema package currently contains the Phase 01 unit tests. They cover a valid draft document,
 unsupported versions and IDs, missing review provenance, and incomplete safety/procedure data.
+
+Phase 02 browser coverage includes:
+
+- Light and dark theme axe scans.
+- Explore, Subjects, About and Settings axe scans.
+- Skip-link and responsive navigation behavior.
+- Explore search/filter interaction.
+- Experiment detail routing and the future laboratory boundary.

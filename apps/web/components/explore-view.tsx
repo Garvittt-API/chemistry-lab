@@ -116,7 +116,8 @@ export function ExploreView() {
       <section aria-labelledby="results-title">
         <div className="results-toolbar">
           <p id="results-title" aria-live="polite">
-            <strong>{filteredExperiments.length}</strong> demonstration records
+            <strong>{filteredExperiments.length}</strong> demonstration{" "}
+            {filteredExperiments.length === 1 ? "record" : "records"}
           </p>
           <div className="sort-field">
             <label htmlFor="sort-order">Sort</label>

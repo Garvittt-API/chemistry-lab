@@ -16,11 +16,21 @@ The detailed system architecture is maintained in `docs/architecture/overview.md
 ## Phase 01 implementation
 
 - Workspace: pnpm `12.16.1` with Turborepo `2.11.10`.
-- Applications: Next.js `16.4.4` web app and Expo `58.0.22` mobile app.
+- Applications: Next.js `16.4.4` web app and Expo `58.0.23` mobile app.
 - Shared package: `@virtual-chemistry-lab/experiment-schema` using Zod `4.6.7`.
 - Quality: TypeScript `6.0.3`, ESLint `9.39.1`, Prettier `3.6.2`, and Vitest `5.1.0`.
 - No simulation-core, experiment-library, UI, backend, database or authentication package exists yet;
   each remains deferred until it has real behavior and a consumer.
+
+## Phase 02 implementation
+
+- Web routes remain in `apps/web/app`; shared web presentation components live in
+  `apps/web/components`; demonstration content lives in `apps/web/lib`.
+- CSS semantic tokens and light/dark themes are centralized in `apps/web/app/global.css`.
+- `lucide-react` provides consistent interface icons; `@axe-core/playwright` provides automated
+  accessibility scans.
+- The future laboratory workspace is an explicit UI integration boundary and does not execute models,
+  calculate readings or create notebook data.
 
 ## Architecture rules
 1. Scientific calculations must not depend on React, DOM, Canvas or Three.js.

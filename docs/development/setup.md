@@ -44,7 +44,7 @@ device, or Expo-compatible client for interactive use.
 
 ## Toolchain policy
 Exact versions are pinned in workspace manifests and the lockfile. Compatibility was checked against
-the installed registry metadata: Next.js `16.4.4` requires Node `>=20.9.0`, Expo `58.0.22` supports
+the installed registry metadata: Next.js `16.4.4` requires Node `>=20.9.0`, Expo `58.0.23` supports
 Node `^22.13.0 || ^24.3.0`, and React Native `0.88.1` supports Node `^22.13.0 || ^24.3.0`.
 
 ## Environment variables

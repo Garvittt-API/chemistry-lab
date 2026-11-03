@@ -23,3 +23,11 @@ Use a modern scientific/editorial interface rather than a game dashboard. A rest
 
 ## Motion
 Motion should communicate state changes, not decorate. Respect reduced-motion settings. Provide pause/reset and avoid flashing effects.
+
+## Phase 02 visual direction
+
+The web foundation uses a scientific editorial composition: strong reading widths, rule-based
+separation, restrained elevation and one measured primary accent. Demonstration content is visually
+distinct from reviewed content through a text badge and status language. Cards are used where they
+support discovery; long-form experiment information uses sections, tables and a persistent index
+instead of an undifferentiated card grid.

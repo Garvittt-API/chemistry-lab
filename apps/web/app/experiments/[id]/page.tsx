@@ -25,9 +25,7 @@ export default async function ExperimentDetailPage({ params }: ExperimentPagePro
       <header className="container detail-header">
         <div>
           <DemoBadge />
-          <p className="eyebrow" style={{ marginTop: "1.25rem" }}>
-            {experiment.discipline}
-          </p>
+          <p className="eyebrow detail-eyebrow">{experiment.discipline}</p>
           <h1>{experiment.title}</h1>
           <p className="detail-summary">
             {experiment.summary} This page demonstrates the information architecture for a future
@@ -136,7 +134,7 @@ export default async function ExperimentDetailPage({ params }: ExperimentPagePro
           <section className="detail-section" id="workspace" aria-labelledby="workspace-title">
             <h2 id="workspace-title">Simulation, observations and calculations</h2>
             <FutureLabPanel />
-            <div className="measurement-empty" style={{ marginTop: "1rem" }}>
+            <div className="measurement-empty measurement-empty-spaced">
               <p>
                 There are no readings, observations or calculations to display. No values have been
                 fabricated for this demonstration.

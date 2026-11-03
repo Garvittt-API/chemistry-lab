@@ -31,3 +31,30 @@ test("supports keyboard navigation and the responsive menu", async ({ page }) =>
   await expect(page.getByRole("navigation", { name: "Mobile navigation" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Explore experiments" }).last()).toBeVisible();
 });
+
+test("filters demonstration content and exposes the future lab boundary", async ({ page }) => {
+  await page.goto("/explore");
+  await expect(page.getByText("3 demonstration records")).toBeVisible();
+
+  await page.getByLabel("Search demonstration content").fill("molecular");
+  await expect(page.getByText("1 demonstration record")).toBeVisible();
+  await expect(page.getByRole("heading", { name: /molecular structure metadata/i })).toBeVisible();
+
+  await page.getByRole("link", { name: "Read layout" }).click();
+  await expect(page).toHaveURL(/\/experiments\/molecular-structure-metadata$/);
+  await expect(
+    page.getByRole("heading", {
+      name: "The laboratory workspace will arrive with reviewed models",
+    }),
+  ).toBeVisible();
+  await expect(page.getByText(/no readings, observations or calculations/i)).toBeVisible();
+});
+
+test("key pages pass the automated accessibility scan", async ({ page }) => {
+  for (const route of ["/explore", "/subjects", "/about", "/settings"]) {
+    await page.goto(route);
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    const accessibilityResults = await new AxeBuilder({ page }).analyze();
+    expect(accessibilityResults.violations, route).toEqual([]);
+  }
+});

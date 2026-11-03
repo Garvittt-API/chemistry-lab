@@ -4,7 +4,7 @@ An open-source, cross-platform virtual chemistry laboratory for school and colle
 long-term product vision includes interactive 2D and 3D experiments, molecular visualization,
 structured practical records, assessments, and offline-capable learning.
 
-> **Project status:** Foundation / Phase 01. This repository is not yet a validated chemistry
+> **Project status:** Foundation / Phase 02. This repository is not yet a validated chemistry
 > simulator. Do not present planned features as implemented.
 
 ## Guiding principles
@@ -18,16 +18,16 @@ structured practical records, assessments, and offline-capable learning.
 
 ## Current scope
 
-Phase 01 establishes product requirements, architecture, repository structure, engineering standards,
-security baseline, and CI. It does not implement experiment simulations or claim scientific
-validation.
+Phase 01 established the product requirements, architecture, repository structure, engineering
+standards, security baseline and CI. Phase 02 adds the responsive web design system and application
+foundation. Neither phase implements experiment simulations or claims scientific validation.
 
-## Phase 01 foundation
+## Current foundation
 
-This repository contains the initial TypeScript monorepo, a minimal Next.js web application, a
-minimal Expo mobile application, and the versioned experiment metadata contract in
-`packages/experiment-schema`. No chemistry simulation, authentication, database, AI tutor, or
-production deployment is included in this phase.
+This repository contains the TypeScript monorepo, responsive Next.js web application foundation,
+minimal Expo mobile application, and versioned experiment metadata contract in
+`packages/experiment-schema`. The web UI uses explicitly labelled demonstration content. No chemistry
+simulation, authentication, database, AI tutor, or production deployment is included.
 
 ## Getting started
 

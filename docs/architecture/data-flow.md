@@ -21,6 +21,13 @@ content and review provenance, rejects unsupported schema versions and malformed
 no executable content fields. The web and mobile scaffolds consume the schema version constant; no
 simulation output or notebook record is produced yet.
 
+## Phase 02 presentation flow
+
+App Router pages consume typed, explicitly labelled demonstration content from `apps/web/lib`.
+Search and filter state remains local to the Explore view. Theme preference is local browser display
+state only and never crosses the content or domain boundary. Detail pages render content sections and
+future integration boundaries without constructing a model, measurement or notebook record.
+
 ## Trust boundaries
 - User-entered values are untrusted.
 - Imported experiment files are untrusted.

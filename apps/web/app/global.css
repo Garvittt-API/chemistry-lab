@@ -883,6 +883,10 @@ html[data-theme="dark"] .button {
   max-width: 15ch;
 }
 
+.detail-eyebrow {
+  margin-top: var(--space-5);
+}
+
 .detail-summary {
   max-width: 48rem;
   margin-bottom: 0;
@@ -1044,6 +1048,10 @@ html[data-theme="dark"] .button {
 .measurement-empty p {
   max-width: 30rem;
   margin-bottom: 0;
+}
+
+.measurement-empty-spaced {
+  margin-top: var(--space-4);
 }
 
 .my-lab-note {

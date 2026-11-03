@@ -14,9 +14,9 @@
 - Long-term scope: broad chemistry curriculum, 2D and 3D simulations
 
 ## Current status
-- Current phase: Phase 01 — Product Foundation, Architecture & Repository
-- Current milestone: 01.1 — Repository and project foundation
-- Overall status: Foundation implemented; project-owner review pending
+- Current phase: Phase 02 — Design System & Web Application Foundation
+- Current milestone: 02.1 — Scientific editorial web foundation
+- Overall status: Phase 02 implementation complete; project-owner review pending
 - Last verified commit: `8bb87bf` (`fix: normalize repository line endings`)
 - Last verification date: 2026-11-03
 
@@ -27,11 +27,12 @@
 - pnpm/Turbo monorepo, web/mobile scaffolds and shared experiment schema implemented.
 - Formatting, lint, typecheck, unit tests, web build, Playwright smoke test and mobile validation passed locally.
 - Clean-clone install, quality checks, web build, mobile validation and dependency audit passed from the committed revision.
+- Phase 02 web shell, semantic design tokens, responsive pages, themes, explicitly labelled demonstration content and accessibility coverage implemented.
 
 ## In progress
-- Complete owner review of ADRs and Phase 01 acceptance.
+- Complete owner review of Phase 01 and Phase 02 ADRs and acceptance evidence.
 - Connect a private remote repository and configure branch protection.
-- Complete project-owner review of the Phase 01 acceptance evidence.
+- Run remote CI after the connected repository receives the Phase 02 changes.
 
 ## Blocked / undecided
 - Final product name.
@@ -48,14 +49,15 @@
 - Roadmap dates are estimates, not commitments.
 
 ## Next actions
-1. Create the private remote repository and protect `main`.
-2. Review and accept the Phase 01 ADRs and acceptance evidence.
-3. Run the CI workflow on the remote repository after it is connected.
+1. Review and accept the Phase 01 and Phase 02 ADRs and acceptance evidence.
+2. Run remote CI after pushing the reviewed commits.
+3. Do not begin Phase 03 until the project owner accepts the Phase 02 gate.
 
 ## Session log
 | Date | Work completed | Tests / evidence | Next step |
 |---|---|---|---|
 | 2026-11-03 | Phase 01 foundation implemented and clean-clone verified | Local checks and clean-clone checks passed; remote CI and owner sign-off pending | Review acceptance evidence and connect remote |
+| 2026-11-03 | Phase 02 web foundation implemented | Typecheck, lint, unit tests, web build, Expo compatibility, Playwright and axe scans passed; remote CI and owner sign-off pending | Review Phase 02 evidence; do not start Phase 03 |
 
 ## Agent hand-off rules
 - Read this file, `TASKS.md`, `ARCHITECTURE.md`, and relevant decision records before changing code.
