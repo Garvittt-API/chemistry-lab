@@ -10,6 +10,9 @@ All notable changes to this project are recorded here. Follow Keep a Changelog c
 - Versioned Zod experiment metadata schema with valid and invalid unit tests.
 - Strict TypeScript, ESLint, Prettier, Vitest, CI workflow, Dependabot configuration and environment conventions.
 
+### Fixed
+- Added repository line-ending attributes so clean Windows clones pass the formatting gate.
+
 ### Not yet implemented
 - Chemistry simulation engine.
 - Experiment content library.

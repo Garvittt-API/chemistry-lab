@@ -17,7 +17,7 @@
 - Current phase: Phase 01 — Product Foundation, Architecture & Repository
 - Current milestone: 01.1 — Repository and project foundation
 - Overall status: Foundation implemented; project-owner review pending
-- Last verified commit: Working tree (no commit created)
+- Last verified commit: `8bb87bf` (`fix: normalize repository line endings`)
 - Last verification date: 2026-11-03
 
 ## Completed
@@ -26,11 +26,12 @@
 - Local project Git boundary initialized without touching the unrelated parent repository.
 - pnpm/Turbo monorepo, web/mobile scaffolds and shared experiment schema implemented.
 - Formatting, lint, typecheck, unit tests, web build, Playwright smoke test and mobile validation passed locally.
+- Clean-clone install, quality checks, web build, mobile validation and dependency audit passed from the committed revision.
 
 ## In progress
 - Complete owner review of ADRs and Phase 01 acceptance.
 - Connect a private remote repository and configure branch protection.
-- Run a clean-clone reproducibility test from a committed revision.
+- Complete project-owner review of the Phase 01 acceptance evidence.
 
 ## Blocked / undecided
 - Final product name.
@@ -48,14 +49,13 @@
 
 ## Next actions
 1. Create the private remote repository and protect `main`.
-2. Commit the Phase 01 foundation and lockfile.
-3. Review and accept the Phase 01 ADRs and acceptance evidence.
-4. Run the clean-clone reproducibility test.
+2. Review and accept the Phase 01 ADRs and acceptance evidence.
+3. Run the CI workflow on the remote repository after it is connected.
 
 ## Session log
 | Date | Work completed | Tests / evidence | Next step |
 |---|---|---|---|
-| 2026-11-03 | Phase 01 foundation implemented | Local checks passed; CI and clean clone unverified; owner review pending | Review acceptance evidence and connect remote |
+| 2026-11-03 | Phase 01 foundation implemented and clean-clone verified | Local checks and clean-clone checks passed; remote CI and owner sign-off pending | Review acceptance evidence and connect remote |
 
 ## Agent hand-off rules
 - Read this file, `TASKS.md`, `ARCHITECTURE.md`, and relevant decision records before changing code.

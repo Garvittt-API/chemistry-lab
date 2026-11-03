@@ -15,7 +15,7 @@ Statuses: `TODO`, `IN_PROGRESS`, `BLOCKED`, `REVIEW`, `DONE`. A task is `DONE` o
 | P01-008 | Add unit-test, typecheck, lint and build scripts | High | P01-004,P01-005 | DONE |
 | P01-009 | Add CI workflow and dependency/security baseline | High | P01-008 | REVIEW |
 | P01-010 | Complete architecture and developer documentation review | High | P01-001 | REVIEW |
-| P01-011 | Run clean-clone reproducibility test | Critical | P01-009 | REVIEW |
+| P01-011 | Run clean-clone reproducibility test | Critical | P01-009 | DONE |
 | P01-012 | Phase 01 acceptance review and sign-off | Critical | P01-001..P01-011 | REVIEW |
 
 ## Phase 02 — Design system and web foundation
