@@ -5,7 +5,7 @@ Statuses: `TODO`, `IN_PROGRESS`, `BLOCKED`, `REVIEW`, `DONE`. A task is `DONE` o
 ## Phase 01 — Foundation
 | ID | Task | Priority | Depends on | Status |
 |---|---|---:|---|---|
-| P01-001 | Create private Git repository and protect `main` | Critical | — | BLOCKED |
+| P01-001 | Create private Git repository and protect `main` | Critical | — | REVIEW |
 | P01-002 | Confirm Node/pnpm versions compatible with selected Next.js, Expo and Turborepo releases | Critical | P01-001 | DONE |
 | P01-003 | Initialize pnpm/Turborepo workspace | High | P01-002 | DONE |
 | P01-004 | Scaffold minimal web app and prove production build | High | P01-003 | DONE |
