@@ -1,0 +1,98 @@
+{
+  "registryVersion": "1.0.0",
+  "curricula": [
+    {
+      "id": "cbse-chemistry-2025-26",
+      "country": "IN",
+      "boardOrInstitution": "Central Board of Secondary Education (CBSE)",
+      "name": "Senior School Chemistry (Classes XI-XII)",
+      "subject": "Chemistry",
+      "curriculumVersion": "2025-26",
+      "applicableAcademicYears": ["2025-2026"],
+      "academicLevels": ["school", "higher-secondary"],
+      "source": {
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26 (Circular Acad-14/2025)",
+        "publisher": "Central Board of Secondary Education",
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "documentVersion": "Acad-14/2025",
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "verified_2026-11-05",
+        "notes": "Official circular confirming release of the 2025-26 curriculum; the detailed curriculum document is published at https://cbseacademic.nic.in/curriculum_2026.html. Unit and practical wording in curriculum topics below is described at chapter/component-name granularity and is marked proposed_pending_verification on experiment mappings until a reviewer checks the subject PDF directly."
+      },
+      "topics": [
+        {
+          "id": "cbse-11-basic-concepts",
+          "label": "Class XI: Some Basic Concepts of Chemistry",
+          "syllabusReference": "Class XI Chemistry, unit 'Some Basic Concepts of Chemistry' (mole concept, concentration, stoichiometry)",
+          "disciplineIds": ["general-chemistry"]
+        },
+        {
+          "id": "cbse-11-chemical-bonding",
+          "label": "Class XI: Chemical Bonding and Molecular Structure",
+          "syllabusReference": "Class XI Chemistry, unit 'Chemical Bonding and Molecular Structure' (VSEPR theory, molecular shape)",
+          "disciplineIds": ["general-chemistry", "physical-chemistry"]
+        },
+        {
+          "id": "cbse-11-equilibrium",
+          "label": "Class XI: Equilibrium",
+          "syllabusReference": "Class XI Chemistry, unit 'Equilibrium' (chemical equilibrium, ionic equilibrium, pH, indicators)",
+          "disciplineIds": ["physical-chemistry", "general-chemistry"]
+        },
+        {
+          "id": "cbse-12-solutions",
+          "label": "Class XII: Solutions",
+          "syllabusReference": "Class XII Chemistry, unit 'Solutions' (concentration of solutions, solubility)",
+          "disciplineIds": ["general-chemistry", "physical-chemistry"]
+        },
+        {
+          "id": "cbse-12-electrochemistry",
+          "label": "Class XII: Electrochemistry",
+          "syllabusReference": "Class XII Chemistry, unit 'Electrochemistry' (galvanic cells, electrode potential, Nernst equation)",
+          "disciplineIds": ["electrochemistry", "physical-chemistry"]
+        },
+        {
+          "id": "cbse-12-kinetics",
+          "label": "Class XII: Chemical Kinetics",
+          "syllabusReference": "Class XII Chemistry, unit 'Chemical Kinetics' (rate of reaction, factors affecting rates)",
+          "disciplineIds": ["physical-chemistry"]
+        },
+        {
+          "id": "cbse-practical-solution-preparation",
+          "label": "Chemistry practical: solution preparation and laboratory techniques",
+          "syllabusReference": "Chemistry practical components (Classes XI-XII): basic laboratory techniques and preparation of solutions",
+          "disciplineIds": ["general-chemistry", "analytical-chemistry"]
+        },
+        {
+          "id": "cbse-practical-volumetric-analysis",
+          "label": "Chemistry practical: volumetric analysis",
+          "syllabusReference": "Class XII Chemistry practical components: volumetric analysis (acid-base titrations and related exercises)",
+          "disciplineIds": ["analytical-chemistry"]
+        },
+        {
+          "id": "cbse-practical-chromatography",
+          "label": "Chemistry practical: chromatography",
+          "syllabusReference": "Class XII Chemistry practical components: chromatography-based separation experiments",
+          "disciplineIds": ["analytical-chemistry"]
+        },
+        {
+          "id": "cbse-practical-kinetics",
+          "label": "Chemistry practical: chemical kinetics experiments",
+          "syllabusReference": "Class XII Chemistry practical components: experiments studying rate of reaction",
+          "disciplineIds": ["physical-chemistry"]
+        },
+        {
+          "id": "cbse-practical-salt-analysis",
+          "label": "Chemistry practical: qualitative salt analysis",
+          "syllabusReference": "Class XII Chemistry practical components: qualitative analysis of salts and identification of ions",
+          "disciplineIds": ["inorganic-chemistry", "analytical-chemistry"]
+        },
+        {
+          "id": "cbse-practical-electrochemistry",
+          "label": "Chemistry practical: electrochemistry experiments",
+          "syllabusReference": "Class XII Chemistry practical components: electrochemistry experiments",
+          "disciplineIds": ["electrochemistry"]
+        }
+      ]
+    }
+  ]
+}

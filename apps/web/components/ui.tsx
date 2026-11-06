@@ -1,11 +1,21 @@
 import { ArrowRight, Clock3, CircleAlert, Info, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
-import type { DemoExperiment, Subject } from "../lib/content";
+import type { ExperimentCardModel, SubjectModel } from "../lib/content";
 import { classNames } from "../lib/utils";
 
-export function DemoBadge() {
-  return <span className="badge badge-demo">Demonstration content</span>;
+export function ContentStatusBadge({
+  scientificReviewStatus,
+  integrityLabel,
+}: Readonly<{ scientificReviewStatus: string; integrityLabel: string }>) {
+  return (
+    <span className="badge badge-muted">
+      {scientificReviewStatus === "draft"
+        ? "Draft — pending scientific review"
+        : scientificReviewStatus}
+      {integrityLabel === "pending_scientific_review" ? " · Not yet scientifically validated" : ""}
+    </span>
+  );
 }
 
 export function SectionHeading({
@@ -53,43 +63,58 @@ export function PageIntro({
   );
 }
 
-export function ExperimentCard({ experiment }: Readonly<{ experiment: DemoExperiment }>) {
+export function ExperimentCard({
+  experiment,
+  index,
+}: Readonly<{ experiment: ExperimentCardModel; index?: number }>) {
   return (
     <article className="experiment-card">
       <div className="card-topline">
-        <span className="card-index" aria-hidden="true">
-          01
-        </span>
-        <DemoBadge />
+        {typeof index === "number" ? (
+          <span className="card-index" aria-hidden="true">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        ) : (
+          <span />
+        )}
+        <ContentStatusBadge
+          scientificReviewStatus={experiment.scientificReviewStatus}
+          integrityLabel={experiment.integrityLabel}
+        />
       </div>
       <div className="card-content">
         <p className="card-meta">
-          {experiment.discipline} · {experiment.level}
+          {experiment.disciplineLabel} · {experiment.levelLabels.join(", ")}
         </p>
         <h3>{experiment.title}</h3>
-        <p>{experiment.summary}</p>
+        <p>{experiment.shortDescription}</p>
       </div>
       <div className="card-footer">
         <span className="card-meta card-duration">
           <Clock3 size={15} aria-hidden="true" />
-          {experiment.duration}
+          About {experiment.estimatedDurationMinutes} min
         </span>
-        <Link className="text-link" href={`/experiments/${experiment.id}`}>
-          Read layout <ArrowRight size={16} aria-hidden="true" />
+        <Link className="text-link" href={`/experiments/${experiment.slug}`}>
+          Read experiment <ArrowRight size={16} aria-hidden="true" />
         </Link>
       </div>
     </article>
   );
 }
 
-export function SubjectCard({ subject }: Readonly<{ subject: Subject }>) {
+export function SubjectCard({ subject }: Readonly<{ subject: SubjectModel }>) {
   return (
     <article className={classNames("subject-card", `subject-card-${subject.accent}`)}>
       <div className="subject-card-mark" aria-hidden="true" />
-      <p className="card-meta">Chemistry subject</p>
-      <h3>{subject.name}</h3>
+      <p className="card-meta">Chemistry discipline</p>
+      <h3>{subject.label}</h3>
       <p>{subject.description}</p>
-      <Link className="text-link" href={`/explore?discipline=${encodeURIComponent(subject.name)}`}>
+      <p className="card-meta">
+        {subject.publishedExperimentCount === 0
+          ? "No published experiments yet"
+          : `${subject.publishedExperimentCount} published ${subject.publishedExperimentCount === 1 ? "experiment" : "experiments"}`}
+      </p>
+      <Link className="text-link" href={`/explore?discipline=${encodeURIComponent(subject.id)}`}>
         Browse topic <ArrowRight size={16} aria-hidden="true" />
       </Link>
     </article>
@@ -125,7 +150,8 @@ export function FutureLabPanel() {
         <h2 id="future-lab-title">The laboratory workspace will arrive with reviewed models</h2>
         <p>
           This area is reserved for apparatus views, permitted controls, readable measurements and
-          explanations. Phase 02 deliberately provides no simulated values or interactive chemistry.
+          explanations. No simulated values are presented as measurements: every model, when it
+          arrives, will label its output as model output.
         </p>
       </div>
       <span className="badge badge-muted">Planned for later phase</span>

@@ -1,53 +1,31 @@
-"use client";
-
 import { Filter, Search } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
 
+import type { ExploreFilters, ExperimentCardModel } from "../lib/content";
 import {
-  demoExperiments,
-  type ExperimentDifficulty,
-  type ExperimentDiscipline,
-  type ExperimentLevel,
+  getDifficultyFacetOptions,
+  getDisciplineFacetOptions,
+  getLevelFacetOptions,
 } from "../lib/content";
-import { ExperimentCard, EmptyState } from "./ui";
+import { EmptyState, ExperimentCard } from "./ui";
 
-type SortOrder = "relevance" | "title" | "duration";
-
-export function ExploreView() {
-  const [query, setQuery] = useState("");
-  const [discipline, setDiscipline] = useState<ExperimentDiscipline | "all">("all");
-  const [level, setLevel] = useState<ExperimentLevel | "all">("all");
-  const [difficulty, setDifficulty] = useState<ExperimentDifficulty | "all">("all");
-  const [sortOrder, setSortOrder] = useState<SortOrder>("relevance");
-
-  useEffect(() => {
-    const requestedDiscipline = new URLSearchParams(window.location.search).get("discipline");
-    if (
-      requestedDiscipline &&
-      demoExperiments.some((item) => item.discipline === requestedDiscipline)
-    ) {
-      setDiscipline(requestedDiscipline as ExperimentDiscipline);
-    }
-  }, []);
-
-  const filteredExperiments = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    const matching = demoExperiments.filter((experiment) => {
-      const matchesQuery =
-        !normalizedQuery ||
-        `${experiment.title} ${experiment.summary}`.toLowerCase().includes(normalizedQuery);
-      const matchesDiscipline = discipline === "all" || experiment.discipline === discipline;
-      const matchesLevel = level === "all" || experiment.level === level;
-      const matchesDifficulty = difficulty === "all" || experiment.difficulty === difficulty;
-      return matchesQuery && matchesDiscipline && matchesLevel && matchesDifficulty;
-    });
-
-    return [...matching].sort((first, second) => {
-      if (sortOrder === "title") return first.title.localeCompare(second.title);
-      if (sortOrder === "duration") return first.duration.localeCompare(second.duration);
-      return 0;
-    });
-  }, [difficulty, discipline, level, query, sortOrder]);
+/**
+ * Server-rendered discovery surface. Filtering and search run through the
+ * experiment-library query engine (see lib/content.ts); this component only
+ * renders the form and results. Results are real — an empty result set shows
+ * the empty state rather than placeholder content.
+ */
+export function ExploreView({
+  filters,
+  results,
+  errored = false,
+}: Readonly<{
+  filters: ExploreFilters;
+  results: ExperimentCardModel[];
+  errored?: boolean;
+}>) {
+  const disciplineOptions = getDisciplineFacetOptions();
+  const levelOptions = getLevelFacetOptions();
+  const difficultyOptions = getDifficultyFacetOptions();
 
   return (
     <div className="container explore-layout">
@@ -55,95 +33,124 @@ export function ExploreView() {
         <h2 id="filter-title">
           <Filter size={18} aria-hidden="true" /> Refine the view
         </h2>
-        <div className="filter-field filter-field-search">
-          <label htmlFor="experiment-search">Search demonstration content</label>
-          <div className="search-field">
-            <Search size={17} aria-hidden="true" />
-            <input
-              className="input"
-              id="experiment-search"
-              type="search"
-              placeholder="Try a concept or topic"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-            />
+        <form method="get" action="/explore">
+          <div className="filter-field filter-field-search">
+            <label htmlFor="experiment-search">Search published experiments</label>
+            <div className="search-field">
+              <Search size={17} aria-hidden="true" />
+              <input
+                className="input"
+                id="experiment-search"
+                name="q"
+                type="search"
+                placeholder="Try a concept or topic"
+                defaultValue={filters.query ?? ""}
+              />
+            </div>
           </div>
-        </div>
-        <div className="filter-field">
-          <label htmlFor="discipline-filter">Discipline</label>
-          <select
-            className="select"
-            id="discipline-filter"
-            value={discipline}
-            onChange={(event) => setDiscipline(event.target.value as ExperimentDiscipline | "all")}
-          >
-            <option value="all">All disciplines</option>
-            <option>General Chemistry</option>
-            <option>Analytical Chemistry</option>
-            <option>Organic Chemistry</option>
-            <option>Physical Chemistry</option>
-          </select>
-        </div>
-        <div className="filter-field">
-          <label htmlFor="level-filter">Level</label>
-          <select
-            className="select"
-            id="level-filter"
-            value={level}
-            onChange={(event) => setLevel(event.target.value as ExperimentLevel | "all")}
-          >
-            <option value="all">All levels</option>
-            <option>Secondary</option>
-            <option>Upper-secondary</option>
-            <option>Undergraduate</option>
-          </select>
-        </div>
-        <div className="filter-field">
-          <label htmlFor="difficulty-filter">Difficulty</label>
-          <select
-            className="select"
-            id="difficulty-filter"
-            value={difficulty}
-            onChange={(event) => setDifficulty(event.target.value as ExperimentDifficulty | "all")}
-          >
-            <option value="all">All difficulties</option>
-            <option>Introductory</option>
-            <option>Intermediate</option>
-          </select>
-        </div>
+          <div className="filter-field">
+            <label htmlFor="discipline-filter">Discipline</label>
+            <select
+              className="select"
+              id="discipline-filter"
+              name="discipline"
+              defaultValue={filters.disciplineId ?? "all"}
+            >
+              <option value="all">All disciplines</option>
+              {disciplineOptions.map((option) => (
+                <option key={option.id} value={option.id}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="filter-field">
+            <label htmlFor="level-filter">Level</label>
+            <select
+              className="select"
+              id="level-filter"
+              name="level"
+              defaultValue={filters.levelId ?? "all"}
+            >
+              <option value="all">All levels</option>
+              {levelOptions.map((option) => (
+                <option key={option.id} value={option.id}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="filter-field">
+            <label htmlFor="difficulty-filter">Difficulty</label>
+            <select
+              className="select"
+              id="difficulty-filter"
+              name="difficulty"
+              defaultValue={filters.difficulty ?? "all"}
+            >
+              <option value="all">All difficulties</option>
+              {difficultyOptions.map((option) => (
+                <option key={option.id} value={option.id}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="filter-field">
+            <label htmlFor="sort-filter">Sort by</label>
+            <select
+              className="select"
+              id="sort-filter"
+              name="sort"
+              defaultValue={filters.sort ?? "relevance"}
+            >
+              <option value="relevance">Relevance</option>
+              <option value="title">Title</option>
+              <option value="duration">Duration</option>
+              <option value="difficulty">Difficulty</option>
+              <option value="updated">Recently updated</option>
+            </select>
+          </div>
+          <button className="button button-secondary" type="submit">
+            Apply filters
+          </button>
+        </form>
       </aside>
 
       <section aria-labelledby="results-title">
         <div className="results-toolbar">
           <p id="results-title" aria-live="polite">
-            <strong>{filteredExperiments.length}</strong> demonstration{" "}
-            {filteredExperiments.length === 1 ? "record" : "records"}
+            <strong>{results.length}</strong> published{" "}
+            {results.length === 1 ? "experiment" : "experiments"}
+            {filters.query ? (
+              <>
+                {" "}
+                matching <strong>“{filters.query}”</strong>
+              </>
+            ) : null}
           </p>
-          <div className="sort-field">
-            <label htmlFor="sort-order">Sort</label>
-            <select
-              className="select"
-              id="sort-order"
-              value={sortOrder}
-              onChange={(event) => setSortOrder(event.target.value as SortOrder)}
-            >
-              <option value="relevance">Relevance</option>
-              <option value="title">Title</option>
-              <option value="duration">Reading time</option>
-            </select>
-          </div>
+          <p className="card-meta">
+            Every record is authored for this project and pending independent scientific review.
+          </p>
         </div>
-        {filteredExperiments.length > 0 ? (
-          <div className="results-grid">
-            {filteredExperiments.map((experiment) => (
-              <ExperimentCard key={experiment.id} experiment={experiment} />
+
+        {errored ? (
+          <EmptyState
+            icon="alert"
+            title="The experiment search could not be completed"
+            description="Something went wrong while querying the experiment library. Please reload the page or try again with simpler filters. No placeholder results are being shown."
+          />
+        ) : results.length === 0 ? (
+          <EmptyState
+            title="No published experiments match these filters"
+            description="Try removing a filter or searching for a broader concept such as “solutions”, “titration” or “equilibrium”. The library is young and grows with each reviewed addition."
+          />
+        ) : (
+          <div className="card-grid">
+            {results.map((experiment, index) => (
+              <ExperimentCard key={experiment.id} experiment={experiment} index={index} />
             ))}
           </div>
-        ) : (
-          <EmptyState
-            title="No demonstration records match"
-            description="Try removing a filter or searching for a broader topic. Reviewed experiment content will be added in a later phase."
-          />
         )}
       </section>
     </div>

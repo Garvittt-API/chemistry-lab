@@ -1,0 +1,645 @@
+{
+  "identity": {
+    "id": "standard-solution-preparation",
+    "slug": "standard-solution-preparation",
+    "title": "Preparing a Standard Solution",
+    "shortDescription": "Prepare a solution of known concentration from a solid primary standard using a volumetric flask, and understand where accuracy is won or lost.",
+    "fullDescription": "A first quantitative laboratory activity: convert a target concentration into a mass, weigh a primary standard (anhydrous sodium carbonate), dissolve and transfer it without loss, and make the solution up to the graduation mark. The experiment develops the mole concept, concentration units and the difference between accuracy and precision. It is written for supervised school or early higher-secondary use with dilute, low-hazard materials.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "general-chemistry",
+    "subdisciplineIds": [
+      "general-chemistry-laboratory-techniques",
+      "general-chemistry-quantitative-foundations"
+    ],
+    "topicIds": [
+      "solutions-and-concentration",
+      "stoichiometry-and-mole-concept",
+      "laboratory-techniques"
+    ],
+    "educationalLevels": ["beginner", "school", "higher-secondary"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-practical-solution-preparation",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Aligns with the practical component covering basic laboratory techniques and preparation of solutions. Mapping proposed; documentary verification against the CBSE subject PDF is pending.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      },
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-11-basic-concepts",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Supports the mole-concept and concentration work of the Class XI unit 'Some Basic Concepts of Chemistry'. Mapping proposed pending documentary verification.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "introductory",
+    "estimatedDurationMinutes": 45,
+    "prerequisites": [
+      "Familiarity with the mole concept and molar mass.",
+      "Basic laboratory safety rules and use of a balance."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Convert a target concentration and volume into the required mass of solute.",
+      "Use a volumetric flask correctly to prepare a solution of known concentration.",
+      "Identify the main sources of error in gravimetric solution preparation."
+    ],
+    "expectedCompetencies": [
+      "Reading a balance to the precision it provides and no further.",
+      "Quantitative transfer between vessels without loss of material.",
+      "Recording measurements with correct units and significant figures."
+    ],
+    "learningOutcomes": [
+      "Given a target molarity and volume, calculate and measure the mass of solute needed.",
+      "Prepare 100 mL of a 0.10 mol/L sodium carbonate solution and state its concentration with justified precision.",
+      "Explain why the final volume, not the volume of water added, defines the concentration."
+    ],
+    "theory": {
+      "overview": "A standard solution has a concentration known accurately from the mass of pure solute and the final volume of solution. Preparing one is an exercise in the mole concept: the measured mass of a pure solid fixes the amount of substance, and the volumetric flask fixes the total volume of solution. The reasoning is quantitative but entirely elementary, which makes it a good first activity for learners meeting practical chemistry.",
+      "sections": [
+        {
+          "heading": "From mass to amount of substance",
+          "body": "The amount of substance n (in moles) contained in a measured mass m is n = m / M, where M is the molar mass of the substance in g/mol. For anhydrous sodium carbonate (Na2CO3) the molar mass is about 105.99 g/mol. Because the relationship is exact arithmetic on measured quantities, the quality of the result depends on the quality of the mass measurement and the purity of the solid, not on any chemical reaction.",
+          "sourceRefIds": ["ref-ncert-class11-unit1"]
+        },
+        {
+          "heading": "Concentration of a solution",
+          "body": "Molar concentration (molarity) c is the amount of solute divided by the total volume of solution: c = n / V, with V in litres. A 0.10 mol/L solution contains 0.10 mol of solute in every litre of finished solution. The solute is dissolved first in less than the final volume of solvent and the solution is then made up to the mark; adding the full volume of water directly would make the total volume larger than intended and the concentration too low.",
+          "sourceRefIds": ["ref-ncert-class12-part1", "ref-ncert-class11-unit1"]
+        },
+        {
+          "heading": "Primary standards",
+          "body": "A primary standard is a pure, stable solid whose composition is known well enough that weighing it fixes the amount of substance directly. Anhydrous sodium carbonate is a classic acid-base primary standard: it is stable in air when dry, available in high purity, and has a convenient molar mass. Its use here is as a well-characterised weighing exercise; in the titration experiment it serves as the standard for acid standardization.",
+          "sourceRefIds": ["ref-ncert-class12-part1", "ref-ncert-class11-part2"]
+        }
+      ],
+      "scientificBackground": "Accuracy in gravimetric preparation is limited by balance calibration, completeness of transfer, and the final volume setting. A volumetric flask is calibrated to contain a known total volume at a stated temperature when the meniscus rests on the graduation mark; the flask's tolerance (for example, 100.0 mL ± 0.1 mL for a Class A 100 mL flask) is the floor of achievable accuracy.",
+      "concepts": [
+        "mole concept",
+        "molar mass",
+        "molar concentration",
+        "primary standard",
+        "accuracy versus precision",
+        "significant figures"
+      ],
+      "equations": [
+        {
+          "id": "eq-molar-mass-amount",
+          "expression": "n = m / M",
+          "displayForm": "n = m / M",
+          "description": "Amount of substance from measured mass and molar mass.",
+          "variables": [
+            { "symbol": "n", "meaning": "amount of substance", "unit": "mol" },
+            { "symbol": "m", "meaning": "measured mass of solute", "unit": "g" },
+            { "symbol": "M", "meaning": "molar mass of the solute", "unit": "g/mol" }
+          ],
+          "applicableConditions": ["Solute is a pure, dry solid of known formula."],
+          "assumptions": [
+            "The sample composition matches the stated formula (for example, anhydrous Na2CO3 without absorbed water)."
+          ],
+          "sourceRefIds": ["ref-ncert-class11-unit1"],
+          "kind": "theoretical_law"
+        },
+        {
+          "id": "eq-molarity",
+          "expression": "c = n / V",
+          "displayForm": "c = n / V",
+          "description": "Definition of molar concentration of a solution.",
+          "variables": [
+            { "symbol": "c", "meaning": "molar concentration", "unit": "mol/L" },
+            { "symbol": "n", "meaning": "amount of solute", "unit": "mol" },
+            { "symbol": "V", "meaning": "total volume of solution", "unit": "L" }
+          ],
+          "applicableConditions": [
+            "Homogeneous solution; volume taken as the total solution volume at the stated temperature."
+          ],
+          "assumptions": [
+            "Volume changes on dissolving are absorbed into the final made-up volume."
+          ],
+          "sourceRefIds": ["ref-ncert-class12-part1", "ref-ncert-class11-unit1"],
+          "kind": "definition"
+        }
+      ],
+      "definitions": [
+        {
+          "id": "def-standard-solution",
+          "term": "Standard solution",
+          "definition": "A solution whose concentration is known accurately, established either by weighing a pure standard or by comparison with one.",
+          "sourceRefIds": ["ref-ncert-class12-part1"]
+        },
+        {
+          "id": "def-primary-standard",
+          "term": "Primary standard",
+          "definition": "A substance of known high purity and stability whose measured mass directly determines the amount of substance used.",
+          "sourceRefIds": ["ref-ncert-class12-part1"]
+        },
+        {
+          "id": "def-volumetric-flask",
+          "term": "Volumetric flask",
+          "definition": "A flask calibrated to contain one stated total volume of solution at a stated temperature when filled to its graduation mark.",
+          "sourceRefIds": ["ref-ncert-class12-part1"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-balance-001",
+        "name": "Analytical or top-pan balance",
+        "specification": "Readability 0.001 g or better (0.0001 g preferred)",
+        "quantity": "1",
+        "purpose": "Weighing the primary standard",
+        "alternatives": ["A well-calibrated electronic balance of stated readability"]
+      },
+      {
+        "id": "eqp-volumetric-flask-100",
+        "name": "Volumetric flask",
+        "specification": "100 mL, Class A preferred",
+        "quantity": "1",
+        "purpose": "Making the solution up to a known total volume",
+        "alternatives": ["A 250 mL volumetric flask with amounts scaled by the same calculation"]
+      },
+      {
+        "id": "eqp-beaker-150",
+        "name": "Beaker",
+        "specification": "150 mL",
+        "quantity": "1",
+        "purpose": "Initial dissolving of the solid",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-wash-bottle",
+        "name": "Wash bottle",
+        "specification": "Filled with distilled or deionised water",
+        "quantity": "1",
+        "purpose": "Rinsing and quantitative transfer",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-funnel-small",
+        "name": "Funnel",
+        "specification": "Small, clean",
+        "quantity": "1",
+        "purpose": "Transferring solution into the flask without loss",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-spatula",
+        "name": "Spatula",
+        "specification": "Clean, dry",
+        "quantity": "1",
+        "purpose": "Handling the solid",
+        "alternatives": []
+      }
+    ],
+    "chemicals": [
+      {
+        "id": "chem-sodium-carbonate",
+        "name": "Sodium carbonate (anhydrous)",
+        "formulaOrDescription": "Na2CO3, primary standard grade, dried as instructed",
+        "category": "chemical",
+        "amount": "About 1.1 g per 100 mL of 0.10 mol/L solution",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "Molar mass 105.99 g/mol. Mild irritant to eyes and respiratory tract; avoid inhaling dust."
+      },
+      {
+        "id": "chem-distilled-water",
+        "name": "Distilled or deionised water",
+        "formulaOrDescription": "H2O",
+        "category": "other",
+        "amount": "About 150 mL per student preparation",
+        "identifiers": {},
+        "hazardKinds": [],
+        "notes": "For dissolving and making up to volume."
+      }
+    ],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "low",
+    "riskRationale": "Dilute, low-hazard solid and water only; no heating, no corrosive reagents and no reaction steps. The main practical hazards are ordinary laboratory ones: glassware breakage and inhaling carbonate dust.",
+    "hazards": [
+      {
+        "kind": "irritant",
+        "statement": "Sodium carbonate powder is irritating to eyes and to the respiratory tract; avoid inhaling dust and avoid contact with eyes.",
+        "appliesTo": ["chem-sodium-carbonate"],
+        "evidence": {
+          "basis": "requires_review",
+          "notes": "Standard laboratory irritant classification for carbonate powders; specific GHS codes must be confirmed against the institutional safety data sheet before scientific review."
+        }
+      },
+      {
+        "kind": "glassware_cuts",
+        "statement": "Volumetric glassware can break if handled roughly or clamped incorrectly; inspect for chips and handle over the bench, not over the floor.",
+        "appliesTo": ["eqp-volumetric-flask-100", "eqp-beaker-150"],
+        "evidence": {
+          "basis": "common_laboratory_practice",
+          "referenceId": "ref-ncert-class12-part1",
+          "notes": "General laboratory practice guidance for school-level work with glass apparatus."
+        }
+      }
+    ],
+    "protectiveEquipment": [
+      "Safety spectacles.",
+      "Laboratory coat or apron.",
+      "Tie long hair back; closed shoes required."
+    ],
+    "disposal": [
+      "Dilute sodium carbonate solutions may normally be washed to drain with plenty of water, subject to the supervising institution's policy.",
+      "Dispose of any excess solid in the container designated by the supervising institution; do not return it to the stock bottle."
+    ],
+    "supervision": "adult_supervision_required",
+    "restrictedOperations": [
+      "No heating is required or described in this experiment.",
+      "Do not taste or ingest any material; this is a laboratory activity, not a food preparation."
+    ],
+    "emergencyGuidance": [
+      "Eye contact: rinse with plenty of water and inform the supervising educator.",
+      "Spilled solid: brush up carefully without raising dust; report broken glassware to the supervisor."
+    ],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Calculate the required mass, weigh the solid, dissolve and transfer it quantitatively, then make the solution up to the graduation mark. Work under supervision and record every measurement with its unit and precision.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Calculate the mass required",
+        "instructions": "For 100.0 mL of 0.10 mol/L Na2CO3 solution, calculate the mass of anhydrous sodium carbonate required using n = c x V and m = n x M. Record the calculated mass before weighing anything.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [
+          "Use the molar mass of the anhydrous solid (105.99 g/mol); the pentahydrate would give a different answer."
+        ],
+        "expectedObservations": ["The calculated mass is about 1.06 g for the stated target."],
+        "explanatoryNotes": [
+          "This step turns the chemistry into an arithmetic check; see the calculations section for the worked example."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Weigh the solid",
+        "instructions": "Weigh the calculated mass of dry anhydrous sodium carbonate into a clean, dry beaker using the balance. Record the mass actually taken to the precision the balance provides.",
+        "equipmentIds": ["eqp-balance-001", "eqp-beaker-150", "eqp-spatula"],
+        "chemicalIds": ["chem-sodium-carbonate"],
+        "precautions": [
+          "Avoid inhaling dust; do not handle the solid with bare hands.",
+          "Tare the beaker; do not place chemicals directly on the balance pan."
+        ],
+        "expectedObservations": [
+          "The measured mass is close to the calculated value; any difference is recorded, not hidden."
+        ],
+        "explanatoryNotes": [
+          "The measured mass, not the calculated one, is used in the final concentration statement."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Dissolve the solid",
+        "instructions": "Add about 50 mL of distilled water to the beaker and stir gently until the solid dissolves completely.",
+        "equipmentIds": ["eqp-beaker-150"],
+        "chemicalIds": ["chem-sodium-carbonate", "chem-distilled-water"],
+        "precautions": ["Do not heat; the solid dissolves readily in cold water."],
+        "expectedObservations": [
+          "A clear, colourless solution forms with no undissolved solid remaining."
+        ],
+        "explanatoryNotes": [
+          "Complete dissolution matters: any solid left behind would make the final concentration too low."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Transfer quantitatively",
+        "instructions": "Pour the solution through the funnel into the volumetric flask. Rinse the beaker and funnel with small portions of distilled water and add each rinse to the flask, repeating until all the solute is transferred.",
+        "equipmentIds": ["eqp-volumetric-flask-100", "eqp-funnel-small", "eqp-wash-bottle"],
+        "chemicalIds": ["chem-distilled-water"],
+        "precautions": [
+          "Handle the flask over the bench.",
+          "Check that no droplets remain in the beaker."
+        ],
+        "expectedObservations": [
+          "The rinsings are colourless and clear; together they contain the last traces of solute."
+        ],
+        "explanatoryNotes": [
+          "Quantitative transfer is the single most important technique in this experiment."
+        ]
+      },
+      {
+        "stepId": "step-5",
+        "title": "Make up to the mark",
+        "instructions": "Add distilled water until the meniscus rests exactly on the graduation mark, adding the final few millilitres drop by drop with the wash bottle or a dropper. Stopper the flask and invert it at least ten times to mix.",
+        "equipmentIds": ["eqp-volumetric-flask-100", "eqp-wash-bottle"],
+        "chemicalIds": ["chem-distilled-water"],
+        "precautions": [
+          "Read the meniscus at eye level to avoid parallax error.",
+          "Do not overfill; liquid above the mark cannot be corrected without starting again."
+        ],
+        "expectedObservations": [
+          "The solution is uniform after mixing, with no visible density or colour streaks."
+        ],
+        "explanatoryNotes": [
+          "The total solution volume is now 100.0 mL (within the flask's tolerance), whatever volume of water was added."
+        ]
+      },
+      {
+        "stepId": "step-6",
+        "title": "Label and record",
+        "instructions": "Label the flask with the contents, the concentration with its units, the date and your name. Record the measured mass, the calculated amount of substance and the stated concentration.",
+        "equipmentIds": ["eqp-volumetric-flask-100"],
+        "chemicalIds": [],
+        "precautions": ["Never store a solution in an unlabelled vessel."],
+        "expectedObservations": [
+          "An unlabelled solution is treated as unknown and is discarded by laboratory convention."
+        ],
+        "explanatoryNotes": [
+          "Good records are part of the result: a standard solution without a provenance note is just a liquid."
+        ]
+      }
+    ],
+    "troubleshooting": [
+      "If solid remains undissolved, stir longer; do not decant the solution away from undissolved solid.",
+      "If the meniscus passes above the mark, the preparation must be repeated; do not pipette liquid out to 'correct' a volumetric flask.",
+      "If the balance reading drifts, re-zero the balance and reweigh rather than accepting a drifting value."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-mass-na2co3",
+          "label": "Mass of anhydrous sodium carbonate taken",
+          "kind": "mass",
+          "unit": "g",
+          "method": "Weigh by difference into a dry beaker on the balance; record the balance reading with its full displayed precision.",
+          "provenance": "theoretical",
+          "sourceRefIds": ["ref-ncert-class11-unit1"],
+          "displayPrecision": "Match the balance readability (for example 0.001 g)."
+        },
+        {
+          "id": "obs-final-volume",
+          "label": "Total volume of solution prepared",
+          "kind": "volume",
+          "unit": "mL",
+          "method": "Set by the volumetric flask graduation (100.0 mL nominal); record the flask's stated tolerance from its label.",
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class12-part1"],
+          "displayPrecision": "One decimal place (for example 100.0 mL)."
+        },
+        {
+          "id": "obs-concentration-prepared",
+          "label": "Concentration of the prepared solution",
+          "kind": "other",
+          "unit": "mol/L",
+          "method": "Calculated from the measured mass and the flask volume using the equations in this record; not independently measured in this experiment.",
+          "provenance": "theoretical",
+          "sourceRefIds": ["ref-ncert-class11-unit1"],
+          "displayPrecision": "Two significant figures unless the mass measurement supports more."
+        }
+      ],
+      "qualitativePrompts": [
+        "Was the solid completely free of visible moisture before weighing?",
+        "Did the final solution appear clear and colourless?",
+        "How close was the measured mass to your calculated value, and what does the difference tell you?"
+      ],
+      "errorSources": [
+        "Incomplete transfer of solid or solution between vessels lowers the concentration.",
+        "Overfilling the flask past the graduation mark raises the volume and lowers the concentration.",
+        "Reading the meniscus away from eye level introduces parallax error.",
+        "Using hydrated instead of anhydrous sodium carbonate changes the effective molar mass.",
+        "Balance calibration error scales directly into the result."
+      ],
+      "interpretationGuidance": [
+        "Compare the measured mass with the calculated mass before judging the final result; most error starts at the balance.",
+        "State the concentration using the significant figures the mass measurement supports — claiming more digits than the balance provides is wrong even if the arithmetic looks precise.",
+        "Treat this as a preparation result: its quality is about technique and honest bookkeeping, not about matching a hidden target value."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "provided",
+    "calculations": [
+      {
+        "id": "calc-standard-solution-mass",
+        "title": "Mass of sodium carbonate for a 0.10 mol/L, 100.0 mL solution",
+        "purpose": "Turn the target concentration and volume into a weighable mass.",
+        "equationId": "eq-molarity",
+        "variables": [
+          { "symbol": "c", "meaning": "target molar concentration", "unit": "mol/L" },
+          { "symbol": "V", "meaning": "target solution volume", "unit": "L" },
+          { "symbol": "n", "meaning": "amount of solute required", "unit": "mol" },
+          { "symbol": "m", "meaning": "mass of solute required", "unit": "g" },
+          { "symbol": "M", "meaning": "molar mass of Na2CO3", "unit": "g/mol" }
+        ],
+        "assumptions": [
+          "The sodium carbonate is anhydrous and pure.",
+          "The flask delivers its nominal total volume within its tolerance.",
+          "Volumes are taken at the flask's calibration temperature (room temperature assumed)."
+        ],
+        "unitsAndDimensions": "c [mol/L] x V [L] gives n [mol]; n [mol] x M [g/mol] gives m [g]. The units cancel consistently at each step.",
+        "significantFigureConvention": "Keep extra digits during the calculation and round the final mass to the precision the balance can actually deliver.",
+        "workedExamples": [
+          {
+            "id": "calc-standard-solution-mass-example",
+            "title": "Worked example: 100.0 mL of 0.10 mol/L Na2CO3",
+            "given": ["c = 0.10 mol/L", "V = 100.0 mL = 0.1000 L", "M(Na2CO3) = 105.99 g/mol"],
+            "steps": [
+              "n = c x V = 0.10 mol/L x 0.1000 L = 0.010 mol",
+              "m = n x M = 0.010 mol x 105.99 g/mol = 1.0599 g",
+              "Weigh approximately 1.06 g and use the measured mass for the final concentration statement."
+            ],
+            "result": "m = 1.06 g (weigh about 1.06 g; report the actual measured mass)",
+            "sourceRefIds": ["ref-ncert-class11-unit1"],
+            "significantFiguresNote": "The target concentration 0.10 mol/L has two significant figures; a balance reading to 0.001 g supports reporting the measured mass to four figures, but the stated concentration should not exceed the weakest input.",
+            "isIllustrative": true
+          }
+        ],
+        "sourceRefIds": ["ref-ncert-class11-unit1"]
+      }
+    ],
+    "notes": "Worked examples in this record use nominal textbook values to demonstrate method. Learners substitute their own measured masses; no measured data are fabricated here."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class11-unit1",
+        "type": "official_educational_resource",
+        "citation": "NCERT, 'Some Basic Concepts of Chemistry', Unit 1 in Chemistry Part I, Textbook for Class XI. National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Some Basic Concepts of Chemistry (Chemistry Part I, Class XI)",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook/pdf/kech101.pdf",
+        "identifiers": { "ncert-chapter-pdf": "kech101.pdf" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "eq-molar-mass-amount",
+          "eq-molarity",
+          "obs-mass-na2co3",
+          "calc-standard-solution-mass"
+        ],
+        "notes": "PDF fetched and content (mole concept, molar mass, significant figures) confirmed on 2026-11-05."
+      },
+      {
+        "id": "ref-ncert-class12-part1",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry I (chemistry I), Textbook for Class XII. National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry I, Textbook for Class XII",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?lech1=0",
+        "identifiers": { "ncert-book-index": "lech1" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "def-standard-solution",
+          "def-primary-standard",
+          "def-volumetric-flask",
+          "eq-molarity",
+          "obs-final-volume"
+        ],
+        "notes": "Official NCERT book index page fetched on 2026-11-05; covers the 'Solutions' unit used for concentration conventions."
+      },
+      {
+        "id": "ref-ncert-class11-part2",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry Part II, Textbook for Class XI. National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry Part II, Textbook for Class XI",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?kech2=0",
+        "identifiers": { "ncert-book-index": "kech2" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Official NCERT book index page fetched on 2026-11-05; listed as background for acid-base standardization context."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": {
+          "circular": "Acad-14/2025",
+          "curriculum-page": "https://cbseacademic.nic.in/curriculum_2026.html"
+        },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Official circular URL and curriculum landing page confirmed on 2026-11-05. Used as curriculum-mapping evidence only; specific unit wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "planned",
+    "model": {
+      "id": "standard-solution-preparation",
+      "contractVersion": "1.0.0",
+      "summary": "A preparation calculator: given target concentration, target volume and molar mass, computes the required mass and, from a learner-supplied measured mass, the achieved concentration with unit-consistent significant figures.",
+      "inputs": [
+        {
+          "id": "in-target-concentration",
+          "label": "Target concentration",
+          "unit": "mol/L",
+          "defaultValue": 0.1,
+          "validRange": { "min": 0.001, "max": 2, "unit": "mol/L" },
+          "description": "The molar concentration the learner aims to prepare."
+        },
+        {
+          "id": "in-target-volume",
+          "label": "Target volume",
+          "unit": "mL",
+          "defaultValue": 100,
+          "validRange": { "min": 10, "max": 1000, "unit": "mL" },
+          "description": "Nominal total volume of the volumetric flask."
+        },
+        {
+          "id": "in-measured-mass",
+          "label": "Measured mass of solute",
+          "unit": "g",
+          "description": "The mass the learner actually weighed (user-entered; never a simulated measurement)."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-required-mass",
+          "label": "Required mass",
+          "unit": "g",
+          "displayPrecision": "0.001 g",
+          "description": "Mass of solute required for the target solution."
+        },
+        {
+          "id": "out-achieved-concentration",
+          "label": "Achieved concentration",
+          "unit": "mol/L",
+          "displayPrecision": "Two significant figures",
+          "description": "Concentration implied by the measured mass; labelled theoretical, not measured."
+        }
+      ],
+      "assumptions": [
+        "Solute is anhydrous, pure and completely transferred.",
+        "Final volume equals the flask's nominal volume."
+      ],
+      "limitations": [
+        "Does not model hydration states, purity corrections or temperature-dependent flask volume.",
+        "Achieved concentration is arithmetic on user-entered data, not a simulated laboratory measurement."
+      ],
+      "equations": ["eq-molar-mass-amount", "eq-molarity"],
+      "sourceRefIds": ["ref-ncert-class11-unit1"]
+    }
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "requires_review",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. Equations and conventions cross-checked against NCERT Class XI Unit 1. Pending independent scientific review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "Equations n = m/M and c = n/V and the worked example (1.06 g for 100 mL of 0.10 mol/L Na2CO3, M = 105.99 g/mol) were recomputed and cross-checked against NCERT Class XI Unit 1 during the 2026-11-05 content pass.",
+      "Reference URLs were verified during the 2026-11-05 content pass as recorded in each reference entry."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place; scientificReviewStatus must remain draft until one is recorded.",
+      "Institution-specific balance tolerances and disposal rules must be confirmed by the supervising laboratory."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text has been copied; NCERT and CBSE are cited as references only. Content license will be recorded when the project owner selects one (see LICENSE_SELECTION.md)."
+    }
+  }
+}

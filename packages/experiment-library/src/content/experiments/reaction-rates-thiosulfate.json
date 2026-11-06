@@ -1,0 +1,666 @@
+{
+  "identity": {
+    "id": "reaction-rates-thiosulfate",
+    "slug": "reaction-rates-thiosulfate",
+    "title": "Reaction Kinetics: Sodium Thiosulfate and Acid",
+    "shortDescription": "Measure how long a fixed mark takes to disappear when sodium thiosulfate reacts with acid, and use the data to explore how concentration and temperature affect reaction rate.",
+    "fullDescription": "The 'disappearing cross' experiment is the classic school kinetics practical: sodium thiosulfate reacts with hydrochloric acid to produce a sulfur precipitate that gradually obscures a pencil cross drawn under the flask, and the time to a fixed level of turbidity reports the reaction rate. Learners vary concentration and temperature one at a time, record times, and relate the trends to collision theory and rate laws. The experiment is a supervised higher-secondary practical with dilute reagents and a small but real sulphur dioxide by-product.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "physical-chemistry",
+    "subdisciplineIds": ["physical-chemistry-kinetics"],
+    "topicIds": ["chemical-kinetics"],
+    "educationalLevels": ["higher-secondary", "undergraduate"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-practical-kinetics",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Aligns with the Class XII practical component on chemical kinetics (experiments studying rate of reaction). Mapping proposed pending documentary verification against the CBSE subject PDF.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      },
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-12-kinetics",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Reinforces the rate-of-reaction treatment of the Class XII unit 'Chemical Kinetics'. Mapping proposed pending documentary verification.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimatedDurationMinutes": 75,
+    "prerequisites": [
+      "Understanding of concentration and dilution calculations.",
+      "Familiarity with basic rates-of-reaction ideas (collision theory at school level).",
+      "Confident use of a stopwatch and water bath or beaker of warm water."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Measure a reaction rate indirectly using a fixed-turbidity end point.",
+      "Determine how rate depends on thiosulfate concentration and on temperature, one variable at a time.",
+      "Interpret rate trends using collision theory and the concept of rate law."
+    ],
+    "expectedCompetencies": [
+      "Controlling one variable at a time in a practical investigation.",
+      "Timing with a consistent visual end point.",
+      "Converting times to rates (1/t) with correct reasoning about proportionality."
+    ],
+    "learningOutcomes": [
+      "Produce a data set showing that rate increases with thiosulfate concentration and with temperature.",
+      "Explain why 1/t is a valid initial-rate proxy for this reaction when all other conditions are fixed.",
+      "Describe the limitations of the fixed-turbidity method honestly, including its assumptions."
+    ],
+    "theory": {
+      "overview": "Sodium thiosulfate reacts with acid in a redox disproportionation that precipitates elemental sulfur as a fine turbidity: Na2S2O3(aq) + 2 HCl(aq) -> 2 NaCl(aq) + S(s) + SO2(g) + H2O(l). Because the turbidity grows with the amount of sulfur formed, the time taken for a fixed mark under the flask to become invisible corresponds to a fixed amount of reaction. Under these conditions 1/t is proportional to the average reaction rate, so comparing 1/t values compares rates directly.",
+      "sections": [
+        {
+          "heading": "Rate and the fixed-turbidity method",
+          "body": "The reaction rate is the change in concentration of a reactant or product per unit time. This experiment does not measure concentration directly; instead it fixes the amount of reaction needed to hide a standard mark and measures the time taken. Since all runs hide the mark at the same extent of reaction, average rate is proportional to 1/t. This is a method assumption, not an identity: it holds because the same amount of sulfur is formed in every run and the observation criterion is consistent.",
+          "sourceRefIds": ["ref-ncert-class12-kinetics"]
+        },
+        {
+          "heading": "Concentration dependence",
+          "body": "For many reactions the rate is proportional to reactant concentrations raised to powers: rate = k [S2O3^2-]^m [H+]^n. In this experiment the acid is in large excess relative to its own rate order effect in the standard school treatment, so varying only the thiosulfate concentration isolates m. Data typically show the rate approximately proportional to thiosulfate concentration (m near 1), consistent with a rate law first order in thiosulfate under these conditions.",
+          "sourceRefIds": ["ref-ncert-class12-kinetics"]
+        },
+        {
+          "heading": "Temperature dependence",
+          "body": "Raising temperature increases the fraction of collisions with energy at or above the activation energy, so rate rises steeply with temperature; the common rule of thumb that rates roughly double per 10 C is only a rough guide. Quantitatively the rate constant follows the Arrhenius equation k = A exp(-Ea/RT). This experiment records the trend; extracting Ea from 1/t data is an extension exercise, not a validated outcome of the base activity.",
+          "sourceRefIds": ["ref-ncert-class12-kinetics"]
+        }
+      ],
+      "scientificBackground": "The reaction produces sulphur dioxide, a respiratory irritant, in small amounts; this is the reason for the ventilation requirements and for keeping quantities small. The sulfur precipitate is colloidal at first; the visual end point depends on lighting and observer judgment, which is the dominant source of timing error.",
+      "concepts": [
+        "reaction rate",
+        "rate law",
+        "order of reaction",
+        "collision theory",
+        "activation energy",
+        "control of variables"
+      ],
+      "equations": [
+        {
+          "id": "eq-thiosulfate-reaction",
+          "expression": "Na2S2O3(aq) + 2 HCl(aq) -> 2 NaCl(aq) + S(s) + SO2(g) + H2O(l)",
+          "displayForm": "Na₂S₂O₃(aq) + 2 HCl(aq) → 2 NaCl(aq) + S(s) + SO₂(g) + H₂O(l)",
+          "description": "The overall reaction studied; sulfur precipitate is the observable product.",
+          "variables": [
+            { "symbol": "Na2S2O3", "meaning": "sodium thiosulfate", "unit": "mol" },
+            { "symbol": "HCl", "meaning": "hydrochloric acid", "unit": "mol" }
+          ],
+          "applicableConditions": [
+            "Aqueous solution, room to moderate temperature (about 20-60 C)."
+          ],
+          "assumptions": [
+            "Net ionic behaviour; intermediate sulphur species not modelled at this level."
+          ],
+          "sourceRefIds": ["ref-ncert-class12-kinetics"],
+          "kind": "theoretical_law"
+        },
+        {
+          "id": "eq-rate-law-thiosulfate",
+          "expression": "rate = k * [S2O3^2-]^m * [H+]^n",
+          "displayForm": "rate = k [S₂O₃²⁻]^m [H⁺]^n",
+          "description": "Rate law for the reaction; the experiment probes m by varying thiosulfate concentration with acid constant.",
+          "variables": [
+            { "symbol": "rate", "meaning": "reaction rate", "unit": "mol/L/s" },
+            {
+              "symbol": "k",
+              "meaning": "rate constant (temperature dependent)",
+              "unit": "varies with order"
+            },
+            { "symbol": "[S2O3^2-]", "meaning": "thiosulfate concentration", "unit": "mol/L" },
+            { "symbol": "[H+]", "meaning": "acid concentration", "unit": "mol/L" },
+            { "symbol": "m", "meaning": "order with respect to thiosulfate", "unit": "1" },
+            { "symbol": "n", "meaning": "order with respect to acid", "unit": "1" }
+          ],
+          "applicableConditions": [
+            "Initial-rate style conditions; fixed temperature for concentration series."
+          ],
+          "assumptions": [
+            "Orders are constant over the range studied.",
+            "1/t serves as rate proxy (see theory)."
+          ],
+          "sourceRefIds": ["ref-ncert-class12-kinetics"],
+          "kind": "empirical_relation"
+        },
+        {
+          "id": "eq-arrhenius",
+          "expression": "k = A * exp(-Ea / (R * T))",
+          "displayForm": "k = A e^(−E_a/RT)",
+          "description": "Temperature dependence of the rate constant (for interpretation and extension work).",
+          "variables": [
+            { "symbol": "k", "meaning": "rate constant", "unit": "varies with order" },
+            { "symbol": "A", "meaning": "pre-exponential factor", "unit": "same as k" },
+            { "symbol": "Ea", "meaning": "activation energy", "unit": "J/mol" },
+            { "symbol": "R", "meaning": "gas constant", "unit": "J/(mol K)" },
+            { "symbol": "T", "meaning": "absolute temperature", "unit": "K" }
+          ],
+          "applicableConditions": ["Moderate temperature ranges where Ea is effectively constant."],
+          "assumptions": ["Arrhenius behaviour assumed; not verified in the base activity."],
+          "sourceRefIds": ["ref-ncert-class12-kinetics"],
+          "kind": "empirical_relation"
+        }
+      ],
+      "definitions": [
+        {
+          "id": "def-reaction-rate",
+          "term": "Reaction rate",
+          "definition": "Change in concentration of a reactant or product per unit time (for example mol L^-1 s^-1).",
+          "sourceRefIds": ["ref-ncert-class12-kinetics"]
+        },
+        {
+          "id": "def-rate-constant",
+          "term": "Rate constant",
+          "definition": "Proportionality constant k in the rate law; depends on temperature and on the reaction, not on concentrations.",
+          "sourceRefIds": ["ref-ncert-class12-kinetics"]
+        },
+        {
+          "id": "def-order-of-reaction",
+          "term": "Order of reaction",
+          "definition": "The exponent of a reactant's concentration in the experimentally determined rate law.",
+          "sourceRefIds": ["ref-ncert-class12-kinetics"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-conical-flask-250",
+        "name": "Conical flask",
+        "specification": "250 mL",
+        "quantity": "1 per run",
+        "purpose": "Reaction vessel viewed over the mark",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-white-tile-cross",
+        "name": "White tile or paper with a pencil cross",
+        "specification": "Mark about 2 cm wide",
+        "quantity": "1",
+        "purpose": "Fixed turbidity mark under the flask",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-measuring-cylinders",
+        "name": "Measuring cylinders",
+        "specification": "10 mL and 50 mL",
+        "quantity": "2 of each",
+        "purpose": "Measuring reagent volumes",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-stopwatch",
+        "name": "Stopwatch",
+        "specification": "Reading to 0.1 s",
+        "quantity": "1",
+        "purpose": "Timing to the end point",
+        "alternatives": ["A phone stopwatch used with supervision"]
+      },
+      {
+        "id": "eqp-water-bath",
+        "name": "Water bath or beaker of warm water with thermometer",
+        "specification": "Stable to about 2 C",
+        "quantity": "1",
+        "purpose": "Temperature-variation runs",
+        "alternatives": []
+      }
+    ],
+    "chemicals": [
+      {
+        "id": "chem-na2s2o3",
+        "name": "Sodium thiosulfate solution",
+        "formulaOrDescription": "Na2S2O3(aq), 0.04-0.15 mol/L range prepared by serial dilution from a standard stock",
+        "category": "solution",
+        "amount": "About 50 mL per learner across runs",
+        "identifiers": { "pubchem-cid": "24477" },
+        "hazardKinds": ["irritant"],
+        "notes": "Low-hazard salt solution; mild irritant. Pentahydrate form is standard in schools."
+      },
+      {
+        "id": "chem-hcl-kinetics",
+        "name": "Hydrochloric acid (dilute)",
+        "formulaOrDescription": "HCl(aq), 1.0 mol/L (kept in excess relative to thiosulfate)",
+        "category": "solution",
+        "amount": "About 50 mL per learner",
+        "identifiers": { "pubchem-cid": "313" },
+        "hazardKinds": ["corrosive", "irritant"],
+        "notes": "Corrosive and a serious eye hazard; see safety section. Small SO2 amounts are evolved during reaction."
+      }
+    ],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "moderate",
+    "riskRationale": "Dilute reagents, but the reaction releases small amounts of sulphur dioxide (a respiratory irritant) and uses 1 mol/L hydrochloric acid, which is a genuine eye hazard. Work in a ventilated room, keep quantities small and supervise throughout.",
+    "hazards": [
+      {
+        "kind": "corrosive",
+        "statement": "Hydrochloric acid (1 mol/L) causes serious eye damage and skin irritation (H314/H315); wear safety spectacles and handle with care.",
+        "appliesTo": ["chem-hcl-kinetics"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-hcl",
+          "notes": "GHS hazard statements for hydrochloric acid (CID 313) per the PubChem compound entry."
+        }
+      },
+      {
+        "kind": "irritant",
+        "statement": "The reaction releases small amounts of sulphur dioxide gas, which irritates the respiratory tract; use only the stated small quantities, keep the room ventilated and do not lean over the flask.",
+        "appliesTo": ["chem-na2s2o3", "chem-hcl-kinetics"],
+        "evidence": {
+          "basis": "requires_review",
+          "notes": "SO2 evolution from the acidification of thiosulfate is standard textbook chemistry; quantitative exposure estimates must be confirmed by the supervising laboratory's risk assessment before scientific review."
+        }
+      },
+      {
+        "kind": "irritant",
+        "statement": "Sodium thiosulfate solution is a mild irritant; avoid contact with eyes and wash hands after handling.",
+        "appliesTo": ["chem-na2s2o3"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-na2s2o3",
+          "notes": "Mild irritant classification per the PubChem compound entry for sodium thiosulfate (CID 24477)."
+        }
+      }
+    ],
+    "protectiveEquipment": [
+      "Safety spectacles at all times.",
+      "Laboratory coat or apron.",
+      "Nitrile gloves recommended for handling the acid."
+    ],
+    "disposal": [
+      "Reaction mixtures contain sulfur suspension and acidic sulfurous solution; neutralize with dilute sodium carbonate if directed and dispose of to drain with plenty of water, subject to the supervising institution's policy.",
+      "Collect unused acid in the designated acid-waste container; do not tip concentrated stock down the drain.",
+      "Keep quantities small; this limits SO2 evolution and waste."
+    ],
+    "supervision": "qualified_educator_supervision_required",
+    "restrictedOperations": [
+      "No heating above about 60 C; high-temperature runs increase SO2 release sharply.",
+      "Do not scale the reaction up 'for visibility' — larger volumes mean larger gas release.",
+      "Do not inhale gases from the flask at any point."
+    ],
+    "emergencyGuidance": [
+      "If gas irritation is felt, move to fresh air and inform the supervising educator.",
+      "Acid contact: flood with water; eye contact requires immediate rinsing and medical attention."
+    ],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Run the reaction over a pencil cross at a fixed viewing height, timing from mixing until the cross is no longer visible. First vary thiosulfate concentration at fixed temperature; then vary temperature at fixed concentrations.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Set the viewing standard",
+        "instructions": "Place the flask on the white tile over the pencil cross and agree with a partner on what 'cross invisible' means (viewed from directly above, normal room light). Fix the viewing height and lighting for all runs.",
+        "equipmentIds": ["eqp-conical-flask-250", "eqp-white-tile-cross"],
+        "chemicalIds": [],
+        "precautions": [
+          "Agreeing the end-point standard before starting prevents moving goalposts mid-experiment."
+        ],
+        "expectedObservations": [
+          "The cross is clearly visible through the empty flask and clear solutions."
+        ],
+        "explanatoryNotes": [
+          "The subjectivity of this end point is the method's main limitation and is discussed in the observations section."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Concentration series",
+        "instructions": "For each run, measure the chosen volume of sodium thiosulfate solution and top up with water to a fixed total volume in the flask. Add the fixed volume of 1 mol/L hydrochloric acid, start the stopwatch on mixing and stop when the cross is hidden. Record the time. Vary the thiosulfate volume across runs (for example 50, 40, 30, 20, 10 mL with water topping up to 50 mL total thiosulfate-plus-water).",
+        "equipmentIds": [
+          "eqp-conical-flask-250",
+          "eqp-measuring-cylinders",
+          "eqp-stopwatch",
+          "eqp-white-tile-cross"
+        ],
+        "chemicalIds": ["chem-na2s2o3", "chem-hcl-kinetics"],
+        "precautions": [
+          "Keep the acid volume and total liquid volume identical across runs.",
+          "Start timing the moment acid touches the mixture; pour quickly and consistently."
+        ],
+        "expectedObservations": [
+          "Times lengthen as thiosulfate is diluted; 1/t falls roughly in proportion to concentration."
+        ],
+        "explanatoryNotes": [
+          "A fixed total volume keeps the thiosulfate concentration directly proportional to the volume of stock used."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Temperature series",
+        "instructions": "Repeat a standard run at a fixed composition but with the thiosulfate-plus-water mixture equilibrated at different temperatures (for example room temperature, about 35 C, about 45 C) using the water bath. Measure the actual mixture temperature just before adding acid. Add acid at the same temperature and time as before.",
+        "equipmentIds": ["eqp-water-bath", "eqp-conical-flask-250", "eqp-stopwatch"],
+        "chemicalIds": ["chem-na2s2o3", "chem-hcl-kinetics"],
+        "precautions": [
+          "Equilibrate both solutions to the target temperature before mixing.",
+          "Do not heat the acidified mixture; warm the reagents before mixing only."
+        ],
+        "expectedObservations": [
+          "Times shorten markedly with temperature; small warming steps produce clear rate increases."
+        ],
+        "explanatoryNotes": [
+          "Temperature changes the rate constant k; concentration effects and temperature effects are studied separately by design."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Repeat for reliability",
+        "instructions": "Repeat at least one condition in duplicate or triplicate to estimate timing scatter. Record all runs, including outliers, with notes on anything unusual.",
+        "equipmentIds": ["eqp-stopwatch"],
+        "chemicalIds": [],
+        "precautions": [
+          "Do not delete disagreeable repeats; the scatter is data about the method."
+        ],
+        "expectedObservations": [
+          "Repeated times scatter by a few seconds; the scatter sets the resolution of the whole investigation."
+        ],
+        "explanatoryNotes": ["Honest repeat data turn a demonstration into an investigation."]
+      },
+      {
+        "stepId": "step-5",
+        "title": "Analyse",
+        "instructions": "Tabulate concentration, temperature and time. Compute 1/t for each run. Plot 1/t against thiosulfate concentration and describe the trend. Plot ln(1/t) against 1/T (T in kelvin) as an extension and discuss whether Arrhenius-like behaviour is supported.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [],
+        "explanatoryNotes": [
+          "The base outcome is the qualitative trend plus 1/t analysis; Arrhenius plotting is extension work, not a validated core result."
+        ]
+      }
+    ],
+    "troubleshooting": [
+      "If times are wildly inconsistent, check the end-point standard, mixing timing and whether the same person judges the end point.",
+      "If the cross never disappears, the thiosulfate may be too dilute or the acid old; consult the supervising educator.",
+      "Fogged viewing from leaning over the flask signals SO2 exposure — stop, ventilate and reset technique."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-time-to-cross",
+          "label": "Time until the cross is hidden",
+          "kind": "time",
+          "unit": "s",
+          "method": "Start timing on acid addition; stop at the agreed end point viewed from directly above. Record to 0.1 s.",
+          "provenance": "requires_review",
+          "sourceRefIds": ["ref-ncert-class12-kinetics"],
+          "displayPrecision": "0.1 s (report mean and spread of repeats)."
+        },
+        {
+          "id": "obs-inverse-time",
+          "label": "Rate proxy 1/t",
+          "kind": "other",
+          "unit": "s^-1",
+          "method": "Computed from recorded times; proportional to average rate under the fixed-turbidity assumption.",
+          "expectedQualitative": [
+            "1/t increases with thiosulfate concentration and with temperature."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class12-kinetics"],
+          "displayPrecision": "Three significant figures."
+        },
+        {
+          "id": "obs-temperature",
+          "label": "Mixture temperature at mixing",
+          "kind": "temperature",
+          "unit": "C",
+          "method": "Measure the reagent mixture temperature just before acid addition; record in degrees Celsius and convert to kelvin for Arrhenius analysis.",
+          "provenance": "requires_review",
+          "sourceRefIds": ["ref-ncert-class12-kinetics"],
+          "displayPrecision": "1 C."
+        }
+      ],
+      "qualitativePrompts": [
+        "Did the turbidity appear gradually or suddenly at the end?",
+        "How large was the timing scatter in repeats compared with the differences between runs?",
+        "Did any run behave inconsistently with the trend, and what could explain it?"
+      ],
+      "errorSources": [
+        "Subjective judgement of the end point dominates timing error.",
+        "Inconsistent mixing or timing start between runs.",
+        "Temperature drift during a run, or un-equilibrated reagents in temperature series.",
+        "Imprecise volumes when preparing the dilution series.",
+        "The fixed-turbidity assumption itself: 1/t is proportional to average rate only because the hidden-cross criterion corresponds to a fixed extent of reaction."
+      ],
+      "interpretationGuidance": [
+        "Compare trends and proportions, not single times; the method supports relative conclusions.",
+        "1/t is a rate proxy under stated assumptions — say so explicitly in any conclusion.",
+        "A rate increase with temperature is expected from collision theory; a claim about activation energy requires the Arrhenius analysis and its own error treatment."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "provided",
+    "calculations": [
+      {
+        "id": "calc-rate-proxy",
+        "title": "Rate proxy and concentration comparison",
+        "purpose": "Convert times into comparable rate proxies and relate them to concentrations.",
+        "equationId": "eq-rate-law-thiosulfate",
+        "variables": [
+          { "symbol": "t", "meaning": "time to the fixed end point", "unit": "s" },
+          { "symbol": "1/t", "meaning": "rate proxy", "unit": "s^-1" },
+          { "symbol": "[S2O3^2-]", "meaning": "thiosulfate concentration", "unit": "mol/L" }
+        ],
+        "assumptions": [
+          "Fixed total volume and fixed acid concentration across the series.",
+          "Fixed amount of reaction at the end point.",
+          "Same observer and viewing standard."
+        ],
+        "unitsAndDimensions": "1/t has units s^-1; concentrations are mol/L. Comparisons use ratios, so mixed units cancel across runs.",
+        "significantFigureConvention": "Times to 0.1 s give three significant figures in 1/t for typical times of tens of seconds.",
+        "workedExamples": [
+          {
+            "id": "calc-rate-proxy-example",
+            "title": "Worked example: comparing two runs",
+            "given": [
+              "Run A: [S2O3^2-] = 0.08 mol/L, t = 42 s",
+              "Run B: [S2O3^2-] = 0.04 mol/L, t = 84 s"
+            ],
+            "steps": [
+              "1/t(A) = 1/42 s = 0.0238 s^-1",
+              "1/t(B) = 1/84 s = 0.0119 s^-1",
+              "Ratio 1/t(A) : 1/t(B) = 2.0, matching the concentration ratio 2:1."
+            ],
+            "result": "Rate proxy halves when thiosulfate concentration halves: consistent with first-order dependence in thiosulfate.",
+            "sourceRefIds": ["ref-ncert-class12-kinetics"],
+            "significantFiguresNote": "Illustrative ideal data; real runs scatter and the conclusion rests on the trend over several runs.",
+            "isIllustrative": true
+          }
+        ],
+        "sourceRefIds": ["ref-ncert-class12-kinetics"]
+      }
+    ],
+    "notes": "The worked example is idealised illustrative data chosen to demonstrate the comparison logic; it is not experimental data and must not be presented as such."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class12-kinetics",
+        "type": "official_educational_resource",
+        "citation": "NCERT, 'Chemical Kinetics', Unit 3 in Chemistry I, Textbook for Class XII. National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemical Kinetics (Chemistry I, Class XII)",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook/pdf/lech103.pdf",
+        "identifiers": { "ncert-chapter-pdf": "lech103.pdf" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "eq-thiosulfate-reaction",
+          "eq-rate-law-thiosulfate",
+          "eq-arrhenius",
+          "def-reaction-rate",
+          "def-rate-constant",
+          "def-order-of-reaction",
+          "obs-inverse-time",
+          "calc-rate-proxy"
+        ],
+        "notes": "PDF fetched and content (rate definition, rate laws, Arrhenius treatment) confirmed on 2026-11-05."
+      },
+      {
+        "id": "ref-pubchem-hcl",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Hydrochloric acid (CID 313).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Hydrochloric acid (CID 313)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/313",
+        "identifiers": { "pubchem-cid": "313" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID 313 verified during the 2026-11-05 content pass; hazard evidence for the acid."
+      },
+      {
+        "id": "ref-pubchem-na2s2o3",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Sodium thiosulfate (CID 24477).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Sodium thiosulfate (CID 24477)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24477",
+        "identifiers": { "pubchem-cid": "24477" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID 24477 confirmed during the 2026-11-05 content pass; hazard evidence for sodium thiosulfate."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": { "circular": "Acad-14/2025" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Curriculum-mapping evidence only; practical-component wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "planned",
+    "model": {
+      "id": "thiosulfate-rate-model",
+      "contractVersion": "1.0.0",
+      "summary": "Computes theoretical 1/t trends from a rate law with user-chosen orders and rate constant, and from Arrhenius temperature dependence, so learners can compare idealised models with their own data. Outputs are theoretical model values, never measurements.",
+      "inputs": [
+        {
+          "id": "in-thiosulfate-concentration",
+          "label": "Thiosulfate concentration",
+          "unit": "mol/L",
+          "defaultValue": 0.08,
+          "validRange": { "min": 0.005, "max": 0.5, "unit": "mol/L" },
+          "description": "Concentration of sodium thiosulfate in the reaction mixture."
+        },
+        {
+          "id": "in-temperature",
+          "label": "Temperature",
+          "unit": "K",
+          "defaultValue": 298,
+          "validRange": { "min": 278, "max": 340, "unit": "K" },
+          "description": "Absolute temperature of the mixture at mixing."
+        },
+        {
+          "id": "in-order-m",
+          "label": "Order with respect to thiosulfate (m)",
+          "unit": "1",
+          "defaultValue": 1,
+          "validRange": { "min": 0, "max": 2, "unit": "1" },
+          "description": "Rate law exponent explored by the learner."
+        },
+        {
+          "id": "in-activation-energy",
+          "label": "Activation energy",
+          "unit": "J/mol",
+          "validRange": { "min": 10000, "max": 200000, "unit": "J/mol" },
+          "description": "Ea used for the Arrhenius component of the model."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-predicted-rate-proxy",
+          "label": "Predicted rate proxy",
+          "unit": "s^-1",
+          "displayPrecision": "Three significant figures",
+          "description": "Theoretical 1/t values for comparison with learner data; theoretical only."
+        },
+        {
+          "id": "out-predicted-time",
+          "label": "Predicted end-point time",
+          "unit": "s",
+          "displayPrecision": "1 s",
+          "description": "Model time to the fixed end point under the stated assumptions."
+        }
+      ],
+      "assumptions": [
+        "1/t proportional to rate under the fixed-turbidity criterion.",
+        "Arrhenius behaviour with constant Ea.",
+        "Ideal mixing and constant volume."
+      ],
+      "limitations": [
+        "Does not model the reaction mechanism or sulphur colloid formation.",
+        "Predicted times are illustrative model output, not measurements, and must be labelled as such.",
+        "Order parameters are user-chosen hypotheses, not fitted to data, in this contract."
+      ],
+      "equations": ["eq-rate-law-thiosulfate", "eq-arrhenius"],
+      "sourceRefIds": ["ref-ncert-class12-kinetics"]
+    }
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "requires_review",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. Reaction equation, rate-law treatment and Arrhenius relation cross-checked against NCERT Class XII Unit 3. Pending independent scientific review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "Rate concepts, rate law and Arrhenius equation verified against the fetched NCERT 'Chemical Kinetics' chapter PDF (lech103.pdf) during the 2026-11-05 content pass.",
+      "The 1/t proportionality assumption is documented as a method assumption rather than an exact relation, consistent with standard treatments of this experiment."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place.",
+      "SO2 exposure assessment for the stated quantities must be confirmed by the supervising laboratory's risk assessment.",
+      "The recommendation of 1 mol/L HCl keeps runs classroom-length but raises the acid hazard relative to more dilute variants; a reviewer should confirm the preferred concentration for the target audience."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text copied; NCERT and PubChem are cited as references only."
+    }
+  }
+}

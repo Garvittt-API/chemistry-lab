@@ -1,11 +1,14 @@
-import { EXPERIMENT_SCHEMA_VERSION } from "@virtual-chemistry-lab/experiment-schema";
+import { EXPERIMENT_RECORD_SCHEMA_VERSION } from "@virtual-chemistry-lab/experiment-schema";
 import { ArrowRight, BookOpen, Compass, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
-import { demoExperiments, subjectCatalog } from "../lib/content";
+import { getCollectionStats, getExperimentCards, getSubjects } from "../lib/content";
 import { ExperimentCard, SectionHeading, SubjectCard } from "../components/ui";
 
 export default function HomePage() {
+  const featuredExperiments = getExperimentCards().slice(0, 3);
+  const subjects = getSubjects().slice(0, 5);
+  const stats = getCollectionStats();
   return (
     <div className="page page-grid">
       <section className="container hero" aria-labelledby="page-title">
@@ -26,8 +29,9 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="microcopy">
-            Phase 02 web foundation · Schema {EXPERIMENT_SCHEMA_VERSION} · No validated experiments
-            yet
+            Phase 03 scientific content · Schema {EXPERIMENT_RECORD_SCHEMA_VERSION} ·{" "}
+            {stats.publishedExperimentCount} published experiments, all pending independent
+            scientific review
           </p>
         </div>
 
@@ -62,11 +66,11 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Start with a question"
           title="Find the right doorway into chemistry"
-          description="Browse the structure we are preparing for reviewed learning content. Every card below is a demonstration of the interface, not a published experiment."
+          description="Every experiment below is real library content with documented authors, references, safety context and review status. All current records are AI-assisted drafts awaiting independent scientific review — read them as drafts, not as validated teaching material."
         />
         <div className="card-grid">
-          {demoExperiments.map((experiment) => (
-            <ExperimentCard key={experiment.id} experiment={experiment} />
+          {featuredExperiments.map((experiment, index) => (
+            <ExperimentCard key={experiment.id} experiment={experiment} index={index} />
           ))}
         </div>
       </section>
@@ -75,11 +79,11 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="A growing taxonomy"
           title="Explore chemistry by the questions it asks"
-          description="The subject structure is intentionally extensible so educators can map future content to different curricula without changing the interface."
+          description="A 15-discipline chemistry taxonomy with extensible subdisciplines and topics. Experiment-to-curriculum links (starting with CBSE) are proposed mappings marked pending verification, not claims of official endorsement."
         />
         <div className="subject-grid">
-          {subjectCatalog.slice(0, 5).map((subject) => (
-            <SubjectCard key={subject.name} subject={subject} />
+          {subjects.map((subject) => (
+            <SubjectCard key={subject.id} subject={subject} />
           ))}
         </div>
         <div className="button-row">
@@ -146,8 +150,8 @@ export default function HomePage() {
           <div className="benefit-item">
             <h3>Educators</h3>
             <p>
-              A content surface that can eventually show objectives, references, review status and
-              curriculum context.
+              A content surface that shows objectives, references, review status and curriculum
+              context for every experiment.
             </p>
           </div>
         </div>

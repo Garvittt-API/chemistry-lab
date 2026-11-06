@@ -1,0 +1,454 @@
+{
+  "identity": {
+    "id": "vsepr-molecular-geometry",
+    "slug": "vsepr-molecular-geometry",
+    "title": "Molecular Structure and Bonding: VSEPR Shapes",
+    "shortDescription": "Predict molecular shapes from Lewis structures using VSEPR theory, build simple models and connect geometry to bond angles and polarity.",
+    "fullDescription": "Why is water bent while carbon dioxide is linear? Valence Shell Electron Pair Repulsion (VSEPR) theory answers by counting electron domains around a central atom and arranging them to minimise repulsion. This theory-focused activity works through Lewis structures, electron-domain counting, the standard shape catalogue and polarity reasoning, with simple physical models where available. It contains no chemical reactions and no reagents, making it suitable for any level from school to early undergraduate work.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "general-chemistry",
+    "subdisciplineIds": ["general-chemistry-structure-foundations"],
+    "topicIds": ["structure-and-bonding"],
+    "educationalLevels": ["school", "higher-secondary", "undergraduate"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-11-chemical-bonding",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Aligns with the VSEPR and molecular-shape treatment of the Class XI unit 'Chemical Bonding and Molecular Structure'. Mapping proposed pending documentary verification against the CBSE subject PDF.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "introductory",
+    "estimatedDurationMinutes": 45,
+    "prerequisites": [
+      "Lewis electron-dot structures and covalent bonding basics.",
+      "Idea of electronegativity and bond polarity."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Draw Lewis structures and count electron domains around a central atom.",
+      "Predict molecular geometry and ideal bond angles from VSEPR domain counts.",
+      "Distinguish molecular geometry from electron geometry and relate both to polarity."
+    ],
+    "expectedCompetencies": [
+      "Systematic counting of bonding and lone pairs.",
+      "Using a 3D model or careful diagrams to check reasoning.",
+      "Explaining bond-angle deviations (compression by lone pairs) in words."
+    ],
+    "learningOutcomes": [
+      "Predict shapes for the standard catalogue species (AB2 to AB6 with lone pairs) and justify each with domain counts.",
+      "Explain why water is bent (bond angle near 104.5 degrees) while methane is tetrahedral (near 109.5 degrees).",
+      "Classify molecules as polar or non-polar from their geometry and bond dipoles."
+    ],
+    "theory": {
+      "overview": "VSEPR theory treats bonding pairs and lone pairs as electron domains that repel each other and occupy positions of minimum repulsion around a central atom. Lone pairs occupy more angular space than bonding pairs, compressing bond angles slightly below the ideal values. The number of domains fixes the electron-domain geometry; the arrangement of atoms (which is what is named as molecular shape) may differ when lone pairs are present.",
+      "sections": [
+        {
+          "heading": "Counting electron domains",
+          "body": "Each single, double or triple bond counts as ONE domain (the repulsion is treated along the bond axis), and each lone pair on the central atom counts as one domain. Two domains give linear arrangement at 180 degrees; three give trigonal planar at 120; four give tetrahedral at 109.5; five give trigonal bipyramidal; six give octahedral. The domain count is the single most important number in the method.",
+          "sourceRefIds": ["ref-ncert-class11-bonding"]
+        },
+        {
+          "heading": "From electron geometry to molecular shape",
+          "body": "When all domains are bonding pairs, electron geometry and molecular shape share the same name. Lone pairs alter the atom arrangement's name: four domains with one lone pair give a trigonal pyramidal molecule (for example ammonia, near 107 degrees), and with two lone pairs give a bent molecule (for example water, near 104.5 degrees). Ideal angles are compressed progressively as lone pairs replace bonding pairs.",
+          "sourceRefIds": ["ref-ncert-class11-bonding"]
+        },
+        {
+          "heading": "Shape and polarity",
+          "body": "Bond dipoles are vector quantities. In symmetric geometries (linear CO2, tetrahedral CH4, trigonal planar BF3) the bond dipoles cancel and the molecule is non-polar overall; in asymmetric ones (bent H2O, trigonal pyramidal NH3) they do not cancel and the molecule is polar. Polarity explains physical properties such as solubility and boiling point trends — the reason shape matters beyond naming.",
+          "sourceRefIds": ["ref-ncert-class11-bonding"]
+        }
+      ],
+      "scientificBackground": "VSEPR is a qualitative model: it predicts shapes reliably for main-group compounds but has no energetic calculation behind it and gives approximate, not exact, bond angles. Advanced treatments (valence bond and molecular orbital theory) explain the same structures with orbital models; the simplification here is deliberate for the target level and recorded as such.",
+      "concepts": [
+        "Lewis structures",
+        "electron domains",
+        "bonding and lone pairs",
+        "electron geometry versus molecular shape",
+        "bond angles",
+        "molecular polarity"
+      ],
+      "equations": [
+        {
+          "id": "eq-vsepr-domains",
+          "expression": "domains = bonding domains (sigma bonds) + lone pairs on the central atom",
+          "displayForm": "electron domains = σ-bond directions + lone pairs on the central atom",
+          "description": "Domain-count rule used to select the electron-domain geometry.",
+          "variables": [
+            { "symbol": "domains", "meaning": "number of electron domains", "unit": "1" },
+            {
+              "symbol": "bonding domains",
+              "meaning": "bond directions (multiple bonds count once)",
+              "unit": "1"
+            },
+            { "symbol": "lone pairs", "meaning": "lone pairs on the central atom", "unit": "1" }
+          ],
+          "applicableConditions": ["Main-group molecules and ions with a clear central atom."],
+          "assumptions": [
+            "Multiple bonds act as a single domain for shape purposes.",
+            "Only lone pairs on the central atom affect the shape name."
+          ],
+          "sourceRefIds": ["ref-ncert-class11-bonding"],
+          "kind": "working_relation"
+        },
+        {
+          "id": "eq-dipole-vector-sum",
+          "expression": "mu(total) = sum of bond dipole vectors",
+          "displayForm": "μ(total) = Σ μ(bond vectors)",
+          "description": "Molecular dipole moment as a vector sum of bond dipoles; symmetry determines cancellation.",
+          "variables": [
+            {
+              "symbol": "mu(total)",
+              "meaning": "net molecular dipole moment",
+              "unit": "C m (or D)"
+            },
+            { "symbol": "mu(bond)", "meaning": "bond dipole vector", "unit": "C m (or D)" }
+          ],
+          "applicableConditions": ["Qualitative vector-addition treatment at this level."],
+          "assumptions": ["Bond dipoles transferable between similar bonds; geometry from VSEPR."],
+          "sourceRefIds": ["ref-ncert-class11-bonding"],
+          "kind": "theoretical_law"
+        }
+      ],
+      "definitions": [
+        {
+          "id": "def-vsepr",
+          "term": "VSEPR theory",
+          "definition": "Valence Shell Electron Pair Repulsion theory: electron domains around a central atom orient to minimise repulsion, determining molecular shape.",
+          "sourceRefIds": ["ref-ncert-class11-bonding"]
+        },
+        {
+          "id": "def-electron-domain",
+          "term": "Electron domain",
+          "definition": "A region of high electron density around a central atom: a bond (of any order) or a lone pair.",
+          "sourceRefIds": ["ref-ncert-class11-bonding"]
+        },
+        {
+          "id": "def-molecular-polarity",
+          "term": "Molecular polarity",
+          "definition": "The property of having a net dipole moment due to unsymmetrical arrangement of bond dipoles and lone pairs.",
+          "sourceRefIds": ["ref-ncert-class11-bonding"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-model-kit",
+        "name": "Molecular model kit",
+        "specification": "Atoms and flexible bonds, or simple ball-and-stick set",
+        "quantity": "1 per pair",
+        "purpose": "Building predicted geometries to check reasoning",
+        "alternatives": ["Clay and toothpicks; or careful 3D sketches on isometric paper"]
+      },
+      {
+        "id": "eqp-protractor",
+        "name": "Protractor",
+        "specification": "For measuring angles on drawn or modelled structures",
+        "quantity": "1",
+        "purpose": "Comparing predicted angles with measured ones",
+        "alternatives": []
+      }
+    ],
+    "chemicals": [],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "low",
+    "riskRationale": "No chemicals are used or needed; the activity is a paper-and-model exercise. The only hazards are ordinary classroom ones (small model parts, eye pokes from stiff model bonds).",
+    "hazards": [
+      {
+        "kind": "glassware_cuts",
+        "statement": "Stiff model bonds can snap or poke; assemble kits carefully and away from the face.",
+        "appliesTo": ["eqp-model-kit"],
+        "evidence": {
+          "basis": "common_laboratory_practice",
+          "referenceId": "ref-ncert-class11-bonding",
+          "notes": "General classroom handling guidance; no chemical hazard applies to this activity."
+        }
+      }
+    ],
+    "protectiveEquipment": ["None required beyond normal classroom care."],
+    "disposal": ["No chemical waste; return model kits to storage."],
+    "supervision": "self_directed_with_written_guidance",
+    "restrictedOperations": ["None; no reagents are used."],
+    "emergencyGuidance": ["Report any injury from model parts to the supervising educator."],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Work through a set of representative species: draw the Lewis structure, count domains, name the electron geometry and molecular shape, state the ideal bond angle, build or sketch the model and classify polarity.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Draw and count",
+        "instructions": "For each species in the practice set (CO2, BF3, CH4, NH3, H2O, SF6), draw the Lewis structure, circle the central atom and count its electron domains using the domain rule. Record the counts.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [
+          "Domain counts of 2, 3, 4, 4, 4 and 6 respectively for the listed species."
+        ],
+        "explanatoryNotes": [
+          "Double and triple bonds count once — a common and consequential mistake."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Name geometry and angles",
+        "instructions": "From the domain count, name the electron geometry; then name the molecular shape from the atoms-only arrangement. Record the ideal bond angles and note where lone pairs compress them below ideal values.",
+        "equipmentIds": ["eqp-protractor"],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [
+          "Tetrahedral electron geometry appears as trigonal pyramidal (NH3) or bent (H2O) molecular shapes, with angles compressed below 109.5 degrees."
+        ],
+        "explanatoryNotes": [
+          "Electron geometry and molecular shape differ only when lone pairs are present; keeping the two names distinct is half the discipline."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Build or sketch",
+        "instructions": "Build each structure with the model kit (or make careful 3D sketches). Compare the physical arrangement with your prediction and measure approximate angles.",
+        "equipmentIds": ["eqp-model-kit", "eqp-protractor"],
+        "chemicalIds": [],
+        "precautions": [
+          "Do not force model bonds at angles they cannot hold; the kit's constraints are not chemistry."
+        ],
+        "expectedObservations": [
+          "Models match the predicted arrangements; measured angles on models are ideal values, not the compressed real ones."
+        ],
+        "explanatoryNotes": [
+          "Model kits cannot reproduce lone-pair compression; that limitation is itself a teaching point."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Classify polarity",
+        "instructions": "For each species draw bond dipoles from the less electronegative to the more electronegative atom and decide by symmetry whether they cancel. Record polar or non-polar with a one-line justification.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [
+          "CO2 non-polar despite polar bonds; H2O polar with a net dipole toward the oxygen."
+        ],
+        "explanatoryNotes": [
+          "Polarity conclusions follow from geometry plus bond-dipole direction; neither alone is sufficient."
+        ]
+      },
+      {
+        "stepId": "step-5",
+        "title": "Reflect on the model",
+        "instructions": "Write down one prediction VSEPR made correctly in your work and one place where the model is approximate or would fail (for example exact angles, transition-metal compounds).",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [],
+        "explanatoryNotes": ["Naming the model's limits is part of using it scientifically."]
+      }
+    ],
+    "troubleshooting": [
+      "If two shapes seem to fit one species, re-count domains from the Lewis structure — the count is usually the culprit.",
+      "If polarity calls contradict your own geometry, re-draw the 3D arrangement; flat drawings mislead.",
+      "Ions (NH4+, SO4^2-) work the same way; include charge in the Lewis structure before counting."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-bond-angles",
+          "label": "Predicted and model-measured bond angles",
+          "kind": "other",
+          "unit": "degree",
+          "method": "Predict ideal angles from the geometry table; measure approximate angles on the physical model with a protractor and compare.",
+          "expectedQualitative": [
+            "Ideal angles: 180 (linear), 120 (trigonal planar), 109.5 (tetrahedral), 90/120 (trigonal bipyramidal), 90 (octahedral).",
+            "Lone pairs compress real angles below ideal (for example water near 104.5 degrees versus 109.5 ideal)."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class11-bonding"],
+          "displayPrecision": "1 degree on models; real values as literature-expected only."
+        },
+        {
+          "id": "obs-polarity-calls",
+          "label": "Polarity classification per species",
+          "kind": "qualitative",
+          "method": "Vector-addition reasoning on the predicted geometry; record polar/non-polar with justification.",
+          "expectedQualitative": [
+            "Symmetric arrangements non-polar; asymmetric arrangements polar."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class11-bonding"],
+          "displayPrecision": "Qualitative classification with reasoning."
+        }
+      ],
+      "qualitativePrompts": [
+        "Which species were you most confident predicting before building them?",
+        "Where did the model kit disagree with the ideal angles, and why?",
+        "How did lone pairs change both the shape name and the angle?"
+      ],
+      "errorSources": [
+        "Flat (2D) drawings of 3D structures distort perception.",
+        "Model kits enforce ideal angles and cannot show lone-pair compression.",
+        "Miscounting multiple bonds as multiple domains.",
+        "Forgetting lone pairs on the central atom entirely."
+      ],
+      "interpretationGuidance": [
+        "Bond angles quoted from the theory table are ideal reference values; real angles deviate and are cited from literature when needed, not invented.",
+        "Polarity calls are qualitative; quantitative dipole moments are literature data outside this activity.",
+        "Record the reasoning, not just the answer: the domain count is the reusable skill."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "not_applicable",
+    "rationale": "This activity is structural and qualitative; the only arithmetic is counting domains and comparing angles with tabulated ideal values. No quantitative calculation section is meaningful here, and none is fabricated."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class11-bonding",
+        "type": "official_educational_resource",
+        "citation": "NCERT, 'Chemical Bonding and Molecular Structure', Unit 4 in Chemistry Part I, Textbook for Class XI. National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemical Bonding and Molecular Structure (Chemistry Part I, Class XI)",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook/pdf/kech104.pdf",
+        "identifiers": { "ncert-chapter-pdf": "kech104.pdf" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "eq-vsepr-domains",
+          "eq-dipole-vector-sum",
+          "def-vsepr",
+          "def-electron-domain",
+          "def-molecular-polarity",
+          "obs-bond-angles",
+          "obs-polarity-calls"
+        ],
+        "notes": "Official NCERT chapter PDF URL (kech104.pdf) corroborated on 2026-11-05 by multiple independent sources citing it as the NCERT source for this unit; direct fetch was unavailable in this pass. Reviewer should open the PDF directly when validating."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": { "circular": "Acad-14/2025" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Curriculum-mapping evidence only; unit wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "planned",
+    "model": {
+      "id": "vsepr-shape-predictor",
+      "contractVersion": "1.0.0",
+      "summary": "Given a Lewis-structure-derived domain count (bonding domains, lone pairs), predicts electron geometry, molecular shape and ideal bond angles, and shows an illustrative 3D arrangement. Predictions are model output following the documented VSEPR rules.",
+      "inputs": [
+        {
+          "id": "in-bonding-domains",
+          "label": "Bonding domains on the central atom",
+          "unit": "1",
+          "validRange": { "min": 1, "max": 6, "unit": "1" },
+          "description": "Number of bond directions (multiple bonds count once)."
+        },
+        {
+          "id": "in-lone-pairs",
+          "label": "Lone pairs on the central atom",
+          "unit": "1",
+          "validRange": { "min": 0, "max": 3, "unit": "1" },
+          "description": "Number of lone pairs on the central atom."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-shape",
+          "label": "Predicted molecular shape",
+          "unit": "1",
+          "displayPrecision": "Standard shape name",
+          "description": "Shape name from the VSEPR catalogue."
+        },
+        {
+          "id": "out-ideal-angles",
+          "label": "Ideal bond angles",
+          "unit": "degree",
+          "displayPrecision": "0.5 degree",
+          "description": "Ideal angles; real angles differ (lone-pair compression)."
+        },
+        {
+          "id": "out-polarity-hint",
+          "label": "Polarity hint from symmetry",
+          "unit": "1",
+          "displayPrecision": "Qualitative",
+          "description": "Symmetry-based polarity indication; illustrative."
+        }
+      ],
+      "assumptions": [
+        "VSEPR domain rules as documented in the theory section.",
+        "Ideal angles only; no quantum-mechanical refinement."
+      ],
+      "limitations": [
+        "Approximate qualitative model; predicts neither exact angles nor energies.",
+        "Model-kit-level visuals cannot represent lone-pair compression.",
+        "Model output is model output — never a measured structure."
+      ],
+      "equations": ["eq-vsepr-domains"],
+      "sourceRefIds": ["ref-ncert-class11-bonding"]
+    }
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "reviewed",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. VSEPR treatment and species examples consistent with NCERT Class XI Unit 4. Pending independent scientific review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "Shape/angle catalogue (180/120/109.5/90+120/90 with lone-pair compression below ideal) cross-checked against standard textbook treatment during the 2026-11-05 content pass.",
+      "This experiment uses no chemicals; safety review by inspection records only ordinary classroom handling considerations."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place.",
+      "The NCERT chapter PDF URL is corroborated but was not directly fetched in this pass; reviewer should open it directly when validating."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text copied; NCERT is cited as reference only."
+    }
+  }
+}

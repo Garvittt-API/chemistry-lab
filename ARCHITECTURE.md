@@ -19,8 +19,9 @@ The detailed system architecture is maintained in `docs/architecture/overview.md
 - Applications: Next.js `16.4.4` web app and Expo `58.0.23` mobile app.
 - Shared package: `@virtual-chemistry-lab/experiment-schema` using Zod `4.6.7`.
 - Quality: TypeScript `6.0.3`, ESLint `9.39.1`, Prettier `3.6.2`, and Vitest `5.1.0`.
-- No simulation-core, experiment-library, UI, backend, database or authentication package exists yet;
-  each remains deferred until it has real behavior and a consumer.
+- No simulation-core, UI-kit, backend, database or authentication package exists yet;
+  each remains deferred until it has real behavior and a consumer. (The
+  `experiment-library` package was added in Phase 03, see below.)
 
 ## Phase 02 implementation
 
@@ -31,6 +32,24 @@ The detailed system architecture is maintained in `docs/architecture/overview.md
   accessibility scans.
 - The future laboratory workspace is an explicit UI integration boundary and does not execute models,
   calculate readings or create notebook data.
+
+## Phase 03 implementation
+
+- `@virtual-chemistry-lab/experiment-schema` now carries the versioned record contract
+  `2.0.0` (`EXPERIMENT_RECORD_SCHEMA_VERSION`): taxonomy, educational levels, curriculum
+  mapping, safety, procedure, observations/calculations discriminated unions, references,
+  review/status axes and simulation model contracts, plus a legacy-metadata migration. The
+  legacy 1.0.0 metadata schema remains for compatibility.
+- `@virtual-chemistry-lab/experiment-library` is the framework-free content package:
+  versioned JSON content (taxonomy/level/curriculum registries + one JSON file per experiment),
+  mandatory schema + referential validation at catalog build, and a pure query API
+  (filter/search/sort/paginate) with a single public-visibility gate (`published` only).
+- Web consumes content exclusively through `apps/web/lib/content.ts` (view-model adaptation);
+  UI components hold no catalog logic. Unpublished records render the 404 boundary.
+- Content status honesty is machine-shaped: publication status, scientific review status and
+  integrity label are independent fields; publishing requires complete safety metadata;
+  "reviewed" requires a named human reviewer (AI-assisted content stays draft).
+- ADR-009 records the content-storage decision (versioned local JSON, no DB in this phase).
 
 ## Architecture rules
 1. Scientific calculations must not depend on React, DOM, Canvas or Three.js.

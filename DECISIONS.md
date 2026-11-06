@@ -12,5 +12,6 @@ Record accepted decisions here and link to detailed ADR files.
 | ADR-006 | Separate application code license from educational content license | Proposed; legal decision pending | TBD |
 | ADR-007 | Pin the Phase 01 toolchain and add only consumed packages | Implemented; owner review pending | 2026-11-03 |
 | ADR-008 | Scientific editorial web design system with consumed components only | Implemented; owner review pending | 2026-11-03 |
+| ADR-009 | Versioned local content with a framework-free experiment library and layered validation | Implemented; owner review pending | 2026-11-06 |
 
-Do not treat `owner review pending` or `Proposed` as final project-owner approval. ADR-007 is documented in `docs/architecture/decisions/ADR-004-phase-01-toolchain.md`; ADR-008 is documented in `docs/architecture/decisions/ADR-008-phase-02-web-design-system.md`.
+Do not treat `owner review pending` or `Proposed` as final project-owner approval. ADR-007 is documented in `docs/architecture/decisions/ADR-004-phase-01-toolchain.md`; ADR-008 is documented in `docs/architecture/decisions/ADR-008-phase-02-web-design-system.md`; ADR-009 is documented in `docs/architecture/decisions/ADR-009-versioned-content-and-experiment-library.md`.
