@@ -1,0 +1,69 @@
+# Release Checklist
+
+> Required before any tagged release, production deployment or public launch.
+> Items marked **OWNER** require explicit project-owner approval and cannot be
+> satisfied by automated checks alone. Update this file as items are completed
+> with evidence.
+
+Status values: `PASS`, `FAIL`, `UNVERIFIED`, `NOT IMPLEMENTED`, `BLOCKED`,
+`NEEDS HUMAN REVIEW`.
+
+## A. Engineering quality (automated)
+
+- [ ] `pnpm format:check` — **PASS** (2026-11-06, local)
+- [ ] `pnpm lint` — **PASS** (2026-11-06, local, 4/4 packages)
+- [ ] `pnpm typecheck` — **PASS** (2026-11-06, local, 6/6 tasks)
+- [ ] `pnpm test` — **PASS** (2026-11-06, local: schema 31/31, library 23/23)
+- [ ] `pnpm build:web` — **PASS** (2026-11-06, local; 9 routes)
+- [ ] `pnpm e2e` (Playwright + axe) — **PASS in CI** (run 42223523746, 2026-11-06); local sandbox cannot download browsers (**UNVERIFIED locally**)
+- [ ] `pnpm validate:mobile` — **PASS** (2026-11-06, local)
+- [ ] `pnpm security:audit` (`--audit-level=high`) — **PASS**; 2 moderate transitive Expo toolchain advisories documented in `docs/security/dependency-audit.md`
+- [ ] Remote CI green on the release commit — **PASS** (run 42223523746 on `2c18930`)
+- [ ] Clean-clone install reproducibility — **PASS** (Phase 01 evidence in `PROJECT_STATE.md`)
+
+## B. Scientific integrity
+
+- [ ] Every published experiment reviewed by a qualified chemistry educator — **BLOCKED** (`TASKS.md` P03-011; 0/11 records reviewed)
+- [ ] `SCIENTIFIC_VALIDATION_LOG.md` current — **PASS** (created 2026-11-06)
+- [ ] Model catalog matches implemented models — **PASS** (honestly empty; no models implemented)
+- [ ] No unvalidated model presented as scientific truth — **PASS** (simulation contracts are `planned`; UI labels pending review)
+- [ ] Curriculum mappings verified against official documents — **NEEDS HUMAN REVIEW** (P03-012)
+- [ ] Safety metadata reviewed for all published experiments — **NEEDS HUMAN REVIEW**
+
+## C. Security and privacy
+
+- [ ] Threat model reviewed for the release scope — **UNVERIFIED** (document exists; no assessment date)
+- [ ] No secrets in the repository — **PASS** (`.env.example` contains only a public setting)
+- [ ] Dependency audit within policy — **PASS** (high/critical: none)
+- [ ] Branch protection on `main` confirmed — **UNVERIFIED** (API token lacks admin; owner must confirm)
+- [ ] Privacy review before any account/persistence feature — **NOT IMPLEMENTED** (no backend yet)
+
+## D. Documentation
+
+- [ ] README reflects current phase — **PASS** (synced 2026-11-06)
+- [ ] ARCHITECTURE / DECISIONS / CHANGELOG / TASKS / PROJECT_STATE current — **PASS** (2026-11-06)
+- [ ] ADRs for all long-term decisions — **PARTIAL** (ADR-005/006 described in `docs/architecture/overview.md` and `LICENSE_SELECTION.md`; dedicated files pending)
+- [ ] Third-party attribution complete — **PASS** (`THIRD_PARTY_NOTICES.md`)
+- [ ] Installation, self-hosting and contributor docs — **PARTIAL** (setup/contributing exist; self-hosting deferred until deployment scope exists)
+
+## E. Release operations (future)
+
+- [ ] License selected and applied — **OWNER** (TBD: Apache-2.0 vs AGPL-3.0; `LICENSE_SELECTION.md`)
+- [ ] Product/brand name finalized — **OWNER**
+- [ ] Deployment target, HTTPS and secret management defined — **NOT IMPLEMENTED**
+- [ ] Monitoring, error reporting, backup and rollback procedures — **NOT IMPLEMENTED**
+- [ ] Versioning policy executed for the tag (`docs/development/release-and-versioning.md`) — pending first tag
+- [ ] Release notes drafted from `CHANGELOG.md` — pending first tag
+
+## F. Publication approvals (owner only)
+
+- [ ] Production deployment authorized — **OWNER**
+- [ ] Public repository release authorized — **OWNER**
+- [ ] Mobile app store submission authorized — **OWNER** (native builds not yet produced)
+- [ ] Higher-risk experiment content approved for publication — **OWNER** + qualified reviewer
+
+## Current release recommendation
+
+No release may be tagged until items B1 (qualified scientific review) and F
+(owner authorizations) are satisfied. Engineering-quality items (A) are green
+as of 2026-11-06.
