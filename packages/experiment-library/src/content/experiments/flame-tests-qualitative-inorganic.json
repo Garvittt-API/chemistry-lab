@@ -1,0 +1,496 @@
+{
+  "identity": {
+    "id": "flame-tests-qualitative-inorganic",
+    "slug": "flame-tests-qualitative-inorganic",
+    "title": "Flame Tests: Qualitative Inorganic Analysis",
+    "shortDescription": "Observe characteristic flame colours of selected metal ions and connect them to emission and the beginnings of qualitative salt analysis.",
+    "fullDescription": "Heating metal salts in a Bunsen flame produces characteristic colours: crimson for lithium, yellow for sodium, lilac for potassium, brick red for calcium and blue-green for copper. This classic qualitative-analysis technique is the first identification tool learners meet in inorganic chemistry. The activity uses a nichrome wire loop and a Bunsen burner under direct supervision, with dilute hydrochloric acid for cleaning the loop, and develops the reasoning of identification by characteristic property.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "inorganic-chemistry",
+    "subdisciplineIds": ["inorganic-chemistry-qualitative-analysis"],
+    "topicIds": ["flame-tests-and-emission", "qualitative-inorganic-analysis"],
+    "educationalLevels": ["school", "higher-secondary", "undergraduate"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-practical-salt-analysis",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Supports the qualitative salt-analysis practical component of Class XII Chemistry (identification of ions by characteristic reactions). Mapping proposed pending documentary verification against the CBSE subject PDF.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimatedDurationMinutes": 45,
+    "prerequisites": [
+      "Bunsen burner safety and use under supervision.",
+      "Basic idea of metal ions and salts.",
+      "Understanding that observation and inference are different things."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Perform flame tests safely with a clean nichrome wire loop.",
+      "Relate characteristic flame colours to specific metal ions as an identification method.",
+      "Discuss why flame colour arises from emission and how it supports qualitative analysis."
+    ],
+    "expectedCompetencies": [
+      "Manipulating a wire loop in and out of a flame without contaminating samples.",
+      "Observing colour carefully, including through cobalt glass where relevant.",
+      "Recording identification conclusions with their supporting observations."
+    ],
+    "learningOutcomes": [
+      "Correctly match at least four of the tested salts with their characteristic flame colours.",
+      "Explain the test-observation-conclusion chain for one unknown salt.",
+      "State at least two limitations of the flame test (masking, contamination, subjectivity)."
+    ],
+    "theory": {
+      "overview": "When metal ions are heated in a Bunsen flame, thermal energy excites their electrons to higher energy levels; on returning to lower levels they emit light of characteristic wavelengths, seen as flame colours. Because the colour is characteristic of the element, the flame test is a rapid qualitative identification tool. It is a screening method: sodium's intense yellow masks other colours, and contamination is easy, so confirmatory tests are part of proper qualitative analysis.",
+      "sections": [
+        {
+          "heading": "Excitation and emission",
+          "body": "The blue inner cone of a Bunsen flame reaches roughly 1300-1500 C in air and hotter with a roaring flame — enough to excite valence electrons of volatile metal compounds. The emitted light's wavelengths are element-specific; the eye integrates them into the observed colour. (Quantitative emission and atomic spectra are treated in the separate spectroscopy draft, not here.)",
+          "sourceRefIds": ["ref-ncert-class11-part1-textbook"]
+        },
+        {
+          "heading": "Characteristic colours of common cations",
+          "body": "Lithium compounds give a crimson flame, sodium an intense persistent yellow, potassium lilac (easier to see through cobalt glass, which absorbs sodium's yellow), calcium brick red and copper(II) compounds blue-green. These are standard qualitative-analysis observations taught in school practical chemistry and used as first-line identification in salt analysis schemes.",
+          "sourceRefIds": ["ref-ncert-class11-part1-textbook"]
+        },
+        {
+          "heading": "Technique and its limits",
+          "body": "The wire loop must be cleaned with dilute hydrochloric acid between samples; even trace sodium (from fingerprints or tap water) dominates the flame. Colours are subjective in mixed samples, and some elements (magnesium, aluminium) give no distinctive flame colour at all — so a negative flame test never proves absence. Proper qualitative analysis combines several characteristic reactions.",
+          "sourceRefIds": ["ref-ncert-class11-part1-textbook"]
+        }
+      ],
+      "scientificBackground": "Flame colours are emission phenomena of gas-phase atoms and simple compounds; the school-level description deliberately stops at excitation/de-excitation without orbital energy calculations. Interference and masking effects are real analytical chemistry problems, which is why instrumental methods (AAS, ICP) largely superseded flame tests in professional practice while the tests remain educationally central.",
+      "concepts": [
+        "qualitative analysis",
+        "characteristic property",
+        "emission",
+        "excitation",
+        "contamination and masking",
+        "identification reasoning"
+      ],
+      "equations": [],
+      "definitions": [
+        {
+          "id": "def-flame-test",
+          "term": "Flame test",
+          "definition": "A qualitative test in which a sample heated in a flame produces a characteristic colour used to identify metal ions present.",
+          "sourceRefIds": ["ref-ncert-class11-part1-textbook"]
+        },
+        {
+          "id": "def-qualitative-analysis",
+          "term": "Qualitative analysis",
+          "definition": "Determining WHICH substances or ions are present (as opposed to how much), using characteristic reactions and observations.",
+          "sourceRefIds": ["ref-ncert-class11-part1-textbook"]
+        },
+        {
+          "id": "def-emission",
+          "term": "Emission (atomic)",
+          "definition": "Light emitted when excited atoms or ions return to lower energy states, at element-characteristic wavelengths.",
+          "sourceRefIds": ["ref-ncert-class11-part1-textbook"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-bunsen-burner",
+        "name": "Bunsen burner with gas supply",
+        "specification": "Standard laboratory burner",
+        "quantity": "1",
+        "purpose": "Heating the wire loop",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-nichrome-wire",
+        "name": "Nichrome (or platinum) wire loop in holder",
+        "specification": "Clean, fused-glass handle preferred",
+        "quantity": "1",
+        "purpose": "Carrying sample into the flame",
+        "alternatives": [
+          "Wooden splint soaked in the sample solution (single-use, safer for younger learners)"
+        ]
+      },
+      {
+        "id": "eqp-cobalt-glass",
+        "name": "Cobalt blue glass plate",
+        "specification": "Small",
+        "quantity": "1",
+        "purpose": "Viewing potassium flame past sodium's yellow",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-watch-glasses",
+        "name": "Watch glasses or spotting tile",
+        "specification": "For holding sample solutions",
+        "quantity": "1",
+        "purpose": "Sample staging",
+        "alternatives": []
+      }
+    ],
+    "chemicals": [
+      {
+        "id": "chem-hcl-cleaning",
+        "name": "Hydrochloric acid (dilute, for cleaning)",
+        "formulaOrDescription": "HCl(aq), about 2 mol/L in a small wash bottle or beaker",
+        "category": "solution",
+        "amount": "About 20 mL",
+        "identifiers": { "pubchem-cid": "313" },
+        "hazardKinds": ["corrosive", "irritant"],
+        "notes": "Used to clean the wire loop between samples (chlorides volatilise well)."
+      },
+      {
+        "id": "chem-nacl-salt",
+        "name": "Sodium chloride solution",
+        "formulaOrDescription": "NaCl(aq), dilute (about 0.5 mol/L)",
+        "category": "solution",
+        "amount": "A few mL",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "Intense yellow flame. Low hazard."
+      },
+      {
+        "id": "chem-kcl-salt",
+        "name": "Potassium chloride solution",
+        "formulaOrDescription": "KCl(aq), dilute (about 0.5 mol/L)",
+        "category": "solution",
+        "amount": "A few mL",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "Lilac flame, viewed through cobalt glass. Low hazard."
+      },
+      {
+        "id": "chem-cacl2-salt",
+        "name": "Calcium chloride solution",
+        "formulaOrDescription": "CaCl2(aq), dilute (about 0.5 mol/L)",
+        "category": "solution",
+        "amount": "A few mL",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "Brick-red flame. Mild irritant."
+      },
+      {
+        "id": "chem-cuso4-flame",
+        "name": "Copper(II) sulfate solution",
+        "formulaOrDescription": "CuSO4(aq), dilute (about 0.5 mol/L)",
+        "category": "solution",
+        "amount": "A few mL",
+        "identifiers": { "pubchem-cid": "24462" },
+        "hazardKinds": ["acutely_toxic", "irritant", "environmental_hazard"],
+        "notes": "Blue-green flame. Harmful if swallowed; metal-salt waste rules apply."
+      },
+      {
+        "id": "chem-unknown-salt",
+        "name": "One 'unknown' salt solution (for identification)",
+        "formulaOrDescription": "Prepared by the supervising educator from one of the above salts",
+        "category": "solution",
+        "amount": "A few mL",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "For the identification reasoning exercise; treated as irritant until identified."
+      }
+    ],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "moderate",
+    "riskRationale": "The activity works with an open Bunsen flame and hot wire near the face and with dilute hydrochloric acid for loop cleaning. Burns and eye splash are the controlled risks; direct qualified supervision is required throughout, and the wooden-splint variant is recommended for younger learners.",
+    "hazards": [
+      {
+        "kind": "hot_surface_or_flame",
+        "statement": "The Bunsen flame and the wire loop become extremely hot; the loop stays hot long after leaving the flame. Tie hair back, keep the loop away from the face and never leave a lit burner unattended.",
+        "appliesTo": ["eqp-bunsen-burner", "eqp-nichrome-wire"],
+        "evidence": {
+          "basis": "common_laboratory_practice",
+          "referenceId": "ref-ncert-class11-part1-textbook",
+          "notes": "Standard school laboratory safety for burner work; institutional rules govern the details."
+        }
+      },
+      {
+        "kind": "corrosive",
+        "statement": "Dilute hydrochloric acid (about 2 mol/L) is corrosive and a serious eye hazard; wear safety spectacles and handle the cleaning acid with care.",
+        "appliesTo": ["chem-hcl-cleaning"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-hcl",
+          "notes": "GHS hazard statements for hydrochloric acid (CID 313) per the PubChem compound entry."
+        }
+      },
+      {
+        "kind": "acutely_toxic",
+        "statement": "Copper(II) sulfate is harmful if swallowed; wash hands after handling and collect waste for metal-salt disposal.",
+        "appliesTo": ["chem-cuso4-flame"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-cuso4",
+          "notes": "GHS hazard classifications for copper(II) sulfate (CID 24462) per the PubChem compound entry."
+        }
+      }
+    ],
+    "protectiveEquipment": [
+      "Safety spectacles at all times (splash goggles preferred).",
+      "Laboratory coat or apron; short sleeves or rolled sleeves — no loose clothing near a flame.",
+      "Tie long hair back; closed shoes required.",
+      "Heat-proof mat under the working area."
+    ],
+    "disposal": [
+      "Collect copper sulfate waste in the labelled metal-salt container; do not pour down the drain.",
+      "Dilute NaCl, KCl and CaCl2 solutions may normally be washed to drain with water, subject to the supervising institution's policy.",
+      "Dispose of used splints and cleaning acid as directed by the supervising institution."
+    ],
+    "supervision": "qualified_educator_supervision_required",
+    "restrictedOperations": [
+      "No flame work without the supervising educator present at the bench.",
+      "No tasting of any salt — 'common salt' identification by taste is prohibited in laboratories.",
+      "No heating of unknown materials or mixtures; only the listed dilute salt solutions are tested.",
+      "Do not use methanol or other flammable solvents to carry samples into the flame (a known serious-accident pattern); this record uses aqueous solutions on a wire loop only."
+    ],
+    "emergencyGuidance": [
+      "Burns: cool under running water for at least ten minutes and inform the supervising educator; seek medical attention for serious burns.",
+      "Fire: use the fire blanket or extinguisher per the institution's procedure; switch off the gas supply.",
+      "Acid splash: flood with water; eye contact requires immediate rinsing and medical attention."
+    ],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Clean the wire loop in acid and pass it through the flame until colourless, then test each salt solution in turn, observing the flame colour (through cobalt glass for potassium) and finally identifying one unknown.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Set up and clean the loop",
+        "instructions": "Light the Bunsen burner with a blue roaring flame. Dip the nichrome loop in dilute hydrochloric acid and heat it in the flame until no colour remains. Repeat until the flame is colourless when the clean loop is introduced.",
+        "equipmentIds": ["eqp-bunsen-burner", "eqp-nichrome-wire"],
+        "chemicalIds": ["chem-hcl-cleaning"],
+        "precautions": [
+          "Hot loop! Hold the wire handle only and rest it on the heat-proof mat when not in use.",
+          "A persistent yellow flame means sodium contamination — clean again before any test."
+        ],
+        "expectedObservations": ["The flame shows no colour when the cleaned loop is inserted."],
+        "explanatoryNotes": [
+          "This cleaning step is the difference between a test and a guess; treat it as part of the measurement."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Test the known salts",
+        "instructions": "Dip the cleaned loop into a salt solution and introduce it into the flame. Observe and record the flame colour immediately. Re-clean the loop between samples. Test NaCl, KCl, CaCl2 and CuSO4 solutions. For potassium, view the flame through the cobalt glass and record what changes.",
+        "equipmentIds": [
+          "eqp-bunsen-burner",
+          "eqp-nichrome-wire",
+          "eqp-cobalt-glass",
+          "eqp-watch-glasses"
+        ],
+        "chemicalIds": ["chem-nacl-salt", "chem-kcl-salt", "chem-cacl2-salt", "chem-cuso4-flame"],
+        "precautions": [
+          "Work sample by sample; do not line up all solutions at the burner.",
+          "Never return used loop touches to stock solutions."
+        ],
+        "expectedObservations": [
+          "NaCl intense yellow; KCl lilac (clearer through cobalt glass); CaCl2 brick red; CuSO4 blue-green."
+        ],
+        "explanatoryNotes": [
+          "These are the standard characteristic colours of qualitative-analysis teaching; they are recorded as expected reference behaviour."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Identify the unknown",
+        "instructions": "Test the educator-prepared unknown in the same way. Compare its flame colour with the observed and recorded colours of the known salts. State your identification and the observation that supports it.",
+        "equipmentIds": ["eqp-bunsen-burner", "eqp-nichrome-wire", "eqp-cobalt-glass"],
+        "chemicalIds": ["chem-unknown-salt"],
+        "precautions": ["Treat the unknown as harmful until identified."],
+        "expectedObservations": [
+          "The unknown's flame colour matches exactly one of the tested knowns."
+        ],
+        "explanatoryNotes": [
+          "Write the conclusion as 'observation -> inference': the shape of the argument is the learning outcome, not just the name."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Record technique notes",
+        "instructions": "Record how the loop was cleaned between samples, any masking observed and any colour that was ambiguous. Note which observations support which conclusions.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [],
+        "explanatoryNotes": [
+          "Technique notes are data about reliability; they belong in the record."
+        ]
+      }
+    ],
+    "troubleshooting": [
+      "Persistent yellow flame: sodium contamination on the loop, in the water or from fingers — reclean and handle the loop by its holder only.",
+      "Faint potassium lilac: view through cobalt glass and re-test with a fresh drop; sodium masking is the usual cause.",
+      "No visible colour at all: the sample may be too dilute or may contain an element without a distinctive flame colour — record it as a negative result, not a failed one."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-flame-colour",
+          "label": "Observed flame colour per salt",
+          "kind": "absorbance_or_color",
+          "method": "Introduce the charged loop into the lower flame and observe immediately; record colour and persistence. View potassium through cobalt glass.",
+          "expectedQualitative": [
+            "Sodium: intense persistent yellow.",
+            "Potassium: lilac, clearer through cobalt glass.",
+            "Calcium: brick red.",
+            "Copper(II): blue-green."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class11-part1-textbook"],
+          "displayPrecision": "Qualitative observation with notes on intensity."
+        },
+        {
+          "id": "obs-unknown-identification",
+          "label": "Unknown identification with supporting observation",
+          "kind": "qualitative",
+          "method": "Compare the unknown's flame colour with the recorded known colours; state the inference and its confidence.",
+          "provenance": "requires_review",
+          "sourceRefIds": ["ref-ncert-class11-part1-textbook"],
+          "displayPrecision": "Qualitative inference with stated basis."
+        }
+      ],
+      "qualitativePrompts": [
+        "Which colours were unmistakable and which needed a second look?",
+        "Did the cobalt glass change what you saw for potassium, and why?",
+        "What additional test would you want before trusting an identification in a real analysis?"
+      ],
+      "errorSources": [
+        "Sodium contamination masking other colours (fingerprints, tap water, dirty loop).",
+        "Subjective colour naming under different lighting.",
+        "Sample too dilute on the loop for a clear colour.",
+        "Observer expectation bias when the 'unknown' is guessed early."
+      ],
+      "interpretationGuidance": [
+        "A flame test is confirmatory only in combination with a clean technique and, in real analysis, further tests; single-test conclusions are provisional.",
+        "A negative flame test does not prove absence of an element — some give no distinctive colour.",
+        "Record the observation and the inference separately in your write-up."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "not_applicable",
+    "rationale": "Flame tests are qualitative identification; there is no measured quantity to compute from. Quantitative emission analysis is out of scope and no calculation is fabricated."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class11-part1-textbook",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry Part I, Textbook for Class XI (includes 'Classification of Elements and Periodicity in Properties' and laboratory-related qualitative analysis coverage in the Class XI-XII Chemistry course). National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry Part I, Textbook for Class XI",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?kech1=0",
+        "identifiers": { "ncert-book-index": "kech1" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "def-flame-test",
+          "def-qualitative-analysis",
+          "def-emission",
+          "obs-flame-colour"
+        ],
+        "notes": "Official NCERT book index page fetched on 2026-11-05. The characteristic flame colours are standard qualitative-analysis teaching data; the scientific reviewer should confirm the exact table against the practical/lab manual used by the target institution."
+      },
+      {
+        "id": "ref-pubchem-hcl",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Hydrochloric acid (CID 313).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Hydrochloric acid (CID 313)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/313",
+        "identifiers": { "pubchem-cid": "313" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID 313 verified during the 2026-11-05 content pass; hazard evidence for the cleaning acid."
+      },
+      {
+        "id": "ref-pubchem-cuso4",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Copper sulfate (CID 24462).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Copper sulfate (CID 24462)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24462",
+        "identifiers": { "pubchem-cid": "24462" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID 24462 verified during the 2026-11-05 content pass; hazard evidence for copper(II) sulfate."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": { "circular": "Acad-14/2025" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Curriculum-mapping evidence only; practical-component wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "not_planned",
+    "rationale": "Flame colour is the observation itself; a simulated flame would teach the colours as game content rather than as observations. If a future simulation is proposed it must present colours as reference behaviour clearly labelled as illustrative, and must not substitute for the real observation."
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "requires_review",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. Methanol-flame variants were deliberately excluded as a known serious-accident pattern. Pending independent scientific and safety review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "Characteristic flame colours recorded as standard qualitative-analysis reference behaviour; flagged for reviewer confirmation against the institution's lab manual.",
+      "The exclusion of flammable-solvent flame-test variants is recorded as a deliberate safety decision consistent with docs/experiments/experiment-safety-policy.md."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place.",
+      "Flame test with open fire requires the supervising institution's formal risk assessment; publication does not authorize classroom use without it.",
+      "Characteristic flame colours should be confirmed against the specific practical manual of the target curriculum before the mapping is upgraded."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text copied; NCERT and PubChem are cited as references only."
+    }
+  }
+}

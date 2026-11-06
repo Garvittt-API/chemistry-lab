@@ -34,10 +34,21 @@ Statuses: `TODO`, `IN_PROGRESS`, `BLOCKED`, `REVIEW`, `DONE`. A task is `DONE` o
 - Verify keyboard, screen-reader and contrast requirements.
 - Do not add decorative complexity that reduces scientific clarity.
 
-## Phase 03 — Experiment library and content pipeline
-- Finalize experiment content schema and versioning.
-- Add search, filtering, categories, curriculum tags and provenance.
-- Establish editorial review and contribution workflow.
+## Phase 03 — Experiment library, scientific content and curriculum mapping
+| ID | Task | Priority | Depends on | Status |
+|---|---|---:|---|---|
+| P03-001 | Pre-flight audit of Phase 02 gates and architecture | Critical | P02-007 | DONE |
+| P03-002 | Extend `experiment-schema` to versioned 2.0.0 record contract with tests and legacy migration | Critical | P03-001 | DONE |
+| P03-003 | Implement framework-free `experiment-library` package (catalog validation, queries, publication gating) | Critical | P03-002 | DONE |
+| P03-004 | Author taxonomy (15 disciplines), educational-level registry and CBSE curriculum registry | High | P03-002 | DONE |
+| P03-005 | Author initial collection: 11 records (10 published + 1 draft) with traceable references and honest review status | Critical | P03-003,P03-004 | DONE |
+| P03-006 | Integrate library into web (explore/search/filters, detail rendering, subjects, unpublished→404, empty/error states) | Critical | P03-005 | DONE |
+| P03-007 | Rewrite e2e suite against real content incl. publication restriction and axe scans | High | P03-006 | DONE |
+| P03-008 | Author docs set (science, experiments, contribution) and ADR-009 | High | P03-005 | DONE |
+| P03-009 | Run full quality gates (format, lint, typecheck, tests, build, e2e, mobile, security audit) | Critical | P03-007,P03-008 | DONE |
+| P03-010 | Phase 03 acceptance review and sign-off | Critical | P03-001..P03-009 | REVIEW |
+| P03-011 | Qualified scientific review of the content collection | Critical | P03-010 | TODO |
+| P03-012 | Curriculum mappings verified against official subject documents | Medium | P03-011 | TODO |
 
 ## Phase 04 — Scientific simulation core
 - Implement deterministic, independently testable scientific models.

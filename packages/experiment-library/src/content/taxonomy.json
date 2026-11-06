@@ -1,0 +1,877 @@
+{
+  "taxonomyVersion": "1.0.0",
+  "disciplines": [
+    {
+      "id": "general-chemistry",
+      "label": "General Chemistry",
+      "description": "Foundational language of chemistry: quantities, matter, solutions, acids and bases, bonding basics and laboratory reasoning.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "general-chemistry-laboratory-techniques",
+          "label": "Laboratory techniques",
+          "description": "Core practical skills: measuring, preparing solutions, handling apparatus and working safely.",
+          "topicIds": [
+            "laboratory-techniques",
+            "measurement-and-units",
+            "solutions-and-concentration"
+          ]
+        },
+        {
+          "id": "general-chemistry-quantitative-foundations",
+          "label": "Quantitative foundations",
+          "description": "Mole concept, stoichiometry and concentration reasoning.",
+          "topicIds": ["stoichiometry-and-mole-concept", "solutions-and-concentration"]
+        },
+        {
+          "id": "general-chemistry-acid-base-foundations",
+          "label": "Acid-base foundations",
+          "description": "Acid-base behaviour, pH ideas and indicators at introductory level.",
+          "topicIds": ["acids-and-bases", "indicator-foundations"]
+        },
+        {
+          "id": "general-chemistry-structure-foundations",
+          "label": "Structure and bonding foundations",
+          "description": "Why molecules have shape: bonding models and molecular geometry.",
+          "topicIds": ["structure-and-bonding"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "stoichiometry-and-mole-concept",
+          "label": "Stoichiometry and the mole concept",
+          "description": "Amounts of substance, molar mass and quantitative reaction reasoning.",
+          "relatedTopicIds": ["solutions-and-concentration"]
+        },
+        {
+          "id": "solutions-and-concentration",
+          "label": "Solutions and concentration",
+          "description": "Preparing solutions, concentration units, dilution and standardization.",
+          "relatedTopicIds": ["stoichiometry-and-mole-concept", "laboratory-techniques"]
+        },
+        {
+          "id": "acids-and-bases",
+          "label": "Acids and bases",
+          "description": "Acid-base definitions, strength, neutralization and pH.",
+          "relatedTopicIds": ["indicator-foundations"]
+        },
+        {
+          "id": "indicator-foundations",
+          "label": "Indicators (foundations)",
+          "description": "Colour-change indicators and what they reveal about a solution.",
+          "relatedTopicIds": ["acids-and-bases"]
+        },
+        {
+          "id": "structure-and-bonding",
+          "label": "Structure and bonding",
+          "description": "Lewis structures, VSEPR and molecular shape.",
+          "relatedTopicIds": []
+        },
+        {
+          "id": "laboratory-techniques",
+          "label": "Laboratory techniques",
+          "description": "Transfer, measurement, heating and apparatus handling skills.",
+          "relatedTopicIds": ["measurement-and-units"]
+        },
+        {
+          "id": "measurement-and-units",
+          "label": "Measurement and units",
+          "description": "Units, significant figures, accuracy and precision in practice.",
+          "relatedTopicIds": ["laboratory-techniques"]
+        }
+      ],
+      "relatedDisciplineIds": ["analytical-chemistry", "physical-chemistry", "inorganic-chemistry"],
+      "applicableLevelIds": ["beginner", "school", "higher-secondary"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "organic-chemistry",
+      "label": "Organic Chemistry",
+      "description": "Carbon-based structures, functional groups, reaction mechanisms and purification of organic compounds.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "organic-chemistry-synthesis",
+          "label": "Organic synthesis",
+          "description": "Building and transforming carbon compounds.",
+          "topicIds": ["functional-groups", "reaction-mechanisms", "organic-nomenclature"]
+        },
+        {
+          "id": "organic-chemistry-techniques",
+          "label": "Organic laboratory techniques",
+          "description": "Purification and characterization techniques used in organic work.",
+          "topicIds": ["purification-techniques"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "organic-nomenclature",
+          "label": "Organic nomenclature",
+          "description": "Naming and representing organic compounds.",
+          "relatedTopicIds": ["functional-groups"]
+        },
+        {
+          "id": "functional-groups",
+          "label": "Functional groups",
+          "description": "Reactive molecular units and their characteristic chemistry.",
+          "relatedTopicIds": ["reaction-mechanisms"]
+        },
+        {
+          "id": "reaction-mechanisms",
+          "label": "Reaction mechanisms",
+          "description": "Electron movement and stepwise pathways of organic reactions.",
+          "relatedTopicIds": ["functional-groups"]
+        },
+        {
+          "id": "purification-techniques",
+          "label": "Purification techniques",
+          "description": "Crystallization, distillation, extraction and chromatography of organic compounds.",
+          "relatedTopicIds": []
+        },
+        {
+          "id": "stereochemistry",
+          "label": "Stereochemistry",
+          "description": "Three-dimensional arrangement of atoms in molecules.",
+          "relatedTopicIds": []
+        }
+      ],
+      "relatedDisciplineIds": [
+        "general-chemistry",
+        "biochemistry",
+        "medicinal-chemistry",
+        "polymer-chemistry"
+      ],
+      "applicableLevelIds": ["higher-secondary", "undergraduate", "postgraduate"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "inorganic-chemistry",
+      "label": "Inorganic Chemistry",
+      "description": "Elements, ionic and coordination compounds, descriptive chemistry of the periodic table and qualitative identification.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "inorganic-chemistry-qualitative-analysis",
+          "label": "Qualitative inorganic analysis",
+          "description": "Identification of ions and substances through characteristic reactions.",
+          "topicIds": ["qualitative-inorganic-analysis", "flame-tests-and-emission"]
+        },
+        {
+          "id": "inorganic-chemistry-coordination",
+          "label": "Coordination chemistry",
+          "description": "Metal complexes, ligands and their behaviour.",
+          "topicIds": ["coordination-chemistry"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "qualitative-inorganic-analysis",
+          "label": "Qualitative inorganic analysis",
+          "description": "Systematic identification of cations and anions.",
+          "relatedTopicIds": ["flame-tests-and-emission"]
+        },
+        {
+          "id": "flame-tests-and-emission",
+          "label": "Flame tests and emission",
+          "description": "Characteristic flame colours and emission observations of metal ions.",
+          "relatedTopicIds": ["qualitative-inorganic-analysis"]
+        },
+        {
+          "id": "coordination-chemistry",
+          "label": "Coordination chemistry",
+          "description": "Structure and behaviour of metal complexes.",
+          "relatedTopicIds": []
+        },
+        {
+          "id": "periodic-trends",
+          "label": "Periodic trends",
+          "description": "Trends in properties across periods and groups.",
+          "relatedTopicIds": ["descriptive-inorganic"]
+        },
+        {
+          "id": "descriptive-inorganic",
+          "label": "Descriptive inorganic chemistry",
+          "description": "Characteristic reactions and compounds of the elements.",
+          "relatedTopicIds": ["periodic-trends"]
+        }
+      ],
+      "relatedDisciplineIds": ["general-chemistry", "analytical-chemistry", "materials-chemistry"],
+      "applicableLevelIds": ["higher-secondary", "undergraduate", "postgraduate"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "physical-chemistry",
+      "label": "Physical Chemistry",
+      "description": "Energy, equilibrium, kinetics, structure and the quantitative behaviour of chemical systems.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "physical-chemistry-equilibrium-thermodynamics",
+          "label": "Equilibrium and thermodynamics",
+          "description": "Energetics, spontaneity and the extent of reactions.",
+          "topicIds": ["chemical-equilibrium", "thermodynamics"]
+        },
+        {
+          "id": "physical-chemistry-kinetics",
+          "label": "Chemical kinetics",
+          "description": "Rates of reactions and their dependence on conditions.",
+          "topicIds": ["chemical-kinetics"]
+        },
+        {
+          "id": "physical-chemistry-structure",
+          "label": "Molecular structure and spectroscopy",
+          "description": "Structure determination and the interaction of matter with radiation.",
+          "topicIds": ["atomic-and-molecular-structure", "spectroscopy-and-structure"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "chemical-equilibrium",
+          "label": "Chemical equilibrium",
+          "description": "Dynamic equilibrium, equilibrium constants and Le Chatelier's principle.",
+          "relatedTopicIds": ["thermodynamics", "chemical-kinetics"]
+        },
+        {
+          "id": "chemical-kinetics",
+          "label": "Chemical kinetics",
+          "description": "Reaction rates, rate laws, order and temperature dependence.",
+          "relatedTopicIds": ["chemical-equilibrium"]
+        },
+        {
+          "id": "thermodynamics",
+          "label": "Thermodynamics",
+          "description": "Energy changes, enthalpy, entropy and free energy.",
+          "relatedTopicIds": ["chemical-equilibrium"]
+        },
+        {
+          "id": "atomic-and-molecular-structure",
+          "label": "Atomic and molecular structure",
+          "description": "Electronic structure and its consequences for bonding and shape.",
+          "relatedTopicIds": ["spectroscopy-and-structure"]
+        },
+        {
+          "id": "spectroscopy-and-structure",
+          "label": "Spectroscopy and structure",
+          "description": "Using spectra and physical measurements to reason about molecular structure.",
+          "relatedTopicIds": ["atomic-and-molecular-structure"]
+        },
+        {
+          "id": "states-of-matter",
+          "label": "States of matter",
+          "description": "Gases, liquids, solids and phase behaviour.",
+          "relatedTopicIds": []
+        },
+        {
+          "id": "surface-chemistry",
+          "label": "Surface chemistry",
+          "description": "Adsorption, catalysis and colloids.",
+          "relatedTopicIds": []
+        }
+      ],
+      "relatedDisciplineIds": [
+        "general-chemistry",
+        "analytical-chemistry",
+        "computational-chemistry"
+      ],
+      "applicableLevelIds": [
+        "higher-secondary",
+        "undergraduate",
+        "postgraduate",
+        "advanced-research"
+      ],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "analytical-chemistry",
+      "label": "Analytical Chemistry",
+      "description": "Measurement, separation, uncertainty and evidence-based interpretation of chemical composition.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "analytical-chemistry-classical-analysis",
+          "label": "Classical analysis",
+          "description": "Gravimetric and volumetric methods.",
+          "topicIds": ["volumetric-analysis", "indicator-foundations"]
+        },
+        {
+          "id": "analytical-chemistry-separation-science",
+          "label": "Separation science",
+          "description": "Chromatographic and related separation methods.",
+          "topicIds": ["separation-techniques"]
+        },
+        {
+          "id": "analytical-chemistry-instrumental",
+          "label": "Instrumental analysis",
+          "description": "Spectroscopic, electrochemical and other instrumental measurements.",
+          "topicIds": ["instrumental-analysis", "analytical-uncertainty"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "volumetric-analysis",
+          "label": "Volumetric analysis",
+          "description": "Titration-based quantitative analysis and standardization.",
+          "relatedTopicIds": ["indicator-chemistry", "analytical-uncertainty"]
+        },
+        {
+          "id": "separation-techniques",
+          "label": "Separation techniques",
+          "description": "Chromatography and other methods for separating mixtures.",
+          "relatedTopicIds": ["instrumental-analysis"]
+        },
+        {
+          "id": "instrumental-analysis",
+          "label": "Instrumental analysis",
+          "description": "Instrument-based measurement of chemical properties.",
+          "relatedTopicIds": ["analytical-uncertainty"]
+        },
+        {
+          "id": "indicator-foundations",
+          "label": "Indicator foundations",
+          "description": "Acid-base and other indicators used as analytical signals.",
+          "relatedTopicIds": ["volumetric-analysis"]
+        },
+        {
+          "id": "analytical-uncertainty",
+          "label": "Uncertainty and error in analysis",
+          "description": "Sources of error, significant figures and honest reporting of results.",
+          "relatedTopicIds": ["volumetric-analysis"]
+        },
+        {
+          "id": "acids-and-bases",
+          "label": "Acids and bases",
+          "description": "Acid-base reactions and their analytical exploitation (neutralisation, titration, indicators).",
+          "relatedTopicIds": ["indicator-foundations", "volumetric-analysis"]
+        }
+      ],
+      "relatedDisciplineIds": [
+        "general-chemistry",
+        "physical-chemistry",
+        "forensic-chemistry",
+        "environmental-chemistry"
+      ],
+      "applicableLevelIds": [
+        "higher-secondary",
+        "undergraduate",
+        "postgraduate",
+        "advanced-research"
+      ],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "environmental-chemistry",
+      "label": "Environmental Chemistry",
+      "description": "Chemical processes in air, water, soil and changing environments, including pollutant behaviour.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "environmental-chemistry-aquatic",
+          "label": "Aquatic chemistry",
+          "description": "Chemistry of natural and polluted waters.",
+          "topicIds": ["water-chemistry", "pollutant-fate"]
+        },
+        {
+          "id": "environmental-chemistry-atmospheric",
+          "label": "Atmospheric chemistry",
+          "description": "Reactions and processes in the atmosphere.",
+          "topicIds": ["air-chemistry"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "water-chemistry",
+          "label": "Water chemistry",
+          "description": "Dissolved species, hardness, pH and quality of water systems.",
+          "relatedTopicIds": ["pollutant-fate"]
+        },
+        {
+          "id": "air-chemistry",
+          "label": "Air chemistry",
+          "description": "Atmospheric composition, smog, ozone and greenhouse gases.",
+          "relatedTopicIds": ["pollutant-fate"]
+        },
+        {
+          "id": "soil-chemistry",
+          "label": "Soil chemistry",
+          "description": "Chemical processes in soils and sediments.",
+          "relatedTopicIds": ["pollutant-fate"]
+        },
+        {
+          "id": "pollutant-fate",
+          "label": "Pollutant fate and transport",
+          "description": "How contaminants move, transform and persist in the environment.",
+          "relatedTopicIds": ["water-chemistry", "air-chemistry", "soil-chemistry"]
+        },
+        {
+          "id": "green-chemistry",
+          "label": "Green chemistry",
+          "description": "Designing chemical processes that reduce hazard and waste.",
+          "relatedTopicIds": []
+        }
+      ],
+      "relatedDisciplineIds": ["analytical-chemistry", "industrial-chemistry", "biochemistry"],
+      "applicableLevelIds": ["higher-secondary", "undergraduate", "postgraduate"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "biochemistry",
+      "label": "Biochemistry",
+      "description": "Molecules and reactions that support living systems: biomolecules, enzymes and metabolism.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "biochemistry-molecular",
+          "label": "Molecular biochemistry",
+          "description": "Structure and behaviour of biological molecules.",
+          "topicIds": ["biomolecules", "bioenergetics"]
+        },
+        {
+          "id": "biochemistry-metabolic",
+          "label": "Enzymes and metabolism",
+          "description": "Biological catalysis and metabolic transformations.",
+          "topicIds": ["enzyme-kinetics", "metabolism-fundamentals"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "biomolecules",
+          "label": "Biomolecules",
+          "description": "Carbohydrates, proteins, lipids and nucleic acids.",
+          "relatedTopicIds": ["enzyme-kinetics"]
+        },
+        {
+          "id": "enzyme-kinetics",
+          "label": "Enzyme kinetics",
+          "description": "Rates and regulation of enzyme-catalysed reactions.",
+          "relatedTopicIds": ["metabolism-fundamentals"]
+        },
+        {
+          "id": "metabolism-fundamentals",
+          "label": "Metabolism fundamentals",
+          "description": "Major metabolic pathways and their chemical logic.",
+          "relatedTopicIds": ["bioenergetics"]
+        },
+        {
+          "id": "bioenergetics",
+          "label": "Bioenergetics",
+          "description": "Energy transformation in living systems.",
+          "relatedTopicIds": ["thermodynamics"]
+        }
+      ],
+      "relatedDisciplineIds": [
+        "organic-chemistry",
+        "medicinal-chemistry",
+        "environmental-chemistry"
+      ],
+      "applicableLevelIds": ["undergraduate", "postgraduate", "advanced-research"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "industrial-chemistry",
+      "label": "Industrial Chemistry",
+      "description": "Process thinking, materials, scale and responsible production of chemicals.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "industrial-chemistry-processes",
+          "label": "Industrial processes",
+          "description": "Large-scale chemical transformations and their design principles.",
+          "topicIds": ["process-chemistry", "scale-up-principles"]
+        },
+        {
+          "id": "industrial-chemistry-catalysis",
+          "label": "Industrial catalysis",
+          "description": "Catalysts and their role in industrial reactions.",
+          "topicIds": ["industrial-catalysis"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "process-chemistry",
+          "label": "Process chemistry",
+          "description": "Reaction and separation steps in industrial production.",
+          "relatedTopicIds": ["scale-up-principles"]
+        },
+        {
+          "id": "scale-up-principles",
+          "label": "Scale-up principles",
+          "description": "How laboratory chemistry changes with scale.",
+          "relatedTopicIds": ["process-chemistry"]
+        },
+        {
+          "id": "industrial-catalysis",
+          "label": "Industrial catalysis",
+          "description": "Catalyst design, deactivation and process conditions.",
+          "relatedTopicIds": ["process-chemistry"]
+        },
+        {
+          "id": "resource-utilization",
+          "label": "Resource utilization",
+          "description": "Responsible use of raw materials, energy and water.",
+          "relatedTopicIds": ["green-chemistry"]
+        }
+      ],
+      "relatedDisciplineIds": [
+        "materials-chemistry",
+        "environmental-chemistry",
+        "polymer-chemistry"
+      ],
+      "applicableLevelIds": ["undergraduate", "postgraduate"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "materials-chemistry",
+      "label": "Materials Chemistry",
+      "description": "Structure, properties and design of useful materials, from crystals to composites.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "materials-chemistry-structure",
+          "label": "Structure of materials",
+          "description": "Atomic and microstructural organization of materials.",
+          "topicIds": ["crystal-structure", "structure-property-relations"]
+        },
+        {
+          "id": "materials-chemistry-advanced",
+          "label": "Advanced materials",
+          "description": "Functional and nanostructured materials.",
+          "topicIds": ["nanomaterials", "electronic-materials"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "crystal-structure",
+          "label": "Crystal structure",
+          "description": "Lattices, unit cells and diffraction.",
+          "relatedTopicIds": ["structure-property-relations"]
+        },
+        {
+          "id": "structure-property-relations",
+          "label": "Structure-property relations",
+          "description": "How structure determines the properties of a material.",
+          "relatedTopicIds": ["crystal-structure"]
+        },
+        {
+          "id": "nanomaterials",
+          "label": "Nanomaterials",
+          "description": "Materials with nanoscale structure and their special behaviour.",
+          "relatedTopicIds": ["structure-property-relations"]
+        },
+        {
+          "id": "electronic-materials",
+          "label": "Electronic materials",
+          "description": "Semiconductors, conductors and functional electronic materials.",
+          "relatedTopicIds": ["structure-property-relations"]
+        }
+      ],
+      "relatedDisciplineIds": [
+        "inorganic-chemistry",
+        "polymer-chemistry",
+        "industrial-chemistry",
+        "electrochemistry"
+      ],
+      "applicableLevelIds": ["undergraduate", "postgraduate", "advanced-research"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "electrochemistry",
+      "label": "Electrochemistry",
+      "description": "Charge transfer, electrochemical cells, electrode potentials, electrolysis and corrosion.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "electrochemistry-cells",
+          "label": "Electrochemical cells",
+          "description": "Galvanic and electrolytic cells and their quantitative treatment.",
+          "topicIds": ["galvanic-cells", "electrode-potentials"]
+        },
+        {
+          "id": "electrochemistry-applications",
+          "label": "Electrochemical applications",
+          "description": "Batteries, electrolysis and corrosion control.",
+          "topicIds": ["batteries-and-energy-storage", "electrolysis", "corrosion"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "galvanic-cells",
+          "label": "Galvanic cells",
+          "description": "Spontaneous reactions that produce electrical work.",
+          "relatedTopicIds": ["electrode-potentials"]
+        },
+        {
+          "id": "electrode-potentials",
+          "label": "Electrode potentials",
+          "description": "Standard potentials, the Nernst equation and cell EMF.",
+          "relatedTopicIds": ["galvanic-cells"]
+        },
+        {
+          "id": "electrolysis",
+          "label": "Electrolysis",
+          "description": "Driving non-spontaneous reactions with electrical energy.",
+          "relatedTopicIds": ["galvanic-cells"]
+        },
+        {
+          "id": "corrosion",
+          "label": "Corrosion",
+          "description": "Electrochemical degradation of metals and its prevention.",
+          "relatedTopicIds": ["electrode-potentials"]
+        },
+        {
+          "id": "batteries-and-energy-storage",
+          "label": "Batteries and energy storage",
+          "description": "Practical electrochemical energy devices.",
+          "relatedTopicIds": ["galvanic-cells"]
+        }
+      ],
+      "relatedDisciplineIds": ["physical-chemistry", "analytical-chemistry", "materials-chemistry"],
+      "applicableLevelIds": ["higher-secondary", "undergraduate", "postgraduate"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "nuclear-chemistry",
+      "label": "Nuclear Chemistry",
+      "description": "Radioactivity, nuclear reactions, radioisotope applications and radiation safety.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "nuclear-chemistry-radioactivity",
+          "label": "Radioactivity and reactions",
+          "description": "Decay processes, nuclear reactions and their energetics.",
+          "topicIds": ["radioactivity", "nuclear-reactions"]
+        },
+        {
+          "id": "nuclear-chemistry-applications",
+          "label": "Radioisotope applications",
+          "description": "Uses of radioisotopes in science, medicine and industry.",
+          "topicIds": ["radioisotope-applications", "radiation-safety"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "radioactivity",
+          "label": "Radioactivity",
+          "description": "Alpha, beta and gamma decay and half-life.",
+          "relatedTopicIds": ["nuclear-reactions"]
+        },
+        {
+          "id": "nuclear-reactions",
+          "label": "Nuclear reactions",
+          "description": "Fission, fusion and transmutation.",
+          "relatedTopicIds": ["radioactivity"]
+        },
+        {
+          "id": "radioisotope-applications",
+          "label": "Radioisotope applications",
+          "description": "Tracers, dating, medicine and power.",
+          "relatedTopicIds": ["radiation-safety"]
+        },
+        {
+          "id": "radiation-safety",
+          "label": "Radiation safety",
+          "description": "Handling radioactive materials and minimizing exposure.",
+          "relatedTopicIds": ["radioactivity"]
+        }
+      ],
+      "relatedDisciplineIds": ["physical-chemistry", "analytical-chemistry"],
+      "applicableLevelIds": ["undergraduate", "postgraduate", "advanced-research"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "polymer-chemistry",
+      "label": "Polymer Chemistry",
+      "description": "Macromolecules: polymerization mechanisms, characterization, properties and applications.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "polymer-chemistry-synthesis",
+          "label": "Polymer synthesis",
+          "description": "How macromolecules are built.",
+          "topicIds": ["polymerization-mechanisms", "macromolecular-design"]
+        },
+        {
+          "id": "polymer-chemistry-characterization",
+          "label": "Polymer characterization",
+          "description": "Measuring size, structure and properties of polymers.",
+          "topicIds": ["polymer-characterization", "polymer-properties"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "polymerization-mechanisms",
+          "label": "Polymerization mechanisms",
+          "description": "Chain-growth and step-growth polymerization.",
+          "relatedTopicIds": ["macromolecular-design"]
+        },
+        {
+          "id": "macromolecular-design",
+          "label": "Macromolecular design",
+          "description": "Designing polymers for intended properties.",
+          "relatedTopicIds": ["polymer-properties"]
+        },
+        {
+          "id": "polymer-characterization",
+          "label": "Polymer characterization",
+          "description": "Molar mass, distribution and structural analysis of polymers.",
+          "relatedTopicIds": ["polymer-properties"]
+        },
+        {
+          "id": "polymer-properties",
+          "label": "Polymer properties",
+          "description": "Mechanical, thermal and transport behaviour of polymers.",
+          "relatedTopicIds": ["macromolecular-design"]
+        }
+      ],
+      "relatedDisciplineIds": ["organic-chemistry", "materials-chemistry", "industrial-chemistry"],
+      "applicableLevelIds": ["undergraduate", "postgraduate", "advanced-research"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "medicinal-chemistry",
+      "label": "Medicinal Chemistry",
+      "description": "Chemical foundations of drug action: structure-activity relationships, pharmacophores and drug properties.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "medicinal-chemistry-design",
+          "label": "Drug design principles",
+          "description": "Relationships between chemical structure and biological activity.",
+          "topicIds": ["drug-structure-activity", "pharmacophores"]
+        },
+        {
+          "id": "medicinal-chemistry-properties",
+          "label": "Drug-like properties",
+          "description": "Absorption, distribution, metabolism and excretion considerations.",
+          "topicIds": ["adme-principles"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "drug-structure-activity",
+          "label": "Structure-activity relationships",
+          "description": "How molecular changes affect biological activity.",
+          "relatedTopicIds": ["pharmacophores"]
+        },
+        {
+          "id": "pharmacophores",
+          "label": "Pharmacophores",
+          "description": "The essential structural features responsible for a drug's action.",
+          "relatedTopicIds": ["drug-structure-activity"]
+        },
+        {
+          "id": "adme-principles",
+          "label": "ADME principles",
+          "description": "Absorption, distribution, metabolism and excretion of drug molecules.",
+          "relatedTopicIds": ["drug-structure-activity"]
+        },
+        {
+          "id": "medicinal-syntheses",
+          "label": "Medicinal syntheses",
+          "description": "Synthetic routes to biologically active molecules.",
+          "relatedTopicIds": ["drug-structure-activity"]
+        }
+      ],
+      "relatedDisciplineIds": ["organic-chemistry", "biochemistry", "computational-chemistry"],
+      "applicableLevelIds": ["undergraduate", "postgraduate", "advanced-research"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "computational-chemistry",
+      "label": "Computational Chemistry",
+      "description": "Modelling molecules and chemical processes with computers: quantum methods, simulations and cheminformatics.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "computational-chemistry-methods",
+          "label": "Computational methods",
+          "description": "Quantum chemical and simulation methodologies.",
+          "topicIds": ["quantum-chemical-methods", "simulation-methods"]
+        },
+        {
+          "id": "computational-chemistry-applications",
+          "label": "Computational applications",
+          "description": "Modelling and data-driven applications in chemistry.",
+          "topicIds": ["molecular-modeling", "cheminformatics"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "molecular-modeling",
+          "label": "Molecular modelling",
+          "description": "Building and analysing models of molecular structure and behaviour.",
+          "relatedTopicIds": ["quantum-chemical-methods"]
+        },
+        {
+          "id": "quantum-chemical-methods",
+          "label": "Quantum chemical methods",
+          "description": "Electronic structure calculations and their approximations.",
+          "relatedTopicIds": ["molecular-modeling"]
+        },
+        {
+          "id": "cheminformatics",
+          "label": "Cheminformatics",
+          "description": "Chemical information, descriptors and data-driven analysis.",
+          "relatedTopicIds": ["molecular-modeling"]
+        },
+        {
+          "id": "simulation-methods",
+          "label": "Simulation methods",
+          "description": "Molecular dynamics, Monte Carlo and related simulation approaches.",
+          "relatedTopicIds": ["molecular-modeling"]
+        }
+      ],
+      "relatedDisciplineIds": ["physical-chemistry", "medicinal-chemistry", "materials-chemistry"],
+      "applicableLevelIds": ["undergraduate", "postgraduate", "advanced-research"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    },
+    {
+      "id": "forensic-chemistry",
+      "label": "Forensic Chemistry",
+      "description": "Chemical analysis applied to legal questions: trace evidence, toxicology and analytical interpretation.",
+      "parentDisciplineId": null,
+      "subdisciplines": [
+        {
+          "id": "forensic-chemistry-evidence",
+          "label": "Forensic evidence analysis",
+          "description": "Chemical examination of physical evidence.",
+          "topicIds": ["trace-evidence", "document-and-ink-analysis"]
+        },
+        {
+          "id": "forensic-chemistry-toxicology",
+          "label": "Forensic toxicology",
+          "description": "Detection and interpretation of drugs and poisons.",
+          "topicIds": ["toxicology-fundamentals"]
+        }
+      ],
+      "topics": [
+        {
+          "id": "forensic-analysis",
+          "label": "Forensic chemical analysis",
+          "description": "Analytical strategies used in forensic casework.",
+          "relatedTopicIds": ["trace-evidence"]
+        },
+        {
+          "id": "trace-evidence",
+          "label": "Trace evidence",
+          "description": "Fibres, soils, residues and other microscopic evidence.",
+          "relatedTopicIds": ["forensic-analysis"]
+        },
+        {
+          "id": "toxicology-fundamentals",
+          "label": "Toxicology fundamentals",
+          "description": "Dose, exposure and detection of harmful substances.",
+          "relatedTopicIds": ["forensic-analysis"]
+        },
+        {
+          "id": "document-and-ink-analysis",
+          "label": "Document and ink analysis",
+          "description": "Chemical comparison of inks, papers and documents.",
+          "relatedTopicIds": ["trace-evidence"]
+        }
+      ],
+      "relatedDisciplineIds": ["analytical-chemistry", "environmental-chemistry", "biochemistry"],
+      "applicableLevelIds": ["undergraduate", "postgraduate"],
+      "introducedInTaxonomyVersion": "1.0.0"
+    }
+  ]
+}

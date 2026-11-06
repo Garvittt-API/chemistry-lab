@@ -1,0 +1,552 @@
+{
+  "identity": {
+    "id": "chemical-equilibrium-fescn",
+    "slug": "chemical-equilibrium-fescn",
+    "title": "Chemical Equilibrium: The Iron(III)–Thiocyanate System",
+    "shortDescription": "Watch a deep red equilibrium respond as reactant concentrations change, and connect the shifts to Le Chatelier's principle and the equilibrium constant expression.",
+    "fullDescription": "When iron(III) and thiocyanate ions meet in solution they establish a dynamic equilibrium with the intensely coloured iron(III) thiocyanate complex. Adding more of either reactant pushes the equilibrium toward product and deepens the red; dilution or added competitor ions shift it back. This activity builds qualitative observation skills first, then connects what is seen to the equilibrium constant expression and Le Chatelier's principle — the central ideas of chemical equilibrium at higher-secondary level.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "physical-chemistry",
+    "subdisciplineIds": ["physical-chemistry-equilibrium-thermodynamics"],
+    "topicIds": ["chemical-equilibrium"],
+    "educationalLevels": ["higher-secondary", "undergraduate"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-11-equilibrium",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Aligns with the chemical-equilibrium and Le Chatelier's principle treatment of the Class XI unit 'Equilibrium'. Mapping proposed pending documentary verification against the CBSE subject PDF.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimatedDurationMinutes": 50,
+    "prerequisites": [
+      "Idea of reversible reactions and dynamic equilibrium.",
+      "Familiarity with concentration and dilution.",
+      "Safe handling of dilute iron(III) and thiocyanate solutions."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Observe concentration-dependent shifts in a visible equilibrium.",
+      "Apply Le Chatelier's principle to predict and explain the direction of shifts.",
+      "Write the equilibrium constant expression for the reaction and state what it does and does not change with."
+    ],
+    "expectedCompetencies": [
+      "Comparing colour intensity consistently across samples.",
+      "Changing one condition at a time and recording the response.",
+      "Distinguishing qualitative observation from quantitative measurement."
+    ],
+    "learningOutcomes": [
+      "Predict the direction of equilibrium shift for added Fe3+, SCN- or water dilution, and verify the prediction observationally.",
+      "Write the Kc expression for the iron(III) thiocyanate equilibrium and explain why adding a reactant changes concentrations but not Kc at fixed temperature.",
+      "Explain the colour change in terms of the concentration of the coloured complex, not 'colour as a substance'."
+    ],
+    "theory": {
+      "overview": "The reaction Fe3+(aq) + SCN-(aq) ⇌ FeSCN2+(aq) (simplified; higher complexes exist) establishes an equilibrium whose product complex is deep red. Le Chatelier's principle states that a system at equilibrium responds to a imposed change by partially counteracting it: adding Fe3+ or SCN- shifts right (more red), dilution shifts toward the side with more dissolved particles (left, paler), and the equilibrium constant Kc = [FeSCN2+]/([Fe3+][SCN-]) stays fixed at constant temperature while the individual concentrations adjust.",
+      "sections": [
+        {
+          "heading": "Dynamic equilibrium and Kc",
+          "body": "At equilibrium the forward and reverse reactions proceed at equal rates, so concentrations remain constant while reactions continue on the molecular scale. The equilibrium constant expression is built from the balanced equation: for Fe3+ + SCN- ⇌ FeSCN2+, Kc = [FeSCN2+] / ([Fe3+][SCN-]). Kc depends only on temperature; changing concentrations moves the system to a new equilibrium position with the same Kc.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "heading": "Le Chatelier's principle in this system",
+          "body": "Adding Fe3+ or SCN- increases one denominator term of the reaction quotient Q; Q < Kc, so the reaction proceeds forward until Q returns to Kc and the solution deepens in colour. Diluting with water lowers all concentrations; Q then exceeds Kc relative to the diluted expression, and the equilibrium shifts toward the side with more aqueous species (the ions, i.e. left), giving a paler colour per unit path length. These predictions follow from the mathematics of Q versus Kc, and the principle gives the same answers qualitatively.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "heading": "What the colour reports",
+          "body": "The depth of red tracks the concentration of FeSCN2+ in the light path. Comparing colour between tubes is therefore a qualitative comparison of complex concentration — useful for direction of shift, not for computing Kc. (Quantitative treatment via absorbance and Beer-Lambert law belongs to an instrumental extension and is explicitly out of scope here.)",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        }
+      ],
+      "scientificBackground": "In reality several thiocyanatoiron(III) species (FeSCN2+, Fe(SCN)2+ ...) form; the simplified 1:1 treatment is standard at school level and is recorded here as a simplification with stated scope. The system also shows kinetic colour drift on mixing, so observations are read after a fixed short equilibration time.",
+      "concepts": [
+        "dynamic equilibrium",
+        "equilibrium constant",
+        "reaction quotient",
+        "Le Chatelier's principle",
+        "complex ions",
+        "qualitative comparison"
+      ],
+      "equations": [
+        {
+          "id": "eq-fescn-equilibrium",
+          "expression": "Fe3+(aq) + SCN-(aq) <=> FeSCN2+(aq)",
+          "displayForm": "Fe³⁺(aq) + SCN⁻(aq) ⇌ FeSCN²⁺(aq)",
+          "description": "Simplified equilibrium studied in this experiment (1:1 complex).",
+          "variables": [
+            { "symbol": "Fe3+", "meaning": "iron(III) ion", "unit": "mol/L" },
+            { "symbol": "SCN-", "meaning": "thiocyanate ion", "unit": "mol/L" },
+            { "symbol": "FeSCN2+", "meaning": "iron(III) thiocyanate complex", "unit": "mol/L" }
+          ],
+          "applicableConditions": [
+            "Dilute aqueous solution at room temperature; excess nitrate/chloride spectator background."
+          ],
+          "assumptions": [
+            "1:1 complexation treated as the dominant equilibrium; higher complexes neglected at this level."
+          ],
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "kind": "theoretical_law"
+        },
+        {
+          "id": "eq-kc-fescn",
+          "expression": "Kc = [FeSCN2+] / ([Fe3+] * [SCN-])",
+          "displayForm": "K_c = [FeSCN²⁺] / ([Fe³⁺][SCN⁻])",
+          "description": "Equilibrium constant expression for the simplified reaction; fixed at constant temperature.",
+          "variables": [
+            {
+              "symbol": "Kc",
+              "meaning": "equilibrium constant (concentration basis)",
+              "unit": "L/mol"
+            },
+            {
+              "symbol": "[FeSCN2+]",
+              "meaning": "equilibrium concentration of complex",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "[Fe3+]",
+              "meaning": "equilibrium concentration of iron(III)",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "[SCN-]",
+              "meaning": "equilibrium concentration of thiocyanate",
+              "unit": "mol/L"
+            }
+          ],
+          "applicableConditions": ["Dilute-solution concentration basis; constant temperature."],
+          "assumptions": ["Activity effects neglected; simplification to 1:1 complexation."],
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "kind": "definition"
+        }
+      ],
+      "definitions": [
+        {
+          "id": "def-dynamic-equilibrium",
+          "term": "Dynamic equilibrium",
+          "definition": "State of a reversible reaction in which forward and reverse rates are equal, so macroscopic concentrations remain constant.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "id": "def-equilibrium-constant",
+          "term": "Equilibrium constant (Kc)",
+          "definition": "Temperature-dependent constant given by the ratio of product to reactant equilibrium concentrations, each raised to stoichiometric powers.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "id": "def-le-chatelier",
+          "term": "Le Chatelier's principle",
+          "definition": "A system at equilibrium responds to a change in conditions by partially counteracting that change.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-test-tubes",
+        "name": "Test tubes with rack",
+        "specification": "Large, clean",
+        "quantity": "5",
+        "purpose": "Holding equilibrium samples",
+        "alternatives": ["Small beakers or vials"]
+      },
+      {
+        "id": "eqp-droppers",
+        "name": "Droppers",
+        "specification": "One per solution, labelled",
+        "quantity": "5",
+        "purpose": "Adding reagents without contamination",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-white-background",
+        "name": "White background card",
+        "specification": "Plain white paper or tile",
+        "quantity": "1",
+        "purpose": "Consistent colour comparison",
+        "alternatives": []
+      }
+    ],
+    "chemicals": [
+      {
+        "id": "chem-fecl3",
+        "name": "Iron(III) chloride solution",
+        "formulaOrDescription": "FeCl3(aq), about 0.02 mol/L in dilute acid",
+        "category": "solution",
+        "amount": "About 20 mL",
+        "identifiers": {},
+        "hazardKinds": ["irritant", "environmental_hazard"],
+        "notes": "Yellow-brown solution; irritant and environmentally harmful to aquatic life. Slightly acidic to limit hydrolysis."
+      },
+      {
+        "id": "chem-kscn",
+        "name": "Potassium thiocyanate solution",
+        "formulaOrDescription": "KSCN(aq), about 0.02 mol/L",
+        "category": "solution",
+        "amount": "About 20 mL",
+        "identifiers": { "pubchem-cid": "516872" },
+        "hazardKinds": ["acutely_toxic", "irritant"],
+        "notes": "Colourless solution. Thiocyanates are harmful if swallowed and must never be mixed with acid stock beyond the stated dilute use (risk of toxic gas evolution with strong acids)."
+      },
+      {
+        "id": "chem-distilled-water",
+        "name": "Distilled or deionised water",
+        "formulaOrDescription": "H2O",
+        "category": "other",
+        "amount": "About 50 mL",
+        "identifiers": {},
+        "hazardKinds": [],
+        "notes": "For dilution shifts."
+      }
+    ],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "low",
+    "riskRationale": "Dilute (about 0.02 mol/L) iron(III) and thiocyanate solutions used in drop and small-tube quantities, without heating or strong acids. The controlling hazards are ingestion (thiocyanate is harmful if swallowed) and environmental release of metal-salt solutions.",
+    "hazards": [
+      {
+        "kind": "acutely_toxic",
+        "statement": "Potassium thiocyanate is harmful if swallowed; never mouth-pipette and wash hands after handling.",
+        "appliesTo": ["chem-kscn"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-kscn",
+          "notes": "GHS acute toxicity classification for potassium thiocyanate (CID 516872) per the PubChem compound entry."
+        }
+      },
+      {
+        "kind": "irritant",
+        "statement": "Iron(III) chloride solution is irritating to skin and eyes and stains skin and clothing; avoid contact.",
+        "appliesTo": ["chem-fecl3"],
+        "evidence": {
+          "basis": "requires_review",
+          "notes": "Standard irritant properties of iron(III) chloride solutions; specific GHS codes must be confirmed against the institutional safety data sheet before scientific review."
+        }
+      },
+      {
+        "kind": "environmental_hazard",
+        "statement": "Iron(III) and thiocyanate solutions are harmful to aquatic life; collect waste for metal-salt disposal and do not pour down the drain.",
+        "appliesTo": ["chem-fecl3", "chem-kscn"],
+        "evidence": {
+          "basis": "requires_review",
+          "notes": "Environmental hazard statements must be confirmed against institutional safety data sheets before scientific review."
+        }
+      }
+    ],
+    "protectiveEquipment": [
+      "Safety spectacles.",
+      "Laboratory coat or apron.",
+      "Nitrile gloves recommended."
+    ],
+    "disposal": [
+      "Collect all iron/thiocyanate solutions in a labelled heavy-metal waste container provided by the supervising institution.",
+      "Do not pour metal-salt or thiocyanate solutions down the drain.",
+      "Rinse droppers and tubes into the waste container."
+    ],
+    "supervision": "adult_supervision_required",
+    "restrictedOperations": [
+      "Never mix thiocyanate solutions with strong acids or bleach (toxic gases including HCN can form under harsh conditions).",
+      "No heating in this activity."
+    ],
+    "emergencyGuidance": [
+      "Ingestion: do not induce vomiting; inform the supervising educator and seek medical advice.",
+      "Eye or skin contact: rinse with plenty of water and inform the supervising educator."
+    ],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Mix dilute iron(III) and thiocyanate solutions to establish the red equilibrium, then perturb it one change at a time — added Fe3+, added SCN-, dilution — comparing colour against a reference tube after each change.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Establish the reference equilibrium",
+        "instructions": "Place 5 mL of 0.02 mol/L FeCl3 in a test tube and add 5 mL of 0.02 mol/L KSCN. Mix and let stand for one minute. Keep this tube as the reference against which all shifts are judged.",
+        "equipmentIds": ["eqp-test-tubes", "eqp-droppers"],
+        "chemicalIds": ["chem-fecl3", "chem-kscn"],
+        "precautions": ["Use clean droppers; contamination ruins colour comparisons."],
+        "expectedObservations": ["A deep blood-red solution forms immediately on mixing."],
+        "explanatoryNotes": [
+          "The colour is the FeSCN2+ complex; its intensity is the visual report of the equilibrium position."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Add excess iron(III)",
+        "instructions": "Take 2 mL of the reference mixture in a second tube. Add 5 more drops of FeCl3 solution, mix and compare the colour with the reference against the white card.",
+        "equipmentIds": ["eqp-test-tubes", "eqp-droppers", "eqp-white-background"],
+        "chemicalIds": ["chem-fecl3"],
+        "precautions": ["Compare at the same liquid depth; hold tubes side by side against white."],
+        "expectedObservations": ["The red deepens relative to the reference."],
+        "explanatoryNotes": [
+          "Prediction first, observation second: write down the predicted direction before adding the reagent."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Add excess thiocyanate",
+        "instructions": "Take 2 mL of the reference mixture in a third tube. Add 5 more drops of KSCN solution, mix and compare with the reference.",
+        "equipmentIds": ["eqp-test-tubes", "eqp-droppers", "eqp-white-background"],
+        "chemicalIds": ["chem-kscn"],
+        "precautions": [
+          "Keep the added volume small so dilution does not confound the comparison."
+        ],
+        "expectedObservations": ["The red deepens relative to the reference."],
+        "explanatoryNotes": [
+          "Both reactants push the equilibrium the same way — toward the coloured product."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Dilute with water",
+        "instructions": "Take 2 mL of the reference mixture in a fourth tube and add 5 mL of distilled water. Mix and compare the colour with a reference sample equally diluted and re-established... compare with the plain reference at equal depth, noting that simple dilution also reduces colour per unit depth.",
+        "equipmentIds": ["eqp-test-tubes", "eqp-droppers", "eqp-white-background"],
+        "chemicalIds": ["chem-distilled-water"],
+        "precautions": [
+          "Interpret this step carefully: pure dilution lowers concentration even without a shift; discuss both effects."
+        ],
+        "expectedObservations": ["The diluted sample is clearly paler than the reference."],
+        "explanatoryNotes": [
+          "Honest treatment: observed fading combines the dilution effect and the equilibrium shift; the record does not overclaim which dominates at this level."
+        ]
+      },
+      {
+        "stepId": "step-5",
+        "title": "Record predictions and outcomes",
+        "instructions": "Tabulate each change, the predicted direction of shift (before observing) and the observed colour change. Write the Kc expression and note which quantities Kc does and does not change with.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [],
+        "explanatoryNotes": [
+          "The prediction-then-test structure is what turns the activity from a demonstration into reasoning practice."
+        ]
+      }
+    ],
+    "troubleshooting": [
+      "If the initial mixture is only faintly orange, the reagents may be too dilute or partially hydrolysed; consult the supervising educator about fresh reagent.",
+      "If colour comparisons are hard, reduce room glare and use the white card consistently.",
+      "FeCl3 solutions yellow with age; a stale stock weakens the contrast — note the stock age in records."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-colour-comparison",
+          "label": "Relative colour intensity versus reference",
+          "kind": "absorbance_or_color",
+          "method": "Compare each tube with the reference tube at equal depth against a white background, in consistent lighting.",
+          "expectedQualitative": [
+            "Adding Fe3+ or SCN- deepens the red (shift toward FeSCN2+).",
+            "Dilution with water makes the solution paler (combined dilution and shift effects)."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "displayPrecision": "Qualitative observation only (no colour numbers claimed)."
+        },
+        {
+          "id": "obs-shift-direction",
+          "label": "Direction of equilibrium shift",
+          "kind": "qualitative",
+          "method": "Record the predicted direction before each change and the observed response after; note agreement or disagreement.",
+          "expectedQualitative": [
+            "Shifts follow Le Chatelier's principle as stated in the theory section."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "displayPrecision": "Qualitative record."
+        }
+      ],
+      "qualitativePrompts": [
+        "Which added reagent produced the clearest visible change?",
+        "Did the dilution result match a pure dilution effect, an equilibrium shift, or both?",
+        "What would count as evidence against your prediction, and did you see any?"
+      ],
+      "errorSources": [
+        "Colour judgement is subjective and lighting-dependent.",
+        "Different tube depths distort apparent intensity.",
+        "Adding large drops or volumes confounds concentration change with equilibrium shift.",
+        "Stock solutions degrade (Fe3+ hydrolysis) changing baseline intensity.",
+        "Kinetic colour development: comparing too early or at inconsistent times after mixing."
+      ],
+      "interpretationGuidance": [
+        "Conclusions here are qualitative: direction of shift, not magnitudes.",
+        "The dilution step is genuinely ambiguous visually at this level — a sophisticated answer acknowledges that, which is exactly the intellectual honesty the topic needs.",
+        "Kc is unchanged by concentration changes at fixed temperature; only temperature would change it (not tested here)."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "not_applicable",
+    "rationale": "This activity is deliberately qualitative: computing Kc requires quantitative complex concentration (absorbance calibration) that is out of scope here and must not be fabricated. The Kc expression itself is taught through the definitions and theory sections."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class11-part2",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry Part II, Textbook for Class XI (unit 'Equilibrium'). National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry Part II, Textbook for Class XI",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?kech2=0",
+        "identifiers": { "ncert-book-index": "kech2" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "eq-fescn-equilibrium",
+          "eq-kc-fescn",
+          "def-dynamic-equilibrium",
+          "def-equilibrium-constant",
+          "def-le-chatelier",
+          "obs-colour-comparison",
+          "obs-shift-direction"
+        ],
+        "notes": "Official NCERT book index page fetched on 2026-11-05; the 'Equilibrium' unit covers Kc and Le Chatelier's principle at book level."
+      },
+      {
+        "id": "ref-pubchem-kscn",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Potassium thiocyanate (CID 516872).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Potassium thiocyanate (CID 516872)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/516872",
+        "identifiers": { "pubchem-cid": "516872" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID 516872 confirmed during the 2026-11-05 content pass; hazard evidence for potassium thiocyanate."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": { "circular": "Acad-14/2025" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Curriculum-mapping evidence only; unit wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "planned",
+    "model": {
+      "id": "fescn-equilibrium-explorer",
+      "contractVersion": "1.0.0",
+      "summary": "Computes theoretical equilibrium concentrations and predicted colour-depth trends from Kc and starting concentrations, so learners can compare qualitative predictions with a simple equilibrium model. Outputs are theoretical model values only.",
+      "inputs": [
+        {
+          "id": "in-initial-fe",
+          "label": "Initial iron(III) concentration",
+          "unit": "mol/L",
+          "defaultValue": 0.01,
+          "validRange": { "min": 0.0001, "max": 0.1, "unit": "mol/L" },
+          "description": "Analytical concentration of Fe3+ after mixing."
+        },
+        {
+          "id": "in-initial-scn",
+          "label": "Initial thiocyanate concentration",
+          "unit": "mol/L",
+          "defaultValue": 0.01,
+          "validRange": { "min": 0.0001, "max": 0.1, "unit": "mol/L" },
+          "description": "Analytical concentration of SCN- after mixing."
+        },
+        {
+          "id": "in-kc",
+          "label": "Equilibrium constant Kc",
+          "unit": "L/mol",
+          "defaultValue": 200,
+          "validRange": { "min": 1, "max": 5000, "unit": "L/mol" },
+          "description": "Model Kc for the 1:1 complex; user-chosen for exploration (not fitted to data)."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-equilibrium-concentrations",
+          "label": "Equilibrium concentrations",
+          "unit": "mol/L",
+          "displayPrecision": "Two significant figures",
+          "description": "Theoretical equilibrium concentrations of Fe3+, SCN- and FeSCN2+."
+        },
+        {
+          "id": "out-relative-colour",
+          "label": "Predicted relative colour depth",
+          "unit": "1",
+          "displayPrecision": "Qualitative",
+          "description": "Illustrative trend indicator proportional to complex concentration; illustrative only."
+        }
+      ],
+      "assumptions": [
+        "1:1 complexation only.",
+        "Ideal dilute-solution behaviour; Kc constant at fixed temperature.",
+        "Colour depth proportional to complex concentration."
+      ],
+      "limitations": [
+        "Higher complexes and activity effects neglected.",
+        "Predicted colour is illustrative; no model output may be shown as a laboratory observation.",
+        "Kc is a user-chosen parameter in this contract, not a validated constant."
+      ],
+      "equations": ["eq-fescn-equilibrium", "eq-kc-fescn"],
+      "sourceRefIds": ["ref-ncert-class11-part2"]
+    }
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "requires_review",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. Simplified 1:1 complex treatment documented as a scope limitation. Pending independent scientific review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "Kc expression and Le Chatelier reasoning cross-checked against NCERT Class XI 'Equilibrium' material during the 2026-11-05 content pass.",
+      "The multi-species reality of thiocyanatoiron(III) chemistry is recorded as a simplification; the qualitative conclusions do not depend on it."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place.",
+      "Iron(iii) chloride and thiocyanate environmental hazard statements marked requires_review pending institutional SDS confirmation.",
+      "A reviewer should confirm whether the dilution-step interpretation is appropriate for the target level."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text copied; NCERT and PubChem are cited as references only."
+    }
+  }
+}

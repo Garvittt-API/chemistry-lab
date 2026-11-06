@@ -1,0 +1,156 @@
+{
+  "identity": {
+    "id": "basic-spectroscopic-interpretation",
+    "slug": "basic-spectroscopic-interpretation",
+    "title": "Basic Spectroscopic Interpretation",
+    "shortDescription": "An early draft exploring how absorption and emission spectra are read to reason about molecular structure. Deliberately incomplete and unpublished pending reference and review work.",
+    "fullDescription": "This record is an intentionally early draft retained to exercise the publication workflow and the unpublished-content restrictions of the platform. Its planned scope is introductory interpretation of simple absorption and emission spectra (colour of solutions, flame emission lines, and the logic of matching spectral features to substances) for undergraduate learners. Scientific sections that have not yet been sourced or reviewed are explicitly marked requires_review rather than filled with plausible-sounding text.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "0.1.0",
+    "publicationStatus": "draft",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "physical-chemistry",
+    "subdisciplineIds": ["physical-chemistry-structure"],
+    "topicIds": ["spectroscopy-and-structure"],
+    "educationalLevels": ["undergraduate"],
+    "curriculumMappings": [],
+    "difficulty": "advanced",
+    "estimatedDurationMinutes": 60,
+    "prerequisites": [
+      "Electronic structure basics and electromagnetic spectrum overview.",
+      "Beer-Lambert law at introductory level."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Read simple absorption and emission spectra and relate features to electronic transitions.",
+      "Match unknown spectra to reference substances by characteristic features.",
+      "State the assumptions and limits of qualitative spectral interpretation."
+    ],
+    "expectedCompetencies": [],
+    "learningOutcomes": [
+      "Draft outcome pending educator input: interpret a simple spectrum and justify the assignment of one feature to a transition."
+    ],
+    "theory": {
+      "overview": "Draft overview: atoms and molecules absorb or emit light at characteristic wavelengths determined by their energy-level structure, so spectra serve as fingerprints for identification and as evidence about structure. This overview is a placeholder summary of the intended scope and must not be treated as reviewed content.",
+      "sections": [
+        {
+          "heading": "Status of this draft",
+          "body": "The theory sections for this experiment have not yet been written against specific verified sources. Rather than fill them with unverified prose, this record is held in draft with its references listed for review. The authoring backlog is recorded in the outstanding concerns.",
+          "sourceRefIds": []
+        }
+      ],
+      "concepts": ["absorption", "emission", "electronic transitions", "spectral fingerprinting"],
+      "equations": [],
+      "definitions": []
+    }
+  },
+  "materials": {
+    "equipment": [],
+    "chemicals": [],
+    "metadataStatus": {
+      "mode": "requires_review",
+      "rationale": "Equipment and sample lists cannot be responsibly specified until the experimental scope is fixed with a supervising institution; no list is better than an invented one."
+    }
+  },
+  "safety": {
+    "riskClassification": "requires_review",
+    "riskRationale": "The risk classification cannot be established before the experimental scope (samples, light sources, instruments) is defined. This draft describes no operational activity and therefore no operational hazard.",
+    "hazards": [],
+    "protectiveEquipment": ["Requires review once the scope is defined."],
+    "disposal": ["Requires review once the scope is defined."],
+    "supervision": "requires_review",
+    "restrictedOperations": [
+      "This draft must not be used to conduct any laboratory activity; it contains no procedure by design."
+    ],
+    "emergencyGuidance": [],
+    "metadataStatus": {
+      "mode": "requires_review",
+      "rationale": "Safety metadata awaits scope definition and formal review before any operational content is added."
+    }
+  },
+  "procedure": {
+    "overview": "Procedure overview pending scope and safety review; no operational steps are provided in this draft.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Scope and review pending",
+        "instructions": "This placeholder exists to satisfy the record structure for a draft. No laboratory action is described, and none should be inferred from this record.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": ["Do not perform any laboratory activity based on this draft record."],
+        "expectedObservations": [],
+        "explanatoryNotes": [
+          "A real procedure will be authored once the scope and safety review are complete."
+        ]
+      }
+    ],
+    "troubleshooting": []
+  },
+  "observations": {
+    "mode": "requires_review",
+    "rationale": "Expected spectral observations must be tied to verified reference spectra; none have been registered for this experiment yet."
+  },
+  "calculations": {
+    "mode": "requires_review",
+    "rationale": "Quantitative spectral calculations (Beer-Lambert applications) are planned but have not been written or verified against sources."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-pending-spectroscopy",
+        "type": "other",
+        "citation": "Reference list pending. A future revision must add verified sources for introductory spectroscopy before any scientific claim is made.",
+        "authors": [],
+        "title": "Reference list pending for basic spectroscopic interpretation",
+        "identifiers": {},
+        "verificationStatus": "requires_review",
+        "supportsClaims": [],
+        "notes": "This placeholder exists only to satisfy the requirement that drafts carry an explicit reference status. It supports no claims."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "not_planned",
+    "rationale": "Simulation planning is deferred until the content scope and references are established."
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "not_started",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "0.1.0",
+        "date": "2026-11-05",
+        "summary": "Skeleton draft created to exercise the publication workflow. All scientific sections explicitly marked requires_review; record deliberately unpublished.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "This record is a workflow fixture: it demonstrates that incomplete content stays in draft and is excluded from public browsing.",
+      "No scientific claims are made in this record."
+    ],
+    "outstandingConcerns": [
+      "Scope, procedure, safety and references all require authoring and review before this experiment can move beyond draft.",
+      "Reference spectra would need licensing review before redistribution (see THIRD_PARTY_NOTICES.md policy).",
+      "Do not publish this record until every requires_review marker is resolved and a qualified reviewer signs off."
+    ],
+    "integrityLabel": "demonstration_content",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original skeleton authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No scientific content is included; no third-party material used."
+    }
+  }
+}

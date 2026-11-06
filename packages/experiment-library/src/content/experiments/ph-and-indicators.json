@@ -1,0 +1,688 @@
+{
+  "identity": {
+    "id": "ph-and-indicators",
+    "slug": "ph-and-indicators",
+    "title": "pH Measurement and Acid–Base Indicators",
+    "shortDescription": "Compare pH paper, universal indicator and single indicators across everyday dilute solutions, and connect colour changes to the pH scale and the hydronium ion concentration.",
+    "fullDescription": "The pH scale turns the wide range of hydronium-ion concentrations in dilute solutions into manageable numbers, and indicators translate those numbers into colour. In this activity learners test a small set of safe, dilute acidic and basic solutions with indicator paper, universal indicator and two single indicators, record the colours, and reconcile them with calculated pH values where the composition is known. The emphasis is on what indicators can and cannot tell you.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "general-chemistry",
+    "subdisciplineIds": ["general-chemistry-acid-base-foundations"],
+    "topicIds": ["acids-and-bases", "indicator-foundations", "measurement-and-units"],
+    "educationalLevels": ["beginner", "school", "higher-secondary"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-11-equilibrium",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Supports the ionic-equilibrium and pH work of the Class XI unit 'Equilibrium'. Mapping proposed pending documentary verification against the CBSE subject PDF.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "introductory",
+    "estimatedDurationMinutes": 45,
+    "prerequisites": [
+      "Basic idea of acids and bases in aqueous solution.",
+      "Safe use of droppers and spotting tiles."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Use the pH definition pH = -log10[H3O+] to connect concentration and pH.",
+      "Estimate pH ranges from indicator colours and state the limits of that estimate.",
+      "Distinguish strong from weak acid behaviour through pH comparison at equal concentration."
+    ],
+    "expectedCompetencies": [
+      "Handling small volumes of dilute solutions without cross-contamination.",
+      "Recording colour observations consistently against a reference chart.",
+      "Performing base-10 logarithm calculations with correct significant figures."
+    ],
+    "learningOutcomes": [
+      "Predict and verify the colour of methyl orange and phenolphthalein in the tested solutions.",
+      "Calculate the pH of a known strong acid dilution and compare it with the indicator estimate.",
+      "Explain why a 0.1 mol/L acetic acid solution has a higher pH than 0.1 mol/L hydrochloric acid."
+    ],
+    "theory": {
+      "overview": "Water autoionizes slightly: [H3O+][OH-] = Kw = 1.0 x 10^-14 at 25 C. The pH scale compresses this range as pH = -log10[H3O+], so pH 7 is neutral at 25 C, lower values are acidic and higher values basic. Acid-base indicators are themselves weak acids or bases whose protonated and deprotonated forms differ in colour; each indicator changes over a characteristic pH range, which is why a single indicator gives a range, not a number.",
+      "sections": [
+        {
+          "heading": "The pH scale",
+          "body": "For dilute solutions, pH = -log10[H3O+]. Each pH unit is a factor of ten in concentration: pH 2 is one hundred times more acidic than pH 4. The scale is logarithmic, so differences in pH correspond to ratios, not differences, in concentration — a point that catches out many learners.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "heading": "Strong and weak acids at equal concentration",
+          "body": "Hydrochloric acid is strong: it is effectively fully dissociated in dilute solution, so 0.1 mol/L HCl gives [H3O+] = 0.1 mol/L and pH 1. Acetic acid is weak: only a small fraction dissociates, so 0.1 mol/L acetic acid gives [H3O+] near 1.3 x 10^-3 mol/L and pH near 2.9 (calculated with Ka = 1.8 x 10^-5). Comparing the two at equal concentration isolates strength from concentration.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "heading": "How indicators work",
+          "body": "An indicator HIn exists in equilibrium with its conjugate form In- , which has a different colour. When the solution pH crosses the indicator's transition range (centred near its pKa), the dominant form switches and the colour changes. Methyl orange changes from red to yellow over roughly pH 3.1-4.4; phenolphthalein is colourless below about pH 8.2 and pink above about pH 10. Universal indicator is a mixture of dyes giving a graded colour across the whole scale.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        }
+      ],
+      "scientificBackground": "Activity coefficients depart from unity at higher ionic strengths, so measured pH of concentrated solutions deviates from -log10[H3O+] computed on the concentration scale; at the dilute concentrations used here the approximation is adequate for educational purposes and is recorded as an assumption.",
+      "concepts": [
+        "pH scale",
+        "autoionization of water",
+        "strong and weak acids",
+        "indicator transition range",
+        "logarithmic scales"
+      ],
+      "equations": [
+        {
+          "id": "eq-ph",
+          "expression": "pH = -log10([H3O+])",
+          "displayForm": "pH = −log₁₀[H₃O⁺]",
+          "description": "Definition of pH from the hydronium ion concentration.",
+          "variables": [
+            { "symbol": "pH", "meaning": "pH of the solution", "unit": "1" },
+            { "symbol": "[H3O+]", "meaning": "hydronium ion concentration", "unit": "mol/L" }
+          ],
+          "applicableConditions": ["Dilute aqueous solutions near 25 C."],
+          "assumptions": [
+            "Concentration used in place of activity (adequate at the dilutions used here)."
+          ],
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "kind": "definition"
+        },
+        {
+          "id": "eq-kw",
+          "expression": "[H3O+] * [OH-] = Kw = 1.0e-14 at 25 C",
+          "displayForm": "[H₃O⁺][OH⁻] = K_w = 1.0 × 10⁻¹⁴ (25 °C)",
+          "description": "Ionic product of water; fixes the relationship between acidity and basicity in aqueous solution.",
+          "variables": [
+            { "symbol": "[H3O+]", "meaning": "hydronium ion concentration", "unit": "mol/L" },
+            { "symbol": "[OH-]", "meaning": "hydroxide ion concentration", "unit": "mol/L" },
+            { "symbol": "Kw", "meaning": "ionic product of water at 25 C", "unit": "mol^2/L^2" }
+          ],
+          "applicableConditions": ["Aqueous solutions at 25 C."],
+          "assumptions": [
+            "Kw is treated as temperature-independent at the precision of this activity; it is not in reality."
+          ],
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "kind": "theoretical_law"
+        },
+        {
+          "id": "eq-weak-acid-ph",
+          "expression": "[H3O+] ~= sqrt(Ka * c) for a weak acid with c >> [H3O+]",
+          "displayForm": "[H₃O⁺] ≈ √(K_a × c)",
+          "description": "Approximate hydronium concentration of a weak acid solution at concentration c.",
+          "variables": [
+            { "symbol": "[H3O+]", "meaning": "hydronium ion concentration", "unit": "mol/L" },
+            { "symbol": "Ka", "meaning": "acid dissociation constant", "unit": "mol/L" },
+            { "symbol": "c", "meaning": "analytical acid concentration", "unit": "mol/L" }
+          ],
+          "applicableConditions": [
+            "Weak acid with small dissociation (Ka << c).",
+            "Water autoionization neglected."
+          ],
+          "assumptions": [
+            "The approximation simplifies the exact quadratic; it is accurate for typical teaching concentrations."
+          ],
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "kind": "working_relation"
+        }
+      ],
+      "definitions": [
+        {
+          "id": "def-ph",
+          "term": "pH",
+          "definition": "The negative base-10 logarithm of the hydronium ion concentration; pH 7 is neutral in water at 25 C.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "id": "def-indicator",
+          "term": "Acid-base indicator",
+          "definition": "A substance whose acidic and basic forms have different colours, changing colour over a characteristic pH range.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "id": "def-strong-acid",
+          "term": "Strong acid",
+          "definition": "An acid that is effectively fully dissociated in dilute aqueous solution (for example HCl).",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "id": "def-weak-acid",
+          "term": "Weak acid",
+          "definition": "An acid that dissociates only partially in aqueous solution, establishing an equilibrium (for example acetic acid).",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-spotting-tile",
+        "name": "Spotting (well) tile",
+        "specification": "12-well ceramic or white",
+        "quantity": "1",
+        "purpose": "Holding small samples for indicator tests",
+        "alternatives": ["White test tubes in a rack"]
+      },
+      {
+        "id": "eqp-droppers",
+        "name": "Droppers",
+        "specification": "One per solution, labelled",
+        "quantity": "6",
+        "purpose": "Transferring samples and indicators without contamination",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-ph-paper",
+        "name": "Indicator (pH) paper with colour chart",
+        "specification": "Range 1-14",
+        "quantity": "1 book",
+        "purpose": "Quick pH estimation",
+        "alternatives": ["A calibrated pH meter if available and supervised"]
+      }
+    ],
+    "chemicals": [
+      {
+        "id": "chem-hcl-dilute",
+        "name": "Hydrochloric acid (dilute)",
+        "formulaOrDescription": "HCl(aq), 0.1 mol/L",
+        "category": "solution",
+        "amount": "About 10 mL",
+        "identifiers": { "pubchem-cid": "313" },
+        "hazardKinds": ["corrosive", "irritant"],
+        "notes": "Strong acid; serious eye irritant at this concentration."
+      },
+      {
+        "id": "chem-acetic-acid",
+        "name": "Acetic acid (dilute)",
+        "formulaOrDescription": "CH3COOH(aq), 0.1 mol/L",
+        "category": "solution",
+        "amount": "About 10 mL",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "Weak acid; irritant. Ka = 1.8 x 10^-5 mol/L at 25 C (standard textbook value)."
+      },
+      {
+        "id": "chem-naoh-dilute",
+        "name": "Sodium hydroxide (dilute)",
+        "formulaOrDescription": "NaOH(aq), 0.1 mol/L",
+        "category": "solution",
+        "amount": "About 10 mL",
+        "identifiers": { "pubchem-cid": "14798" },
+        "hazardKinds": ["corrosive", "irritant"],
+        "notes": "Strong base; serious eye hazard."
+      },
+      {
+        "id": "chem-ammonia-dilute",
+        "name": "Ammonia solution (dilute)",
+        "formulaOrDescription": "NH3(aq), about 0.1 mol/L",
+        "category": "solution",
+        "amount": "About 10 mL",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "Weak base; pungent, irritating vapour. Use in ventilated space."
+      },
+      {
+        "id": "chem-methyl-orange",
+        "name": "Methyl orange indicator",
+        "formulaOrDescription": "Aqueous indicator solution",
+        "category": "solution",
+        "amount": "1-2 drops per test",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "Transition range roughly pH 3.1-4.4."
+      },
+      {
+        "id": "chem-phenolphthalein",
+        "name": "Phenolphthalein indicator",
+        "formulaOrDescription": "1% solution in ethanol",
+        "category": "solution",
+        "amount": "1-2 drops per test",
+        "identifiers": {},
+        "hazardKinds": ["flammable", "chronic_health_hazard"],
+        "notes": "Transition range roughly pH 8.2-10. Ethanol-based; flammable. Phenolphthalein classification varies by jurisdiction — see safety notes."
+      },
+      {
+        "id": "chem-universal-indicator",
+        "name": "Universal indicator solution",
+        "formulaOrDescription": "Commercial mixed indicator with colour chart",
+        "category": "solution",
+        "amount": "1-2 drops per test",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "Graded colour across pH 1-14; consult product safety data sheet."
+      },
+      {
+        "id": "chem-distilled-water",
+        "name": "Distilled or deionised water",
+        "formulaOrDescription": "H2O",
+        "category": "other",
+        "amount": "About 50 mL",
+        "identifiers": {},
+        "hazardKinds": [],
+        "notes": "Neutral reference (pH near 7 if freshly boiled and cooled; atmospheric CO2 lowers it slightly)."
+      }
+    ],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "low",
+    "riskRationale": "All reagents are dilute (about 0.1 mol/L) and used in drop quantities on a spotting tile, without heating. The realistic hazards are eye irritation from acid/base splashes and flammability of the ethanol-based phenolphthalein solution.",
+    "hazards": [
+      {
+        "kind": "corrosive",
+        "statement": "Dilute sodium hydroxide and hydrochloric acid can cause serious eye damage (H314 at higher concentrations); wear safety spectacles and keep all work below eye level.",
+        "appliesTo": ["chem-naoh-dilute", "chem-hcl-dilute"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-naoh-hcl",
+          "notes": "GHS hazard statements for sodium hydroxide (CID 14798) and hydrochloric acid (CID 313) per PubChem entries."
+        }
+      },
+      {
+        "kind": "irritant",
+        "statement": "Ammonia solution releases irritating vapour; use only the dilute solution provided and work in a ventilated area.",
+        "appliesTo": ["chem-ammonia-dilute"],
+        "evidence": {
+          "basis": "requires_review",
+          "notes": "Ammonia's irritant properties are standard laboratory knowledge; specific GHS codes must be confirmed against the institutional safety data sheet before scientific review."
+        }
+      },
+      {
+        "kind": "flammable",
+        "statement": "Phenolphthalein indicator solution contains ethanol and is flammable; keep away from flames and close the bottle when not in use.",
+        "appliesTo": ["chem-phenolphthalein"],
+        "evidence": {
+          "basis": "requires_review",
+          "notes": "Solvent flammability is standard; confirm the commercial product's safety data sheet."
+        }
+      }
+    ],
+    "protectiveEquipment": ["Safety spectacles.", "Laboratory coat or apron."],
+    "disposal": [
+      "Small volumes of dilute test solutions may normally be washed to drain with plenty of water, subject to the supervising institution's policy.",
+      "Collect indicator solutions as directed by the supervising institution; do not mix large volumes of indicators into one waste bottle without guidance."
+    ],
+    "supervision": "adult_supervision_required",
+    "restrictedOperations": [
+      "No tasting of any solution — including 'everyday' ones — in a laboratory setting.",
+      "No heating and no concentrated reagents in this activity."
+    ],
+    "emergencyGuidance": [
+      "Eye contact: rinse with plenty of water and inform the supervising educator.",
+      "Skin contact: wash with water; report persistent irritation."
+    ],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Arrange the test solutions on the spotting tile and examine each with pH paper, universal indicator, methyl orange and phenolphthalein. Record colours promptly and compare with calculated pH where the composition is known.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Set up the test array",
+        "instructions": "Label the wells of the spotting tile for each test solution: distilled water, 0.1 mol/L HCl, 0.1 mol/L acetic acid, 0.1 mol/L NaOH and 0.1 mol/L ammonia. Place a few drops of each solution in its own well using the labelled dropper for that solution.",
+        "equipmentIds": ["eqp-spotting-tile", "eqp-droppers"],
+        "chemicalIds": [
+          "chem-hcl-dilute",
+          "chem-acetic-acid",
+          "chem-naoh-dilute",
+          "chem-ammonia-dilute",
+          "chem-distilled-water"
+        ],
+        "precautions": [
+          "Use a separate dropper for each solution; cross-contamination ruins the comparison."
+        ],
+        "expectedObservations": [
+          "All samples are clear and colourless; appearance alone cannot identify them."
+        ],
+        "explanatoryNotes": [
+          "The invisible differences between these solutions are exactly what the indicators will reveal."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Test with indicator paper",
+        "instructions": "Dip a strip of pH paper into each sample (or transfer one drop with a clean dropper) and compare the colour with the chart immediately. Record the estimated pH as a value or range.",
+        "equipmentIds": ["eqp-ph-paper", "eqp-droppers"],
+        "chemicalIds": [],
+        "precautions": ["Do not dip the paper into the stock bottles."],
+        "expectedObservations": [
+          "HCl and acetic acid read acidic (HCl lower than acetic acid); NaOH and ammonia read basic; water reads near neutral."
+        ],
+        "explanatoryNotes": [
+          "pH paper gives a rough estimate — typically to about one pH unit — which is part of the lesson."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Test with universal indicator",
+        "instructions": "Add 1-2 drops of universal indicator to fresh samples in clean wells. Record the colours and estimate pH from the product's colour chart.",
+        "equipmentIds": ["eqp-spotting-tile", "eqp-droppers"],
+        "chemicalIds": ["chem-universal-indicator"],
+        "precautions": [
+          "Universal indicator permanently stains clothing and skin; handle with care."
+        ],
+        "expectedObservations": [
+          "A graded colour series from red/orange (HCl) through yellow-green (water) to blue-violet (NaOH)."
+        ],
+        "explanatoryNotes": [
+          "Compare the universal-indicator estimate with the pH-paper estimate; agreement builds confidence, disagreement is worth discussing."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Test with single indicators",
+        "instructions": "Add 1-2 drops of methyl orange to fresh samples and record the colours. Repeat with phenolphthalein in another set of fresh samples.",
+        "equipmentIds": ["eqp-spotting-tile", "eqp-droppers"],
+        "chemicalIds": ["chem-methyl-orange", "chem-phenolphthalein"],
+        "precautions": ["Keep the ethanol-based phenolphthalein away from flames."],
+        "expectedObservations": [
+          "Methyl orange: red in HCl and acetic acid, yellow in NaOH and ammonia. Phenolphthalein: colourless in acids, pink in bases."
+        ],
+        "explanatoryNotes": [
+          "These are the classic qualitative results taught with this topic; cite them as expected reference behaviour, not as measurements taken here."
+        ]
+      },
+      {
+        "stepId": "step-5",
+        "title": "Compare with calculated pH",
+        "instructions": "Calculate the expected pH of the HCl solution (complete dissociation) and of the acetic acid solution (Ka = 1.8 x 10^-5). Compare with the indicator estimates and record the differences.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [
+          "Calculated pH 1 for 0.1 mol/L HCl and about 2.9 for 0.1 mol/L acetic acid; indicator estimates agree within their coarse resolution."
+        ],
+        "explanatoryNotes": [
+          "The comparison shows both the power and the limits of indicator methods."
+        ]
+      }
+    ],
+    "troubleshooting": [
+      "If all wells give the same colour, contamination between droppers is likely; start over with clean equipment.",
+      "If phenolphthalein shows a faint pink in a supposedly acidic sample, the sample may be contaminated with base or the indicator bottle with carbonate; do not force the observation to fit.",
+      "Indicator colours are easier to read in good daylight against a white background; move to better light before doubting the result."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-ph-paper-estimate",
+          "label": "Estimated pH from indicator paper",
+          "kind": "ph",
+          "unit": "1",
+          "method": "Compare the developed paper colour with the chart immediately after dipping; record the value or range shown on the chart.",
+          "expectedRange": { "min": 1, "max": 14, "unit": "1" },
+          "expectedQualitative": [
+            "HCl lower pH than acetic acid at equal concentration; NaOH higher pH than ammonia."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "displayPrecision": "Whole pH units (paper resolution)."
+        },
+        {
+          "id": "obs-indicator-colours",
+          "label": "Indicator colour observations",
+          "kind": "qualitative",
+          "method": "Add 1-2 drops of each indicator to fresh samples; record colour against a white background.",
+          "expectedQualitative": [
+            "Methyl orange is red in the two acid samples and yellow in the two base samples.",
+            "Phenolphthalein is colourless in the acid samples and pink in the base samples.",
+            "Universal indicator shows a graded series from red (HCl) to blue-violet (NaOH)."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "displayPrecision": "Qualitative observation only."
+        }
+      ],
+      "qualitativePrompts": [
+        "Which solutions can indicator paper distinguish reliably and which are too close to separate?",
+        "Did the strong/weak comparison (HCl vs acetic acid) show up in the colours, or only in the calculated pH?",
+        "Where did the pH-paper and universal-indicator estimates disagree?"
+      ],
+      "errorSources": [
+        "Reading indicator colours in poor light or against coloured backgrounds.",
+        "Cross-contamination between droppers or wells.",
+        "pH paper resolution of about one pH unit limits all conclusions.",
+        "Universal indicator colours are subjective near transition shades.",
+        "Atmospheric carbon dioxide dissolving in standing water shifts its pH slightly acidic."
+      ],
+      "interpretationGuidance": [
+        "Treat indicator results as range estimates; only the calculation gives numbers tied to concentrations.",
+        "The strong/weak acid distinction is quantitative (Ka) even when the colours look similar.",
+        "Record unexpected colours honestly as observations to investigate, not as errors to delete."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "provided",
+    "calculations": [
+      {
+        "id": "calc-ph-strong-acid",
+        "title": "pH of a strong acid solution",
+        "purpose": "Compute the pH of a fully dissociated acid from its concentration.",
+        "equationId": "eq-ph",
+        "variables": [
+          { "symbol": "c", "meaning": "acid concentration", "unit": "mol/L" },
+          {
+            "symbol": "[H3O+]",
+            "meaning": "hydronium concentration (equal to c for a strong monoprotic acid)",
+            "unit": "mol/L"
+          },
+          { "symbol": "pH", "meaning": "pH", "unit": "1" }
+        ],
+        "assumptions": ["Complete dissociation.", "Activity effects neglected."],
+        "unitsAndDimensions": "pH is dimensionless; the logarithm argument carries units of mol/L relative to the standard state (1 mol/L).",
+        "significantFigureConvention": "The concentration's significant figures determine the decimal places of the pH: 0.1 mol/L (one significant figure) gives pH 1.0.",
+        "workedExamples": [
+          {
+            "id": "calc-ph-strong-acid-example",
+            "title": "Worked example: 0.1 mol/L HCl",
+            "given": ["c = 0.1 mol/L", "HCl fully dissociated"],
+            "steps": ["[H3O+] = c = 0.1 mol/L", "pH = -log10(0.1) = 1.0"],
+            "result": "pH = 1.0",
+            "sourceRefIds": ["ref-ncert-class11-part2"],
+            "significantFiguresNote": "0.1 has one significant figure; pH is reported to one decimal place (the mantissa carries the significant figure).",
+            "isIllustrative": true
+          }
+        ],
+        "sourceRefIds": ["ref-ncert-class11-part2"]
+      },
+      {
+        "id": "calc-ph-weak-acid",
+        "title": "Approximate pH of a weak acid solution",
+        "purpose": "Estimate the pH of a weak acid from Ka and concentration.",
+        "equationId": "eq-weak-acid-ph",
+        "variables": [
+          { "symbol": "Ka", "meaning": "acid dissociation constant", "unit": "mol/L" },
+          { "symbol": "c", "meaning": "analytical acid concentration", "unit": "mol/L" },
+          { "symbol": "[H3O+]", "meaning": "hydronium concentration", "unit": "mol/L" }
+        ],
+        "assumptions": [
+          "c >> [H3O+] so the approximation holds.",
+          "Ka = 1.8 x 10^-5 mol/L for acetic acid at 25 C."
+        ],
+        "unitsAndDimensions": "sqrt(Ka x c) has units sqrt(mol/L x mol/L) = mol/L.",
+        "significantFigureConvention": "Two significant figures in Ka and c support two decimal places in pH.",
+        "workedExamples": [
+          {
+            "id": "calc-ph-weak-acid-example",
+            "title": "Worked example: 0.1 mol/L acetic acid",
+            "given": ["Ka = 1.8 x 10^-5 mol/L", "c = 0.1 mol/L"],
+            "steps": [
+              "[H3O+] = sqrt(Ka x c) = sqrt(1.8 x 10^-5 x 0.1) = sqrt(1.8 x 10^-6) = 1.34 x 10^-3 mol/L",
+              "pH = -log10(1.34 x 10^-3) = 2.87"
+            ],
+            "result": "pH is about 2.9",
+            "sourceRefIds": ["ref-ncert-class11-part2"],
+            "significantFiguresNote": "The exact treatment (quadratic) gives essentially the same pH at this concentration; the approximation is justified by c/Ka > 100.",
+            "isIllustrative": true
+          }
+        ],
+        "sourceRefIds": ["ref-ncert-class11-part2"]
+      }
+    ],
+    "notes": "Worked examples use nominal textbook values (Ka of acetic acid 1.8 x 10^-5 mol/L at 25 C). They illustrate method; they are not measurements."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class11-part2",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry Part II, Textbook for Class XI (units including 'Equilibrium'). National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry Part II, Textbook for Class XI",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?kech2=0",
+        "identifiers": { "ncert-book-index": "kech2" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "eq-ph",
+          "eq-kw",
+          "eq-weak-acid-ph",
+          "def-ph",
+          "def-indicator",
+          "def-strong-acid",
+          "def-weak-acid",
+          "obs-indicator-colours",
+          "calc-ph-strong-acid",
+          "calc-ph-weak-acid"
+        ],
+        "notes": "Official NCERT book index page fetched on 2026-11-05; the 'Equilibrium' unit covers pH, indicators and weak acid treatment at book level."
+      },
+      {
+        "id": "ref-pubchem-naoh-hcl",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Sodium hydroxide (CID 14798) and Hydrochloric acid (CID 313).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summaries: Sodium hydroxide (CID 14798), Hydrochloric acid (CID 313)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/14798",
+        "identifiers": { "pubchem-cid-naoh": "14798", "pubchem-cid-hcl": "313" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Both CIDs verified during the 2026-11-05 content pass; hazard evidence for the dilute acid and base samples."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": { "circular": "Acad-14/2025" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Curriculum-mapping evidence only; unit wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "planned",
+    "model": {
+      "id": "ph-indicator-explorer",
+      "contractVersion": "1.0.0",
+      "summary": "Computes theoretical pH for strong and weak acid/base inputs and overlays indicator transition ranges, so learners can see why colours change where they do. Outputs are theoretical model values.",
+      "inputs": [
+        {
+          "id": "in-concentration",
+          "label": "Analyte concentration",
+          "unit": "mol/L",
+          "defaultValue": 0.1,
+          "validRange": { "min": 0.0001, "max": 1, "unit": "mol/L" },
+          "description": "Concentration of the acid or base solution."
+        },
+        {
+          "id": "in-kind",
+          "label": "Analyte type",
+          "unit": "1",
+          "description": "Strong acid, weak acid, strong base or weak base (fixed choices in the future UI)."
+        },
+        {
+          "id": "in-ka",
+          "label": "Dissociation constant (Ka or Kb)",
+          "unit": "mol/L",
+          "validRange": { "min": 1e-10, "max": 1, "unit": "mol/L" },
+          "description": "Required for weak electrolytes (for example Ka = 1.8e-5 for acetic acid)."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-ph",
+          "label": "Theoretical pH",
+          "unit": "1",
+          "displayPrecision": "Two decimal places",
+          "description": "Model pH; theoretical value only, never a measured reading."
+        },
+        {
+          "id": "out-indicator-colours",
+          "label": "Predicted indicator appearances",
+          "unit": "1",
+          "displayPrecision": "Qualitative",
+          "description": "Model-based prediction of indicator colours from transition ranges; illustrative."
+        }
+      ],
+      "assumptions": [
+        "Dilute ideal solutions at 25 C.",
+        "Concentration used in place of activity.",
+        "Indicator transition ranges treated as fixed literature values."
+      ],
+      "limitations": [
+        "Does not model ionic strength, mixed solvents or temperature dependence of Kw/Ka.",
+        "Predicted colours are illustrative; real colour perception varies with concentration and observers.",
+        "Model outputs must never be labelled as measurements."
+      ],
+      "equations": ["eq-ph", "eq-kw", "eq-weak-acid-ph"],
+      "sourceRefIds": ["ref-ncert-class11-part2"]
+    }
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "requires_review",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. pH calculations and indicator behaviour cross-checked against NCERT equilibrium material. Pending independent scientific review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "pH calculations recomputed during the 2026-11-05 content pass: 0.1 mol/L HCl gives pH 1.0; 0.1 mol/L acetic acid with Ka = 1.8 x 10^-5 gives pH 2.87, consistent with standard textbook treatment.",
+      "Indicator transition ranges (methyl orange about 3.1-4.4; phenolphthalein about 8.2-10) are standard textbook values recorded without re-verification against a primary source; scientific reviewer should confirm before validation."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place.",
+      "Indicator transition ranges and the acetic acid Ka are textbook-standard but not re-verified against a primary source in this pass.",
+      "Ammonia and phenolphthalein hazard classifications marked requires_review pending institutional SDS confirmation."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text copied; NCERT and PubChem are cited as references only."
+    }
+  }
+}

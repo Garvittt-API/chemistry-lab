@@ -1,0 +1,71 @@
+{
+  "registryVersion": "1.0.0",
+  "levels": [
+    {
+      "id": "beginner",
+      "label": "Beginner",
+      "description": "Learners meeting a topic for the first time, regardless of age or institution.",
+      "typicalCharacteristics": [
+        "No assumed laboratory experience.",
+        "Benefits from guided steps and explicit definitions.",
+        "Curriculum mapping is usually not applicable at this level."
+      ],
+      "ordinal": 1
+    },
+    {
+      "id": "school",
+      "label": "School",
+      "description": "School-stage learners (roughly classes 6-10 in the Indian system; equivalent stages vary by country).",
+      "typicalCharacteristics": [
+        "Developing practical skills under supervision.",
+        "Concrete observations before abstract equations.",
+        "Strong safety supervision required for wet chemistry."
+      ],
+      "ordinal": 2
+    },
+    {
+      "id": "higher-secondary",
+      "label": "Higher secondary",
+      "description": "Pre-university learners (roughly classes 11-12 in the Indian system; A-level, IB or senior high-school equivalents elsewhere).",
+      "typicalCharacteristics": [
+        "Working with quantitative relationships and laboratory technique.",
+        "Preparing for university study or applied science.",
+        "Curriculum mapping to boards such as CBSE is common at this level."
+      ],
+      "ordinal": 3
+    },
+    {
+      "id": "undergraduate",
+      "label": "Undergraduate",
+      "description": "University learners in foundation or intermediate chemistry study.",
+      "typicalCharacteristics": [
+        "Comfortable with calculus-based or deeper quantitative treatment.",
+        "Independent laboratory work under institutional supervision.",
+        "Expects assumptions, error sources and model limitations to be explicit."
+      ],
+      "ordinal": 4
+    },
+    {
+      "id": "postgraduate",
+      "label": "Postgraduate",
+      "description": "Advanced university learners (master's stage and equivalent).",
+      "typicalCharacteristics": [
+        "Specialist depth within a subdiscipline.",
+        "Critical reading of primary literature expected.",
+        "Research-grade methods and uncertainty treatment."
+      ],
+      "ordinal": 5
+    },
+    {
+      "id": "advanced-research",
+      "label": "Advanced / Research",
+      "description": "Researchers and advanced practitioners needing rigorous models, data and provenance.",
+      "typicalCharacteristics": [
+        "Full model reports with validation evidence.",
+        "Precision, uncertainty and provenance are mandatory.",
+        "Content may exceed standard curriculum scope."
+      ],
+      "ordinal": 6
+    }
+  ]
+}

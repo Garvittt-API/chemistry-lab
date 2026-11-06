@@ -1,0 +1,613 @@
+{
+  "identity": {
+    "id": "solution-dilution",
+    "slug": "solution-dilution",
+    "title": "Serial Dilution and Concentration Calculations",
+    "shortDescription": "Prepare a series of dilutions from one stock solution, observe how colour intensity tracks concentration, and master the c1 x V1 = c2 x V2 relationship.",
+    "fullDescription": "Dilution is the most-used calculation in a chemistry laboratory and the easiest to get subtly wrong. This activity uses a visibly coloured dilute copper(II) sulfate stock solution: learners measure, dilute, mix and observe the stepwise loss of colour intensity while calculating each new concentration. The reasoning transfers directly to every later quantitative activity, from titration to kinetics.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "general-chemistry",
+    "subdisciplineIds": [
+      "general-chemistry-quantitative-foundations",
+      "general-chemistry-laboratory-techniques"
+    ],
+    "topicIds": ["solutions-and-concentration", "measurement-and-units"],
+    "educationalLevels": ["beginner", "school", "higher-secondary"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-12-solutions",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Supports the concentration-of-solutions work of the Class XII unit 'Solutions'. Mapping proposed pending documentary verification against the CBSE subject PDF.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      },
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-11-basic-concepts",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Reinforces concentration and amount-of-substance reasoning from the Class XI unit 'Some Basic Concepts of Chemistry'. Mapping proposed pending documentary verification.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "introductory",
+    "estimatedDurationMinutes": 40,
+    "prerequisites": [
+      "Understanding of molar concentration (see the 'Preparing a Standard Solution' activity).",
+      "Confident use of measuring cylinders or pipettes."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Apply the dilution relationship c1 x V1 = c2 x V2 to plan a dilution series.",
+      "Carry out measured dilutions and relate the visible colour intensity to concentration.",
+      "Track units and significant figures through multi-step calculations."
+    ],
+    "expectedCompetencies": [
+      "Accurate liquid measurement and transfer.",
+      "Planning a serial dilution so each step is measurable.",
+      "Distinguishing 'volume of water added' from 'total final volume'."
+    ],
+    "learningOutcomes": [
+      "Calculate the concentration of each member of a dilution series from one stock value.",
+      "Demonstrate a serial dilution and explain why each step multiplies the concentration by the same factor.",
+      "Predict how the appearance of a solution changes with concentration and justify the prediction with the dilution equation."
+    ],
+    "theory": {
+      "overview": "Diluting a solution changes its concentration but not the amount of solute it contains. That single conservation statement generates the whole calculation: whatever volume V1 of concentration c1 is taken from the stock, the same amount of solute ends up dispersed in the new total volume V2 at concentration c2, so c1 x V1 = c2 x V2. In a serial dilution the product of each step's dilution factor gives the overall factor, which is why serial dilution can reach very small concentrations with a single measuring device.",
+      "sections": [
+        {
+          "heading": "Conservation of solute on dilution",
+          "body": "When a volume V1 of stock solution is made up to a larger total volume V2, no solute is added or removed: the amount of substance n = c1 x V1 is unchanged. Therefore c2 = c1 x V1 / V2. The units carry through directly: if c is in mol/L and V in mL on both sides the millilitres cancel and c2 comes out in mol/L.",
+          "sourceRefIds": ["ref-ncert-class12-part1", "ref-ncert-class11-unit1"]
+        },
+        {
+          "heading": "Serial dilution",
+          "body": "In a serial dilution each diluted solution becomes the stock for the next step. If every step uses the same factor f = V1 / V2 (for example 1:10), then after k steps the concentration is c0 x f^k. Errors do not accumulate randomly in a serial dilution: a systematic error in the first step propagates to all later steps, which is why the first measurement deserves the most care.",
+          "sourceRefIds": ["ref-ncert-class12-part1"]
+        },
+        {
+          "heading": "Colour and concentration",
+          "body": "For a coloured solute at low concentration, the intensity of the observed colour increases with the amount of coloured species in the light path; halving the concentration visibly lightens the solution. Colour comparison is a qualitative observation, not a quantitative measurement: it supports the calculation, it does not replace it. (A rigorous treatment belongs to spectrophotometry and Beer-Lambert law, outside this activity's scope.)",
+          "sourceRefIds": ["ref-ncert-class12-part1"]
+        }
+      ],
+      "scientificBackground": "The dilution equation assumes volumes are additive enough for the stated precision and that temperature is roughly constant. For dilute aqueous solutions these assumptions are adequate at school-level precision; concentrated solutions can show measurable volume changes on mixing, which is one reason dilute stocks are used here.",
+      "concepts": [
+        "conservation of amount of substance",
+        "dilution factor",
+        "serial dilution",
+        "concentration units",
+        "significant figures"
+      ],
+      "equations": [
+        {
+          "id": "eq-dilution",
+          "expression": "c1 * V1 = c2 * V2",
+          "displayForm": "c₁ × V₁ = c₂ × V₂",
+          "description": "Conservation of solute on dilution: the amount of solute before dilution equals the amount after.",
+          "variables": [
+            { "symbol": "c1", "meaning": "concentration of the stock solution", "unit": "mol/L" },
+            { "symbol": "V1", "meaning": "volume of stock solution taken", "unit": "mL" },
+            { "symbol": "c2", "meaning": "concentration after dilution", "unit": "mol/L" },
+            { "symbol": "V2", "meaning": "total volume after dilution", "unit": "mL" }
+          ],
+          "applicableConditions": [
+            "Dilute solutions near room temperature.",
+            "V2 is the total final volume, not the volume of water added."
+          ],
+          "assumptions": [
+            "Volumes are effectively additive at the working precision.",
+            "No solute is lost during transfer."
+          ],
+          "sourceRefIds": ["ref-ncert-class12-part1", "ref-ncert-class11-unit1"],
+          "kind": "working_relation"
+        }
+      ],
+      "definitions": [
+        {
+          "id": "def-dilution-factor",
+          "term": "Dilution factor",
+          "definition": "The ratio V1 / V2 by which one dilution step multiplies the concentration; overall factor of a serial dilution is the product of the step factors.",
+          "sourceRefIds": ["ref-ncert-class12-part1"]
+        },
+        {
+          "id": "def-stock-solution",
+          "term": "Stock solution",
+          "definition": "The more concentrated solution from which dilutions are prepared.",
+          "sourceRefIds": ["ref-ncert-class12-part1"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-measuring-cylinder-10",
+        "name": "Measuring cylinder",
+        "specification": "10 mL",
+        "quantity": "1",
+        "purpose": "Measuring stock solution for each dilution step",
+        "alternatives": ["A 10 mL graduated pipette with a filler for better accuracy"]
+      },
+      {
+        "id": "eqp-measuring-cylinder-100",
+        "name": "Measuring cylinder",
+        "specification": "100 mL",
+        "quantity": "1",
+        "purpose": "Making up diluted solutions",
+        "alternatives": ["A 100 mL volumetric flask per step if higher accuracy is required"]
+      },
+      {
+        "id": "eqp-beaker-set",
+        "name": "Beakers or sample tubes",
+        "specification": "5 x 100 mL (or large test tubes in a rack)",
+        "quantity": "5",
+        "purpose": "Holding the dilution series",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-dropper",
+        "name": "Dropper",
+        "specification": "Clean",
+        "quantity": "1",
+        "purpose": "Fine volume adjustment",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-stirring-rod",
+        "name": "Stirring rod",
+        "specification": "Glass or plastic",
+        "quantity": "1",
+        "purpose": "Mixing after dilution",
+        "alternatives": []
+      }
+    ],
+    "chemicals": [
+      {
+        "id": "chem-cuso4-stock",
+        "name": "Copper(II) sulfate solution (stock)",
+        "formulaOrDescription": "CuSO4(aq), approximately 0.10 mol/L, prepared by the supervising educator",
+        "category": "solution",
+        "amount": "About 30 mL per learner",
+        "identifiers": { "pubchem-cid": "24462" },
+        "hazardKinds": ["irritant", "acutely_toxic", "environmental_hazard"],
+        "notes": "Blue solution used as a visible tracer. Harmful if swallowed; very toxic to aquatic life; collect waste for metal-salt disposal."
+      },
+      {
+        "id": "chem-distilled-water",
+        "name": "Distilled or deionised water",
+        "formulaOrDescription": "H2O",
+        "category": "other",
+        "amount": "About 200 mL per learner",
+        "identifiers": {},
+        "hazardKinds": [],
+        "notes": "Diluent for the series."
+      }
+    ],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "low",
+    "riskRationale": "Dilute copper(II) sulfate is a common school reagent used at 0.1 mol/L or below, without heating or reaction steps. Copper salts are harmful if swallowed and environmentally hazardous, so ingestion and drain disposal are the controlled risks.",
+    "hazards": [
+      {
+        "kind": "acutely_toxic",
+        "statement": "Copper(II) sulfate is harmful if swallowed; never mouth-pipette and wash hands after handling.",
+        "appliesTo": ["chem-cuso4-stock"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-cuso4",
+          "notes": "GHS acute toxicity classification (oral) for copper(II) sulfate per the PubChem compound entry."
+        }
+      },
+      {
+        "kind": "environmental_hazard",
+        "statement": "Copper(II) sulfate is very toxic to aquatic life; do not pour copper solutions down the drain.",
+        "appliesTo": ["chem-cuso4-stock"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-cuso4",
+          "notes": "GHS environmental hazard classification per the PubChem compound entry."
+        }
+      },
+      {
+        "kind": "irritant",
+        "statement": "Copper(II) sulfate solution is irritating to eyes and skin; wear safety spectacles and avoid contact.",
+        "appliesTo": ["chem-cuso4-stock"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-cuso4",
+          "notes": "GHS skin/eye irritation classification per the PubChem compound entry."
+        }
+      }
+    ],
+    "protectiveEquipment": ["Safety spectacles.", "Laboratory coat or apron."],
+    "disposal": [
+      "Collect all copper(II) sulfate solutions in a labelled waste container for metal-salt disposal provided by the supervising institution.",
+      "Do not dispose of copper solutions in the drain or in the environment.",
+      "Rinse measuring equipment into the waste container, not the sink."
+    ],
+    "supervision": "adult_supervision_required",
+    "restrictedOperations": [
+      "No mouth pipetting under any circumstances.",
+      "No heating of copper solutions in this activity."
+    ],
+    "emergencyGuidance": [
+      "Eye contact: rinse with plenty of water and inform the supervising educator.",
+      "Ingestion: do not induce vomiting; inform the supervising educator and seek medical advice."
+    ],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Prepare a 1:10 dilution series from the stock solution, calculating each concentration before you measure it. Keep the first measurement the most careful one; every later value inherits its error.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Plan and calculate the series",
+        "instructions": "Label five vessels 1 to 5. Decide on a 1:10 step factor. Calculate the expected concentration of each vessel if vessel 1 is 10.0 mL of stock diluted to 100.0 mL, vessel 2 is 10.0 mL of vessel 1 diluted to 100.0 mL, and so on.",
+        "equipmentIds": ["eqp-beaker-set"],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [
+          "The planned concentrations form a geometric series: 0.010, 0.0010, 0.00010 mol/L (values illustrative)."
+        ],
+        "explanatoryNotes": [
+          "Calculate first, measure second: a dilution series planned on the fly is where mistakes multiply."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Prepare vessel 1",
+        "instructions": "Measure 10.0 mL of stock copper(II) sulfate solution and transfer it into vessel 1. Add distilled water until the total volume reaches 100.0 mL. Stir.",
+        "equipmentIds": [
+          "eqp-measuring-cylinder-10",
+          "eqp-measuring-cylinder-100",
+          "eqp-beaker-set",
+          "eqp-stirring-rod"
+        ],
+        "chemicalIds": ["chem-cuso4-stock", "chem-distilled-water"],
+        "precautions": [
+          "Measure the stock with the 10 mL cylinder; do not use the 100 mL cylinder for it."
+        ],
+        "expectedObservations": [
+          "Vessel 1 is a clearly blue solution, visibly paler than the stock."
+        ],
+        "explanatoryNotes": [
+          "The added water volume is 90.0 mL, but the concentration calculation uses the total 100.0 mL."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Continue the series",
+        "instructions": "Measure 10.0 mL from vessel 1, transfer to vessel 2 and make up to 100.0 mL with distilled water. Repeat from vessel 2 to vessel 3 and from vessel 3 to vessel 4, using the freshly stirred solution each time.",
+        "equipmentIds": [
+          "eqp-measuring-cylinder-10",
+          "eqp-measuring-cylinder-100",
+          "eqp-beaker-set",
+          "eqp-stirring-rod"
+        ],
+        "chemicalIds": ["chem-distilled-water"],
+        "precautions": [
+          "Rinse the measuring cylinder with the next solution before measuring it, or use separate cylinders, to avoid cross-contamination."
+        ],
+        "expectedObservations": [
+          "Each vessel is paler than the previous one; by vessel 4 the blue tint is very faint."
+        ],
+        "explanatoryNotes": [
+          "Stir before every transfer; a concentration gradient inside a vessel becomes an error in the next one."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Record the appearance of the series",
+        "instructions": "Arrange the vessels in order, view them against a white background in good light and record the relative colour intensity of each. Compare with the values predicted in step 1.",
+        "equipmentIds": ["eqp-beaker-set"],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [
+          "Colour intensity decreases stepwise with calculated concentration; the trend, not exact shade matching, is the expected observation."
+        ],
+        "explanatoryNotes": [
+          "Colour is a qualitative cross-check on the arithmetic, not a concentration measurement."
+        ]
+      },
+      {
+        "stepId": "step-5",
+        "title": "Record calculations and units",
+        "instructions": "Record c1, V1 and V2 for every step and the resulting c2 with correct units. State the overall dilution factor from stock to vessel 4.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [],
+        "explanatoryNotes": [
+          "The overall factor from stock to vessel 4 is 1:10^4 = 1:10000 for this plan."
+        ]
+      }
+    ],
+    "troubleshooting": [
+      "If two adjacent vessels look identical, re-check the transfers before concluding the calculation is wrong; incomplete rinsing is the usual cause.",
+      "If vessel 1 is as dark as the stock, the make-up volume was forgotten or too small.",
+      "If the final cylinder reading overshoots, use a dropper to correct before mixing, and record the actual volume."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-volume-stock",
+          "label": "Volume of stock taken per step",
+          "kind": "volume",
+          "unit": "mL",
+          "method": "Measure with the 10 mL cylinder (or graduated pipette) at eye level; record the actual delivered volume.",
+          "provenance": "theoretical",
+          "sourceRefIds": ["ref-ncert-class12-part1"],
+          "displayPrecision": "One decimal place (for example 10.0 mL)."
+        },
+        {
+          "id": "obs-volume-final",
+          "label": "Total volume per dilution step",
+          "kind": "volume",
+          "unit": "mL",
+          "method": "Make up to 100.0 mL in the measuring cylinder or volumetric flask; record the achieved total volume.",
+          "provenance": "theoretical",
+          "sourceRefIds": ["ref-ncert-class12-part1"],
+          "displayPrecision": "One decimal place (for example 100.0 mL)."
+        },
+        {
+          "id": "obs-concentration-series",
+          "label": "Calculated concentration of each vessel",
+          "kind": "other",
+          "unit": "mol/L",
+          "method": "Computed from c1 x V1 = c2 x V2 step by step; theoretical values derived from learner measurements.",
+          "provenance": "theoretical",
+          "sourceRefIds": ["ref-ncert-class12-part1"],
+          "displayPrecision": "Two significant figures."
+        }
+      ],
+      "qualitativePrompts": [
+        "How does the blue intensity change from vessel to vessel?",
+        "Does the step-to-step change look constant (a geometric series) or random?",
+        "Which vessel would you no longer trust to look different from pure water, and why?"
+      ],
+      "errorSources": [
+        "Rough volume measurements at each step multiply into large end-of-series errors.",
+        "Carrying contamination between cylinders alters the next dilution.",
+        "Comparing colours in poor light or against a coloured background biases judgment.",
+        "Reading cylinder volumes from above or below eye level causes parallax error."
+      ],
+      "interpretationGuidance": [
+        "Judge the series by its trend: each vessel should be paler than the one before by a similar factor.",
+        "Treat colour as qualitative support for the calculation; concentration values come from measurements and equations, not from shade matching.",
+        "State concentrations with the significant figures the volume measurements support."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "provided",
+    "calculations": [
+      {
+        "id": "calc-dilution-step",
+        "title": "Concentration after one dilution step",
+        "purpose": "Calculate the new concentration from the volume of stock taken and the total final volume.",
+        "equationId": "eq-dilution",
+        "variables": [
+          { "symbol": "c1", "meaning": "stock concentration", "unit": "mol/L" },
+          { "symbol": "V1", "meaning": "volume of stock taken", "unit": "mL" },
+          { "symbol": "V2", "meaning": "total final volume", "unit": "mL" },
+          { "symbol": "c2", "meaning": "concentration after dilution", "unit": "mol/L" }
+        ],
+        "assumptions": [
+          "Volumes are additive at the working precision.",
+          "No solute is lost during transfer.",
+          "The stock concentration is known as stated."
+        ],
+        "unitsAndDimensions": "c2 = c1 x V1 / V2; the volume units cancel (mL/mL), leaving mol/L.",
+        "significantFigureConvention": "Two significant figures throughout the example because the nominal stock concentration is stated to two; round only at the end.",
+        "workedExamples": [
+          {
+            "id": "calc-dilution-step-example",
+            "title": "Worked example: first dilution step",
+            "given": ["c1 = 0.10 mol/L (stock)", "V1 = 10.0 mL", "V2 = 100.0 mL"],
+            "steps": [
+              "c2 = c1 x V1 / V2",
+              "c2 = 0.10 mol/L x 10.0 mL / 100.0 mL",
+              "c2 = 0.010 mol/L"
+            ],
+            "result": "c2 = 0.010 mol/L (1:10 dilution of the stock)",
+            "sourceRefIds": ["ref-ncert-class12-part1"],
+            "significantFiguresNote": "0.10 mol/L has two significant figures, so 0.010 mol/L is reported, not 0.0100.",
+            "isIllustrative": true
+          },
+          {
+            "id": "calc-serial-dilution-example",
+            "title": "Worked example: overall factor after four 1:10 steps",
+            "given": ["Step factor f = 1/10", "Number of steps k = 4"],
+            "steps": [
+              "Overall factor = f^k = (1/10)^4 = 1/10000",
+              "c4 = 0.10 mol/L / 10000 = 1.0 x 10^-5 mol/L"
+            ],
+            "result": "c4 = 1.0 x 10^-5 mol/L after four steps from the stock",
+            "sourceRefIds": ["ref-ncert-class12-part1"],
+            "significantFiguresNote": "Scientific notation makes the two-significant-figure result unambiguous.",
+            "isIllustrative": true
+          }
+        ],
+        "sourceRefIds": ["ref-ncert-class12-part1"]
+      }
+    ],
+    "notes": "Worked examples use nominal illustrative values. Learners substitute their own recorded volumes; no measured data are fabricated in this record."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class12-part1",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry I (chemistry I), Textbook for Class XII. National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry I, Textbook for Class XII",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?lech1=0",
+        "identifiers": { "ncert-book-index": "lech1" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "eq-dilution",
+          "def-dilution-factor",
+          "def-stock-solution",
+          "calc-dilution-step"
+        ],
+        "notes": "Official NCERT book index page fetched on 2026-11-05; the 'Solutions' unit covers concentration and dilution treatment."
+      },
+      {
+        "id": "ref-ncert-class11-unit1",
+        "type": "official_educational_resource",
+        "citation": "NCERT, 'Some Basic Concepts of Chemistry', Unit 1 in Chemistry Part I, Textbook for Class XI. National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Some Basic Concepts of Chemistry (Chemistry Part I, Class XI)",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook/pdf/kech101.pdf",
+        "identifiers": { "ncert-chapter-pdf": "kech101.pdf" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": ["eq-dilution"],
+        "notes": "PDF fetched and content confirmed on 2026-11-05 (mole concept, concentration, significant figures)."
+      },
+      {
+        "id": "ref-pubchem-cuso4",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Copper sulfate (CID 24462).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Copper sulfate (CID 24462)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24462",
+        "identifiers": { "pubchem-cid": "24462" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID 24462 confirmed during the 2026-11-05 content pass; used as the hazard-evidence source for copper(II) sulfate GHS classifications."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": { "circular": "Acad-14/2025" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Curriculum-mapping evidence only; unit wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "planned",
+    "model": {
+      "id": "dilution-series-calculator",
+      "contractVersion": "1.0.0",
+      "summary": "Given a stock concentration and a series of dilution steps (V1, V2 per step), computes each resulting concentration and the overall dilution factor with consistent units.",
+      "inputs": [
+        {
+          "id": "in-stock-concentration",
+          "label": "Stock concentration",
+          "unit": "mol/L",
+          "defaultValue": 0.1,
+          "validRange": { "min": 0.0001, "max": 5, "unit": "mol/L" },
+          "description": "Concentration of the starting stock solution."
+        },
+        {
+          "id": "in-volume-taken",
+          "label": "Volume taken per step",
+          "unit": "mL",
+          "defaultValue": 10,
+          "validRange": { "min": 0.1, "max": 1000, "unit": "mL" },
+          "description": "Volume transferred from the previous vessel at each step."
+        },
+        {
+          "id": "in-final-volume",
+          "label": "Total volume per step",
+          "unit": "mL",
+          "defaultValue": 100,
+          "validRange": { "min": 1, "max": 5000, "unit": "mL" },
+          "description": "Total volume after dilution at each step."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-series-concentrations",
+          "label": "Concentration of each vessel",
+          "unit": "mol/L",
+          "displayPrecision": "Two significant figures",
+          "description": "Theoretical concentration series, labelled theoretical, not measured."
+        },
+        {
+          "id": "out-overall-factor",
+          "label": "Overall dilution factor",
+          "unit": "1",
+          "displayPrecision": "Exact ratio",
+          "description": "Product of the step factors from stock to the final vessel."
+        }
+      ],
+      "assumptions": [
+        "Perfect mixing before each transfer.",
+        "Volumes additive at the working precision.",
+        "No solute lost in transfer."
+      ],
+      "limitations": [
+        "Does not model colour or spectrophotometric absorbance.",
+        "Real volumes carry tolerance; the model reports exact arithmetic on the stated inputs only."
+      ],
+      "equations": ["eq-dilution"],
+      "sourceRefIds": ["ref-ncert-class12-part1"]
+    }
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "requires_review",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. Dilution relation and worked examples cross-checked against NCERT material. Pending independent scientific review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "The dilution relation and both worked examples were recomputed during the 2026-11-05 content pass and are consistent with NCERT treatment of solutions and concentration.",
+      "Copper(II) sulfate hazard statements cite the PubChem entry (CID 24462) verified during the same pass."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place.",
+      "The stated stock concentration is nominal; supervising educators should state the actual prepared concentration to learners."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text copied; NCERT and PubChem are cited as references only."
+    }
+  }
+}

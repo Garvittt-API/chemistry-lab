@@ -1,0 +1,586 @@
+{
+  "identity": {
+    "id": "paper-chromatography",
+    "slug": "paper-chromatography",
+    "title": "Paper Chromatography",
+    "shortDescription": "Separate the coloured components of an ink or permanganate mixture on filter paper, calculate retardation factors and understand how partition between phases separates mixtures.",
+    "fullDescription": "Chromatography separates mixtures because different components spend different fractions of their time in a moving solvent and a stationary phase. In paper chromatography the stationary phase is the water held in the paper fibres and the mobile phase is the developing solvent. This experiment develops spots of a coloured mixture on filter paper, measures migration distances and calculates retention factors (Rf values), introducing the most widely used separation technique in chemistry and biochemistry.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "analytical-chemistry",
+    "subdisciplineIds": ["analytical-chemistry-separation-science"],
+    "topicIds": ["separation-techniques", "analytical-uncertainty"],
+    "educationalLevels": ["school", "higher-secondary", "undergraduate"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-practical-chromatography",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Aligns with the Class XII practical component on chromatography. Mapping proposed pending documentary verification against the CBSE subject PDF.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "introductory",
+    "estimatedDurationMinutes": 60,
+    "prerequisites": [
+      "Basic idea of mixtures and solutions.",
+      "Careful measurement of short distances in centimetres."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Explain separation in paper chromatography in terms of differential partitioning between mobile and stationary phases.",
+      "Run a paper chromatogram with a proper baseline and solvent level.",
+      "Calculate retention factors (Rf) and use them to compare components."
+    ],
+    "expectedCompetencies": [
+      "Applying small, controlled spots to a baseline without overloading.",
+      "Measuring distances from a consistent origin to consistent front/centres.",
+      "Recording observations while the paper is still fresh."
+    ],
+    "learningOutcomes": [
+      "Produce a developed chromatogram showing separated coloured components.",
+      "Calculate Rf values for each component with correct measurement practice.",
+      "Predict how changing the solvent would change component migration and justify the prediction."
+    ],
+    "theory": {
+      "overview": "A chromatographic separation balances a component's affinity for two phases: the mobile phase (developing solvent) carries it up the paper, while the stationary phase (water bound to the cellulose fibres) retards it. Components with greater affinity for the stationary phase move more slowly. The retardation factor Rf = distance travelled by the component / distance travelled by the solvent front is a characteristic, dimensionless quantity for a component in a given solvent system.",
+      "sections": [
+        {
+          "heading": "Partition between phases",
+          "body": "As the solvent front passes the applied spot, the component repeatedly partitions between the moving solvent and the stationary water layer. Each partition leaves more of the component behind or carries it further according to its distribution between the phases. Many small partitions produce a clean, continuous separation, and differences in chemical structure produce differences in migration.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "heading": "Retention factor",
+          "body": "Rf is defined as the ratio of the distance travelled by the component to the distance travelled by the solvent front, both measured from the baseline. Rf is always between 0 and 1 and is reproducible for a given component, solvent system, paper and temperature — which is why Rf values can help identify components, but only when compared under identical conditions.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "heading": "Choice of components",
+          "body": "This experiment uses dilute potassium permanganate as a single coloured substance and a mixture of permanganate with a common food colouring or ink as the separation target. Potassium permanganate's intense purple colour makes even small amounts visible without staining reagents, which keeps the experiment simple; a direct school-level route to chromatography of cations using hydrogen sulphide reagents is deliberately excluded for safety reasons.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        }
+      ],
+      "scientificBackground": "Rf values depend on temperature, paper grade, chamber saturation and solvent composition; they are comparative data rather than absolute constants. Modern instrumental chromatography (HPLC, GC) uses the same partition principle with different engineering, which makes paper chromatography a genuine conceptual foundation rather than a historical curiosity.",
+      "concepts": [
+        "mobile and stationary phase",
+        "partition",
+        "retention factor",
+        "separation of mixtures",
+        "experimental reproducibility"
+      ],
+      "equations": [
+        {
+          "id": "eq-rf",
+          "expression": "Rf = d(component) / d(solvent front)",
+          "displayForm": "R_f = d(component) / d(solvent front)",
+          "description": "Retention factor of a chromatographed component.",
+          "variables": [
+            { "symbol": "Rf", "meaning": "retention factor", "unit": "1" },
+            {
+              "symbol": "d(component)",
+              "meaning": "distance travelled by the component from the baseline",
+              "unit": "cm"
+            },
+            {
+              "symbol": "d(solvent front)",
+              "meaning": "distance travelled by the solvent front from the baseline",
+              "unit": "cm"
+            }
+          ],
+          "applicableConditions": [
+            "Both distances measured on the same developed sheet, from the same baseline.",
+            "0 <= Rf <= 1."
+          ],
+          "assumptions": [
+            "The component spot is compact enough that its centre is meaningful.",
+            "Solvent front is clearly visible when marked."
+          ],
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "kind": "working_relation"
+        }
+      ],
+      "definitions": [
+        {
+          "id": "def-mobile-phase",
+          "term": "Mobile phase",
+          "definition": "The moving phase (here the developing solvent) that carries components through the stationary phase.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "id": "def-stationary-phase",
+          "term": "Stationary phase",
+          "definition": "The phase that stays in place (here water bound to the paper fibres) and retards components by differential interaction.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "id": "def-rf",
+          "term": "Retention factor (Rf)",
+          "definition": "Ratio of the distance travelled by a component to the distance travelled by the solvent front, measured from the baseline.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-chromatography-paper",
+        "name": "Chromatography paper (or filter paper strip)",
+        "specification": "About 10 cm x 15 cm strips, Whatman No. 1 or equivalent",
+        "quantity": "1 per run",
+        "purpose": "Stationary support for the separation",
+        "alternatives": ["Quality filter paper cut to size"]
+      },
+      {
+        "id": "eqp-beaker-chamber",
+        "name": "Developing chamber",
+        "specification": "Tall beaker (600 mL) with cover (watch glass or cling film)",
+        "quantity": "1",
+        "purpose": "Saturated atmosphere for development",
+        "alternatives": ["A glass jar with a lid"]
+      },
+      {
+        "id": "eqp-capillary-tubes",
+        "name": "Capillary tubes",
+        "specification": "Fine, for spotting",
+        "quantity": "3",
+        "purpose": "Applying small spots of sample",
+        "alternatives": ["Micro-capillary pipettes"]
+      },
+      {
+        "id": "eqp-ruler",
+        "name": "Ruler",
+        "specification": "Millimetre scale",
+        "quantity": "1",
+        "purpose": "Measuring distances for Rf",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-pencil",
+        "name": "Pencil",
+        "specification": "For marking baseline and front",
+        "quantity": "1",
+        "purpose": "Marking (ink must never be used on the paper)",
+        "alternatives": []
+      }
+    ],
+    "chemicals": [
+      {
+        "id": "chem-kmno4",
+        "name": "Potassium permanganate solution",
+        "formulaOrDescription": "KMnO4(aq), very dilute (about 0.01 mol/L or less)",
+        "category": "solution",
+        "amount": "A few drops",
+        "identifiers": { "pubchem-cid": "516875" },
+        "hazardKinds": ["oxidizing", "acutely_toxic", "environmental_hazard"],
+        "notes": "Intense purple dye for tracking. Strong oxidizer; stains skin and clothing brown."
+      },
+      {
+        "id": "chem-ink-mixture",
+        "name": "Coloured ink or food-colour mixture",
+        "formulaOrDescription": "Water-based coloured ink or dilute food colouring; optionally mixed with the permanganate solution",
+        "category": "other",
+        "amount": "A few drops",
+        "identifiers": {},
+        "hazardKinds": ["irritant"],
+        "notes": "Unknown composition mixtures are the point of the exercise; treat commercial inks as irritants and consult product data."
+      },
+      {
+        "id": "chem-developing-solvent",
+        "name": "Developing solvent",
+        "formulaOrDescription": "Water : ethanol mixture (1:1 v/v), or as directed by the supervising educator",
+        "category": "solution",
+        "amount": "About 10 mL per chamber",
+        "identifiers": {},
+        "hazardKinds": ["flammable", "irritant"],
+        "notes": "Ethanol-water keeps the experiment low-hazard; other solvent systems (butanol/acetic acid) are more hazardous and are out of scope here."
+      }
+    ],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "low",
+    "riskRationale": "Small volumes of dilute aqueous samples and an ethanol-water developer, in a covered chamber at room temperature. Potassium permanganate is a genuine oxidizer and stain hazard but is used at very dilute strength; the ethanol-based developer is flammable but used in a small, covered beaker far from flames.",
+    "hazards": [
+      {
+        "kind": "oxidizing",
+        "statement": "Potassium permanganate is a strong oxidizer and harmful if swallowed; it stains skin and clothing brown. Use dilute solution only and handle with care.",
+        "appliesTo": ["chem-kmno4"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-kmno4",
+          "notes": "GHS oxidizer and toxicity classifications per the PubChem compound entry for potassium permanganate (CID 516875)."
+        }
+      },
+      {
+        "kind": "flammable",
+        "statement": "The developing solvent contains ethanol and is flammable; cover the chamber and keep it away from flames and hot surfaces.",
+        "appliesTo": ["chem-developing-solvent"],
+        "evidence": {
+          "basis": "requires_review",
+          "notes": "Ethanol flammability is standard; confirm the prepared solvent mixture's handling rules with the supervising institution."
+        }
+      }
+    ],
+    "protectiveEquipment": [
+      "Safety spectacles.",
+      "Laboratory coat or apron (permanganate stains are persistent).",
+      "Nitrile gloves recommended when handling permanganate."
+    ],
+    "disposal": [
+      "Collect permanganate-containing solutions and used developer in labelled waste containers as directed by the supervising institution; permanganate waste must not be mixed with flammable-organic waste.",
+      "Developed paper strips may be allowed to dry and disposed of as solid waste unless the supervising institution says otherwise.",
+      "Do not pour developer down the sink in quantity."
+    ],
+    "supervision": "adult_supervision_required",
+    "restrictedOperations": [
+      "No open flames or heating while the ethanol-based developer is in use.",
+      "No solvent systems involving highly toxic or strongly acidic components (for example butanol-acid mixtures) at this level; out of scope of this record."
+    ],
+    "emergencyGuidance": [
+      "Skin contact with permanganate: wash with water; brown staining fades over days and is not an injury.",
+      "Solvent vapour irritation: move to fresh air and inform the supervising educator."
+    ],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Mark a baseline on the paper, apply small spots, develop the strip in a covered chamber until the solvent front rises well above the spots, then measure distances and compute Rf values before the paper dries completely.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Prepare the paper and chamber",
+        "instructions": "Cut the chromatography paper to fit the chamber. With a pencil, draw a light baseline about 2 cm from the bottom edge. Pour the developing solvent into the chamber to a depth of about 1 cm and cover it so the atmosphere saturates with vapour.",
+        "equipmentIds": ["eqp-chromatography-paper", "eqp-beaker-chamber", "eqp-pencil"],
+        "chemicalIds": ["chem-developing-solvent"],
+        "precautions": [
+          "Never draw the baseline with ink — it would run with the solvent.",
+          "Solvent depth must stay below the baseline once the paper is inserted."
+        ],
+        "expectedObservations": [
+          "The chamber atmosphere smells faintly of solvent; the paper is clean and unmarked except the pencil line."
+        ],
+        "explanatoryNotes": [
+          "A saturated chamber stops the solvent evaporating from the paper face, giving an even front."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Apply the samples",
+        "instructions": "Using separate capillaries, place one small spot of the ink/colour mixture and one small spot of dilute permanganate on the baseline, spaced well apart and labelled in pencil. Allow the spots to dry; repeat once if a darker spot is needed.",
+        "equipmentIds": ["eqp-capillary-tubes", "eqp-chromatography-paper"],
+        "chemicalIds": ["chem-ink-mixture", "chem-kmno4"],
+        "precautions": [
+          "Keep spots small (2-3 mm); overloaded spots tail and smear.",
+          "One capillary per sample to avoid cross-contamination."
+        ],
+        "expectedObservations": ["Small, compact, intensely coloured spots on the baseline."],
+        "explanatoryNotes": [
+          "The permanganate spot acts as a reference component with a known compact appearance."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Develop the chromatogram",
+        "instructions": "Stand the paper in the chamber with the baseline above the solvent level. Cover the chamber and leave it undisturbed until the solvent front has risen at least two thirds of the paper height.",
+        "equipmentIds": ["eqp-beaker-chamber"],
+        "chemicalIds": ["chem-developing-solvent"],
+        "precautions": [
+          "Do not move the chamber during development; sloshing solvent front ruins the run.",
+          "Keep the room ventilated; no flames nearby."
+        ],
+        "expectedObservations": [
+          "The solvent front rises steadily; coloured components begin to separate within minutes."
+        ],
+        "explanatoryNotes": [
+          "Development time varies with paper and solvent; the front distance, not the clock, defines the run."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Mark and measure",
+        "instructions": "Remove the paper, immediately mark the solvent front in pencil before it evaporates and let the paper dry. Mark the centre of each coloured spot. Measure from the baseline to the solvent front and to each spot centre in centimetres.",
+        "equipmentIds": ["eqp-ruler", "eqp-pencil"],
+        "chemicalIds": [],
+        "precautions": [
+          "Mark the front at once; a dried sheet gives an invisible front and unreliable Rf values."
+        ],
+        "expectedObservations": [
+          "The ink or colour mixture separates into two or more distinct bands at different heights; permanganate gives one compact spot."
+        ],
+        "explanatoryNotes": [
+          "Measure to the centre of a diffuse spot and record that choice; measurement conventions affect Rf comparisons."
+        ]
+      },
+      {
+        "stepId": "step-5",
+        "title": "Calculate and evaluate",
+        "instructions": "Calculate Rf for each component. Compare values between the mixture components and the permanganate reference. Note which components in the mixture match each other's Rf and which do not.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [],
+        "explanatoryNotes": [
+          "Rf comparison under identical conditions is the identification logic used in real chromatography."
+        ]
+      }
+    ],
+    "troubleshooting": [
+      "If all spots stay on the baseline, the solvent system has too little affinity for the components; consult the supervising educator about a different solvent.",
+      "If the front is curved (edge effects), the chamber was not saturated or the paper touched the chamber wall.",
+      "If spots streak, they were overloaded; use a single light application next time."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-distance-front",
+          "label": "Solvent front distance",
+          "kind": "other",
+          "unit": "cm",
+          "method": "Measure from the baseline to the marked solvent front along the direction of development.",
+          "provenance": "requires_review",
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "displayPrecision": "One decimal place (0.1 cm)."
+        },
+        {
+          "id": "obs-distance-component",
+          "label": "Component spot distance",
+          "kind": "other",
+          "unit": "cm",
+          "method": "Measure from the baseline to the centre of each marked spot.",
+          "provenance": "requires_review",
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "displayPrecision": "One decimal place (0.1 cm)."
+        },
+        {
+          "id": "obs-rf-values",
+          "label": "Retention factor (Rf) of each component",
+          "kind": "other",
+          "unit": "1",
+          "method": "Computed from the measured distances using the Rf relation; theoretical value derived from learner measurements.",
+          "expectedRange": { "min": 0, "max": 1, "unit": "1" },
+          "expectedQualitative": [
+            "Components of the mixture show different Rf values; identical components in different lanes show matching Rf values."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "displayPrecision": "Two decimal places."
+        }
+      ],
+      "qualitativePrompts": [
+        "How many distinct coloured components did the mixture contain?",
+        "Did any mixture component line up with the permanganate reference?",
+        "Were the spots compact or tailed, and what does that say about the spotting technique?"
+      ],
+      "errorSources": [
+        "Marking the solvent front after evaporation underestimates the front distance.",
+        "Measuring to a spot edge rather than its centre changes Rf.",
+        "Overloaded spots tail and give ambiguous centres.",
+        "Curved solvent fronts from an unsaturated chamber distort distances across the sheet.",
+        "Temperature and paper grade differences shift Rf between runs."
+      ],
+      "interpretationGuidance": [
+        "Compare Rf values only between runs developed in the same chamber at the same time; absolute Rf values are condition-dependent.",
+        "Two components with matching Rf in one solvent system are consistent with, but not proof of, identical substances — real identification uses multiple systems or standards.",
+        "Report measurement precision honestly: distances to 0.1 cm support Rf to two decimal places at most."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "provided",
+    "calculations": [
+      {
+        "id": "calc-rf",
+        "title": "Retention factor from measured distances",
+        "purpose": "Convert migration distances into the dimensionless Rf used for comparison.",
+        "equationId": "eq-rf",
+        "variables": [
+          {
+            "symbol": "d(component)",
+            "meaning": "distance from baseline to spot centre",
+            "unit": "cm"
+          },
+          {
+            "symbol": "d(front)",
+            "meaning": "distance from baseline to solvent front",
+            "unit": "cm"
+          },
+          { "symbol": "Rf", "meaning": "retention factor", "unit": "1" }
+        ],
+        "assumptions": [
+          "Both distances measured on the same developed sheet from the same baseline.",
+          "Solvent front marked before drying."
+        ],
+        "unitsAndDimensions": "cm / cm = dimensionless; Rf has no units and must lie between 0 and 1.",
+        "significantFigureConvention": "Distances read to 0.1 cm support two decimal places in Rf; a computed Rf outside 0-1 signals a measurement error.",
+        "workedExamples": [
+          {
+            "id": "calc-rf-example",
+            "title": "Worked example: a component that travelled 4.2 cm with a 7.0 cm front",
+            "given": ["d(component) = 4.2 cm", "d(front) = 7.0 cm"],
+            "steps": ["Rf = d(component) / d(front)", "Rf = 4.2 cm / 7.0 cm = 0.60"],
+            "result": "Rf = 0.60",
+            "sourceRefIds": ["ref-ncert-class11-part2"],
+            "significantFiguresNote": "Both distances have two significant figures; the ratio is reported as 0.60.",
+            "isIllustrative": true
+          }
+        ],
+        "sourceRefIds": ["ref-ncert-class11-part2"]
+      }
+    ],
+    "notes": "The worked example uses nominal illustrative distances; learners substitute their own measurements. No measured data are fabricated in this record."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class11-part2",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry Part II, Textbook for Class XI (unit 'Organic Chemistry – Some Basic Principles and Techniques', including chromatography). National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry Part II, Textbook for Class XI",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?kech2=0",
+        "identifiers": { "ncert-book-index": "kech2" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "eq-rf",
+          "def-mobile-phase",
+          "def-stationary-phase",
+          "def-rf",
+          "obs-rf-values",
+          "calc-rf"
+        ],
+        "notes": "Official NCERT book index page fetched on 2026-11-05; the purification techniques section (including chromatography) is covered at book level in this volume."
+      },
+      {
+        "id": "ref-pubchem-kmno4",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Potassium permanganate (CID 516875).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Potassium permanganate (CID 516875)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/516875",
+        "identifiers": { "pubchem-cid": "516875" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID 516875 confirmed during the 2026-11-05 content pass; hazard evidence for potassium permanganate (oxidizer, toxicity)."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": { "circular": "Acad-14/2025" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Curriculum-mapping evidence only; practical-component wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "planned",
+    "model": {
+      "id": "paper-chromatography-explorer",
+      "contractVersion": "1.0.0",
+      "summary": "Illustrative development model: given component Rf values and a solvent front distance, predicts migration distances and visual band positions so learners can explore how Rf controls separation. Predictions are theoretical, not measurements.",
+      "inputs": [
+        {
+          "id": "in-front-distance",
+          "label": "Solvent front distance",
+          "unit": "cm",
+          "defaultValue": 7,
+          "validRange": { "min": 1, "max": 15, "unit": "cm" },
+          "description": "Distance the solvent front travels from the baseline."
+        },
+        {
+          "id": "in-rf-values",
+          "label": "Component Rf values",
+          "unit": "1",
+          "validRange": { "min": 0, "max": 1, "unit": "1" },
+          "description": "Retention factor of each component under the chosen conditions."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-component-distances",
+          "label": "Predicted component distances",
+          "unit": "cm",
+          "displayPrecision": "0.1 cm",
+          "description": "Theoretical migration distances computed from Rf and front distance."
+        },
+        {
+          "id": "out-separation-quality",
+          "label": "Predicted resolution between components",
+          "unit": "1",
+          "displayPrecision": "Qualitative",
+          "description": "Illustrative indication of whether components would appear separated."
+        }
+      ],
+      "assumptions": [
+        "Rf values are known and constant for the solvent system.",
+        "Development is linear and spots remain compact."
+      ],
+      "limitations": [
+        "Does not model real spot diffusion, tailing or edge effects.",
+        "Cannot predict Rf values from molecular structure at this stage.",
+        "Model output is illustrative and must never be presented as measured migration."
+      ],
+      "equations": ["eq-rf"],
+      "sourceRefIds": ["ref-ncert-class11-part2"]
+    }
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "requires_review",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. A low-hazard ethanol-water solvent system was chosen deliberately in place of classical butanol-acid systems. Pending independent scientific review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "Rf relation and worked example recomputed during the 2026-11-05 content pass.",
+      "The safety substitution (ethanol-water developer, dilute permanganate, no H2S-based cation chromatography) is recorded as a deliberate scope decision consistent with the platform safety policy."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place.",
+      "Commercial ink/food-colour compositions vary; a reviewer should confirm the recommended sample set for the target audience.",
+      "Rf reproducibility caveats need educator review for the intended level."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text copied; NCERT and PubChem are cited as references only."
+    }
+  }
+}

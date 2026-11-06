@@ -1,0 +1,693 @@
+{
+  "identity": {
+    "id": "electrochemical-cell-daniell",
+    "slug": "electrochemical-cell-daniell",
+    "title": "Electrochemical Cells: The Daniell Cell",
+    "shortDescription": "Build a zinc–copper galvanic cell from dilute salt solutions, measure its voltage and connect the reading to electrode potentials and the Nernst equation.",
+    "fullDescription": "The Daniell cell is the reference galvanic cell of school and university chemistry: zinc metal in zinc sulfate solution and copper metal in copper sulfate solution, joined so that a spontaneous redox reaction drives current through an external circuit. Learners assemble the cell, measure its potential, observe electrode behaviour and relate the voltage to standard electrode potentials. The activity introduces electrochemical conventions, half-equations and the difference between a cell's ideal thermodynamic voltage and a real, slightly resistive measurement.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "electrochemistry",
+    "subdisciplineIds": ["electrochemistry-cells"],
+    "topicIds": ["galvanic-cells", "electrode-potentials"],
+    "educationalLevels": ["higher-secondary", "undergraduate"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-12-electrochemistry",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Aligns with the galvanic-cell and electrode-potential treatment of the Class XII unit 'Electrochemistry'. Mapping proposed pending documentary verification against the CBSE subject PDF.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      },
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-practical-electrochemistry",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Aligns with the Class XII practical component on electrochemistry experiments. Mapping proposed pending documentary verification.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimatedDurationMinutes": 60,
+    "prerequisites": [
+      "Oxidation and reduction, half-equations and redox balancing.",
+      "Idea of electric potential difference.",
+      "Safe handling of copper(II) sulfate solution."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Assemble a galvanic cell and identify its half-cells, electrodes and ion path.",
+      "Measure the cell potential and compare it with the value predicted from standard electrode potentials.",
+      "Explain the direction of electron flow in terms of oxidation at the anode and reduction at the cathode."
+    ],
+    "expectedCompetencies": [
+      "Making a salt bridge and electrical connections that give stable readings.",
+      "Recording voltmeter readings with units and noting sign conventions.",
+      "Distinguishing measured cell voltage from tabulated standard potential."
+    ],
+    "learningOutcomes": [
+      "Construct a Daniell cell and measure a potential near 1.1 V at room conditions.",
+      "Write the anode, cathode and overall cell reactions with correct direction.",
+      "Discuss why the measured voltage may differ from the standard cell potential and what would change it."
+    ],
+    "theory": {
+      "overview": "In a galvanic cell a spontaneous redox reaction is separated into two half-reactions at spatially separated electrodes: zinc is oxidised at the anode (Zn -> Zn2+ + 2e-) and copper(II) is reduced at the cathode (Cu2+ + 2e- -> Cu). Electrons travel through the external circuit from anode to cathode, while ions migrate through the salt bridge to maintain charge balance. The standard cell potential is the difference of standard electrode potentials: E°cell = E°cathode - E°anode = +0.34 V - (-0.76 V) = +1.10 V for the Daniell cell.",
+      "sections": [
+        {
+          "heading": "Half-reactions and cell convention",
+          "body": "The zinc electrode dissolves (oxidation, negative terminal in the galvanic convention) while copper deposits on the copper electrode (reduction, positive terminal). Cell diagrams summarise the arrangement: Zn(s) | Zn2+(aq) || Cu2+(aq) | Cu(s), with the anode on the left and a single vertical bar marking a phase boundary, double bars the salt bridge.",
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"]
+        },
+        {
+          "heading": "Standard electrode potentials",
+          "body": "Each half-cell has a standard reduction potential measured against the standard hydrogen electrode. For Zn2+/Zn, E° = -0.76 V; for Cu2+/Cu, E° = +0.34 V (both at 298 K, 1 mol/L, 1 bar). The spontaneous direction is the one giving a positive cell potential, and the tabulated values predict the observed 1.1 V magnitude.",
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"]
+        },
+        {
+          "heading": "Real cells and the Nernst equation",
+          "body": "The Nernst equation, E = E° - (RT/nF) ln Q, predicts how the potential changes when ion concentrations differ from standard conditions (at 298 K: E = E° - (0.0592/n) log10 Q for practical work). A real voltmeter reading also falls short of theory because of internal resistance, liquid-junction potentials and non-ideal concentrations — effects learners should discuss rather than 'correct away'.",
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"]
+        }
+      ],
+      "scientificBackground": "The Daniell cell is thermodynamically favourable (ΔG = -nFE < 0) but its practical use is limited by electrode polarisation and electrolyte management; modern batteries solve these problems with different chemistry. The activity teaches the principles, not battery engineering.",
+      "concepts": [
+        "galvanic cell",
+        "half-cell",
+        "standard electrode potential",
+        "salt bridge",
+        "cell potential",
+        "Nernst equation"
+      ],
+      "equations": [
+        {
+          "id": "eq-anode-zn",
+          "expression": "Zn(s) -> Zn2+(aq) + 2 e-",
+          "displayForm": "Zn(s) → Zn²⁺(aq) + 2 e⁻",
+          "description": "Oxidation half-reaction at the zinc anode.",
+          "variables": [
+            { "symbol": "Zn", "meaning": "zinc electrode", "unit": "mol" },
+            { "symbol": "Zn2+", "meaning": "zinc ion produced", "unit": "mol" },
+            { "symbol": "e-", "meaning": "electrons released to the circuit", "unit": "mol" }
+          ],
+          "applicableConditions": ["Aqueous zinc sulfate half-cell."],
+          "assumptions": ["Zinc behaves as an ideally reactive electrode at this level."],
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"],
+          "kind": "theoretical_law"
+        },
+        {
+          "id": "eq-cathode-cu",
+          "expression": "Cu2+(aq) + 2 e- -> Cu(s)",
+          "displayForm": "Cu²⁺(aq) + 2 e⁻ → Cu(s)",
+          "description": "Reduction half-reaction at the copper cathode.",
+          "variables": [
+            { "symbol": "Cu2+", "meaning": "copper(II) ion consumed", "unit": "mol" },
+            { "symbol": "Cu", "meaning": "copper deposited", "unit": "mol" }
+          ],
+          "applicableConditions": ["Aqueous copper(II) sulfate half-cell."],
+          "assumptions": ["Copper deposits cleanly on the copper electrode."],
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"],
+          "kind": "theoretical_law"
+        },
+        {
+          "id": "eq-cell-potential",
+          "expression": "E°cell = E°cathode - E°anode",
+          "displayForm": "E°cell = E°cathode − E°anode",
+          "description": "Standard cell potential from standard reduction potentials.",
+          "variables": [
+            { "symbol": "E°cell", "meaning": "standard cell potential", "unit": "V" },
+            {
+              "symbol": "E°cathode",
+              "meaning": "standard reduction potential of the cathode half-cell",
+              "unit": "V"
+            },
+            {
+              "symbol": "E°anode",
+              "meaning": "standard reduction potential of the anode half-cell",
+              "unit": "V"
+            }
+          ],
+          "applicableConditions": [
+            "298 K, 1 mol/L solutions, 1 bar gases.",
+            "Half-reactions written as reductions."
+          ],
+          "assumptions": ["Tabulated standard potentials apply; junction potentials neglected."],
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"],
+          "kind": "definition"
+        },
+        {
+          "id": "eq-nernst",
+          "expression": "E = E° - (0.0592 / n) * log10(Q) at 298 K",
+          "displayForm": "E = E° − (0.0592/n) log₁₀ Q (298 K)",
+          "description": "Cell potential under non-standard concentrations.",
+          "variables": [
+            { "symbol": "E", "meaning": "cell potential at stated conditions", "unit": "V" },
+            { "symbol": "E°", "meaning": "standard cell potential", "unit": "V" },
+            {
+              "symbol": "n",
+              "meaning": "moles of electrons transferred per mole of reaction",
+              "unit": "1"
+            },
+            { "symbol": "Q", "meaning": "reaction quotient", "unit": "1" }
+          ],
+          "applicableConditions": ["298 K; dilute solutions approximated by concentrations."],
+          "assumptions": [
+            "Activity coefficients unity; temperature constant at 298 K for the 0.0592 form."
+          ],
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"],
+          "kind": "theoretical_law"
+        }
+      ],
+      "definitions": [
+        {
+          "id": "def-galvanic-cell",
+          "term": "Galvanic cell",
+          "definition": "A device that converts the energy of a spontaneous redox reaction into electrical work through separated half-reactions.",
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"]
+        },
+        {
+          "id": "def-salt-bridge",
+          "term": "Salt bridge",
+          "definition": "An ion-conducting connection between half-cells that maintains electrical neutrality as the reaction proceeds.",
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"]
+        },
+        {
+          "id": "def-standard-electrode-potential",
+          "term": "Standard electrode potential",
+          "definition": "The reduction potential of a half-cell measured under standard conditions (298 K, 1 mol/L, 1 bar) against the standard hydrogen electrode.",
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-beakers-100",
+        "name": "Beakers",
+        "specification": "100 mL",
+        "quantity": "2",
+        "purpose": "Half-cell vessels",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-zinc-electrode",
+        "name": "Zinc electrode",
+        "specification": "Clean zinc strip or rod",
+        "quantity": "1",
+        "purpose": "Anode",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-copper-electrode",
+        "name": "Copper electrode",
+        "specification": "Clean copper strip or wire",
+        "quantity": "1",
+        "purpose": "Cathode",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-salt-bridge",
+        "name": "Salt bridge",
+        "specification": "Filter-paper strip or U-tube with saturated KNO3",
+        "quantity": "1",
+        "purpose": "Ion path between half-cells",
+        "alternatives": ["Cotton wool soaked in potassium nitrate solution"]
+      },
+      {
+        "id": "eqp-multimeter",
+        "name": "Digital multimeter (high-impedance voltmeter)",
+        "specification": "DC millivolt range",
+        "quantity": "1",
+        "purpose": "Measuring the cell potential",
+        "alternatives": ["A high-resistance voltmeter"]
+      },
+      {
+        "id": "eqp-connecting-leads",
+        "name": "Connecting leads and crocodile clips",
+        "specification": "Insulated",
+        "quantity": "2",
+        "purpose": "External circuit",
+        "alternatives": []
+      }
+    ],
+    "chemicals": [
+      {
+        "id": "chem-znso4",
+        "name": "Zinc sulfate solution",
+        "formulaOrDescription": "ZnSO4(aq), about 1 mol/L",
+        "category": "solution",
+        "amount": "About 30 mL",
+        "identifiers": {},
+        "hazardKinds": ["irritant", "environmental_hazard"],
+        "notes": "Zinc sulfate is harmful if swallowed and hazardous to aquatic life; avoid contact and disposal to drain."
+      },
+      {
+        "id": "chem-cuso4-daniell",
+        "name": "Copper(II) sulfate solution",
+        "formulaOrDescription": "CuSO4(aq), about 1 mol/L",
+        "category": "solution",
+        "amount": "About 30 mL",
+        "identifiers": { "pubchem-cid": "24462" },
+        "hazardKinds": ["acutely_toxic", "irritant", "environmental_hazard"],
+        "notes": "Harmful if swallowed; very toxic to aquatic life; see safety section."
+      },
+      {
+        "id": "chem-kno3",
+        "name": "Potassium nitrate solution (salt bridge electrolyte)",
+        "formulaOrDescription": "KNO3(aq), saturated",
+        "category": "solution",
+        "amount": "About 20 mL",
+        "identifiers": {},
+        "hazardKinds": ["oxidizing", "irritant"],
+        "notes": "Potassium nitrate is an oxidizer (solid); dilute solution used here. Keep the salt bridge moist, not dripping."
+      }
+    ],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "moderate",
+    "riskRationale": "1 mol/L copper(II) sulfate is a genuine hazard (harmful if swallowed, very toxic to aquatic life) and the cell produces only low voltages and currents — the electrical side is harmless at these scales. The controlled risks are ingestion, skin/eye contact and proper metal-salt waste handling.",
+    "hazards": [
+      {
+        "kind": "acutely_toxic",
+        "statement": "Copper(II) sulfate is harmful if swallowed and causes serious eye irritation; never mouth-pipette, wash hands after handling.",
+        "appliesTo": ["chem-cuso4-daniell"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-cuso4",
+          "notes": "GHS hazard classifications for copper(II) sulfate (CID 24462) per the PubChem compound entry."
+        }
+      },
+      {
+        "kind": "environmental_hazard",
+        "statement": "Copper and zinc salt solutions are very toxic to aquatic life; collect all solutions and rinsings as heavy-metal waste.",
+        "appliesTo": ["chem-cuso4-daniell", "chem-znso4"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-cuso4",
+          "notes": "Environmental hazard classification per PubChem entry for copper sulfate; zinc sulfate confirmed as environmentally hazardous in institutional SDS (marked requires_review for exact codes)."
+        }
+      },
+      {
+        "kind": "oxidizing",
+        "statement": "Potassium nitrate is an oxidizer in solid form; keep the solid away from combustible material and use the prepared dilute solution only.",
+        "appliesTo": ["chem-kno3"],
+        "evidence": {
+          "basis": "requires_review",
+          "notes": "Oxidizer classification of potassium nitrate is standard; confirm against the institutional safety data sheet before scientific review."
+        }
+      }
+    ],
+    "protectiveEquipment": [
+      "Safety spectacles.",
+      "Laboratory coat or apron.",
+      "Nitrile gloves recommended."
+    ],
+    "disposal": [
+      "Collect all copper and zinc salt solutions and rinsings in a labelled heavy-metal waste container; never down the drain.",
+      "Dispose of used salt-bridge material with the metal-salt waste or as directed by the supervising institution.",
+      "Wipe electrodes dry before storage rather than rinsing waste to the sink."
+    ],
+    "supervision": "adult_supervision_required",
+    "restrictedOperations": [
+      "No mains electricity or high-current sources; this activity uses only the cell's own low voltage.",
+      "No tasting or ingestion; no contact of solutions with eyes."
+    ],
+    "emergencyGuidance": [
+      "Skin or eye contact: rinse with plenty of water and inform the supervising educator.",
+      "Ingestion: do not induce vomiting; seek medical advice."
+    ],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Set up the two half-cells, connect them with a salt bridge and measure the potential with a high-impedance voltmeter. Then compare the reading with the standard-potential prediction and discuss the difference.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Set up the half-cells",
+        "instructions": "Place about 30 mL of zinc sulfate solution in one beaker with the zinc electrode, and about 30 mL of copper sulfate solution in the other with the copper electrode. Clean the electrode surfaces with a little sandpaper if dull.",
+        "equipmentIds": ["eqp-beakers-100", "eqp-zinc-electrode", "eqp-copper-electrode"],
+        "chemicalIds": ["chem-znso4", "chem-cuso4-daniell"],
+        "precautions": [
+          "Keep the solutions separate; mixing them outside the external circuit wastes the chemistry.",
+          "Do not touch the copper sulfate solution with bare hands."
+        ],
+        "expectedObservations": [
+          "The zinc sulfate solution is colourless; the copper sulfate solution is blue."
+        ],
+        "explanatoryNotes": [
+          "Colour contrast makes the half-cell chemistry visible before any measurement."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Bridge the half-cells",
+        "instructions": "Place the salt bridge (moist filter-paper strip or KNO3-soaked wick) so that its ends dip into both solutions without touching the electrodes.",
+        "equipmentIds": ["eqp-salt-bridge"],
+        "chemicalIds": ["chem-kno3"],
+        "precautions": ["A dry bridge gives an open circuit; moisten, do not flood."],
+        "expectedObservations": ["The circuit is now ionically complete."],
+        "explanatoryNotes": [
+          "Without the bridge the circuit is open and no steady potential exists — a design feature to point out to learners."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Measure the cell potential",
+        "instructions": "Connect the zinc electrode to the negative lead and the copper electrode to the positive lead of the multimeter on the DC millivolt range. Record the steady reading with its sign. Note which electrode is which terminal.",
+        "equipmentIds": ["eqp-multimeter", "eqp-connecting-leads"],
+        "chemicalIds": [],
+        "precautions": [
+          "Use the high-impedance (voltmeter) range; current-drawing ranges polarise the cell and lower the reading."
+        ],
+        "expectedObservations": [
+          "A steady positive reading of about 1.0-1.1 V, with copper as the positive terminal."
+        ],
+        "explanatoryNotes": [
+          "The reading may start slightly high or low and settle; record the settled value and note the drift."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Observe electrode behaviour",
+        "instructions": "Examine both electrodes after a few minutes of connection. Record any visible changes (deposits, dissolving, colour changes in solution).",
+        "equipmentIds": ["eqp-zinc-electrode", "eqp-copper-electrode"],
+        "chemicalIds": [],
+        "precautions": ["Do not scrape deposits off mid-observation; record first."],
+        "expectedObservations": [
+          "A dark copper deposit may appear on the copper electrode region and the zinc may look etched; the blue copper solution fades very slowly near the cathode."
+        ],
+        "explanatoryNotes": [
+          "Visible electrode change is direct evidence of the half-reactions the voltmeter implies."
+        ]
+      },
+      {
+        "stepId": "step-5",
+        "title": "Compare with theory",
+        "instructions": "Calculate the standard cell potential from tabulated E° values and the Nernst-adjusted expectation if concentrations differ from 1 mol/L. Tabulate predicted versus measured values and list reasons for any difference.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [],
+        "explanatoryNotes": [
+          "Voltage, resistance effects, junction potentials and concentration reality belong in the discussion — not in a forced 'correction factor'."
+        ]
+      }
+    ],
+    "troubleshooting": [
+      "Zero or unstable reading: check the salt bridge contact and electrode connections before doubting the chemistry.",
+      "Reading drifting down steadily: electrode polarisation or a drying bridge; refresh the bridge and note the effect.",
+      "Negative reading: the leads are reversed; record the magnitude and correct the sign convention in your notes."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-cell-voltage",
+          "label": "Cell potential (steady reading)",
+          "kind": "electrical_potential",
+          "unit": "V",
+          "method": "High-impedance voltmeter across the electrodes; record the settled value with sign convention (copper positive).",
+          "expectedRange": { "min": 0.9, "max": 1.15, "unit": "V" },
+          "expectedQualitative": [
+            "Reading near 1.1 V with copper as positive terminal at about 1 mol/L solutions."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"],
+          "displayPrecision": "0.01 V."
+        },
+        {
+          "id": "obs-electrode-changes",
+          "label": "Visible electrode changes",
+          "kind": "qualitative",
+          "method": "Inspect electrodes before and after several minutes of current flow.",
+          "expectedQualitative": [
+            "Copper deposition and zinc surface etching consistent with the half-reactions."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class12-electrochemistry"],
+          "displayPrecision": "Qualitative record."
+        }
+      ],
+      "qualitativePrompts": [
+        "How close was the measured voltage to 1.10 V, and what could account for the shortfall?",
+        "What evidence besides the voltmeter shows that a reaction is occurring?",
+        "What would you expect if both solutions were diluted tenfold, and why?"
+      ],
+      "errorSources": [
+        "Voltmeter input resistance and polarisation lower real readings.",
+        "Liquid-junction potential at the salt bridge.",
+        "Solutions not at standard concentration or temperature.",
+        "Oxide films on electrodes raise contact resistance.",
+        "A drying salt bridge increases internal resistance."
+      ],
+      "interpretationGuidance": [
+        "A reading of roughly 1.0-1.1 V supports the theory; a precise match is not expected and pretending otherwise would be dishonest.",
+        "The sign of the reading is part of the result: it identifies which half-reaction runs in which direction.",
+        "State conditions (approximate concentrations, temperature) alongside any voltage value."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "provided",
+    "calculations": [
+      {
+        "id": "calc-standard-cell-potential",
+        "title": "Standard cell potential of the Daniell cell",
+        "purpose": "Predict the cell voltage from tabulated standard electrode potentials.",
+        "equationId": "eq-cell-potential",
+        "variables": [
+          {
+            "symbol": "E°cathode",
+            "meaning": "standard reduction potential of Cu2+/Cu",
+            "unit": "V"
+          },
+          {
+            "symbol": "E°anode",
+            "meaning": "standard reduction potential of Zn2+/Zn",
+            "unit": "V"
+          },
+          { "symbol": "E°cell", "meaning": "standard cell potential", "unit": "V" }
+        ],
+        "assumptions": [
+          "Standard conditions (1 mol/L, 298 K) for the prediction.",
+          "Tabulated E° values apply; junction potentials neglected."
+        ],
+        "unitsAndDimensions": "Volts subtract to volts; nF consistency is handled inside the E° definitions.",
+        "significantFigureConvention": "Tabulated potentials to two decimal places support a prediction quoted to two decimal places.",
+        "workedExamples": [
+          {
+            "id": "calc-standard-cell-potential-example",
+            "title": "Worked example: Daniell cell at standard conditions",
+            "given": ["E°(Cu2+/Cu) = +0.34 V", "E°(Zn2+/Zn) = -0.76 V"],
+            "steps": ["E°cell = E°cathode - E°anode", "E°cell = 0.34 V - (-0.76 V) = 1.10 V"],
+            "result": "E°cell = +1.10 V (copper is the positive terminal)",
+            "sourceRefIds": ["ref-ncert-class12-electrochemistry"],
+            "significantFiguresNote": "Standard potentials quoted to 0.01 V; the prediction is 1.10 V, consistent with typical school measurements near 1.05-1.10 V.",
+            "isIllustrative": true
+          }
+        ],
+        "sourceRefIds": ["ref-ncert-class12-electrochemistry"]
+      },
+      {
+        "id": "calc-nernst-adjustment",
+        "title": "Nernst adjustment for non-standard concentrations",
+        "purpose": "Estimate how concentration changes shift the cell potential from its standard value.",
+        "equationId": "eq-nernst",
+        "variables": [
+          { "symbol": "E°", "meaning": "standard cell potential", "unit": "V" },
+          {
+            "symbol": "n",
+            "meaning": "electrons transferred per reaction (n = 2 here)",
+            "unit": "1"
+          },
+          { "symbol": "Q", "meaning": "reaction quotient [Zn2+]/[Cu2+]", "unit": "1" }
+        ],
+        "assumptions": ["298 K.", "Concentrations approximate activities at these levels."],
+        "unitsAndDimensions": "0.0592 V per decade of Q at 298 K for n = 1; divided by n for larger n.",
+        "significantFigureConvention": "Two decimal places consistent with tabulated E°.",
+        "workedExamples": [
+          {
+            "id": "calc-nernst-example",
+            "title": "Worked example: [Zn2+] = 1.0 mol/L, [Cu2+] = 0.1 mol/L",
+            "given": ["E° = 1.10 V", "n = 2", "Q = [Zn2+]/[Cu2+] = 1.0/0.1 = 10"],
+            "steps": ["E = E° - (0.0592/2) x log10(10)", "E = 1.10 V - 0.0296 V x 1", "E = 1.07 V"],
+            "result": "E is about 1.07 V under these concentrations",
+            "sourceRefIds": ["ref-ncert-class12-electrochemistry"],
+            "significantFiguresNote": "The adjustment (about 30 mV per decade for n = 2) is smaller than typical measurement uncertainty in school setups — an honest discussion point.",
+            "isIllustrative": true
+          }
+        ],
+        "sourceRefIds": ["ref-ncert-class12-electrochemistry"]
+      }
+    ],
+    "notes": "Worked examples use standard tabulated potentials and nominal concentrations; they illustrate method, not measured data."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class12-electrochemistry",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry I (chemistry I), Textbook for Class XII (unit 'Electrochemistry'). National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry I, Textbook for Class XII (Electrochemistry)",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?lech1=0",
+        "identifiers": { "ncert-book-index": "lech1" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "eq-anode-zn",
+          "eq-cathode-cu",
+          "eq-cell-potential",
+          "eq-nernst",
+          "def-galvanic-cell",
+          "def-salt-bridge",
+          "def-standard-electrode-potential",
+          "obs-cell-voltage",
+          "calc-standard-cell-potential",
+          "calc-nernst-adjustment"
+        ],
+        "notes": "Official NCERT book index page fetched on 2026-11-05; the 'Electrochemistry' unit covers galvanic cells, standard potentials and the Nernst treatment at book level. Standard potential values (Zn2+/Zn -0.76 V, Cu2+/Cu +0.34 V) are textbook-standard data recorded for review."
+      },
+      {
+        "id": "ref-pubchem-cuso4",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Copper sulfate (CID 24462).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Copper sulfate (CID 24462)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24462",
+        "identifiers": { "pubchem-cid": "24462" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID 24462 confirmed during the 2026-11-05 content pass; hazard evidence for copper(II) sulfate."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": { "circular": "Acad-14/2025" },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Curriculum-mapping evidence only; unit wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "planned",
+    "model": {
+      "id": "daniell-cell-model",
+      "contractVersion": "1.0.0",
+      "summary": "Computes theoretical cell potential from standard electrode potentials and the Nernst equation for user-chosen concentrations, so learners can explore how conditions shift the voltage. Outputs are theoretical model values, never measurements.",
+      "inputs": [
+        {
+          "id": "in-zn-concentration",
+          "label": "Zinc ion concentration",
+          "unit": "mol/L",
+          "defaultValue": 1,
+          "validRange": { "min": 0.001, "max": 2, "unit": "mol/L" },
+          "description": "Concentration of the zinc sulfate half-cell."
+        },
+        {
+          "id": "in-cu-concentration",
+          "label": "Copper ion concentration",
+          "unit": "mol/L",
+          "defaultValue": 1,
+          "validRange": { "min": 0.001, "max": 2, "unit": "mol/L" },
+          "description": "Concentration of the copper sulfate half-cell."
+        },
+        {
+          "id": "in-temperature",
+          "label": "Temperature",
+          "unit": "K",
+          "defaultValue": 298,
+          "validRange": { "min": 278, "max": 340, "unit": "K" },
+          "description": "Cell temperature for the Nernst factor."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-cell-potential",
+          "label": "Theoretical cell potential",
+          "unit": "V",
+          "displayPrecision": "0.01 V",
+          "description": "Model voltage; theoretical value only."
+        },
+        {
+          "id": "out-reaction-direction",
+          "label": "Spontaneous direction",
+          "unit": "1",
+          "displayPrecision": "Qualitative",
+          "description": "Which half-reaction runs as oxidation under the stated conditions."
+        }
+      ],
+      "assumptions": [
+        "Ideal dilute solutions; concentrations approximate activities.",
+        "No junction or resistance losses — model reports the thermodynamic potential.",
+        "Tabulated standard potentials at the reference state."
+      ],
+      "limitations": [
+        "Real voltmeter readings differ (resistance, polarisation, junction potentials).",
+        "Standard potential temperature dependence not modelled.",
+        "Model output must never be presented as a measured voltage."
+      ],
+      "equations": ["eq-cell-potential", "eq-nernst"],
+      "sourceRefIds": ["ref-ncert-class12-electrochemistry"]
+    }
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "requires_review",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. Standard potential arithmetic and Nernst example recomputed. Pending independent scientific review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "Cell potential arithmetic recomputed during the 2026-11-05 content pass: 0.34 - (-0.76) = 1.10 V; Nernst example gives 1.07 V for Q = 10 at n = 2, consistent with the standard treatment.",
+      "Standard electrode potential values are textbook-standard data flagged for scientific reviewer confirmation."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place.",
+      "Standard electrode potential values and the expected voltage range should be confirmed against the current NCERT tables by a reviewer.",
+      "Zinc sulfate hazard statements marked requires_review pending institutional SDS confirmation."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text copied; NCERT and PubChem are cited as references only."
+    }
+  }
+}

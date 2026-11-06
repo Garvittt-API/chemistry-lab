@@ -1,0 +1,804 @@
+{
+  "identity": {
+    "id": "acid-base-titration",
+    "slug": "acid-base-titration",
+    "title": "Acid–Base Titration",
+    "shortDescription": "Determine the concentration of a dilute acid by titration against standard sodium hydroxide, and understand how the end point relates to the equivalence point.",
+    "fullDescription": "Titration is the reference method of volumetric analysis: a measured volume of unknown solution reacts with a standard solution added from a burette until the reaction is just complete. This activity titrates dilute hydrochloric acid against standard sodium hydroxide with phenolphthalein indicator. Learners practise careful burette technique, repeated consistent readings, and the stoichiometric calculation that converts a titre into a concentration. The experiment is a supervised school or higher-secondary practical using dilute reagents.",
+    "schemaVersion": "2.0.0",
+    "contentVersion": "1.0.0",
+    "publicationStatus": "published",
+    "createdOn": "2026-11-05",
+    "updatedOn": "2026-11-05"
+  },
+  "classification": {
+    "disciplineId": "analytical-chemistry",
+    "subdisciplineIds": ["analytical-chemistry-classical-analysis"],
+    "topicIds": ["volumetric-analysis", "acids-and-bases", "indicator-foundations"],
+    "educationalLevels": ["school", "higher-secondary", "undergraduate"],
+    "curriculumMappings": [
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-practical-volumetric-analysis",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Aligns with the Class XII practical component on volumetric analysis (acid-base titrations). Mapping proposed pending documentary verification against the CBSE subject PDF.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      },
+      {
+        "curriculumId": "cbse-chemistry-2025-26",
+        "curriculumTopicId": "cbse-11-equilibrium",
+        "academicLevel": "higher-secondary",
+        "syllabusNote": "Reinforces the acid-base and ionic-equilibrium treatment of the Class XI unit 'Equilibrium'. Mapping proposed pending documentary verification.",
+        "confidence": "proposed_pending_verification",
+        "evidenceRefIds": ["ref-cbse-curriculum-2025-26"]
+      }
+    ],
+    "difficulty": "intermediate",
+    "estimatedDurationMinutes": 60,
+    "prerequisites": [
+      "Confident use of the mole concept and molar concentration.",
+      "Understanding of neutralization reactions and indicators.",
+      "Familiarity with basic laboratory safety for dilute acids and bases."
+    ]
+  },
+  "educational": {
+    "learningObjectives": [
+      "Carry out a titration with consistent burette technique and repeated readings.",
+      "Identify the equivalence point and the indicator end point, and explain why they need not coincide exactly.",
+      "Calculate an unknown concentration from titre volumes and the reaction stoichiometry."
+    ],
+    "expectedCompetencies": [
+      "Reading a burette at eye level and recording initial/final readings.",
+      "Controlling dropwise addition near the end point.",
+      "Assessing the repeatability of concordant titres and reporting honestly."
+    ],
+    "learningOutcomes": [
+      "Produce at least two concordant titres (within the tolerance stated by the supervising laboratory) for the neutralization of hydrochloric acid by sodium hydroxide.",
+      "Calculate the acid concentration from the mean titre with correct units and significant figures.",
+      "Explain the role of the indicator and estimate the error introduced by the difference between end point and equivalence point."
+    ],
+    "theory": {
+      "overview": "In an acid-base titration, a standard solution of known concentration reacts with the analyte until chemically equivalent amounts have reacted. For the neutralization of a monoprotic acid by a monobasic base the mole ratio is 1:1, so the unknown concentration follows directly from c(acid) x V(acid) = c(base) x V(base). The indicator signals the end point by a colour change near the pH of the equivalence point; the small difference between the two is the titration's principal systematic error.",
+      "sections": [
+        {
+          "heading": "Neutralization stoichiometry",
+          "body": "Hydrochloric acid and sodium hydroxide react in a 1:1 mole ratio: HCl + NaOH -> NaCl + H2O. At the equivalence point the amount of base added equals the amount of acid originally present. Because concentration times volume gives amount of substance (for dilute solutions near the stated conditions), the calculation reduces to c(acid) = c(base) x V(base) / V(acid).",
+          "sourceRefIds": ["ref-ncert-class11-part2", "ref-ncert-class11-unit1"]
+        },
+        {
+          "heading": "Equivalence point and end point",
+          "body": "The equivalence point is the theoretical condition of exactly stoichiometric reaction; the end point is where the indicator visibly changes. For a strong acid-strong base titration the pH changes very steeply near the equivalence point (roughly pH 4 to 10 within a drop or two for 0.1 mol/L solutions), so any indicator changing within that range gives a small, estimable error. Phenolphthalein changes from colourless to faint pink around pH 8-10 and is the conventional choice; the first persistent pale pink that lasts about 30 seconds is taken as the end point.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "heading": "Standard solutions",
+          "body": "One of the two solutions must have a concentration known accurately. In this activity the sodium hydroxide solution is treated as standard (standardized by the supervising educator, for example against dry primary-standard sodium carbonate with methyl orange indicator). The reliability of the calculated acid concentration cannot exceed the reliability of that standardization — a limitation recorded explicitly in the observations section.",
+          "sourceRefIds": ["ref-ncert-class12-part1", "ref-ncert-class11-part2"]
+        }
+      ],
+      "scientificBackground": "The steepness of the pH jump at the equivalence point follows from the ionic product of water and the concentrations used: as one drop of base converts a small excess of H+ into a large relative change in [H+], the pH passes through the indicator's transition range within a very small added volume. This is why titration is precise despite the coarseness of a colour-change signal.",
+      "concepts": [
+        "neutralization",
+        "equivalence point",
+        "end point",
+        "standard solution",
+        "titre",
+        "concordant results",
+        "systematic and random error"
+      ],
+      "equations": [
+        {
+          "id": "eq-neutralization-hcl-naoh",
+          "expression": "HCl + NaOH -> NaCl + H2O",
+          "displayForm": "HCl + NaOH → NaCl + H₂O",
+          "description": "The neutralization reaction performed in this experiment; 1:1 mole ratio.",
+          "variables": [
+            {
+              "symbol": "HCl",
+              "meaning": "hydrochloric acid (analyte)",
+              "unit": "mol"
+            },
+            {
+              "symbol": "NaOH",
+              "meaning": "sodium hydroxide (standard titrant)",
+              "unit": "mol"
+            }
+          ],
+          "applicableConditions": ["Aqueous dilute solutions at room temperature."],
+          "assumptions": [
+            "Both reagents behave as strong acid and strong base at the concentrations used (about 0.1 mol/L)."
+          ],
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "kind": "theoretical_law"
+        },
+        {
+          "id": "eq-titration-concentration",
+          "expression": "c(acid) * V(acid) = c(base) * V(base)",
+          "displayForm": "c(acid) × V(acid) = c(base) × V(base)",
+          "description": "Concentration of the analyte from the titre volumes for a 1:1 reaction.",
+          "variables": [
+            {
+              "symbol": "c(acid)",
+              "meaning": "concentration of the acid analyte",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "V(acid)",
+              "meaning": "volume of acid analyte pipetted",
+              "unit": "mL"
+            },
+            {
+              "symbol": "c(base)",
+              "meaning": "concentration of the standard base",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "V(base)",
+              "meaning": "mean titre of base delivered from the burette",
+              "unit": "mL"
+            }
+          ],
+          "applicableConditions": [
+            "1:1 stoichiometry (monoprotic acid, monobasic base).",
+            "Both volumes recorded at the same reference temperature."
+          ],
+          "assumptions": [
+            "The base concentration is accurately known.",
+            "The end point approximates the equivalence point within the stated error."
+          ],
+          "sourceRefIds": ["ref-ncert-class11-part2", "ref-ncert-class11-unit1"],
+          "kind": "working_relation"
+        }
+      ],
+      "definitions": [
+        {
+          "id": "def-titre",
+          "term": "Titre",
+          "definition": "The volume of titrant delivered between the initial and final burette readings in one titration.",
+          "sourceRefIds": ["ref-ncert-class12-part1"]
+        },
+        {
+          "id": "def-concordant-titres",
+          "term": "Concordant titres",
+          "definition": "Repeated titres that agree within a stated tolerance (commonly 0.10 mL in school practice); their mean is reported.",
+          "sourceRefIds": ["ref-ncert-class12-part1"]
+        },
+        {
+          "id": "def-equivalence-point",
+          "term": "Equivalence point",
+          "definition": "The point at which chemically equivalent amounts of acid and base have reacted.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        },
+        {
+          "id": "def-end-point",
+          "term": "End point",
+          "definition": "The observed indicator colour change at which a titration is stopped; ideally as close as possible to the equivalence point.",
+          "sourceRefIds": ["ref-ncert-class11-part2"]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "equipment": [
+      {
+        "id": "eqp-burette-50",
+        "name": "Burette",
+        "specification": "50 mL, with stand and clamp",
+        "quantity": "1",
+        "purpose": "Delivering the standard base in measured volumes",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-pipette-25",
+        "name": "Graduated or volumetric pipette with filler",
+        "specification": "25 mL",
+        "quantity": "1",
+        "purpose": "Measuring the acid aliquot",
+        "alternatives": ["A 20 mL pipette if that is the laboratory standard"]
+      },
+      {
+        "id": "eqp-conical-flask",
+        "name": "Conical flask",
+        "specification": "250 mL",
+        "quantity": "1",
+        "purpose": "Titration vessel",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-white-tile",
+        "name": "White tile",
+        "specification": "Plain",
+        "quantity": "1",
+        "purpose": "Making the indicator colour change easy to see",
+        "alternatives": ["White paper"]
+      },
+      {
+        "id": "eqp-dropper",
+        "name": "Dropper",
+        "specification": "Clean",
+        "quantity": "1",
+        "purpose": "Dropwise addition near the end point",
+        "alternatives": []
+      },
+      {
+        "id": "eqp-wash-bottle",
+        "name": "Wash bottle",
+        "specification": "Distilled water",
+        "quantity": "1",
+        "purpose": "Rinsing down the flask walls during titration",
+        "alternatives": []
+      }
+    ],
+    "chemicals": [
+      {
+        "id": "chem-hcl-unknown",
+        "name": "Hydrochloric acid (analyte)",
+        "formulaOrDescription": "HCl(aq), approximately 0.1 mol/L, concentration to be determined",
+        "category": "solution",
+        "amount": "25.0 mL per titration; about 100 mL per learner",
+        "identifiers": {
+          "pubchem-cid": "313"
+        },
+        "hazardKinds": ["corrosive", "irritant"],
+        "notes": "Dilute mineral acid; at this concentration a serious eye irritant and mildly corrosive to skin."
+      },
+      {
+        "id": "chem-naoh-standard",
+        "name": "Sodium hydroxide solution (standard titrant)",
+        "formulaOrDescription": "NaOH(aq), standardized, approximately 0.1 mol/L",
+        "category": "solution",
+        "amount": "About 100 mL per learner",
+        "identifiers": {
+          "pubchem-cid": "14798"
+        },
+        "hazardKinds": ["corrosive", "irritant"],
+        "notes": "Standardized by the supervising educator. Corrosive in concentrated form; dilute solution is a serious eye irritant."
+      },
+      {
+        "id": "chem-phenolphthalein",
+        "name": "Phenolphthalein indicator",
+        "formulaOrDescription": "1% solution in ethanol (commercial indicator solution)",
+        "category": "solution",
+        "amount": "2-3 drops per titration",
+        "identifiers": {},
+        "hazardKinds": ["flammable", "chronic_health_hazard"],
+        "notes": "Ethanol-based flammable indicator solution; keep away from flames. Phenolphthalein itself is listed as a suspected carcinogen in some jurisdictions — handle dilute indicator with care and follow institutional policy."
+      },
+      {
+        "id": "chem-distilled-water",
+        "name": "Distilled or deionised water",
+        "formulaOrDescription": "H2O",
+        "category": "other",
+        "amount": "About 200 mL per learner",
+        "identifiers": {},
+        "hazardKinds": [],
+        "notes": "For rinsing; carbon dioxide-free water is preferred if available for the base."
+      }
+    ],
+    "metadataStatus": "complete"
+  },
+  "safety": {
+    "riskClassification": "moderate",
+    "riskRationale": "Dilute (about 0.1 mol/L) acid and base are the workhorse reagents of school titration, but both are eye hazards and sodium hydroxide is corrosive at higher concentrations used in stock handling. The risk is controlled by dilution, eye protection, supervision and clear disposal routes.",
+    "hazards": [
+      {
+        "kind": "corrosive",
+        "statement": "Sodium hydroxide causes severe skin burns and eye damage (H314); the dilute solution used here is still a serious eye hazard.",
+        "appliesTo": ["chem-naoh-standard"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-naoh",
+          "notes": "GHS hazard statements (including H314) per the PubChem compound entry for sodium hydroxide (CID 14798)."
+        }
+      },
+      {
+        "kind": "corrosive",
+        "statement": "Hydrochloric acid is corrosive and causes serious eye damage (H314) and skin irritation (H315); treat the dilute solution with the same respect as the concentrated stock.",
+        "appliesTo": ["chem-hcl-unknown"],
+        "evidence": {
+          "basis": "official_database",
+          "referenceId": "ref-pubchem-hcl",
+          "notes": "GHS hazard statements for hydrochloric acid (CID 313) per the PubChem compound entry."
+        }
+      },
+      {
+        "kind": "flammable",
+        "statement": "Phenolphthalein indicator solution contains ethanol and is flammable; keep the bottle away from any flame and close it when not in use.",
+        "appliesTo": ["chem-phenolphthalein"],
+        "evidence": {
+          "basis": "requires_review",
+          "notes": "Flammability of the ethanol-based indicator solvent is standard; confirm the commercial product's safety data sheet with the supervising institution. Phenolphthalein's own classification varies by jurisdiction and must be checked before scientific review."
+        }
+      },
+      {
+        "kind": "glassware_cuts",
+        "statement": "Burettes and pipettes are long, thin and easily broken; use them clamped or held over the bench and never force a pipette filler.",
+        "appliesTo": ["eqp-burette-50", "eqp-pipette-25"],
+        "evidence": {
+          "basis": "common_laboratory_practice",
+          "referenceId": "ref-ncert-class12-part1",
+          "notes": "General laboratory practice guidance for volumetric glassware in school practicals."
+        }
+      }
+    ],
+    "protectiveEquipment": [
+      "Safety spectacles at all times; splash goggles recommended.",
+      "Laboratory coat or apron.",
+      "Nitrile gloves available for handling stock solutions.",
+      "Tie long hair back; closed shoes required."
+    ],
+    "disposal": [
+      "Neutralized dilute acid-base mixtures (the final flask contents) may normally be washed to drain with plenty of water, subject to the supervising institution's policy.",
+      "Collect unused stock solutions separately as directed by the supervising institution; do not return them to stock bottles.",
+      "Dispose of ethanol-based indicator waste in the designated flammable-organic waste container."
+    ],
+    "supervision": "qualified_educator_supervision_required",
+    "restrictedOperations": [
+      "No pipetting by mouth under any circumstances.",
+      "No tasting; no contact of reagents with skin or eyes.",
+      "This record describes dilute (about 0.1 mol/L) solutions only; concentrated acid or base handling is out of scope and must not be attempted from this description."
+    ],
+    "emergencyGuidance": [
+      "Skin contact: flood with plenty of water, remove contaminated clothing, inform the supervising educator.",
+      "Eye contact: rinse with running water for several minutes and seek medical attention immediately.",
+      "Spills: dilute spills are flooded with water and wiped up by the supervisor; broken glass is never picked up by hand."
+    ],
+    "metadataStatus": "complete"
+  },
+  "procedure": {
+    "overview": "Rinse and fill the burette with standard sodium hydroxide, pipette a fixed volume of the acid into the conical flask, add indicator and titrate to the first persistent pale pink. Repeat until concordant titres are achieved.",
+    "steps": [
+      {
+        "stepId": "step-1",
+        "title": "Prepare the burette",
+        "instructions": "Rinse the burette with a small volume of the standard sodium hydroxide solution, then fill it above the zero mark. Run the tap to remove air from the tip and bring the meniscus to a convenient starting reading (not necessarily 0.00 mL). Record the initial reading to 0.05 mL (half the smallest division).",
+        "equipmentIds": ["eqp-burette-50"],
+        "chemicalIds": ["chem-naoh-standard"],
+        "precautions": [
+          "Check the tap does not leak before filling.",
+          "Never fill a burette over an open hand; use the clamp and a funnel if needed."
+        ],
+        "expectedObservations": ["The burette tip is full of liquid with no air bubbles."],
+        "explanatoryNotes": [
+          "Starting at a random reading is good practice: it removes one source of bias and shows the reading skill matters."
+        ]
+      },
+      {
+        "stepId": "step-2",
+        "title": "Pipette the acid aliquot",
+        "instructions": "Rinse the pipette with the hydrochloric acid solution, then pipette exactly 25.0 mL into the conical flask. Allow the pipette to drain by gravity; touch the tip to the flask wall. Add 2-3 drops of phenolphthalein indicator.",
+        "equipmentIds": ["eqp-pipette-25", "eqp-conical-flask"],
+        "chemicalIds": ["chem-hcl-unknown", "chem-phenolphthalein"],
+        "precautions": [
+          "Use a pipette filler — never mouth pipetting.",
+          "Do not blow out the last drop remaining in the pipette tip."
+        ],
+        "expectedObservations": [
+          "The flask contains a colourless solution; indicator drops disperse as the flask is swirled."
+        ],
+        "explanatoryNotes": [
+          "The acid volume in the calculation is 25.0 mL regardless of which calibrated pipette the laboratory issues; record the value actually used."
+        ]
+      },
+      {
+        "stepId": "step-3",
+        "title": "Rough titration",
+        "instructions": "Place the flask on the white tile under the burette and titrate, swirling continuously, until the faint pink colour persists for about 30 seconds. Record the final burette reading and the titre. This first (rough) titre gives the approximate volume needed.",
+        "equipmentIds": ["eqp-burette-50", "eqp-conical-flask", "eqp-white-tile"],
+        "chemicalIds": [],
+        "precautions": [
+          "Keep swirling; local excess of base causes premature colour change.",
+          "The rough titre is marked as rough and is not included in the mean."
+        ],
+        "expectedObservations": [
+          "The solution turns faint pink where each drop lands and the colour fades on swirling until the end point."
+        ],
+        "explanatoryNotes": [
+          "A rough titre first is standard technique: it prevents wasting time and reagent hunting for the end point drop by drop."
+        ]
+      },
+      {
+        "stepId": "step-4",
+        "title": "Accurate titrations",
+        "instructions": "Repeat steps 2 and 3 at least three more times, this time adding the titrant dropwise when the rough titre volume is approached. Record initial and final readings for every run. Stop at the first faint pink that persists about 30 seconds.",
+        "equipmentIds": ["eqp-burette-50", "eqp-conical-flask", "eqp-white-tile", "eqp-dropper"],
+        "chemicalIds": ["chem-hcl-unknown", "chem-phenolphthalein"],
+        "precautions": [
+          "Rinse the flask walls with distilled water during titration so no analyte is left unreacted on the walls.",
+          "Do not over-shoot; one drop past the end point is an error, not a result."
+        ],
+        "expectedObservations": [
+          "Accurate titres agree closely with each other and with the rough titre within a few tenths of a millilitre."
+        ],
+        "explanatoryNotes": [
+          "Concordance is the evidence that technique is under control; a spread of millilitres means something systematic is wrong."
+        ]
+      },
+      {
+        "stepId": "step-5",
+        "title": "Record and calculate",
+        "instructions": "List all titres, identify the concordant set (commonly agreeing within 0.10 mL), calculate their mean and then the acid concentration using the stoichiometric relation. Report the result with units and justified significant figures, together with a short error commentary.",
+        "equipmentIds": [],
+        "chemicalIds": [],
+        "precautions": [],
+        "expectedObservations": [],
+        "explanatoryNotes": [
+          "Report what the data support: a mean from concordant titres with a stated tolerance, not a spurious extra decimal place."
+        ]
+      }
+    ],
+    "troubleshooting": [
+      "A permanently pink flask after one drop: the end point is already passed; record the volume and treat the run as over-titrated.",
+      "Air bubble in the burette tip during a run: the delivered volume is wrong; repeat the run after clearing the bubble.",
+      "Titrres scattered by more than 0.2 mL: check for leaks, inconsistent reading technique and un-rinsed flask walls before continuing."
+    ]
+  },
+  "observations": {
+    "mode": "provided",
+    "content": {
+      "measurements": [
+        {
+          "id": "obs-burette-readings",
+          "label": "Burette initial and final readings",
+          "kind": "volume",
+          "unit": "mL",
+          "method": "Read the meniscus at eye level to half the smallest division (typically 0.05 mL for a 50 mL burette); record initial and final readings for every run.",
+          "provenance": "requires_review",
+          "sourceRefIds": ["ref-ncert-class12-part1"],
+          "displayPrecision": "Two decimal places (for example 22.50 mL)."
+        },
+        {
+          "id": "obs-titre",
+          "label": "Titre volume",
+          "kind": "volume",
+          "unit": "mL",
+          "method": "Titre = final reading - initial reading for each run; the mean of concordant titres is used in the calculation.",
+          "provenance": "requires_review",
+          "sourceRefIds": ["ref-ncert-class12-part1"],
+          "displayPrecision": "Two decimal places."
+        },
+        {
+          "id": "obs-end-point",
+          "label": "End-point appearance",
+          "kind": "qualitative",
+          "method": "Observe the first faint pink colour that persists for about 30 seconds with swirling.",
+          "expectedQualitative": [
+            "The solution is colourless before the end point and faintly, uniformly pink at the end point."
+          ],
+          "provenance": "reference_expected",
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "displayPrecision": "Qualitative observation only."
+        },
+        {
+          "id": "obs-acid-concentration",
+          "label": "Calculated acid concentration",
+          "kind": "other",
+          "unit": "mol/L",
+          "method": "Computed from the mean titre via the stoichiometric relation; theoretical value from learner measurements, not a simulated reading.",
+          "provenance": "theoretical",
+          "sourceRefIds": ["ref-ncert-class11-part2"],
+          "displayPrecision": "Three significant figures if titres support it."
+        }
+      ],
+      "qualitativePrompts": [
+        "How close were your concordant titres to each other and to the rough titre?",
+        "Did the end-point colour appear suddenly or drift in over several drops?",
+        "What does the spread of your titres say about the precision of your technique?"
+      ],
+      "errorSources": [
+        "Reading the burette away from eye level (parallax).",
+        "Delivering the final drops too fast and overshooting the end point.",
+        "Leaving analyte unwashed on the flask walls.",
+        "Air bubbles in the burette tip counted as delivered volume.",
+        "Indicator error: the visible end point at pH about 8-10 lies slightly past the true equivalence point of a strong acid-strong base titration, biasing the titre slightly high.",
+        "Using a base whose concentration was not accurately standardized."
+      ],
+      "interpretationGuidance": [
+        "Precision is judged from the concordance of titres; accuracy is limited by the standard base and indicator error.",
+        "A titre series that is reproducible but consistently high by a few hundredths of a millilitre is compatible with a small indicator error — discuss, do not hide it.",
+        "Report the mean titre with its spread (for example 22.50 mL ± 0.05 mL) rather than a single number without context."
+      ]
+    }
+  },
+  "calculations": {
+    "mode": "provided",
+    "calculations": [
+      {
+        "id": "calc-titration-concentration",
+        "title": "Concentration of the acid from the mean titre",
+        "purpose": "Convert burette and pipette volumes into the unknown acid concentration.",
+        "equationId": "eq-titration-concentration",
+        "variables": [
+          {
+            "symbol": "V(acid)",
+            "meaning": "volume of acid aliquot pipetted",
+            "unit": "mL"
+          },
+          {
+            "symbol": "V(base)",
+            "meaning": "mean titre of standard base",
+            "unit": "mL"
+          },
+          {
+            "symbol": "c(base)",
+            "meaning": "concentration of standard base",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "c(acid)",
+            "meaning": "concentration of the acid analyte",
+            "unit": "mol/L"
+          }
+        ],
+        "assumptions": [
+          "Reaction stoichiometry is 1:1 (HCl + NaOH).",
+          "The standard base concentration is accurately known.",
+          "The end point approximates the equivalence point within the indicator error."
+        ],
+        "unitsAndDimensions": "c(acid) = c(base) x V(base) / V(acid); mL cancel, leaving mol/L.",
+        "significantFigureConvention": "Volumes are read to 0.05 mL; report the concentration to three significant figures if the titres are concordant at that level.",
+        "workedExamples": [
+          {
+            "id": "calc-titration-concentration-example",
+            "title": "Worked example: HCl titrated with 0.100 mol/L NaOH",
+            "given": [
+              "V(acid) = 25.0 mL (pipetted aliquot)",
+              "V(base) = 22.50 mL (mean of concordant titres)",
+              "c(base) = 0.100 mol/L (standardized NaOH)"
+            ],
+            "steps": [
+              "n(base) = c(base) x V(base) = 0.100 mol/L x 0.02250 L = 2.250 x 10^-3 mol",
+              "n(acid) = n(base) = 2.250 x 10^-3 mol (1:1 stoichiometry)",
+              "c(acid) = n(acid) / V(acid) = 2.250 x 10^-3 mol / 0.0250 L = 0.0900 mol/L"
+            ],
+            "result": "c(acid) = 0.0900 mol/L",
+            "sourceRefIds": ["ref-ncert-class11-part2"],
+            "significantFiguresNote": "The volumes support three significant figures; the result is limited by the accuracy of the standardized base.",
+            "isIllustrative": true
+          }
+        ],
+        "sourceRefIds": ["ref-ncert-class11-part2", "ref-ncert-class11-unit1"]
+      }
+    ],
+    "notes": "The worked example uses nominal illustrative values; learners substitute their own measured titres. No measured data are fabricated in this record."
+  },
+  "references": {
+    "items": [
+      {
+        "id": "ref-ncert-class11-part2",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry Part II, Textbook for Class XI (units including 'Equilibrium'). National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry Part II, Textbook for Class XI",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?kech2=0",
+        "identifiers": {
+          "ncert-book-index": "kech2"
+        },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "eq-neutralization-hcl-naoh",
+          "eq-titration-concentration",
+          "def-equivalence-point",
+          "def-end-point",
+          "obs-end-point",
+          "calc-titration-concentration"
+        ],
+        "notes": "Official NCERT book index page fetched on 2026-11-05; acid-base equilibrium and pH treatment cited at book level."
+      },
+      {
+        "id": "ref-ncert-class12-part1",
+        "type": "official_educational_resource",
+        "citation": "NCERT, Chemistry I (chemistry I), Textbook for Class XII. National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Chemistry I, Textbook for Class XII",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook.php?lech1=0",
+        "identifiers": {
+          "ncert-book-index": "lech1"
+        },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [
+          "def-titre",
+          "def-concordant-titres",
+          "obs-burette-readings",
+          "obs-titre"
+        ],
+        "notes": "Official NCERT book index page fetched on 2026-11-05; solution concentration conventions cited at book level."
+      },
+      {
+        "id": "ref-ncert-class11-unit1",
+        "type": "official_educational_resource",
+        "citation": "NCERT, 'Some Basic Concepts of Chemistry', Unit 1 in Chemistry Part I, Textbook for Class XI. National Council of Educational Research and Training, New Delhi (Reprint 2026-27).",
+        "authors": ["NCERT"],
+        "title": "Some Basic Concepts of Chemistry (Chemistry Part I, Class XI)",
+        "publisher": "NCERT",
+        "year": 2026,
+        "url": "https://ncert.nic.in/textbook/pdf/kech101.pdf",
+        "identifiers": {
+          "ncert-chapter-pdf": "kech101.pdf"
+        },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": ["eq-titration-concentration"],
+        "notes": "PDF fetched and content confirmed on 2026-11-05 (mole concept and stoichiometric reasoning)."
+      },
+      {
+        "id": "ref-pubchem-naoh",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Sodium hydroxide (CID 14798).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Sodium hydroxide (CID 14798)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/14798",
+        "identifiers": {
+          "pubchem-cid": "14798",
+          "cas": "1310-73-2"
+        },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID and canonical compound URL confirmed during the 2026-11-05 content pass; GHS hazard statements (H314 and others) recorded from the entry."
+      },
+      {
+        "id": "ref-pubchem-hcl",
+        "type": "authoritative_database",
+        "citation": "PubChem, U.S. National Library of Medicine: Hydrochloric acid (CID 313).",
+        "authors": ["U.S. National Library of Medicine"],
+        "title": "PubChem Compound Summary: Hydrochloric acid (CID 313)",
+        "publisher": "U.S. National Library of Medicine",
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/313",
+        "identifiers": {
+          "pubchem-cid": "313"
+        },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "CID 313 confirmed during the 2026-11-05 content pass; hazard evidence for hydrochloric acid."
+      },
+      {
+        "id": "ref-cbse-curriculum-2025-26",
+        "type": "official_curriculum_document",
+        "citation": "Central Board of Secondary Education, 'Secondary and Senior School Curriculum for the Academic Session 2025-26', Circular Acad-14/2025.",
+        "authors": ["CBSE"],
+        "title": "Secondary and Senior School Curriculum for the Academic Session 2025-26",
+        "publisher": "CBSE",
+        "year": 2025,
+        "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
+        "identifiers": {
+          "circular": "Acad-14/2025"
+        },
+        "accessedOn": "2026-11-05",
+        "verificationStatus": "cross_checked_2026_11_05",
+        "supportsClaims": [],
+        "notes": "Curriculum-mapping evidence only; unit and practical wording remains proposed_pending_verification."
+      }
+    ]
+  },
+  "simulation": {
+    "status": "planned",
+    "model": {
+      "id": "strong-acid-strong-base-titration",
+      "contractVersion": "1.0.0",
+      "summary": "Computes the theoretical pH as a function of added titrant volume for a strong monoprotic acid titrated with a strong monobasic base, so learners can explore how the equivalence point relates to indicator ranges. Outputs are theoretical model values, not measured readings.",
+      "inputs": [
+        {
+          "id": "in-acid-concentration",
+          "label": "Acid concentration",
+          "unit": "mol/L",
+          "defaultValue": 0.1,
+          "validRange": {
+            "min": 0.001,
+            "max": 1,
+            "unit": "mol/L"
+          },
+          "description": "Initial concentration of the acid analyte."
+        },
+        {
+          "id": "in-acid-volume",
+          "label": "Acid volume",
+          "unit": "mL",
+          "defaultValue": 25,
+          "validRange": {
+            "min": 1,
+            "max": 100,
+            "unit": "mL"
+          },
+          "description": "Volume of acid in the titration flask."
+        },
+        {
+          "id": "in-base-concentration",
+          "label": "Base concentration",
+          "unit": "mol/L",
+          "defaultValue": 0.1,
+          "validRange": {
+            "min": 0.001,
+            "max": 1,
+            "unit": "mol/L"
+          },
+          "description": "Concentration of the standard base titrant."
+        },
+        {
+          "id": "in-titrant-volume",
+          "label": "Titrant volume added",
+          "unit": "mL",
+          "validRange": {
+            "min": 0,
+            "max": 100,
+            "unit": "mL"
+          },
+          "description": "Volume of base added at the point of interest."
+        }
+      ],
+      "outputs": [
+        {
+          "id": "out-ph",
+          "label": "Theoretical pH",
+          "unit": "1",
+          "displayPrecision": "Two decimal places",
+          "description": "Model pH of the mixture; theoretical value only."
+        },
+        {
+          "id": "out-equivalence-volume",
+          "label": "Equivalence volume",
+          "unit": "mL",
+          "displayPrecision": "0.01 mL",
+          "description": "Volume of base at the stoichiometric equivalence point."
+        }
+      ],
+      "assumptions": [
+        "Complete dissociation of strong acid and strong base.",
+        "Ideal dilute-solution behaviour; activity coefficients neglected.",
+        "Temperature 25 C with Kw = 1.0 x 10^-14."
+      ],
+      "limitations": [
+        "Does not model weak acids/bases, activity effects or temperature dependence.",
+        "Cannot predict indicator colours or the visible end point; those remain experimental observations.",
+        "No model output may be presented as a laboratory measurement."
+      ],
+      "equations": ["eq-titration-concentration"],
+      "sourceRefIds": ["ref-ncert-class11-part2"]
+    }
+  },
+  "review": {
+    "authors": [
+      {
+        "name": "Virtual Chemistry Lab content team (AI-assisted draft)",
+        "role": "content author"
+      }
+    ],
+    "scientificReviewStatus": "draft",
+    "safetyReviewStatus": "requires_review",
+    "reviewEvents": [],
+    "revisionHistory": [
+      {
+        "contentVersion": "1.0.0",
+        "date": "2026-11-05",
+        "summary": "Initial AI-assisted draft created in the Phase 03 content pass. Stoichiometry and worked example recomputed; hazard statements tied to PubChem entries. Pending independent scientific review.",
+        "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      }
+    ],
+    "validationNotes": [
+      "The worked example (0.0900 mol/L from 25.0 mL analyte and 22.50 mL of 0.100 mol/L NaOH) was recomputed during the 2026-11-05 content pass and is stoichiometrically consistent.",
+      "Sodium hydroxide and hydrochloric acid hazard statements cite PubChem entries (CID 14798 and CID 313) verified during the same pass."
+    ],
+    "outstandingConcerns": [
+      "No independent review by a qualified chemistry educator has taken place.",
+      "Phenolphthalein hazard classification is jurisdiction-dependent and marked requires_review until confirmed against the institutional safety data sheet.",
+      "The end-point error discussion is qualitative here; a validated error estimate needs review against a reference treatment of indicator error."
+    ],
+    "integrityLabel": "pending_scientific_review",
+    "licensing": {
+      "license": "unspecified",
+      "licenseStatus": "pending_owner_decision",
+      "source": "Original content authored for the Virtual Chemistry Lab repository",
+      "attribution": "Virtual Chemistry Lab project contributors",
+      "notes": "No third-party text copied; NCERT and PubChem are cited as references only."
+    }
+  }
+}
