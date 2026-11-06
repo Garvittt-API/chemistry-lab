@@ -4,8 +4,10 @@ An open-source, cross-platform virtual chemistry laboratory for school and colle
 long-term product vision includes interactive 2D and 3D experiments, molecular visualization,
 structured practical records, assessments, and offline-capable learning.
 
-> **Project status:** Foundation / Phase 02. This repository is not yet a validated chemistry
-> simulator. Do not present planned features as implemented.
+> **Project status:** Phase 03 complete (experiment library and scientific content), awaiting
+> project-owner gate review. This repository is not yet a validated chemistry simulator: no
+> simulation engine exists, and all published experiment content is labelled
+> `pending_scientific_review`. Do not present planned features as implemented.
 
 ## Guiding principles
 
@@ -19,15 +21,20 @@ structured practical records, assessments, and offline-capable learning.
 ## Current scope
 
 Phase 01 established the product requirements, architecture, repository structure, engineering
-standards, security baseline and CI. Phase 02 adds the responsive web design system and application
-foundation. Neither phase implements experiment simulations or claims scientific validation.
+standards, security baseline and CI. Phase 02 added the responsive web design system and
+application foundation. Phase 03 added the versioned experiment record contract (schema 2.0.0),
+the framework-free `experiment-library` package, an initial collection of 11 experiment records
+and real search/discovery/detail surfaces on the web. No phase implements experiment simulations
+or claims scientific validation.
 
 ## Current foundation
 
-This repository contains the TypeScript monorepo, responsive Next.js web application foundation,
-minimal Expo mobile application, and versioned experiment metadata contract in
-`packages/experiment-schema`. The web UI uses explicitly labelled demonstration content. No chemistry
-simulation, authentication, database, AI tutor, or production deployment is included.
+This repository contains the TypeScript monorepo, responsive Next.js web application, minimal Expo
+mobile scaffold, the versioned experiment contracts in `packages/experiment-schema`, and the
+validated content catalog in `packages/experiment-library`. All 10 published experiment records
+are AI-assisted drafts awaiting independent scientific review; the UI states this on every
+surface. No chemistry simulation, authentication, database, AI tutor, or production deployment is
+included.
 
 ## Getting started
 
@@ -45,7 +52,8 @@ for verification commands.
 ## Documentation map
 
 - `apps/`: web and mobile application entry points.
-- `packages/experiment-schema/`: versioned, Zod-validated experiment metadata.
+- `packages/experiment-schema/`: versioned, Zod-validated experiment record contracts.
+- `packages/experiment-library/`: validated experiment content catalog and query API.
 - `docs/product/`: vision, requirements, roadmap and scope.
 - `docs/design/`: design principles, design system and accessibility.
 - `docs/architecture/`: system design, data flow and decisions.

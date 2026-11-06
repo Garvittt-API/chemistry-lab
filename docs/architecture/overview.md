@@ -62,7 +62,7 @@ The web presentation layer is organized as follows:
 apps/web/
   app/                    # App Router routes, metadata, loading and error boundaries
   components/             # Shared shell, UI primitives and real page interactions
-  lib/content.ts          # Explicitly labelled Phase 02 demonstration content
+  lib/content.ts          # View-model adapter over the experiment-library package (Phase 03)
   lib/utils.ts            # Small presentation helpers
 ```
 

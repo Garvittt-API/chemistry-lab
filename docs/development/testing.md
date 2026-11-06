@@ -41,13 +41,17 @@ corepack pnpm validate:mobile
 corepack pnpm security:audit
 ```
 
-The schema package currently contains the Phase 01 unit tests. They cover a valid draft document,
-unsupported versions and IDs, missing review provenance, and incomplete safety/procedure data.
+The `experiment-schema` package contains the versioned contract tests (31 tests: schema 1.0.0
+metadata, schema 2.0.0 record validation, cross-section referential integrity and legacy
+migration). The `experiment-library` package contains 23 catalog tests covering bundled-content
+validation, duplicate detection, referential integrity, retrieval, search, filtering, sorting,
+pagination and the publication-visibility gate.
 
-Phase 02 browser coverage includes:
+Browser coverage (`apps/web/e2e/foundation.spec.ts`, 6 tests, run in CI):
 
-- Light and dark theme axe scans.
+- Home page renders real catalog statistics with light and dark theme axe scans.
 - Explore, Subjects, About and Settings axe scans.
 - Skip-link and responsive navigation behavior.
-- Explore search/filter interaction.
-- Experiment detail routing and the future laboratory boundary.
+- Explore search/filter interaction, including the honest empty state.
+- Experiment detail routing, review provenance and the future laboratory boundary.
+- Unpublished draft records restricted to the 404 boundary.

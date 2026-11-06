@@ -202,7 +202,7 @@ export function getCollectionStats(): CollectionStats {
     limit: 1,
   }).total;
   return {
-    publishedExperimentCount: published < 10 ? `${published}` : `${published}`,
+    publishedExperimentCount: `${published}`,
     disciplineCount: catalog.taxonomy.disciplines.length,
     levelCount: catalog.levels.levels.length,
   };

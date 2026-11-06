@@ -16,8 +16,8 @@
 ## Current status
 - Current phase: Phase 03 — Experiment Library, Scientific Content & Curriculum Mapping
 - Current milestone: 03.1 — Experiment schema 2.0.0, library package, initial collection
-- Overall status: Phase 03 implementation complete; project-owner review pending
-- Last verified commit: pending final Phase 03 commit on `arena/04357437-chemistry-lab`
+- Overall status: Phase 03 implementation complete and merged (`PR #6`); project-owner gate review and qualified scientific review pending
+- Last verified commit: `2c18930` on `main`; remote CI green (run 42223523746, all 14 steps, 2026-11-06)
 - Last verification date: 2026-11-06
 
 ## Completed
@@ -36,8 +36,7 @@
 
 ## In progress
 - Complete owner review of Phase 01, Phase 02 and Phase 03 ADRs and acceptance evidence.
-- Confirm branch protection on the configured private remote repository.
-- Run remote CI after the final Phase 03 changes are pushed.
+- Confirm branch protection on the configured private remote repository (API check returns 403 for the integration token; must be confirmed by the owner in repository settings).
 
 ## Blocked / undecided
 - Final product name.
@@ -54,11 +53,13 @@
 - No full security audit or deployment has been performed; dependency audit is configured and recorded.
 - Roadmap dates are estimates, not commitments.
 - A stray `data.db` file is tracked at the repository root (pre-existing); flagged for owner decision, not removed.
+- `react` and `react-dom` in `apps/web` were skewed (19.3.0 vs 19.3.1) after Dependabot's react PR (#2) was closed unmerged while react-dom PR (#5) merged; aligned both to 19.3.1 in the current branch (peer checks clean).
+- Local sandbox cannot download Playwright browsers (CDN blocked); e2e evidence comes from remote CI.
 
 ## Next actions
 1. Review and accept the Phase 01–03 ADRs and acceptance evidence.
-2. Arrange qualified scientific review for the experiment collection.
-3. Run remote CI after pushing the reviewed commits.
+2. Arrange qualified scientific review for the experiment collection (`SCIENTIFIC_VALIDATION_LOG.md` tracks status; 0/11 records reviewed).
+3. Owner to confirm branch protection on `main`.
 4. Do not begin Phase 04 until the project owner accepts the Phase 03 gate.
 
 ## Session log
@@ -67,6 +68,7 @@
 | 2026-11-03 | Phase 01 foundation implemented and clean-clone verified | Local checks and clean-clone checks passed; remote CI and owner sign-off pending | Review acceptance evidence and connect remote |
 | 2026-11-03 | Phase 02 web foundation implemented | Typecheck, lint, unit tests, web build, Expo compatibility, Playwright and axe scans passed; remote CI and owner sign-off pending | Review Phase 02 evidence; do not start Phase 03 |
 | 2026-11-06 | Phase 03 experiment library and content implemented | Schema 31/31, library 23/23, e2e 6/6 (incl. axe), typecheck/lint/build green; Node 22.22.3 used instead of pinned 24.18.1 (CI authoritative); remote CI and owner sign-off pending | Review Phase 03 evidence; do not start Phase 04 |
+| 2026-11-06 | Repository audit of Phases 01–03; docs synced to Phase 03 reality (README, ARCHITECTURE, overview, testing); added `SCIENTIFIC_VALIDATION_LOG.md` and `RELEASE_CHECKLIST.md`; aligned react/react-dom to 19.3.1; removed dead ternary in `getCollectionStats` | Local format/lint/typecheck/unit tests/build/mobile/audit re-run green; remote CI green on `2c18930` (run 42223523746, all 14 steps incl. Playwright); e2e UNVERIFIED locally (browser download blocked) | Owner review of gate evidence; arrange qualified scientific review |
 
 ## Agent hand-off rules
 - Read this file, `TASKS.md`, `ARCHITECTURE.md`, and relevant decision records before changing code.

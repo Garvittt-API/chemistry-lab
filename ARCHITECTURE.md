@@ -26,7 +26,9 @@ The detailed system architecture is maintained in `docs/architecture/overview.md
 ## Phase 02 implementation
 
 - Web routes remain in `apps/web/app`; shared web presentation components live in
-  `apps/web/components`; demonstration content lives in `apps/web/lib`.
+  `apps/web/components`; `apps/web/lib/content.ts` adapts the Phase 03 experiment library into
+  view models (Phase 02 originally shipped labelled demonstration content here; it was replaced
+  by real catalog content in Phase 03).
 - CSS semantic tokens and light/dark themes are centralized in `apps/web/app/global.css`.
 - `lucide-react` provides consistent interface icons; `@axe-core/playwright` provides automated
   accessibility scans.

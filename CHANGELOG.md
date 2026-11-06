@@ -3,6 +3,15 @@
 All notable changes to this project are recorded here. Follow Keep a Changelog conventions where practical.
 
 ## [Unreleased]
+### Fixed
+- Synced README, ARCHITECTURE, architecture overview and testing docs to Phase 03 reality (they still described Phase 02 demonstration content after the library integration).
+- Aligned `react` with `react-dom` at 19.3.1 in web and mobile (Dependabot's react bump PR had been closed unmerged, leaving a version skew).
+- Removed a no-op ternary in `getCollectionStats`.
+
+### Added
+- `SCIENTIFIC_VALIDATION_LOG.md`: traceable model/content validation record (honestly empty model table; 0/11 records scientifically reviewed).
+- `RELEASE_CHECKLIST.md`: release-readiness requirements with owner-approval items marked.
+
 ### Phase 03 — Experiment library, scientific content and curriculum mapping
 - Added the versioned experiment record contract `2.0.0` in `experiment-schema` (taxonomy, educational levels, CBSE curriculum mapping, safety, procedure, observations/calculations unions, references, review/status axes, simulation model contracts) with 31 tests and a legacy-metadata migration.
 - Added the framework-free `experiment-library` package: versioned local JSON content with mandatory schema + referential validation at catalog build, plus pure filter/search/sort/paginate queries and a publication-status visibility gate (23 tests).
