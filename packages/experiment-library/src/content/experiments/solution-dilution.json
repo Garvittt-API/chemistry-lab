@@ -6,10 +6,10 @@
     "shortDescription": "Prepare a series of dilutions from one stock solution, observe how colour intensity tracks concentration, and master the c1 x V1 = c2 x V2 relationship.",
     "fullDescription": "Dilution is the most-used calculation in a chemistry laboratory and the easiest to get subtly wrong. This activity uses a visibly coloured dilute copper(II) sulfate stock solution: learners measure, dilute, mix and observe the stepwise loss of colour intensity while calculating each new concentration. The reasoning transfers directly to every later quantitative activity, from titration to kinetics.",
     "schemaVersion": "2.0.0",
-    "contentVersion": "1.0.0",
+    "contentVersion": "1.0.1",
     "publicationStatus": "published",
     "createdOn": "2026-11-05",
-    "updatedOn": "2026-11-05"
+    "updatedOn": "2026-11-07"
   },
   "classification": {
     "disciplineId": "general-chemistry",
@@ -94,10 +94,26 @@
           "displayForm": "c₁ × V₁ = c₂ × V₂",
           "description": "Conservation of solute on dilution: the amount of solute before dilution equals the amount after.",
           "variables": [
-            { "symbol": "c1", "meaning": "concentration of the stock solution", "unit": "mol/L" },
-            { "symbol": "V1", "meaning": "volume of stock solution taken", "unit": "mL" },
-            { "symbol": "c2", "meaning": "concentration after dilution", "unit": "mol/L" },
-            { "symbol": "V2", "meaning": "total volume after dilution", "unit": "mL" }
+            {
+              "symbol": "c1",
+              "meaning": "concentration of the stock solution",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "V1",
+              "meaning": "volume of stock solution taken",
+              "unit": "mL"
+            },
+            {
+              "symbol": "c2",
+              "meaning": "concentration after dilution",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "V2",
+              "meaning": "total volume after dilution",
+              "unit": "mL"
+            }
           ],
           "applicableConditions": [
             "Dilute solutions near room temperature.",
@@ -177,7 +193,9 @@
         "formulaOrDescription": "CuSO4(aq), approximately 0.10 mol/L, prepared by the supervising educator",
         "category": "solution",
         "amount": "About 30 mL per learner",
-        "identifiers": { "pubchem-cid": "24462" },
+        "identifiers": {
+          "pubchem-cid": "24462"
+        },
         "hazardKinds": ["irritant", "acutely_toxic", "environmental_hazard"],
         "notes": "Blue solution used as a visible tracer. Harmful if swallowed; very toxic to aquatic life; collect waste for metal-salt disposal."
       },
@@ -400,10 +418,26 @@
         "purpose": "Calculate the new concentration from the volume of stock taken and the total final volume.",
         "equationId": "eq-dilution",
         "variables": [
-          { "symbol": "c1", "meaning": "stock concentration", "unit": "mol/L" },
-          { "symbol": "V1", "meaning": "volume of stock taken", "unit": "mL" },
-          { "symbol": "V2", "meaning": "total final volume", "unit": "mL" },
-          { "symbol": "c2", "meaning": "concentration after dilution", "unit": "mol/L" }
+          {
+            "symbol": "c1",
+            "meaning": "stock concentration",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "V1",
+            "meaning": "volume of stock taken",
+            "unit": "mL"
+          },
+          {
+            "symbol": "V2",
+            "meaning": "total final volume",
+            "unit": "mL"
+          },
+          {
+            "symbol": "c2",
+            "meaning": "concentration after dilution",
+            "unit": "mol/L"
+          }
         ],
         "assumptions": [
           "Volumes are additive at the working precision.",
@@ -457,7 +491,9 @@
         "publisher": "NCERT",
         "year": 2026,
         "url": "https://ncert.nic.in/textbook.php?lech1=0",
-        "identifiers": { "ncert-book-index": "lech1" },
+        "identifiers": {
+          "ncert-book-index": "lech1"
+        },
         "accessedOn": "2026-11-05",
         "verificationStatus": "cross_checked_2026_11_05",
         "supportsClaims": [
@@ -477,7 +513,9 @@
         "publisher": "NCERT",
         "year": 2026,
         "url": "https://ncert.nic.in/textbook/pdf/kech101.pdf",
-        "identifiers": { "ncert-chapter-pdf": "kech101.pdf" },
+        "identifiers": {
+          "ncert-chapter-pdf": "kech101.pdf"
+        },
         "accessedOn": "2026-11-05",
         "verificationStatus": "cross_checked_2026_11_05",
         "supportsClaims": ["eq-dilution"],
@@ -491,7 +529,9 @@
         "title": "PubChem Compound Summary: Copper sulfate (CID 24462)",
         "publisher": "U.S. National Library of Medicine",
         "url": "https://pubchem.ncbi.nlm.nih.gov/compound/24462",
-        "identifiers": { "pubchem-cid": "24462" },
+        "identifiers": {
+          "pubchem-cid": "24462"
+        },
         "accessedOn": "2026-11-05",
         "verificationStatus": "cross_checked_2026_11_05",
         "supportsClaims": [],
@@ -506,7 +546,9 @@
         "publisher": "CBSE",
         "year": 2025,
         "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
-        "identifiers": { "circular": "Acad-14/2025" },
+        "identifiers": {
+          "circular": "Acad-14/2025"
+        },
         "accessedOn": "2026-11-05",
         "verificationStatus": "cross_checked_2026_11_05",
         "supportsClaims": [],
@@ -515,18 +557,22 @@
     ]
   },
   "simulation": {
-    "status": "planned",
+    "status": "implemented",
     "model": {
-      "id": "dilution-series-calculator",
+      "id": "dilution-c1v1c2v2",
       "contractVersion": "1.0.0",
-      "summary": "Given a stock concentration and a series of dilution steps (V1, V2 per step), computes each resulting concentration and the overall dilution factor with consistent units.",
+      "summary": "Single-step dilution calculator implementing c₁V₁ = c₂V₂ exactly via @virtual-chemistry-lab/simulation-core, with the laboratory-core adapter providing equipment validation, unit conversion and measurement tagging.",
       "inputs": [
         {
           "id": "in-stock-concentration",
           "label": "Stock concentration",
           "unit": "mol/L",
           "defaultValue": 0.1,
-          "validRange": { "min": 0.0001, "max": 5, "unit": "mol/L" },
+          "validRange": {
+            "min": 0.0001,
+            "max": 5,
+            "unit": "mol/L"
+          },
           "description": "Concentration of the starting stock solution."
         },
         {
@@ -534,7 +580,11 @@
           "label": "Volume taken per step",
           "unit": "mL",
           "defaultValue": 10,
-          "validRange": { "min": 0.1, "max": 1000, "unit": "mL" },
+          "validRange": {
+            "min": 0.1,
+            "max": 1000,
+            "unit": "mL"
+          },
           "description": "Volume transferred from the previous vessel at each step."
         },
         {
@@ -542,7 +592,11 @@
           "label": "Total volume per step",
           "unit": "mL",
           "defaultValue": 100,
-          "validRange": { "min": 1, "max": 5000, "unit": "mL" },
+          "validRange": {
+            "min": 1,
+            "max": 5000,
+            "unit": "mL"
+          },
           "description": "Total volume after dilution at each step."
         }
       ],
@@ -569,10 +623,14 @@
       ],
       "limitations": [
         "Does not model colour or spectrophotometric absorbance.",
-        "Real volumes carry tolerance; the model reports exact arithmetic on the stated inputs only."
+        "Liquid level and colour are illustrative visual cues, not a spectrophotometric prediction.",
+        "Model assumes no solute is lost during transfer (ideal laboratory technique).",
+        "Real volumes carry tolerance; the model reports exact arithmetic on the stated inputs only.",
+        "Volumes assumed effectively additive (valid for dilute aqueous solutions at school-level precision)."
       ],
       "equations": ["eq-dilution"],
-      "sourceRefIds": ["ref-ncert-class12-part1"]
+      "sourceRefIds": ["ref-ncert-class12-part1"],
+      "implementationVersion": "0.1.0"
     }
   },
   "review": {
@@ -591,6 +649,12 @@
         "date": "2026-11-05",
         "summary": "Initial AI-assisted draft created in the Phase 03 content pass. Dilution relation and worked examples cross-checked against NCERT material. Pending independent scientific review.",
         "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      },
+      {
+        "contentVersion": "1.0.1",
+        "date": "2026-11-07",
+        "summary": "Phase 05: wired interactive 2D laboratory workspace and simulation adapter (c1V1=c2V2 for dilution; monoprotic pH at 25 °C); simulation.status set to 'implemented'.",
+        "changedBy": "Phase 05 interactive-lab integration (AI-assisted)"
       }
     ],
     "validationNotes": [

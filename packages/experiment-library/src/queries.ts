@@ -95,7 +95,9 @@ export function toExperimentSummary(record: ExperimentRecord): ExperimentSummary
     publicationStatus: record.identity.publicationStatus,
     scientificReviewStatus: record.review.scientificReviewStatus,
     integrityLabel: record.review.integrityLabel,
-    curriculumIds: record.classification.curriculumMappings.map((mapping) => mapping.curriculumId),
+    curriculumIds: record.classification.curriculumMappings.map(
+      (mapping: { curriculumId: string }) => mapping.curriculumId,
+    ),
     updatedOn: record.identity.updatedOn,
     contentVersion: record.identity.contentVersion,
   };
@@ -170,7 +172,7 @@ export function filterExperiments(
         return false;
       }
       const curriculumIds = record.classification.curriculumMappings.map(
-        (mapping) => mapping.curriculumId,
+        (mapping: { curriculumId: string }) => mapping.curriculumId,
       );
       if (!matchesAny(filters.curriculumIds, curriculumIds)) return false;
       return true;

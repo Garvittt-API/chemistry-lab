@@ -6,10 +6,10 @@
     "shortDescription": "Compare pH paper, universal indicator and single indicators across everyday dilute solutions, and connect colour changes to the pH scale and the hydronium ion concentration.",
     "fullDescription": "The pH scale turns the wide range of hydronium-ion concentrations in dilute solutions into manageable numbers, and indicators translate those numbers into colour. In this activity learners test a small set of safe, dilute acidic and basic solutions with indicator paper, universal indicator and two single indicators, record the colours, and reconcile them with calculated pH values where the composition is known. The emphasis is on what indicators can and cannot tell you.",
     "schemaVersion": "2.0.0",
-    "contentVersion": "1.0.0",
+    "contentVersion": "1.0.1",
     "publicationStatus": "published",
     "createdOn": "2026-11-05",
-    "updatedOn": "2026-11-05"
+    "updatedOn": "2026-11-07"
   },
   "classification": {
     "disciplineId": "general-chemistry",
@@ -83,8 +83,16 @@
           "displayForm": "pH = −log₁₀[H₃O⁺]",
           "description": "Definition of pH from the hydronium ion concentration.",
           "variables": [
-            { "symbol": "pH", "meaning": "pH of the solution", "unit": "1" },
-            { "symbol": "[H3O+]", "meaning": "hydronium ion concentration", "unit": "mol/L" }
+            {
+              "symbol": "pH",
+              "meaning": "pH of the solution",
+              "unit": "1"
+            },
+            {
+              "symbol": "[H3O+]",
+              "meaning": "hydronium ion concentration",
+              "unit": "mol/L"
+            }
           ],
           "applicableConditions": ["Dilute aqueous solutions near 25 C."],
           "assumptions": [
@@ -99,9 +107,21 @@
           "displayForm": "[H₃O⁺][OH⁻] = K_w = 1.0 × 10⁻¹⁴ (25 °C)",
           "description": "Ionic product of water; fixes the relationship between acidity and basicity in aqueous solution.",
           "variables": [
-            { "symbol": "[H3O+]", "meaning": "hydronium ion concentration", "unit": "mol/L" },
-            { "symbol": "[OH-]", "meaning": "hydroxide ion concentration", "unit": "mol/L" },
-            { "symbol": "Kw", "meaning": "ionic product of water at 25 C", "unit": "mol^2/L^2" }
+            {
+              "symbol": "[H3O+]",
+              "meaning": "hydronium ion concentration",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "[OH-]",
+              "meaning": "hydroxide ion concentration",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "Kw",
+              "meaning": "ionic product of water at 25 C",
+              "unit": "mol^2/L^2"
+            }
           ],
           "applicableConditions": ["Aqueous solutions at 25 C."],
           "assumptions": [
@@ -116,9 +136,21 @@
           "displayForm": "[H₃O⁺] ≈ √(K_a × c)",
           "description": "Approximate hydronium concentration of a weak acid solution at concentration c.",
           "variables": [
-            { "symbol": "[H3O+]", "meaning": "hydronium ion concentration", "unit": "mol/L" },
-            { "symbol": "Ka", "meaning": "acid dissociation constant", "unit": "mol/L" },
-            { "symbol": "c", "meaning": "analytical acid concentration", "unit": "mol/L" }
+            {
+              "symbol": "[H3O+]",
+              "meaning": "hydronium ion concentration",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "Ka",
+              "meaning": "acid dissociation constant",
+              "unit": "mol/L"
+            },
+            {
+              "symbol": "c",
+              "meaning": "analytical acid concentration",
+              "unit": "mol/L"
+            }
           ],
           "applicableConditions": [
             "Weak acid with small dissociation (Ka << c).",
@@ -193,7 +225,9 @@
         "formulaOrDescription": "HCl(aq), 0.1 mol/L",
         "category": "solution",
         "amount": "About 10 mL",
-        "identifiers": { "pubchem-cid": "313" },
+        "identifiers": {
+          "pubchem-cid": "313"
+        },
         "hazardKinds": ["corrosive", "irritant"],
         "notes": "Strong acid; serious eye irritant at this concentration."
       },
@@ -213,7 +247,9 @@
         "formulaOrDescription": "NaOH(aq), 0.1 mol/L",
         "category": "solution",
         "amount": "About 10 mL",
-        "identifiers": { "pubchem-cid": "14798" },
+        "identifiers": {
+          "pubchem-cid": "14798"
+        },
         "hazardKinds": ["corrosive", "irritant"],
         "notes": "Strong base; serious eye hazard."
       },
@@ -419,7 +455,11 @@
           "kind": "ph",
           "unit": "1",
           "method": "Compare the developed paper colour with the chart immediately after dipping; record the value or range shown on the chart.",
-          "expectedRange": { "min": 1, "max": 14, "unit": "1" },
+          "expectedRange": {
+            "min": 1,
+            "max": 14,
+            "unit": "1"
+          },
           "expectedQualitative": [
             "HCl lower pH than acetic acid at equal concentration; NaOH higher pH than ammonia."
           ],
@@ -470,13 +510,21 @@
         "purpose": "Compute the pH of a fully dissociated acid from its concentration.",
         "equationId": "eq-ph",
         "variables": [
-          { "symbol": "c", "meaning": "acid concentration", "unit": "mol/L" },
+          {
+            "symbol": "c",
+            "meaning": "acid concentration",
+            "unit": "mol/L"
+          },
           {
             "symbol": "[H3O+]",
             "meaning": "hydronium concentration (equal to c for a strong monoprotic acid)",
             "unit": "mol/L"
           },
-          { "symbol": "pH", "meaning": "pH", "unit": "1" }
+          {
+            "symbol": "pH",
+            "meaning": "pH",
+            "unit": "1"
+          }
         ],
         "assumptions": ["Complete dissociation.", "Activity effects neglected."],
         "unitsAndDimensions": "pH is dimensionless; the logarithm argument carries units of mol/L relative to the standard state (1 mol/L).",
@@ -501,9 +549,21 @@
         "purpose": "Estimate the pH of a weak acid from Ka and concentration.",
         "equationId": "eq-weak-acid-ph",
         "variables": [
-          { "symbol": "Ka", "meaning": "acid dissociation constant", "unit": "mol/L" },
-          { "symbol": "c", "meaning": "analytical acid concentration", "unit": "mol/L" },
-          { "symbol": "[H3O+]", "meaning": "hydronium concentration", "unit": "mol/L" }
+          {
+            "symbol": "Ka",
+            "meaning": "acid dissociation constant",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "c",
+            "meaning": "analytical acid concentration",
+            "unit": "mol/L"
+          },
+          {
+            "symbol": "[H3O+]",
+            "meaning": "hydronium concentration",
+            "unit": "mol/L"
+          }
         ],
         "assumptions": [
           "c >> [H3O+] so the approximation holds.",
@@ -542,7 +602,9 @@
         "publisher": "NCERT",
         "year": 2026,
         "url": "https://ncert.nic.in/textbook.php?kech2=0",
-        "identifiers": { "ncert-book-index": "kech2" },
+        "identifiers": {
+          "ncert-book-index": "kech2"
+        },
         "accessedOn": "2026-11-05",
         "verificationStatus": "cross_checked_2026_11_05",
         "supportsClaims": [
@@ -567,7 +629,10 @@
         "title": "PubChem Compound Summaries: Sodium hydroxide (CID 14798), Hydrochloric acid (CID 313)",
         "publisher": "U.S. National Library of Medicine",
         "url": "https://pubchem.ncbi.nlm.nih.gov/compound/14798",
-        "identifiers": { "pubchem-cid-naoh": "14798", "pubchem-cid-hcl": "313" },
+        "identifiers": {
+          "pubchem-cid-naoh": "14798",
+          "pubchem-cid-hcl": "313"
+        },
         "accessedOn": "2026-11-05",
         "verificationStatus": "cross_checked_2026_11_05",
         "supportsClaims": [],
@@ -582,7 +647,9 @@
         "publisher": "CBSE",
         "year": 2025,
         "url": "https://cbseacademic.nic.in/web_material/Circulars/2025/14_Circular_2025.pdf",
-        "identifiers": { "circular": "Acad-14/2025" },
+        "identifiers": {
+          "circular": "Acad-14/2025"
+        },
         "accessedOn": "2026-11-05",
         "verificationStatus": "cross_checked_2026_11_05",
         "supportsClaims": [],
@@ -591,18 +658,22 @@
     ]
   },
   "simulation": {
-    "status": "planned",
+    "status": "implemented",
     "model": {
-      "id": "ph-indicator-explorer",
+      "id": "ph-monoprotic-25c",
       "contractVersion": "1.0.0",
-      "summary": "Computes theoretical pH for strong and weak acid/base inputs and overlays indicator transition ranges, so learners can see why colours change where they do. Outputs are theoretical model values.",
+      "summary": "25 °C monoprotic acid/base pH model (strong/weak, exact quadratic including water autoionization) wired to the interactive laboratory; includes [H⁺], [OH⁻], pOH and degree-of-dissociation diagnostic.",
       "inputs": [
         {
           "id": "in-concentration",
           "label": "Analyte concentration",
           "unit": "mol/L",
           "defaultValue": 0.1,
-          "validRange": { "min": 0.0001, "max": 1, "unit": "mol/L" },
+          "validRange": {
+            "min": 0.0001,
+            "max": 1,
+            "unit": "mol/L"
+          },
           "description": "Concentration of the acid or base solution."
         },
         {
@@ -615,7 +686,11 @@
           "id": "in-ka",
           "label": "Dissociation constant (Ka or Kb)",
           "unit": "mol/L",
-          "validRange": { "min": 1e-10, "max": 1, "unit": "mol/L" },
+          "validRange": {
+            "min": 1e-10,
+            "max": 1,
+            "unit": "mol/L"
+          },
           "description": "Required for weak electrolytes (for example Ka = 1.8e-5 for acetic acid)."
         }
       ],
@@ -641,12 +716,18 @@
         "Indicator transition ranges treated as fixed literature values."
       ],
       "limitations": [
+        "\"Strong\" means fully dissociated; strong-electrolyte deviations at high concentration are not modelled.",
         "Does not model ionic strength, mixed solvents or temperature dependence of Kw/Ka.",
+        "K_w = 1.0 × 10⁻¹⁴ (conventional 25 °C value); K_w is temperature-dependent.",
+        "Model outputs must never be labelled as measurements.",
+        "Monoprotic single-equilibrium system at 25 °C; polyprotic acids/bases, buffers, and titration curves are out of scope.",
         "Predicted colours are illustrative; real colour perception varies with concentration and observers.",
-        "Model outputs must never be labelled as measurements."
+        "Universal-indicator colour swatch is illustrative and does not replace a real indicator chart.",
+        "Uses concentrations (not activities) — most reliable at ionic strengths below ~10⁻² mol/L."
       ],
       "equations": ["eq-ph", "eq-kw", "eq-weak-acid-ph"],
-      "sourceRefIds": ["ref-ncert-class11-part2"]
+      "sourceRefIds": ["ref-ncert-class11-part2"],
+      "implementationVersion": "0.1.0"
     }
   },
   "review": {
@@ -665,6 +746,12 @@
         "date": "2026-11-05",
         "summary": "Initial AI-assisted draft created in the Phase 03 content pass. pH calculations and indicator behaviour cross-checked against NCERT equilibrium material. Pending independent scientific review.",
         "changedBy": "Virtual Chemistry Lab content team (AI-assisted draft)"
+      },
+      {
+        "contentVersion": "1.0.1",
+        "date": "2026-11-07",
+        "summary": "Phase 05: wired interactive 2D laboratory workspace and simulation adapter (c1V1=c2V2 for dilution; monoprotic pH at 25 °C); simulation.status set to 'implemented'.",
+        "changedBy": "Phase 05 interactive-lab integration (AI-assisted)"
       }
     ],
     "validationNotes": [
