@@ -1,11 +1,16 @@
 "use client";
 
-import { MonitorCog, Moon, Sun } from "lucide-react";
+import { Database, Moon, Sun, Trash2 } from "lucide-react";
+import { useState } from "react";
 
+import { useLearningStore } from "./learning/learning-store-provider";
 import { useTheme } from "./theme-provider";
 
 export function SettingsView() {
   const { theme, setTheme } = useTheme();
+  const { hydrated, snapshot, clearAllData } = useLearningStore();
+  const [confirmClear, setConfirmClear] = useState(false);
+  const [clearedNotice, setClearedNotice] = useState(false);
 
   return (
     <section className="container section section-border" aria-labelledby="display-settings-title">
@@ -41,13 +46,62 @@ export function SettingsView() {
             </label>
           </fieldset>
         </div>
+
         <aside className="about-note">
-          <MonitorCog size={25} aria-hidden="true" />
-          <h2>More settings later</h2>
+          <Database size={25} aria-hidden="true" />
+          <h2>Local learning &amp; notebook storage</h2>
           <p>
-            Language, content preferences and learner records require separate product, privacy and
-            persistence decisions.
+            Practical notebook sessions, quiz attempts and pathway progress are stored locally in
+            this browser (no user account or cloud sync).
           </p>
+          {hydrated ? (
+            <p className="card-meta">
+              Stored locally: {snapshot.sessions.length} sessions ·{" "}
+              {snapshot.completedLessonIds.length} completed lessons ·{" "}
+              {snapshot.assessmentAttempts.length} quiz attempts.
+            </p>
+          ) : null}
+          {clearedNotice ? (
+            <p className="card-meta" role="status">
+              Local learning and notebook records cleared.
+            </p>
+          ) : null}
+          {confirmClear ? (
+            <div className="confirm-box" role="alert">
+              <p>
+                <strong>Clear all local notebook sessions, assessments and progress?</strong> Export
+                any important sessions as JSON first.
+              </p>
+              <div className="notebook-actions-row">
+                <button
+                  type="button"
+                  className="button button-danger"
+                  onClick={() => {
+                    clearAllData();
+                    setConfirmClear(false);
+                    setClearedNotice(true);
+                  }}
+                >
+                  Confirm clear all
+                </button>
+                <button
+                  type="button"
+                  className="button button-secondary"
+                  onClick={() => setConfirmClear(false)}
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          ) : (
+            <button
+              type="button"
+              className="button button-danger"
+              onClick={() => setConfirmClear(true)}
+            >
+              <Trash2 size={15} aria-hidden="true" /> Clear local learning data
+            </button>
+          )}
         </aside>
       </div>
     </section>

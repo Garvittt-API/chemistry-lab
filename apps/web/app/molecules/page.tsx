@@ -21,7 +21,7 @@ export default function MoleculesPage() {
           model has equivalent 2D and textual information.
         </p>
       </header>
-      <main className="container molecule-main">
+      <div className="container molecule-main">
         <div className="science-integrity-banner">
           <strong>Scientific status</strong>
           <p>
@@ -31,7 +31,7 @@ export default function MoleculesPage() {
           </p>
         </div>
         <MoleculeExplorer />
-      </main>
+      </div>
     </div>
   );
 }

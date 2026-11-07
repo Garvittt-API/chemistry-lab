@@ -96,6 +96,19 @@ Statuses: `TODO`, `IN_PROGRESS`, `BLOCKED`, `REVIEW`, `DONE`. A task is `DONE` o
 - Add learning activities, practical notebook, calculations and export.
 - Clearly label generated/simulated observations.
 
+| ID | Task | Priority | Depends on | Status |
+|---|---|---:|---|---|
+| P07-001 | Pre-flight audit of Phase 06 baseline and remote CI E2E annotations | Critical | P06-008 | DONE |
+| P07-002 | Implement `@virtual-chemistry-lab/learning-core` schemas, security sanitizers, and local storage repository | Critical | P07-001 | DONE |
+| P07-003 | Author 4 learning pathways, 10 theory lessons, 30 glossary entries, and 9 deterministic quizzes | High | P07-002 | DONE; scientific REVIEW |
+| P07-004 | Implement 8 `simulation-core` calculation workbench adapters and unit-checked assessment grader | Critical | P07-002 | DONE |
+| P07-005 | Implement Practical Notebook session CRUD, Phase 05 migration, and 2D lab `LabNotebookBridge` | Critical | P07-002 | DONE |
+| P07-006 | Implement 20-section Practical Report builder and zero-dependency PDF 1.4 / HTML / CSV / JSON exporters | Critical | P07-005 | DONE |
+| P07-007 | Build web UI routes (`/learn/*`, `/notebook/*`, `/my-lab`, `/settings`) and fix 5 Phase 05/06 E2E defects | Critical | P07-003..P07-006 | DONE |
+| P07-008 | Unit tests (21 new, 392 total), Playwright E2E spec (`learning-notebook.spec.ts`), static/build/audit gates | Critical | P07-007 | DONE (local unit/build); browser CI UNVERIFIED locally |
+| P07-009 | Architecture/security/science/project documentation (ADR-012, `phase-07-acceptance.md`) and owner gate | Critical | P07-008 | REVIEW |
+| P07-010 | Qualified scientific review of Phase 07 lessons, glossary, and assessment content | Critical | P07-009 | TODO |
+
 ## Phase 08 — Accounts and progress
 - Add identity and progress only after privacy and backend requirements are approved.
 

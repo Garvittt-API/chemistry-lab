@@ -36,6 +36,11 @@ export function VseprLab() {
           </button>
         ))}
       </div>
+      <div className="section-heading">
+        <h2>
+          {molecule.name} <span>{molecule.formula}</span>
+        </h2>
+      </div>
       <MoleculeViewer molecule={molecule} />
     </div>
   );

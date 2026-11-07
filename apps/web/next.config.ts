@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   transpilePackages: [
     "@virtual-chemistry-lab/experiment-schema",
     "@virtual-chemistry-lab/experiment-library",
+    "@virtual-chemistry-lab/simulation-core",
+    "@virtual-chemistry-lab/laboratory-core",
+    "@virtual-chemistry-lab/molecular-visualization",
+    "@virtual-chemistry-lab/learning-core",
   ],
 };
 
