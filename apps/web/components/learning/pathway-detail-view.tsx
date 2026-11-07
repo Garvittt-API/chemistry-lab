@@ -49,7 +49,14 @@ export function PathwayDetailView({ pathway }: Readonly<{ pathway: LearningPathw
             ? `${progress.completedRequiredCount} of ${progress.totalRequiredCount} required items completed in this browser.`
             : "Loading local progress..."}
         </p>
-        <div className="progress-bar-track" aria-label={`Pathway progress ${pct}%`}>
+        <div
+          className="progress-bar-track"
+          role="progressbar"
+          aria-label={`${pathway.title} completion`}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={progress ? pct : undefined}
+        >
           <div className="progress-bar-fill" style={{ width: `${pct}%` }} />
         </div>
       </div>
