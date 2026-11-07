@@ -14,11 +14,11 @@
 - Long-term scope: broad chemistry curriculum, 2D and 3D simulations
 
 ## Current status
-- Current phase: Phase 03 — Experiment Library, Scientific Content & Curriculum Mapping
-- Current milestone: 03.1 — Experiment schema 2.0.0, library package, initial collection
-- Overall status: Phase 03 implementation complete and merged (`PR #6`); project-owner gate review and qualified scientific review pending
-- Last verified commit: `2c18930` on `main`; remote CI green (run 42223523746, all 14 steps, 2026-11-06)
-- Last verification date: 2026-11-06
+- Current phase: Phase 04 — Scientific Simulation Engine
+- Current milestone: 04.1 — simulation-core package with reference-case validation
+- Overall status: Phase 04 implementation complete on `arena/d66f498a-chemistry-lab` (branch + PR #8; NOT merged); project-owner gate review and qualified scientific review pending
+- Last verified commit: Phase 04 branch (current head, see PR #8); `2c18930` on `main`; remote CI green on main (run 42223523746, all 14 steps, 2026-11-06); remote CI on the Phase 04 PR pending
+- Last verification date: 2026-11-07
 
 ## Completed
 - Initial product vision and roadmap documented.
@@ -33,9 +33,12 @@
 - Phase 03: initial collection of 11 experiment records (10 published + 1 deliberate draft) with traceable references (NCERT, PubChem, CBSE circular) and honest review status — all `pending_scientific_review`.
 - Phase 03: web integration — real explore/search/filter surfaces, full experiment detail rendering, taxonomy-based subjects, unpublished content restricted (404), 6 passing Playwright e2e tests incl. axe scans.
 - Phase 03: docs set (`docs/science/*`, `docs/experiments/*`, `docs/contributing/experiment-submission.md`, ADR-009) and governance updates.
+- Phase 04: `@virtual-chemistry-lab/simulation-core` implemented — units (affine temperature), constants (SI/CODATA, precision-classed), elements (CIAAW 2021, Hf 178.486 regression-tested), molar-mass (hydrates, nested brackets), quantity arithmetic (dilution never over 100 % clamped yield), reaction grammar with refuse-ambiguity charge rules, exact rational balancing (bigint nullspace; atom+charge conservation; lowest-terms positive integers), limiting-reagent stoichiometry, 25 °C monoprotic acid/base pH.
+- Phase 04: 52 independently sourced reference cases authored, all PASS under `pnpm test` (simulation-core 258/258, schema 31/31, library 23/23), plus model registry with honest `reference-verified` status (nothing human-reviewed), 8 model reports, ADR-010, `docs/science/reference-cases.md` register.
+- Phase 04: PR #8 opened for owner gate review (not merged). Local gates green — format, lint, typecheck (both tsconfigs), tests, `build:web`, `validate:mobile`, `security:audit` (2 moderate, 0 high; unchanged from Phase 03).
 
 ## In progress
-- Complete owner review of Phase 01, Phase 02 and Phase 03 ADRs and acceptance evidence.
+- Complete owner review of Phase 01, Phase 02, Phase 03 and Phase 04 ADRs and acceptance evidence.
 - Confirm branch protection on the configured private remote repository (API check returns 403 for the integration token; must be confirmed by the owner in repository settings).
 
 ## Blocked / undecided
@@ -48,7 +51,7 @@
 - Scientific review of the content collection by a qualified chemistry educator (nothing is scientifically validated yet).
 
 ## Known limitations
-- No scientific model has been independently validated yet; simulation contracts are `planned` only.
+- Phase 04 models are reference-verified (52 cases), NOT scientifically validated; 0/8 models have qualified human review; simulation contracts remain `planned` everywhere — the engine is not wired into any experiment.
 - All 10 published experiments are AI-assisted drafts (`scientificReviewStatus: draft`, `integrityLabel: pending_scientific_review`) awaiting independent review; publication reflects editorial readiness, not scientific approval.
 - No full security audit or deployment has been performed; dependency audit is configured and recorded.
 - Roadmap dates are estimates, not commitments.
@@ -57,10 +60,10 @@
 - Local sandbox cannot download Playwright browsers (CDN blocked); e2e evidence comes from remote CI.
 
 ## Next actions
-1. Review and accept the Phase 01–03 ADRs and acceptance evidence.
-2. Arrange qualified scientific review for the experiment collection (`SCIENTIFIC_VALIDATION_LOG.md` tracks status; 0/11 records reviewed).
+1. Review and accept the Phase 01–04 ADRs and acceptance evidence (Phase 04 target: `docs/science/models/*.md`, `SCIENTIFIC_VALIDATION_LOG.md`, ADR-010).
+2. Arrange qualified scientific review for the experiment collection AND the 8 simulation models (`SCIENTIFIC_VALIDATION_LOG.md` tracks both; 0/11 records and 0/8 models reviewed).
 3. Owner to confirm branch protection on `main`.
-4. Do not begin Phase 04 until the project owner accepts the Phase 03 gate.
+4. Do not begin Phase 05 (interactive experiments) until the project owner accepts the Phase 04 gate.
 
 ## Session log
 | Date | Work completed | Tests / evidence | Next step |
@@ -69,6 +72,7 @@
 | 2026-11-03 | Phase 02 web foundation implemented | Typecheck, lint, unit tests, web build, Expo compatibility, Playwright and axe scans passed; remote CI and owner sign-off pending | Review Phase 02 evidence; do not start Phase 03 |
 | 2026-11-06 | Phase 03 experiment library and content implemented | Schema 31/31, library 23/23, e2e 6/6 (incl. axe), typecheck/lint/build green; Node 22.22.3 used instead of pinned 24.18.1 (CI authoritative); remote CI and owner sign-off pending | Review Phase 03 evidence; do not start Phase 04 |
 | 2026-11-06 | Repository audit of Phases 01–03; docs synced to Phase 03 reality (README, ARCHITECTURE, overview, testing); added `SCIENTIFIC_VALIDATION_LOG.md` and `RELEASE_CHECKLIST.md`; aligned react/react-dom to 19.3.1; removed dead ternary in `getCollectionStats` | Local format/lint/typecheck/unit tests/build/mobile/audit re-run green; remote CI green on `2c18930` (run 42223523746, all 14 steps incl. Playwright); e2e UNVERIFIED locally (browser download blocked) | Owner review of gate evidence; arrange qualified scientific review |
+| 2026-11-07 | Phase 04 scientific simulation engine implemented (`@virtual-chemistry-lab/simulation-core`), 52 reference cases, 8 model reports, ADR-010, docs catalogs updated, PR opened (not merged) | Schema 31/31, library 23/23, simulation-core 258/258 (52/52 reference cases), typecheck/lint/build:web/mobile/audit green; e2e not re-run (browser download blocked locally; CI authoritative) | Owner review of Phase 04 gate; qualified scientific review of the 8 models before any experiment wires the engine |
 
 ## Agent hand-off rules
 - Read this file, `TASKS.md`, `ARCHITECTURE.md`, and relevant decision records before changing code.

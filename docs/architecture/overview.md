@@ -14,13 +14,16 @@ apps/
   mobile/              # React Native + Expo app
 packages/
   experiment-schema/   # Versioned content contracts and validators
+  experiment-library/  # Versioned local content library (Phase 03)
+  simulation-core/     # Units, constants, elements, formula/reaction math (Phase 04)
 docs/
 scripts/
 .github/
 ```
-Phase 01 creates only `experiment-schema` because it has a real API, tests and consumers. The
-simulation core, experiment library, shared UI and utility packages remain deferred until they have
-real behavior and an owner.
+Phase 01 created only `experiment-schema` because it had a real API, tests and consumers.
+`experiment-library` followed in Phase 03 and `simulation-core` in Phase 04, each with a real
+owner and consumers. The shared UI and utility packages remain deferred until they have real
+behavior and an owner.
 
 ## Dependency direction
 - Apps may depend on domain packages.
@@ -51,7 +54,15 @@ No backend is required for the first local learning prototype unless a validated
 - `apps/web` is a minimal Next.js App Router application with strict TypeScript, a production build,
   environment convention, and error/not-found boundaries.
 - `apps/mobile` is a minimal Expo application with TypeScript and validated Expo configuration.
-- `packages/experiment-schema` exports the Zod `1.0.0` metadata contract and its TypeScript types.
+- `packages/experiment-schema` exports the Zod `2.0.0` content contract and its TypeScript types.
+- `packages/experiment-library` exports the versioned local content catalog (framework-free, pure functions).
+- `packages/simulation-core` exports the scientific simulation engine: unit system with affine
+  temperature support, constants registry (SI/CODATA), elements registry (CIAAW abridged 2021),
+  formula parsing and molar mass, chemical quantities (moles/mass/concentration/dilution/yield),
+  reaction parsing and exact rational balancing with atom + charge conservation, stoichiometry
+  (limiting reagent), and 25 °C monoprotic acid/base pH — all covered by 52 independently sourced
+  reference cases (see `docs/science/reference-cases.md`). Nothing in it claims scientific review;
+  every registered model is `pending_human_review` (see `docs/science/model-catalog.md`).
 - Turbo orchestrates package build, lint, typecheck, test and validation tasks.
 
 ## Phase 02 web foundation

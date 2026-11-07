@@ -12,6 +12,12 @@ All notable changes to this project are recorded here. Follow Keep a Changelog c
 - `SCIENTIFIC_VALIDATION_LOG.md`: traceable model/content validation record (honestly empty model table; 0/11 records scientifically reviewed).
 - `RELEASE_CHECKLIST.md`: release-readiness requirements with owner-approval items marked.
 
+### Phase 04 — Scientific simulation engine (validation-gated, not user-visible yet)
+- Added `@virtual-chemistry-lab/simulation-core`: framework-free TypeScript package with (a) dimension-vector unit system with affine temperature support, (b) physical-constants registry (SI Brochure 9th ed. exact defining constants, CODATA 2018 measured values, conventional 25 °C K_w) with explicit exact/conventional/measured precision classes and source strings, (c) elements registry (CIAAW abridged standard atomic weights, 2021 revision), (d) formula parsing + molar mass (nested brackets, hydrates), (e) chemical quantities (n/m/c/γ/dilution/percent yield — yield never clamped), (f) reaction parsing and EXACT rational balancing (bigint fraction nullspace; atom + charge conservation; lowest-terms positive integers; non-unique systems rejected, never fudged), (g) limiting-reagent stoichiometry, (h) pH/pOH for strong/weak monoprotic systems at 25 °C with explicit validity limits.
+- Added 52 machine-checked reference cases (`reference-cases.ts`) with tolerance and source metadata; `pnpm test` executes all of them (258 tests total, all green 2026-11-07). Human-readable register: `docs/science/reference-cases.md`.
+- Added 8 model reports (`docs/science/models/*.md`), updated `model-catalog.md`, and added ADR-010 (exact-arithmetic engine decision).
+- Status honesty preserved: no model is `independently reviewed` or `production-approved`; `pending_human_review` throughout; simulation contracts in all experiment records remain `planned`; nothing in this change makes any simulation learner-visible.
+
 ### Phase 03 — Experiment library, scientific content and curriculum mapping
 - Added the versioned experiment record contract `2.0.0` in `experiment-schema` (taxonomy, educational levels, CBSE curriculum mapping, safety, procedure, observations/calculations unions, references, review/status axes, simulation model contracts) with 31 tests and a legacy-metadata migration.
 - Added the framework-free `experiment-library` package: versioned local JSON content with mandatory schema + referential validation at catalog build, plus pure filter/search/sort/paginate queries and a publication-status visibility gate (23 tests).
@@ -38,7 +44,7 @@ All notable changes to this project are recorded here. Follow Keep a Changelog c
 - Added repository line-ending attributes so clean Windows clones pass the formatting gate.
 
 ### Not yet implemented
-- Chemistry simulation engine (simulation contracts are `planned` only).
+- Learner-visible simulation (the Phase 04 engine is implemented and reference-verified, but not wired into any experiment; `simulationContract` remains `planned` everywhere until models are scientifically reviewed and Phase 05 lands).
 - Scientific validation of content (qualified reviewer sign-off outstanding for the whole collection).
 - Authentication, persistence, synchronization or deployment.
 - Native device builds and learner-notebook journeys.

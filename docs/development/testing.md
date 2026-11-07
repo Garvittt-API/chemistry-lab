@@ -12,6 +12,14 @@
 ## Scientific reference tests
 Every implemented model should include independently derived reference cases, tolerances, units, conditions and source citations. Include normal, boundary and invalid cases.
 
+As of Phase 04 this is concrete in `packages/simulation-core`: `reference-cases.ts` is a frozen
+registry (`REFERENCE_CASES`) of 52 cases; each case states expected value, unit, tolerance
+(absolute or relative), source string and model ID; `reference-cases.test.ts` executes every case
+against the implementation and also enforces bidirectional coverage (every registered model has ≥ 1
+case; no case targets an unknown model). The human-readable register is
+`docs/science/reference-cases.md`. Passing it is necessary evidence, never proof of scientific
+correctness — see `docs/science/validation-policy.md`.
+
 ## Quality gates
 - Formatting check.
 - Lint.
@@ -25,7 +33,7 @@ Every implemented model should include independently derived reference cases, to
 ## Reporting
 Record exact command, environment, date and outcome. Use `PASS`, `FAIL`, `UNVERIFIED`, `NOT IMPLEMENTED`. Never report a test as passing if it was not run.
 
-## Phase 01 commands
+## Phase 01–04 commands
 
 Run from the repository root after installation:
 
@@ -45,7 +53,15 @@ The `experiment-schema` package contains the versioned contract tests (31 tests:
 metadata, schema 2.0.0 record validation, cross-section referential integrity and legacy
 migration). The `experiment-library` package contains 23 catalog tests covering bundled-content
 validation, duplicate detection, referential integrity, retrieval, search, filtering, sorting,
-pagination and the publication-visibility gate.
+pagination and the publication-visibility gate. The `simulation-core` package contains 258
+tests across 12 colocated files, including the 52-case machine-checked scientific reference
+suite (`reference-cases.test.ts` vs `reference-cases.ts`;
+`docs/science/reference-cases.md`) plus an exact-rational balancing suite
+(`reaction.test.ts`) — every registered model must have reference coverage, or CI fails.
+
+`simulation-core` also ships two tsconfigs: `tsconfig.json` (emit, excludes colocated tests) for
+the `build` task, and `tsconfig.test.json` (noEmit, all sources) folded into its `typecheck`
+task so tests are type-checked without shipping in `dist/`.
 
 Browser coverage (`apps/web/e2e/foundation.spec.ts`, 6 tests, run in CI):
 

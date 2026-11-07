@@ -4,10 +4,10 @@ An open-source, cross-platform virtual chemistry laboratory for school and colle
 long-term product vision includes interactive 2D and 3D experiments, molecular visualization,
 structured practical records, assessments, and offline-capable learning.
 
-> **Project status:** Phase 03 complete (experiment library and scientific content), awaiting
-> project-owner gate review. This repository is not yet a validated chemistry simulator: no
-> simulation engine exists, and all published experiment content is labelled
-> `pending_scientific_review`. Do not present planned features as implemented.
+> **Project status:** Phase 04 complete (scientific simulation engine, reference-verified but
+> not scientifically reviewed), awaiting project-owner gate review. The engine is not wired into
+> any experiment: experiment `simulationContract`s remain `planned`, and all published experiment
+> content is labelled `pending_scientific_review`. Do not present planned features as implemented.
 
 ## Guiding principles
 
@@ -24,17 +24,21 @@ Phase 01 established the product requirements, architecture, repository structur
 standards, security baseline and CI. Phase 02 added the responsive web design system and
 application foundation. Phase 03 added the versioned experiment record contract (schema 2.0.0),
 the framework-free `experiment-library` package, an initial collection of 11 experiment records
-and real search/discovery/detail surfaces on the web. No phase implements experiment simulations
-or claims scientific validation.
+and real search/discovery/detail surfaces on the web. Phase 04 added the framework-free
+`simulation-core` scientific engine (units, constants, elements, molar mass, quantities,
+reaction balancing, stoichiometry, 25 °C monoprotic pH) with 52 machine-checked reference cases.
+It is implemented and reference-verified but not scientifically reviewed, and no experiment
+consumes it yet — so no phase delivers a learner-visible simulation or claims scientific
+validation.
 
 ## Current foundation
 
 This repository contains the TypeScript monorepo, responsive Next.js web application, minimal Expo
-mobile scaffold, the versioned experiment contracts in `packages/experiment-schema`, and the
-validated content catalog in `packages/experiment-library`. All 10 published experiment records
-are AI-assisted drafts awaiting independent scientific review; the UI states this on every
-surface. No chemistry simulation, authentication, database, AI tutor, or production deployment is
-included.
+mobile scaffold, the versioned experiment contracts in `packages/experiment-schema`, the
+validated content catalog in `packages/experiment-library`, and the simulation engine in
+`packages/simulation-core`. All 10 published experiment records are AI-assisted drafts awaiting
+independent scientific review; the UI states this on every surface. No experiment runs a
+simulation yet; no authentication, database, AI tutor, or production deployment is included.
 
 ## Getting started
 
@@ -54,6 +58,11 @@ for verification commands.
 - `apps/`: web and mobile application entry points.
 - `packages/experiment-schema/`: versioned, Zod-validated experiment record contracts.
 - `packages/experiment-library/`: validated experiment content catalog and query API.
+- `packages/simulation-core/`: framework-free scientific engine (units, constants, elements,
+  molar mass, quantities, reaction parsing/exact balancing, stoichiometry, acid/base pH) and its
+  reference-case suite.
+- `docs/science/`: scientific integrity, validation, units, model reports and the reference-case
+  register.
 - `docs/product/`: vision, requirements, roadmap and scope.
 - `docs/design/`: design principles, design system and accessibility.
 - `docs/architecture/`: system design, data flow and decisions.
