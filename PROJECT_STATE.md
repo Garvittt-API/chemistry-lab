@@ -16,8 +16,8 @@
 ## Current status
 - Current phase: Phase 04 — Scientific Simulation Engine
 - Current milestone: 04.1 — simulation-core package with reference-case validation
-- Overall status: Phase 04 implementation complete on `arena/d66f498a-chemistry-lab` (branch + PR; NOT merged); project-owner gate review and qualified scientific review pending
-- Last verified commit: Phase 04 branch head (see PR); `2c18930` on `main`; remote CI green on main (run 42223523746, all 14 steps, 2026-11-06); remote CI on the Phase 04 PR pending
+- Overall status: Phase 04 implementation complete on `arena/d66f498a-chemistry-lab` (branch + PR #8; NOT merged); project-owner gate review and qualified scientific review pending
+- Last verified commit: Phase 04 branch head `41bb8b7` (PR #8, open, not merged); `2c18930` on `main`; remote CI green on main (run 42223523746, all 14 steps, 2026-11-06); remote CI on the Phase 04 PR pending
 - Last verification date: 2026-11-07
 
 ## Completed
@@ -35,7 +35,7 @@
 - Phase 03: docs set (`docs/science/*`, `docs/experiments/*`, `docs/contributing/experiment-submission.md`, ADR-009) and governance updates.
 - Phase 04: `@virtual-chemistry-lab/simulation-core` implemented — units (affine temperature), constants (SI/CODATA, precision-classed), elements (CIAAW 2021, Hf 178.486 regression-tested), molar-mass (hydrates, nested brackets), quantity arithmetic (dilution never over 100 % clamped yield), reaction grammar with refuse-ambiguity charge rules, exact rational balancing (bigint nullspace; atom+charge conservation; lowest-terms positive integers), limiting-reagent stoichiometry, 25 °C monoprotic acid/base pH.
 - Phase 04: 52 independently sourced reference cases authored, all PASS under `pnpm test` (simulation-core 258/258, schema 31/31, library 23/23), plus model registry with honest `reference-verified` status (nothing human-reviewed), 8 model reports, ADR-010, `docs/science/reference-cases.md` register.
-- Phase 04: quality gates green locally — format, lint, typecheck (both tsconfigs), tests, `build:web`, `validate:mobile`, `security:audit` (2 moderate, 0 high; unchanged from Phase 03).
+- Phase 04: PR #8 opened for owner gate review (not merged). Local gates green — format, lint, typecheck (both tsconfigs), tests, `build:web`, `validate:mobile`, `security:audit` (2 moderate, 0 high; unchanged from Phase 03).
 
 ## In progress
 - Complete owner review of Phase 01, Phase 02, Phase 03 and Phase 04 ADRs and acceptance evidence.
