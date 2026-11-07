@@ -43,7 +43,10 @@ test("solution dilution lab: full journey and provenance", async ({ page }) => {
   expect(await badges.count()).toBeGreaterThanOrEqual(1);
 
   // Model provenance is shown
-  await expect(page.getByText(/dilution-c1v1c2v2/)).toBeVisible();
+  const provenance = page.locator(".lab-provenance code");
+  await expect(provenance).toHaveCount(1);
+  await expect(provenance).toBeVisible();
+  await expect(provenance).toContainText("dilution-c1v1c2v2");
 
   // Recording an observation works
   await page.getByLabel("Observation note").fill("Colour visibly paler after dilution.");
@@ -78,8 +81,11 @@ test("pH lab: strong acid calculation and model limitations", async ({ page }) =
   // Limitations panel is visible
   await expect(page.getByText(/Model limitations/)).toBeVisible();
 
-  // Provenance
-  await expect(page.getByText(/ph-monoprotic-25c/)).toBeVisible();
+  // Provenance in the model limitations panel
+  const provenance = page.locator(".lab-limitations code");
+  await expect(provenance).toHaveCount(1);
+  await expect(provenance).toBeVisible();
+  await expect(provenance).toContainText("ph-monoprotic-25c");
 
   // Keyboard-accessible: focusable equipment items
   await page.keyboard.press("Tab");

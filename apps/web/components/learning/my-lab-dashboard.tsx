@@ -21,7 +21,7 @@ export function MyLabDashboard() {
 
   return (
     <div className="container section section-border">
-      <div className="stat-kpi-grid" aria-label="Local learner progress summary">
+      <div className="stat-kpi-grid" role="group" aria-label="Local learner progress summary">
         <div className="stat-kpi-card">
           <p className="card-meta">Lessons completed</p>
           <div className="stat-kpi-value">
@@ -146,7 +146,14 @@ export function MyLabDashboard() {
                     <strong>{pw.title}</strong>
                     <ProgressStatusPill status={pwProg.status} />
                   </div>
-                  <div className="progress-bar-track" aria-label={`${pw.title} ${pct}%`}>
+                  <div
+                    className="progress-bar-track"
+                    role="progressbar"
+                    aria-label={`${pw.title} completion`}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={pct}
+                  >
                     <div className="progress-bar-fill" style={{ width: `${pct}%` }} />
                   </div>
                   <div className="learning-card-footer">

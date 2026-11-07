@@ -158,7 +158,11 @@ export function LearnHubView() {
                     <Clock3 size={14} aria-hidden="true" /> ~{pathway.estimatedDurationMinutes} min
                   </p>
                   <div
-                    aria-label={`${pathway.title} completion ${pct}%`}
+                    role="progressbar"
+                    aria-label={`${pathway.title} completion`}
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={hydrated ? pct : undefined}
                     className="progress-bar-track"
                   >
                     <div className="progress-bar-fill" style={{ width: `${pct}%` }} />
