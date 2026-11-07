@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ShieldAlert } from "lucide-react";
+import { FlaskConical, ShieldAlert } from "lucide-react";
 
 import { ContentStatusBadge, EmptyState, FutureLabPanel } from "../../../components/ui";
+import { DILUTION_EXPERIMENT_ID, PH_EXPERIMENT_ID } from "@virtual-chemistry-lab/laboratory-core";
 import {
   getCurriculumLabel,
   getCurriculumTopicLabel,
@@ -685,7 +686,32 @@ function ExperimentDetail({ record }: { record: ExperimentRecord }) {
                 }
               />
             )}
-            <FutureLabPanel />
+            {[DILUTION_EXPERIMENT_ID, PH_EXPERIMENT_ID].includes(identity.id) ? (
+              <div className="lab-callout" role="note">
+                <div className="lab-callout-icon" aria-hidden="true">
+                  <FlaskConical size={22} />
+                </div>
+                <div>
+                  <p className="eyebrow">Interactive 2D lab available</p>
+                  <h3>This experiment is wired to the simulation engine.</h3>
+                  <p>
+                    Open the 2D laboratory to work through the procedure, manipulate glassware, run
+                    model-backed calculations, and record observations. Liquid levels and indicator
+                    colours are illustrative visual cues — every numeric reading is tagged with its
+                    source (model-calculated vs. user-entered).
+                  </p>
+                  <p className="lab-callout-safety">
+                    <ShieldAlert size={16} aria-hidden={true} /> The virtual lab supplements — it
+                    does not replace — supervised physical laboratory training.
+                  </p>
+                  <Link className="button" href={`/experiments/${identity.slug}/lab`}>
+                    <FlaskConical size={16} aria-hidden={true} /> Open laboratory workspace
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <FutureLabPanel />
+            )}
           </section>
 
           <section className="detail-section" id="references" aria-labelledby="references-title">

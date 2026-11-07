@@ -68,11 +68,16 @@ test("renders a real experiment detail page with review provenance", async ({ pa
   await expect(page.getByRole("heading", { name: "Safety information" })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Review and provenance" })).toBeVisible();
   await expect(page.getByText(/pending scientific review/i).first()).toBeVisible();
-  await expect(
-    page.getByRole("heading", {
+  // Phase 05: model-backed experiments now offer an "Open laboratory workspace"
+  // callout instead of the placeholder panel. Experiments without an adapter
+  // still render the "The laboratory workspace will arrive" panel.
+  const hasLab = await page.getByRole("link", { name: /Open laboratory workspace/ }).count();
+  const hasFuture = await page
+    .getByRole("heading", {
       name: "The laboratory workspace will arrive with reviewed models",
-    }),
-  ).toBeVisible();
+    })
+    .count();
+  expect(hasLab + hasFuture).toBeGreaterThanOrEqual(1);
 });
 
 test("restricts unpublished draft records with a 404", async ({ page }) => {
