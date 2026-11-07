@@ -55,6 +55,21 @@ Statuses: `TODO`, `IN_PROGRESS`, `BLOCKED`, `REVIEW`, `DONE`. A task is `DONE` o
 - Define units, precision, conditions, assumptions and error behavior.
 - Validate models against trusted reference cases.
 
+| ID | Task | Priority | Depends on | Status |
+|---|---|---:|---|---|
+| P04-001 | Pre-flight audit of Phase 03 gates and architecture | Critical | P03-010 | DONE |
+| P04-002 | Implement `@virtual-chemistry-lab/simulation-core`: units, constants, elements, molar-mass, quantities | Critical | P04-001 | DONE |
+| P04-003 | Implement reaction engine (parse, atom+charge analysis, exact rational balancing) | Critical | P04-002 | DONE |
+| P04-004 | Implement stoichiometry (limiting reagent, extent, theoretical yield) | High | P04-003 | DONE |
+| P04-005 | Implement 25 °C monoprotic acid/base pH model with explicit validity limits | High | P04-002 | DONE |
+| P04-006 | Author 52 independently sourced reference cases with tolerances; registry + machine-checked suite | Critical | P04-002..P04-005 | DONE |
+| P04-007 | Model registry with honest verification states + 8 model reports + ADR-010 | High | P04-006 | DONE |
+| P04-008 | Update catalogs and validation logs (model-catalog, SCIENTIFIC_VALIDATION_LOG, testing/overview docs) | High | P04-007 | DONE |
+| P04-009 | Run full quality gates (format, lint, typecheck, tests, build, mobile, security audit) | Critical | P04-006..P04-008 | DONE |
+| P04-010 | Phase 04 acceptance review and sign-off | Critical | P04-001..P04-009 | REVIEW |
+| P04-011 | Qualified scientific review of simulation models | Critical | P04-010 | TODO |
+| P04-012 | Wire engine into first reviewed experiment (Phase 05 scope) | High | P04-011 | TODO |
+
 ## Phase 05 — Interactive 2D experiments
 - Implement a small, reviewed set of experiments end-to-end.
 - Add measurement tools, state transitions and observation capture.

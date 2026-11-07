@@ -19,9 +19,9 @@ The detailed system architecture is maintained in `docs/architecture/overview.md
 - Applications: Next.js `16.4.4` web app and Expo `58.0.23` mobile app.
 - Shared package: `@virtual-chemistry-lab/experiment-schema` using Zod `4.6.7`.
 - Quality: TypeScript `6.0.3`, ESLint `9.39.1`, Prettier `3.6.2`, and Vitest `5.1.0`.
-- No simulation-core, UI-kit, backend, database or authentication package exists yet;
+- No UI-kit, backend, database or authentication package exists yet;
   each remains deferred until it has real behavior and a consumer. (The
-  `experiment-library` package was added in Phase 03, see below.)
+  `experiment-library` package was added in Phase 03 and `simulation-core` in Phase 04, see below.)
 
 ## Phase 02 implementation
 
@@ -52,6 +52,26 @@ The detailed system architecture is maintained in `docs/architecture/overview.md
   integrity label are independent fields; publishing requires complete safety metadata;
   "reviewed" requires a named human reviewer (AI-assisted content stays draft).
 - ADR-009 records the content-storage decision (versioned local JSON, no DB in this phase).
+
+## Phase 04 implementation
+
+- `@virtual-chemistry-lab/simulation-core` is the framework-free scientific simulation engine:
+  - `units.ts` — dimension-vector unit system with affine temperature support (kelvin-routed) and typed errors;
+  - `constants.ts` — frozen constants registry (SI Brochure 9th ed. exact defining constants, CODATA 2018 measured, conventional 25 °C K_w) with explicit `exact | conventional | measured` precision classes and source attribution;
+  - `elements.ts` — CIAAW abridged standard atomic weights, 2021 revision (no elements without a standard weight);
+  - `molar-mass.ts` — formula parser (nested brackets, hydrate dots) + molar mass;
+  - `amount.ts` — moles ↔ mass ↔ concentration, mass concentration, dilution (C₁V₁ = C₂V₂), percent yield (never clamped), solution composition;
+  - `reaction.ts` — species/reaction grammar (single unambiguous charge notation), atom + charge balance analysis, **exact rational** equation balancing (bigint `Fraction`, lowest-terms positive integers; input coefficients ignored; no tolerance-based answers);
+  - `stoichiometry.ts` — limiting reagent, reaction extent, theoretical yield (input must be atom+charge balanced);
+  - `acid-base.ts` — pH/pOH for strong/weak monoprotic acids/bases at 25 °C in dilute aqueous solution (explicit validity limits: activity = concentration);
+  - `models.ts` — machine-checked model registry (8 models; nothing above `reference-verified`, nothing approved for production; `pending_human_review` throughout);
+  - `reference-cases.ts` — frozen registry of 52 independently sourced/derived cases; `reference-cases.test.ts` enforces bidirectional model coverage.
+- Exactness over convenience: balancing rejects non-unique solutions (`BalanceNotUniqueError`);
+  digits directly before a trailing charge sign (`NH4+`) are always rejected as ambiguous with
+  guidance (`NH4^+`); no floating tolerance is ever applied to conservation laws.
+- ADR-010 records the engine decision (exact arithmetic, framework-free, refuse-ambiguity input).
+- Phase 04 deliberately wires NO experiment to the engine: every experiment's
+  `simulationContract` remains `planned`; no claim of learner-usable simulation is made.
 
 ## Architecture rules
 1. Scientific calculations must not depend on React, DOM, Canvas or Three.js.
