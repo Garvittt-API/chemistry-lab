@@ -16,6 +16,8 @@ packages/
   experiment-schema/   # Versioned content contracts and validators
   experiment-library/  # Versioned local content library (Phase 03)
   simulation-core/     # Units, constants, elements, formula/reaction math (Phase 04)
+  laboratory-core/     # Equipment, procedures and 2D experiment adapters (Phase 05)
+  molecular-visualization/ # Molecular contracts, geometry and visualization state (Phase 06)
 docs/
 scripts/
 .github/
@@ -86,6 +88,10 @@ state or produce readings.
 - Prefer HTML/SVG for accessible diagrams and simple apparatus.
 - Use Canvas for dense 2D scenes where justified, with accessible textual alternatives.
 - Use Three.js/R3F selectively for 3D; do not make 3D a prerequisite for all experiments.
+
+## Phase 05 and Phase 06
+
+`laboratory-core` supplies equipment/procedure/observation contracts and model-backed dilution/pH adapters to the web 2D labs. `molecular-visualization` adds strict molecular data and renderer-independent geometry/state. Web Three.js/R3F adapters are dynamically loaded and provide SVG/text alternatives. Equipment scenes reuse Phase 05 IDs and definitions. See `docs/architecture/3d-visualization.md`; native mobile 3D is not implemented.
 
 ## Failure behavior
 Invalid content or model output must fail visibly and safely. Never silently substitute fabricated readings. Provide an actionable error state and preserve user-entered work when safe.

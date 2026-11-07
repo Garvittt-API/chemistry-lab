@@ -12,6 +12,7 @@ const navigation = [
   { href: "/", label: "Home" },
   { href: "/explore", label: "Explore experiments" },
   { href: "/subjects", label: "Subjects" },
+  { href: "/molecules", label: "Molecules" },
   { href: "/my-lab", label: "My Lab" },
   { href: "/about", label: "About" },
 ];

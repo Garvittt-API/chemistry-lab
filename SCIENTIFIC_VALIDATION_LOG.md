@@ -85,11 +85,30 @@ labelling; publication does not imply scientific approval
 | Element atomic weights | Bundled in `packages/simulation-core/src/elements.ts` (CIAAW abridged standard atomic weights, 2021 revision) | registry v1.0.0 | IMPLEMENTED (reference-verified 2026-11-07; not human-reviewed) |
 | Spectral line databases | Not yet bundled | — | NOT IMPLEMENTED |
 
-## 5. Unresolved discrepancies
+## 5. Phase 06 molecular structures
 
-None recorded.
+Last automated consistency check: 2026-11-07, `molecular-visualization` 28/28 tests. Automated schema/reference-coordinate checks are not scientific validation. External NIST/PubChem/NCERT hosts were not directly retrievable in this sandbox; reviewers must inspect the citations and source coordinates directly.
 
-## 6. Reviewer registry
+| Structure | Version | Coordinate basis | Automated checks | Scientific status |
+|---|---|---|---|---|
+| Water | 1.0.0 | NIST reference 0.958 Å / 104.5° | PASS | NEEDS HUMAN REVIEW |
+| Carbon dioxide | 1.0.0 | NIST reference 1.160 Å / linear | PASS | NEEDS HUMAN REVIEW |
+| Methane | 1.0.0 | Ideal tetrahedral construction | PASS | NEEDS HUMAN REVIEW |
+| Ammonia | 1.0.0 | NIST reference 1.012 Å / 106.7° | PASS | NEEDS HUMAN REVIEW |
+| Oxygen | 1.0.0 | NIST reference 1.2075 Å | PASS | NEEDS HUMAN REVIEW |
+| Nitrogen | 1.0.0 | NIST reference 1.0977 Å | PASS | NEEDS HUMAN REVIEW |
+| Hydrogen | 1.0.0 | NIST reference 0.7414 Å | PASS | NEEDS HUMAN REVIEW |
+| Methanol | 1.0.0 | Idealized VSEPR/model lengths | PASS | NEEDS HUMAN REVIEW |
+| Ethanol | 1.0.0 | Idealized single conformer/model lengths | PASS | NEEDS HUMAN REVIEW |
+| Benzene | 1.0.0 | Ideal planar aromatic ring | PASS | NEEDS HUMAN REVIEW |
+
+Summary: 0/10 molecular structures independently reviewed. Glucose: NOT IMPLEMENTED pending a reviewed stereochemical coordinate source. Electronic properties, orbitals and electron densities: NOT IMPLEMENTED. Detailed conventions: `docs/science/molecular-geometry.md`.
+
+## 6. Unresolved discrepancies
+
+- Project memory at the Phase 06 baseline still described Phase 04 and did not record Phase 05 acceptance. Phase 05 code/tests were present and preserved; its owner acceptance remains UNVERIFIED.
+
+## 7. Reviewer registry
 
 | Reviewer | Qualification | Scope | Date |
 |---|---|---|---|
