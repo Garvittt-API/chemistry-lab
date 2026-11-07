@@ -73,6 +73,15 @@ The detailed system architecture is maintained in `docs/architecture/overview.md
 - Phase 04 deliberately wires NO experiment to the engine: every experiment's
   `simulationContract` remains `planned`; no claim of learner-usable simulation is made.
 
+## Phase 05 implementation
+- `laboratory-core` owns shared equipment definitions, procedures, observations and dilution/pH adapters. Web SVG components render 2D apparatus and delegate calculations to `simulation-core`.
+
+## Phase 06 implementation
+- `molecular-visualization` owns renderer-independent molecular contracts, ten sourced structures, coordinate geometry, accessible descriptions and visualization state.
+- Web uses one 3D stack: Three.js 0.187.0 + React Three Fiber 9.8.2 + Drei 10.7.9, dynamically imported with demand rendering, adaptive DPR and disposal.
+- `/molecules` provides 3D, SVG, list and text representations. Dilution/pH retain 2D workspaces with optional 3D equipment layouts; VSEPR integrates the molecular viewer.
+- Native mobile 3D is not implemented. ADR-011 and `docs/architecture/3d-visualization.md` define boundaries and limitations.
+
 ## Architecture rules
 1. Scientific calculations must not depend on React, DOM, Canvas or Three.js.
 2. Rendering must consume model state; it must not define scientific truth.

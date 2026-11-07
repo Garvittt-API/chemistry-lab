@@ -4,6 +4,7 @@ import { SiteFooter } from "../components/site-footer";
 import { SiteHeader } from "../components/site-header";
 import { ThemeProvider } from "../components/theme-provider";
 import "./global.css";
+import "./visualization.css";
 
 export const metadata: Metadata = {
   title: {

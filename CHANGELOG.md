@@ -3,6 +3,12 @@
 All notable changes to this project are recorded here. Follow Keep a Changelog conventions where practical.
 
 ## [Unreleased]
+### Phase 06 — 3D laboratory and molecular visualization
+- Added framework-free `@virtual-chemistry-lab/molecular-visualization`: strict bounded Zod contracts, ten versioned/source-labelled molecular structures, coordinate-derived lengths/angles, complete text descriptions, visualization state and resource lifecycle helpers. Molar mass and elements delegate to Phase 04.
+- Added a Three.js/R3F molecular viewer with single/double/triple/aromatic bonds, atom/bond inspection, representations, labels, keyboard/camera controls, high contrast, demand rendering, adaptive quality, cleanup, loading/error/WebGL fallbacks and 2D/list/text alternatives.
+- Added a reusable 3D equipment scene driven by Phase 05 definitions. Dilution and pH preserve their 2D workspaces and gain optional 3D layouts; VSEPR gains a molecular workspace without duplicating experiment content.
+- Added Playwright journeys (local execution blocked by browser CDN), ADR-011, architecture/science/accessibility/performance/integration documents and honest pending-review status. Native 3D, glucose and electronic-property maps are not implemented.
+
 ### Fixed
 - Synced README, ARCHITECTURE, architecture overview and testing docs to Phase 03 reality (they still described Phase 02 demonstration content after the library integration).
 - Aligned `react` with `react-dom` at 19.3.1 in web and mobile (Dependabot's react bump PR had been closed unmerged, leaving a version skew).

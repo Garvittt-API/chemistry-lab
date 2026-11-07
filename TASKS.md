@@ -71,12 +71,26 @@ Statuses: `TODO`, `IN_PROGRESS`, `BLOCKED`, `REVIEW`, `DONE`. A task is `DONE` o
 | P04-012 | Wire engine into first reviewed experiment (Phase 05 scope) | High | P04-011 | TODO |
 
 ## Phase 05 — Interactive 2D experiments
-- Implement a small, reviewed set of experiments end-to-end.
-- Add measurement tools, state transitions and observation capture.
+| ID | Task | Status |
+|---|---|---|
+| P05-001 | Shared equipment, procedure and observation subsystem | DONE |
+| P05-002 | Model-backed dilution and pH 2D workspaces | DONE |
+| P05-003 | Unit and Playwright journey coverage | DONE (implementation); local e2e UNVERIFIED |
+| P05-004 | Owner acceptance gate | REVIEW — not recorded in baseline project memory |
 
 ## Phase 06 — 3D and molecular visualization
-- Add 3D only where spatial understanding materially benefits.
-- Validate molecular geometry/visual conventions and device performance.
+| ID | Task | Status |
+|---|---|---|
+| P06-001 | Repository audit, baseline gates and Phase 05 gap record | DONE |
+| P06-002 | Framework-free molecular schemas, validation, provenance and ten-structure catalog | DONE; scientific REVIEW |
+| P06-003 | Reusable R3F scenes, camera/selection/state, cleanup, adaptive quality and fallbacks | DONE; browser verification pending |
+| P06-004 | Accessible molecular controls, SVG/list/text alternatives and geometry annotations | DONE; human REVIEW |
+| P06-005 | Shared-equipment 3D lab and Phase 04/05 integration | DONE |
+| P06-006 | Unit tests and local static/build quality gates | DONE (371/371; e2e covered by P06-007) |
+| P06-007 | Browser/device performance and accessibility evidence | BLOCKED locally (browser CDN); NEEDS HUMAN REVIEW |
+| P06-008 | Architecture/science/project documentation and owner gate | REVIEW |
+| P06-009 | Glucose and electronic-property visualization | TODO — validated source/model required |
+| P06-010 | Native mobile 3D adapter and device validation | TODO — no parity claim |
 
 ## Phase 07 — Learning, notebooks and reports
 - Add learning activities, practical notebook, calculations and export.

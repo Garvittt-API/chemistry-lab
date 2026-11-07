@@ -63,6 +63,10 @@ suite (`reference-cases.test.ts` vs `reference-cases.ts`;
 the `build` task, and `tsconfig.test.json` (noEmit, all sources) folded into its `typecheck`
 task so tests are type-checked without shipping in `dist/`.
 
+Phase 05 adds 31 `laboratory-core` tests. Phase 06 adds 28 `molecular-visualization` tests covering schemas, invalid structures, all bond orders, reference/ideal geometry, maximum atom budget, engine integration, text alternatives, camera state and idempotent cleanup. The full Phase 06 local unit total is 371.
+
+Phase 06 browser coverage is authored in `apps/web/e2e/visualization.spec.ts` (5 tests): complete molecule inspection and representations, keyboard controls, blocked-WebGL fallback, 2D/3D laboratory switching and VSEPR integration. It is UNVERIFIED locally because the Playwright Chromium CDN is blocked; do not count it as executed.
+
 Browser coverage (`apps/web/e2e/foundation.spec.ts`, 6 tests, run in CI):
 
 - Home page renders real catalog statistics with light and dark theme axe scans.

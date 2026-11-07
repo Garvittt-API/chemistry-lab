@@ -5,13 +5,14 @@ import { EXPERIMENT_SCHEMA_VERSION } from "@virtual-chemistry-lab/experiment-sch
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.eyebrow}>Phase 01 foundation</Text>
+      <Text style={styles.eyebrow}>Web-first laboratory · mobile scaffold</Text>
       <Text accessibilityRole="header" style={styles.title}>
         Virtual Chemistry Lab
       </Text>
       <Text style={styles.body}>
-        The mobile entry point is ready for shared educational content. Simulations are not part of
-        this phase.
+        The mobile entry point is ready for shared educational contracts. Native interactive
+        experiments and 3D rendering are not implemented; the web application provides the current
+        model-backed laboratory and accessible molecular views.
       </Text>
       <Text style={styles.detail}>Experiment schema {EXPERIMENT_SCHEMA_VERSION}</Text>
     </View>

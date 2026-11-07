@@ -5,6 +5,8 @@ import { ArrowLeft, FlaskConical, Info } from "lucide-react";
 
 import DilutionLab from "../../../../components/lab/dilution-lab";
 import PhLab from "../../../../components/lab/ph-lab";
+import { ExperimentWorkspace } from "../../../../components/lab/experiment-workspace";
+import { VseprLab } from "../../../../components/lab/vsepr-lab";
 import { DILUTION_EXPERIMENT_ID, PH_EXPERIMENT_ID } from "@virtual-chemistry-lab/laboratory-core";
 
 import { getExperimentRecord } from "../../../../lib/content";
@@ -18,7 +20,7 @@ export async function generateMetadata({ params }: LabPageProps): Promise<Metada
   const record = getExperimentRecord(id);
   return {
     title: record ? `Laboratory · ${record.identity.title}` : "Laboratory",
-    description: "Interactive 2D chemistry laboratory workspace.",
+    description: "Interactive 2D and selectively available 3D chemistry laboratory workspace.",
   };
 }
 
@@ -27,7 +29,11 @@ export async function generateMetadata({ params }: LabPageProps): Promise<Metada
  * opened in the lab. Others get a friendly "not yet implemented" panel that
  * explicitly does NOT provide fabricated interactions.
  */
-const IMPLEMENTED_EXPERIMENTS = new Set<string>([DILUTION_EXPERIMENT_ID, PH_EXPERIMENT_ID]);
+const IMPLEMENTED_EXPERIMENTS = new Set<string>([
+  DILUTION_EXPERIMENT_ID,
+  PH_EXPERIMENT_ID,
+  "vsepr-molecular-geometry",
+]);
 
 export default async function LabPage({ params }: LabPageProps) {
   const { id } = await params;
@@ -57,9 +63,15 @@ export default async function LabPage({ params }: LabPageProps) {
 
       {implemented ? (
         record.identity.id === DILUTION_EXPERIMENT_ID ? (
-          <DilutionLab />
+          <ExperimentWorkspace experimentId={record.identity.id}>
+            <DilutionLab />
+          </ExperimentWorkspace>
         ) : record.identity.id === PH_EXPERIMENT_ID ? (
-          <PhLab />
+          <ExperimentWorkspace experimentId={record.identity.id}>
+            <PhLab />
+          </ExperimentWorkspace>
+        ) : record.identity.id === "vsepr-molecular-geometry" ? (
+          <VseprLab />
         ) : null
       ) : (
         <div className="container lab-not-implemented">
