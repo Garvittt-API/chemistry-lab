@@ -36,7 +36,9 @@ test("solution dilution lab: full journey and provenance", async ({ page }) => {
   await page.getByRole("button", { name: /Run dilution calculation/ }).click();
 
   // Result readout must appear and be tagged as calculated
-  await expect(page.getByText("0.050 mol/L")).toBeVisible({ timeout: 5000 });
+  await expect(page.locator(".lab-bench-readouts").getByText(/0\.0500\s*mol\/L/)).toBeVisible({
+    timeout: 5000,
+  });
   const badges = page.locator(".lab-source-model_calculated");
   expect(await badges.count()).toBeGreaterThanOrEqual(1);
 
@@ -69,7 +71,9 @@ test("pH lab: strong acid calculation and model limitations", async ({ page }) =
   await page.getByRole("button", { name: /Dip electrode/ }).click();
 
   // 0.01 M HCl -> pH ~ 2
-  await expect(page.getByText("2.00")).toBeVisible({ timeout: 5000 });
+  await expect(page.locator(".lab-bench-readouts").getByText(/2\.00\s*pH/)).toBeVisible({
+    timeout: 5000,
+  });
 
   // Limitations panel is visible
   await expect(page.getByText(/Model limitations/)).toBeVisible();

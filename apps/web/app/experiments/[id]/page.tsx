@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { FlaskConical, ShieldAlert } from "lucide-react";
 
 import { ContentStatusBadge, EmptyState, FutureLabPanel } from "../../../components/ui";
+import { ExperimentLearningPanel } from "../../../components/learning/experiment-learning-panel";
 import { DILUTION_EXPERIMENT_ID, PH_EXPERIMENT_ID } from "@virtual-chemistry-lab/laboratory-core";
 import {
   getCurriculumLabel,
@@ -140,6 +141,7 @@ function ExperimentDetail({ record }: { record: ExperimentRecord }) {
           <a href="#observations">Observations</a>
           <a href="#calculations">Calculations</a>
           <a href="#simulation">Simulation</a>
+          <a href="#practical-workflow">Practical notebook</a>
           <a href="#references">References</a>
           <a href="#review">Review &amp; provenance</a>
         </nav>
@@ -686,19 +688,21 @@ function ExperimentDetail({ record }: { record: ExperimentRecord }) {
                 }
               />
             )}
-            {[DILUTION_EXPERIMENT_ID, PH_EXPERIMENT_ID].includes(identity.id) ? (
+            {[DILUTION_EXPERIMENT_ID, PH_EXPERIMENT_ID, "vsepr-molecular-geometry"].includes(
+              identity.id,
+            ) ? (
               <div className="lab-callout" role="note">
                 <div className="lab-callout-icon" aria-hidden="true">
                   <FlaskConical size={22} />
                 </div>
                 <div>
-                  <p className="eyebrow">Interactive 2D lab available</p>
-                  <h3>This experiment is wired to the simulation engine.</h3>
+                  <p className="eyebrow">Interactive lab available</p>
+                  <h3>This experiment has an interactive workspace.</h3>
                   <p>
-                    Open the 2D laboratory to work through the procedure, manipulate glassware, run
-                    model-backed calculations, and record observations. Liquid levels and indicator
-                    colours are illustrative visual cues — every numeric reading is tagged with its
-                    source (model-calculated vs. user-entered).
+                    Open the laboratory workspace to explore the procedure or 3D molecular geometry,
+                    run model-backed calculations, and append readings directly to your Practical
+                    Notebook. Visual liquid levels and indicator colours are illustrative cues —
+                    every numeric reading is tagged with its provenance.
                   </p>
                   <p className="lab-callout-safety">
                     <ShieldAlert size={16} aria-hidden={true} /> The virtual lab supplements — it
@@ -713,6 +717,10 @@ function ExperimentDetail({ record }: { record: ExperimentRecord }) {
               <FutureLabPanel />
             )}
           </section>
+
+          <ExperimentLearningPanel
+            experiment={{ identity: record.identity, references: record.references }}
+          />
 
           <section className="detail-section" id="references" aria-labelledby="references-title">
             <h2 id="references-title">References</h2>

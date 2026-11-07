@@ -104,11 +104,22 @@ Last automated consistency check: 2026-11-07, `molecular-visualization` 28/28 te
 
 Summary: 0/10 molecular structures independently reviewed. Glucose: NOT IMPLEMENTED pending a reviewed stereochemical coordinate source. Electronic properties, orbitals and electron densities: NOT IMPLEMENTED. Detailed conventions: `docs/science/molecular-geometry.md`.
 
-## 6. Unresolved discrepancies
+## 6. Phase 07 learning pathways, lessons, glossary and assessments
+
+Last automated consistency check: 2026-11-07, `@virtual-chemistry-lab/learning-core` 21/21 Vitest tests (cross-referencing all published `experiment-library` IDs, `cbse-chemistry-2025-26` curriculum links, and `simulation-core` CIAAW 2021 molar masses / dilution / reaction balancing / pH calculations). Automated schema and engine-consistency checks are not human scientific validation.
+
+| Artifact group | Count | Automated checks | Scientific status | Reviewer | Date |
+|---|---:|---|---|---|---|
+| Learning pathways (`pathway-*`) | 4 | PASS (valid step references) | NEEDS HUMAN REVIEW (`pending_scientific_review`) | — | — |
+| Theory lessons (`lesson-*`) | 10 | PASS (claim-kind tagged, source cited) | NEEDS HUMAN REVIEW (`pending_scientific_review`) | — | — |
+| Chemistry glossary entries (`term-*`) | 30 | PASS (IUPAC/NCERT/SI cited) | NEEDS HUMAN REVIEW (`pending_scientific_review`) | — | — |
+| Self-check assessments (`quiz-*`) | 9 | PASS (deterministic `simulation-core` & unit checks) | NEEDS HUMAN REVIEW (`pending_scientific_review`) | — | — |
+
+## 7. Unresolved discrepancies
 
 - Project memory at the Phase 06 baseline still described Phase 04 and did not record Phase 05 acceptance. Phase 05 code/tests were present and preserved; its owner acceptance remains UNVERIFIED.
 
-## 7. Reviewer registry
+## 8. Reviewer registry
 
 | Reviewer | Qualification | Scope | Date |
 |---|---|---|---|

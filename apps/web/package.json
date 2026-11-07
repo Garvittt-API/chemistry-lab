@@ -17,6 +17,7 @@
     "@virtual-chemistry-lab/experiment-library": "workspace:*",
     "@virtual-chemistry-lab/experiment-schema": "workspace:*",
     "@virtual-chemistry-lab/laboratory-core": "workspace:*",
+    "@virtual-chemistry-lab/learning-core": "workspace:*",
     "@virtual-chemistry-lab/molecular-visualization": "workspace:*",
     "@virtual-chemistry-lab/simulation-core": "workspace:*",
     "lucide-react": "1.67.0",

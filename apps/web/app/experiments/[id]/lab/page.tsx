@@ -64,11 +64,11 @@ export default async function LabPage({ params }: LabPageProps) {
       {implemented ? (
         record.identity.id === DILUTION_EXPERIMENT_ID ? (
           <ExperimentWorkspace experimentId={record.identity.id}>
-            <DilutionLab />
+            <DilutionLab experiment={record} />
           </ExperimentWorkspace>
         ) : record.identity.id === PH_EXPERIMENT_ID ? (
           <ExperimentWorkspace experimentId={record.identity.id}>
-            <PhLab />
+            <PhLab experiment={record} />
           </ExperimentWorkspace>
         ) : record.identity.id === "vsepr-molecular-geometry" ? (
           <VseprLab />
@@ -81,7 +81,7 @@ export default async function LabPage({ params }: LabPageProps) {
             </div>
             <div>
               <p className="eyebrow">Not yet available</p>
-              <h2>This experiment does not yet have a reviewed model-backed workspace.</h2>
+              <h2>Interactive workspace not yet available for this experiment.</h2>
               <p>
                 Interactive 2D experiences are added only when a documented scientific model exists
                 in <code>@virtual-chemistry-lab/simulation-core</code> and has been integrated via{" "}

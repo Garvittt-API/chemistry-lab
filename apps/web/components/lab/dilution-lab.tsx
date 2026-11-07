@@ -19,10 +19,12 @@ import {
   type MeasurementRecord,
 } from "@virtual-chemistry-lab/laboratory-core";
 
+import type { ExperimentRecord } from "@virtual-chemistry-lab/experiment-schema";
 import { EquipmentSprite } from "./equipment-svg";
 import { EquipmentTray } from "./equipment-tray";
 import { ObservationPanel } from "./observation-panel";
 import { ProcedurePanel } from "./procedure-panel";
+import { LabNotebookBridge } from "../learning/lab-notebook-bridge";
 import { classNames } from "../../lib/utils";
 
 /** Available equipment for the dilution experiment. */
@@ -40,7 +42,11 @@ type PlacedItem = { id: string; x: number; y: number };
 
 let noteSeq = 0;
 
-export default function DilutionLab() {
+export default function DilutionLab({
+  experiment,
+}: Readonly<{
+  experiment?: Pick<ExperimentRecord, "identity" | "references">;
+}> = {}) {
   const [placed, setPlaced] = useState<PlacedItem[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [procedure, setProcedure] = useState(() => createInitialState(DILUTION_PROCEDURE));
@@ -280,7 +286,7 @@ export default function DilutionLab() {
         </section>
       </aside>
 
-      <main className="lab-workspace" aria-label="Laboratory workspace">
+      <section className="lab-workspace" aria-label="Laboratory workspace">
         <div className="lab-bench" aria-hidden={false}>
           <div className="lab-bench-surface">
             {placed.map((p) => {
@@ -363,7 +369,7 @@ export default function DilutionLab() {
             </small>
           </div>
         </div>
-      </main>
+      </section>
 
       <aside className="lab-sidebar-right">
         <ProcedurePanel state={procedure} onStart={start} onReset={reset} />
@@ -373,6 +379,30 @@ export default function DilutionLab() {
           canAddObservation={canRecord || procedure.status === "in_progress"}
           onAddObservation={addNote}
         />
+        {experiment ? (
+          <LabNotebookBridge
+            experiment={experiment}
+            modelId="dilution-c1v1c2v2"
+            modelVersion="1.0.0"
+            inputs={[
+              { label: "Stock concentration c1", value: stockConcentration, unit: "mol/L" },
+              { label: "Stock aliquot V1", value: stockVolumeMl, unit: "mL" },
+              { label: "Final volume V2", value: finalVolumeMl, unit: "mL" },
+            ]}
+            measurements={sessionMeasurements}
+            observations={procedure.observations}
+            assumptions={[
+              "Ideal dilute aqueous solution; conserved solute amount n = c1 V1 = c2 V2.",
+            ]}
+            limitations={[
+              "Liquid levels and colour are illustrative visual cues, not spectrophotometry.",
+            ]}
+            completedStepCount={
+              procedure.steps.filter((s) => procedure.stepStatus[s.id] === "completed").length
+            }
+            totalStepCount={procedure.steps.length}
+          />
+        ) : null}
       </aside>
     </div>
   );

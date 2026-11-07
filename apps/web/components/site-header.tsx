@@ -10,9 +10,11 @@ import { ThemeToggle } from "./theme-toggle";
 
 const navigation = [
   { href: "/", label: "Home" },
+  { href: "/learn", label: "Learn" },
   { href: "/explore", label: "Explore experiments" },
   { href: "/subjects", label: "Subjects" },
   { href: "/molecules", label: "Molecules" },
+  { href: "/notebook", label: "Notebook" },
   { href: "/my-lab", label: "My Lab" },
   { href: "/about", label: "About" },
 ];

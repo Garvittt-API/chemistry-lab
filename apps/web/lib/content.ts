@@ -113,6 +113,27 @@ export function getExperimentRecord(idOrSlug: string): ExperimentRecord | undefi
   return getPublicExperimentByIdOrSlug(catalog, idOrSlug);
 }
 
+/** All published full ExperimentRecords sorted by title. */
+export function getPublishedExperimentRecords(): ExperimentRecord[] {
+  const summaries = queryExperiments(catalog, {
+    publicationStatuses: ["published"],
+    sort: "title",
+    sortDirection: "asc",
+  }).items;
+  return summaries
+    .map((s) => getPublicExperimentByIdOrSlug(catalog, s.id))
+    .filter((rec): rec is ExperimentRecord => Boolean(rec));
+}
+
+/** Map of experimentId -> ExperimentRecord for published experiments. */
+export function getPublishedExperimentRecordsMap(): Record<string, ExperimentRecord> {
+  const out: Record<string, ExperimentRecord> = {};
+  for (const rec of getPublishedExperimentRecords()) {
+    out[rec.identity.id] = rec;
+  }
+  return out;
+}
+
 /** Real search + filter + sort over published records (library query engine). */
 export function searchExperimentCards(filters: ExploreFilters): ExperimentCardModel[] {
   const trimmedQuery = filters.query?.trim() ?? "";

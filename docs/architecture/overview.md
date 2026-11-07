@@ -18,6 +18,7 @@ packages/
   simulation-core/     # Units, constants, elements, formula/reaction math (Phase 04)
   laboratory-core/     # Equipment, procedures and 2D experiment adapters (Phase 05)
   molecular-visualization/ # Molecular contracts, geometry and visualization state (Phase 06)
+  learning-core/       # Pathways, lessons, glossary, quizzes, notebook, reports & exporters (Phase 07)
 docs/
 scripts/
 .github/
@@ -92,6 +93,10 @@ state or produce readings.
 ## Phase 05 and Phase 06
 
 `laboratory-core` supplies equipment/procedure/observation contracts and model-backed dilution/pH adapters to the web 2D labs. `molecular-visualization` adds strict molecular data and renderer-independent geometry/state. Web Three.js/R3F adapters are dynamically loaded and provide SVG/text alternatives. Equipment scenes reuse Phase 05 IDs and definitions. See `docs/architecture/3d-visualization.md`; native mobile 3D is not implemented.
+
+## Phase 07 learning, practical notebook and report export
+
+`@virtual-chemistry-lab/learning-core` supplies framework-independent learning pathways, lessons, glossary entries, deterministic self-check quizzes, 8 `simulation-core` calculation workbench adapters, practical notebook session state, local storage persistence (`vcl-learning-store-v1` with corrupted-payload quarantine), 20-section practical report generation, and deterministic PDF 1.4 / HTML / CSV / JSON exporters (ADR-012). Web surfaces under `/learn/*`, `/notebook/*`, `/my-lab`, `/settings`, and `LabNotebookBridge` consume `learning-core` without duplicating chemistry math or introducing server-side accounts.
 
 ## Failure behavior
 Invalid content or model output must fail visibly and safely. Never silently substitute fabricated readings. Provide an actionable error state and preserve user-entered work when safe.

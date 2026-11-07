@@ -14,10 +14,10 @@
 - Long-term scope: broad chemistry curriculum, 2D and 3D simulations
 
 ## Current status
-- Current phase: Phase 06 — 3D Laboratory & Molecular Visualization
-- Current milestone: 06.1 — shared molecular contracts, R3F molecular viewer and equipment scene
-- Overall status: Phase 06 scoped implementation complete on `arena/225b5a6c-chemistry-lab`; owner-acceptance gate, browser/device verification and qualified scientific review pending. STOP before Phase 07.
-- Last verified commit: working branch head after Phase 06 verification; baseline `87f51c6` on `main`. Earlier Phase 04/05 owner gates were not documented as accepted.
+- Current phase: Phase 07 — Learning System, Practical Notebook, Calculations & Report Exports
+- Current milestone: 07.1 — `@virtual-chemistry-lab/learning-core`, `/learn` & `/notebook` & `/my-lab` workflows, provenance-tagged practical reports, and PDF 1.4/HTML/CSV/JSON exports
+- Overall status: Phase 07 scoped implementation complete on `arena/58afb8c1-chemistry-lab` (branched from `4e4d8b7` on `main`); project-owner acceptance gate, remote CI Playwright verification, and qualified human scientific review pending. STOP before Phase 08 (accounts, backend, cloud sync).
+- Last verified commit: working branch `arena/58afb8c1-chemistry-lab` after Phase 07 verification; baseline `4e4d8b7` on `main`.
 - Last verification date: 2026-11-07
 
 ## Completed
@@ -39,10 +39,11 @@
 
 - Phase 05: `laboratory-core` equipment/procedure/observation subsystem and model-backed 2D dilution/pH workspaces (31 unit tests), with Playwright journeys and honest unavailable states. Present in baseline; owner acceptance was not recorded.
 - Phase 06: framework-free `molecular-visualization` package (strict schemas, ten traceable structures, geometry/accessibility helpers, state/resource tests) and R3F/Three.js web scenes with dynamic loading, demand rendering, disposal, adaptive quality, 2D/text fallbacks and experiment integration.
+- Phase 07: framework-free `@virtual-chemistry-lab/learning-core` package (21/21 Vitest tests) with 4 pathways, 10 lessons, 30 glossary entries, 9 deterministic `simulation-core`-backed quizzes, 8 calculation workbench adapters, multi-session Practical Notebook CRUD + Phase 05 migration, versioned local storage (`vcl-learning-store-v1`) with corrupted-payload quarantine, 20-section Practical Report builder (mandatory `title` & `simulation_disclosure`), and zero-dependency PDF 1.4/HTML/CSV/JSON exporters; Next.js App Router surfaces (`/learn/*`, `/notebook/*`, `/my-lab`, `/settings`, `LabNotebookBridge`, `ExperimentLearningPanel`), 5 pre-existing Phase 05/06 remote CI E2E fixes, `learning-notebook.spec.ts`, ADR-012, and `docs/development/phase-07-acceptance.md`.
 
 ## In progress
-- Phase 06 owner review of ADR-011 and acceptance evidence; no Phase 07 work authorized.
-- Complete owner review of Phase 01–05 ADRs and acceptance evidence (the Phase 05 gate is UNVERIFIED in project memory).
+- Phase 07 owner review of ADR-012 and `docs/development/phase-07-acceptance.md`; no Phase 08 (accounts/backend/cloud sync) work authorized.
+- Complete owner review of Phase 01–06 ADRs and acceptance evidence.
 - Confirm branch protection on the configured private remote repository (API check returns 403 for the integration token; must be confirmed by the owner in repository settings).
 
 ## Blocked / undecided
@@ -66,9 +67,9 @@
 - Local sandbox cannot download Playwright browsers (CDN blocked); e2e evidence comes from remote CI.
 
 ## Next actions
-1. Review the Phase 06 gate (`docs/development/phase-06-acceptance.md`, ADR-011, molecular geometry log); do not begin Phase 07 automatically.
-2. Run Playwright/axe in CI and profile real desktop/mobile browsers; arrange qualified review of all 10 molecular records and directly inspect NIST/PubChem/NCERT sources.
-3. Arrange qualified scientific review for the experiment collection and 8 simulation models; review the previously unrecorded Phase 05 acceptance gate.
+1. Review the Phase 07 gate (`docs/development/phase-07-acceptance.md`, ADR-012, `SCIENTIFIC_VALIDATION_LOG.md`); do not begin Phase 08 automatically.
+2. Execute remote GitHub Actions CI on the Phase 07 branch to verify all Playwright + `axe-core` suites (`foundation`, `lab`, `visualization`, `learning-notebook`) with real browser binaries.
+3. Arrange qualified human scientific review for the 10 published experiments, 8 simulation models, 10 molecular structures, and Phase 07 lessons/glossary/assessments.
 4. Owner to confirm branch protection on `main`.
 
 ## Session log
@@ -79,8 +80,8 @@
 | 2026-11-06 | Phase 03 experiment library and content implemented | Schema 31/31, library 23/23, e2e 6/6 (incl. axe), typecheck/lint/build green; Node 22.22.3 used instead of pinned 24.18.1 (CI authoritative); remote CI and owner sign-off pending | Review Phase 03 evidence; do not start Phase 04 |
 | 2026-11-06 | Repository audit of Phases 01–03; docs synced to Phase 03 reality (README, ARCHITECTURE, overview, testing); added `SCIENTIFIC_VALIDATION_LOG.md` and `RELEASE_CHECKLIST.md`; aligned react/react-dom to 19.3.1; removed dead ternary in `getCollectionStats` | Local format/lint/typecheck/unit tests/build/mobile/audit re-run green; remote CI green on `2c18930` (run 42223523746, all 14 steps incl. Playwright); e2e UNVERIFIED locally (browser download blocked) | Owner review of gate evidence; arrange qualified scientific review |
 | 2026-11-07 | Phase 04 scientific simulation engine implemented (`@virtual-chemistry-lab/simulation-core`), 52 reference cases, 8 model reports, ADR-010, docs catalogs updated, PR opened (not merged) | Schema 31/31, library 23/23, simulation-core 258/258 (52/52 reference cases), typecheck/lint/build:web/mobile/audit green; e2e not re-run (browser download blocked locally; CI authoritative) | Owner review of Phase 04 gate; qualified scientific review of the 8 models before any experiment wires the engine |
-
 | 2026-11-07 | Phase 06 shared molecular package, ten structures, R3F molecular/equipment scenes and experiment integration implemented | 371/371 unit tests (28 molecular); format/lint/typecheck/web build/mobile validation/audit green; local e2e/device checks blocked by browser CDN | Owner Phase 06 gate, CI browser evidence and qualified scientific review; stop before Phase 07 |
+| 2026-11-07 | Phase 07 `@virtual-chemistry-lab/learning-core`, web learning/notebook/report/My Lab routes, PDF 1.4/HTML/CSV/JSON exporters, 5 Phase 05/06 E2E fixes, ADR-012, and governance/security/science docs implemented | 392/392 unit tests (`learning-core` 21/21); 8/8 lint, 14/14 typecheck, 19-route Next.js build, Expo validate, live 20-route HTTP/landmark audit, and high-severity audit green; browser Playwright UNVERIFIED locally (CDN blocked) | Owner Phase 07 gate, remote CI Playwright verification, and qualified scientific review; stop before Phase 08 |
 
 ## Agent hand-off rules
 - Read this file, `TASKS.md`, `ARCHITECTURE.md`, and relevant decision records before changing code.

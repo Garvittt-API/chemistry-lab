@@ -4,10 +4,12 @@ An open-source, cross-platform virtual chemistry laboratory for school and colle
 long-term product vision includes interactive 2D and 3D experiments, molecular visualization,
 structured practical records, assessments, and offline-capable learning.
 
-> **Project status:** Phase 06 scoped 3D implementation is awaiting project-owner acceptance,
-> browser/device verification and qualified scientific review. Phase 05 provides model-backed 2D
-> dilution and pH workspaces; Phase 06 adds ten source-labelled molecular structures and reusable
-> 3D scenes. All experiment and molecular content remains `pending_scientific_review`.
+> **Project status:** Phase 07 scoped implementation (learning pathways, lessons, glossary,
+> deterministic quizzes, practical notebook, calculation workbench, and PDF/HTML/CSV/JSON practical
+> reports) is awaiting project-owner acceptance, remote CI browser verification, and qualified
+> scientific review. Phases 05–06 provide model-backed 2D dilution/pH labs and 3D molecular/equipment
+> visualization. All experiment, molecular, and lesson content remains `pending_scientific_review`,
+> and all progress/notebook persistence is strictly local to the browser.
 
 ## Guiding principles
 
@@ -65,6 +67,9 @@ for verification commands.
   reference-case suite.
 - `packages/laboratory-core/`: shared equipment, procedures, observations and 2D experiment adapters.
 - `packages/molecular-visualization/`: validated molecular data, geometry and visualization state.
+- `packages/learning-core/`: learning pathways, lessons, glossary, deterministic assessments,
+  calculation workbench adapters, practical notebook sessions, local storage, and PDF/HTML/CSV/JSON
+  report exporters.
 - `docs/science/`: scientific integrity, validation, units, model reports and the reference-case
   register.
 - `docs/product/`: vision, requirements, roadmap and scope.

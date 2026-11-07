@@ -82,6 +82,11 @@ The detailed system architecture is maintained in `docs/architecture/overview.md
 - `/molecules` provides 3D, SVG, list and text representations. Dilution/pH retain 2D workspaces with optional 3D equipment layouts; VSEPR integrates the molecular viewer.
 - Native mobile 3D is not implemented. ADR-011 and `docs/architecture/3d-visualization.md` define boundaries and limitations.
 
+## Phase 07 implementation
+- `@virtual-chemistry-lab/learning-core` owns framework-free Zod schemas (`1.0.0`), structured learning pathways (4), theory lessons (10), chemistry glossary (30), deterministic assessment evaluation (9 quizzes, unit-checked and `simulation-core`-backed), 8 calculation workbench adapters over `simulation-core`, practical notebook session CRUD + Phase 05 migration, local versioned storage (`vcl-learning-store-v1`) with corrupted-JSON quarantine, 20-section practical report assembly, and zero-dependency deterministic PDF 1.4, HTML, CSV, and JSON exporters.
+- Web routes `/learn`, `/learn/pathways/[slug]`, `/learn/lessons/[slug]`, `/learn/glossary`, `/learn/assessments/[id]`, `/notebook`, `/notebook/[sessionId]`, `/notebook/[sessionId]/report`, and `/my-lab` render accessible workflows over `LearningStoreProvider`, while `LabNotebookBridge` connects Phase 05 2D dilution/pH lab runs directly to Practical Notebook sessions with explicit `simulation_generated` provenance.
+- ADR-012 documents the learning, notebook, provenance, local-storage, and zero-dependency export architecture. Accounts, backend persistence, and cloud sync remain deferred.
+
 ## Architecture rules
 1. Scientific calculations must not depend on React, DOM, Canvas or Three.js.
 2. Rendering must consume model state; it must not define scientific truth.

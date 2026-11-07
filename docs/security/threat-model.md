@@ -28,5 +28,11 @@
 - Authorization checks on every future server-side resource.
 - Backups and recovery tests before persistent cloud data is introduced.
 
-## Out of scope for Phase 01
+## Out of scope for Phase 01–07
 No authentication, payment, public user uploads, multi-tenant API or cloud synchronization should be introduced without a new threat-model review.
+
+## Phase 07 untrusted-input and export mitigations
+- **JSON session import (`importSessionJson`):** Rejects payloads exceeding 2 MB, recursively strips `__proto__` / `constructor` / `prototype` keys prior to schema validation, validates through bounded Zod schemas, strips ASCII control characters, and marks imported records as `imported_external`.
+- **HTML practical report export (`exportReportHtml`):** Escapes `&`, `<`, `>`, `"`, and `'` across all user-entered titles, observations, table cells, and notes (`escapeHtml`); never injects raw user HTML.
+- **CSV dataset export (`exportSessionCsv`):** Applies RFC 4180 quoting and prefixes cells starting with `=`, `+`, `-`, `@`, tab, or CR/LF with a leading apostrophe (`'`) so spreadsheet applications do not execute formula payloads.
+- **PDF 1.4 export (`exportReportPdf`):** Escapes `\`, `(`, `)` and transliterates non-WinAnsi characters safely inside content streams without external font or script embedding.

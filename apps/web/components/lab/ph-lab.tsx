@@ -19,10 +19,12 @@ import {
   type PhExplorationResult,
 } from "@virtual-chemistry-lab/laboratory-core";
 
+import type { ExperimentRecord } from "@virtual-chemistry-lab/experiment-schema";
 import { EquipmentSprite } from "./equipment-svg";
 import { EquipmentTray } from "./equipment-tray";
 import { ObservationPanel } from "./observation-panel";
 import { ProcedurePanel } from "./procedure-panel";
+import { LabNotebookBridge } from "../learning/lab-notebook-bridge";
 
 /** Equipment needed for pH exploration. */
 const AVAILABLE_EQUIPMENT_IDS = [
@@ -35,7 +37,11 @@ const AVAILABLE_EQUIPMENT_IDS = [
 
 let noteSeq = 0;
 
-export default function PhLab() {
+export default function PhLab({
+  experiment,
+}: Readonly<{
+  experiment?: Pick<ExperimentRecord, "identity" | "references">;
+}> = {}) {
   const [placed, setPlaced] = useState<Array<{ id: string; x: number; y: number }>>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [procedure, setProcedure] = useState(() => createInitialState(PH_PROCEDURE));
@@ -222,7 +228,7 @@ export default function PhLab() {
         </section>
       </aside>
 
-      <main className="lab-workspace" aria-label="Laboratory workspace">
+      <section className="lab-workspace" aria-label="Laboratory workspace">
         <div className="lab-bench">
           <div className="lab-bench-surface">
             {placed.map((p) => {
@@ -360,7 +366,7 @@ export default function PhLab() {
             </div>
           )}
         </div>
-      </main>
+      </section>
 
       <aside className="lab-sidebar-right">
         <ProcedurePanel state={procedure} onStart={start} onReset={reset} />
@@ -370,6 +376,25 @@ export default function PhLab() {
           canAddObservation={currentStepIdx === 4 || procedure.status === "in_progress"}
           onAddObservation={addNote}
         />
+        {experiment ? (
+          <LabNotebookBridge
+            experiment={experiment}
+            modelId="ph-monoprotic-25c"
+            modelVersion="1.0.0"
+            inputs={[
+              { label: "Electrolyte", value: electrolyteId, unit: "species" },
+              { label: "Analytical concentration", value: concentration, unit: "mol/L" },
+            ]}
+            measurements={measurements}
+            observations={procedure.observations}
+            assumptions={["Dilute aqueous monoprotic electrolyte at 25 °C (Kw = 1.0e-14)."]}
+            limitations={limitations}
+            completedStepCount={
+              procedure.steps.filter((s) => procedure.stepStatus[s.id] === "completed").length
+            }
+            totalStepCount={procedure.steps.length}
+          />
+        ) : null}
       </aside>
     </div>
   );

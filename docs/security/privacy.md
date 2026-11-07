@@ -3,6 +3,11 @@
 ## Default approach
 Collect the minimum data required for the feature. Prefer local-first learning for early releases. Do not add analytics, accounts or tracking by default.
 
+## Phase 07 local-only learning & notebook data
+- Lesson completion states, self-check quiz attempts, practical notebook sessions, observations, calculations, and generated-report markers are stored exclusively in browser `localStorage` under `vcl-learning-store-v1` on the learner's device.
+- No personal identifiers (name, email, school ID, IP telemetry) are requested or transmitted over the network.
+- Learners can export any practical session as portable JSON/CSV/HTML/PDF and can permanently erase all local learning and notebook records via confirmation-gated controls on `/settings`.
+
 ## If accounts are introduced
 Before implementation, document:
 - Purpose and lawful basis appropriate to target jurisdictions.
